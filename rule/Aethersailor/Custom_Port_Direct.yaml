@@ -1,6 +1,6 @@
 # 80/443 之外的端口规则(非标端口)
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
-# TOTAL: 6
+# Template Address: https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/rule/Aethersailor/Custom_Port_Direct.yaml
 
 payload:
   - DST-PORT,1-79
