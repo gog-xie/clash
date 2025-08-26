@@ -4,6 +4,47 @@
 # TOTAL: 204
 
 payload:
+  - DOMAIN-SUFFIX,docker.amingg.com
+  - DOMAIN-SUFFIX,docker-cf.mrs.1ms.run
+  - DOMAIN-SUFFIX,hub.rat.dev
+  - DOMAIN-KEYWORD,dzmp4
+  - DOMAIN-KEYWORD,exdys
+  - DOMAIN-KEYWORD,domp4
+  - DOMAIN-KEYWORD,ddmp4
+  - DOMAIN-KEYWORD,yinfans
+  - DOMAIN-KEYWORD,zhunchuanpb
+  - DOMAIN-SUFFIX,zhuzhuzhu.whtjdasha.com
+  - DOMAIN-KEYWORD,zhuzhuzhu
+  - DOMAIN-KEYWORD,xwyue
+  - DOMAIN-KEYWORD,upyunso
+  - DOMAIN-SUFFIX,js.pusher.com
+  - DOMAIN-SUFFIX,jianpian.vip
+  - DOMAIN-SUFFIX,potplayercn.com
+  - DOMAIN-SUFFIX,sourceforge.net #(梅林官网)
+  - DOMAIN-KEYWORD,istoreos
+  - DOMAIN-KEYWORD,gogxie
+  - DOMAIN-SUFFIX,dytt8899.com
+  - DOMAIN-SUFFIX,playwoool.com #(音范丝)
+  - DOMAIN-SUFFIX,scorecardresearch.com #(音范丝)
+  - DOMAIN-SUFFIX,dydytt.net
+  - DOMAIN-KEYWORD,XL720
+  - DOMAIN-KEYWORD,cupfox
+  - DOMAIN-KEYWORD,xiaobaovod
+  - DOMAIN-KEYWORD,HW8
+  - DOMAIN-KEYWORD,huawei8
+  - DOMAIN-KEYWORD,plex
+  - DOMAIN-KEYWORD,xiaoya
+  - DOMAIN-KEYWORD,proxmox
+  - DOMAIN-SUFFIX,opentrackr.org #(BT tracker)
+  - DOMAIN-SUFFIX,tracker.opentrackr.org #(BT tracker)
+  - DOMAIN-KEYWORD,tracker #(BT tracker)
+  - DOMAIN-SUFFIX,fanart.tv
+  - DOMAIN-KEYWORD,aliyundrive
+  - DOMAIN-SUFFIX,wallpaperswide.com #(图片刮削)
+  - DOMAIN-SUFFIX,emojiterra.com #(表情包)
+  - DOMAIN-SUFFIX,draw.io
+  - DOMAIN-SUFFIX,app.diagrams.net
+
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,synology
   - DOMAIN-SUFFIX,03241119.xyz
