@@ -1,7 +1,7 @@
 # Generated from rule/Custom_Proxy.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Proxy.list
-# TOTAL: 17
+# Template Address: https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/rule/Aethersailor/Custom_Proxy_Classical.yaml
 
 payload:
   - DOMAIN-SUFFIX,7pzzv.us
