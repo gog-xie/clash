@@ -1,7 +1,7 @@
 # 80/443 之外的端口规则(非标端口)
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
-# Template Address: https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/rule/Aethersailor/Custom_Port_Direct.yaml
-# Direct Template Address: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/Aethersailor/Custom_Port_Direct.yaml
+# Template Address: https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/rule/Custom_Port_Direct.yaml
+# Direct Template Address: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/Custom_Port_Direct.yaml
 payload:
   - DST-PORT,1-79
   - DST-PORT,81-442
