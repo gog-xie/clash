@@ -1,7 +1,6 @@
-# Generated from rule/Steam_CDN.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Steam_CDN.list
-# TOTAL: 26
+# Template Address: https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/rule/Aethersailor/Steam_CDN_Classical.yaml
 
 payload:
   - DOMAIN-SUFFIX,cm.steampowered.com
