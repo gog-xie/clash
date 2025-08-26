@@ -1,7 +1,8 @@
-# Generated from rule/Custom_Direct.list
-# REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
-# SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 204
+# NEW REPO: https://github.com/gog-xie/clash
+# OLD REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
+# NEW SOURCE: https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/rule/Aethersailor/Custom_Direct_Classical.yaml
+# OLD SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
+# TOTAL: 
 
 payload:
   - DOMAIN-SUFFIX,docker.amingg.com
