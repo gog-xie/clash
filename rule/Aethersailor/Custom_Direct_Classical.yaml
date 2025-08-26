@@ -11,7 +11,6 @@ payload:
   - DOMAIN-KEYWORD,exdys
   - DOMAIN-KEYWORD,domp4
   - DOMAIN-KEYWORD,ddmp4
-  - DOMAIN-KEYWORD,yinfans
   - DOMAIN-KEYWORD,zhunchuanpb
   - DOMAIN-SUFFIX,zhuzhuzhu.whtjdasha.com
   - DOMAIN-KEYWORD,zhuzhuzhu
@@ -24,6 +23,7 @@ payload:
   - DOMAIN-KEYWORD,istoreos
   - DOMAIN-KEYWORD,gogxie
   - DOMAIN-SUFFIX,dytt8899.com
+  - DOMAIN-KEYWORD,yinfans #(音范丝)
   - DOMAIN-SUFFIX,playwoool.com #(音范丝)
   - DOMAIN-SUFFIX,scorecardresearch.com #(音范丝)
   - DOMAIN-SUFFIX,dydytt.net
@@ -35,15 +35,14 @@ payload:
   - DOMAIN-KEYWORD,plex
   - DOMAIN-KEYWORD,xiaoya
   - DOMAIN-KEYWORD,proxmox
-  - DOMAIN-SUFFIX,opentrackr.org #(BT tracker)
-  - DOMAIN-SUFFIX,tracker.opentrackr.org #(BT tracker)
-  - DOMAIN-KEYWORD,tracker #(BT tracker)
   - DOMAIN-SUFFIX,fanart.tv
   - DOMAIN-KEYWORD,aliyundrive
   - DOMAIN-SUFFIX,wallpaperswide.com #(图片刮削)
   - DOMAIN-SUFFIX,emojiterra.com #(表情包)
   - DOMAIN-SUFFIX,draw.io
   - DOMAIN-SUFFIX,app.diagrams.net
+  - DOMAIN-SUFFIX,btsj6.com
+  - DOMAIN-SUFFIX,dyg5.com
 
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,synology
