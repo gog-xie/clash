@@ -16,13 +16,13 @@ payload:
   - DOMAIN-SUFFIX,js.pusher.com
   - DOMAIN-SUFFIX,jianpian.vip
   - DOMAIN-SUFFIX,potplayercn.com
-  - DOMAIN-SUFFIX,sourceforge.net #(梅林官网)
+  - DOMAIN-SUFFIX,sourceforge.net
   - DOMAIN-KEYWORD,istoreos
   - DOMAIN-KEYWORD,gogxie
   - DOMAIN-SUFFIX,dytt8899.com
-  - DOMAIN-KEYWORD,yinfans #(音范丝)
-  - DOMAIN-SUFFIX,playwoool.com #(音范丝)
-  - DOMAIN-SUFFIX,scorecardresearch.com #(音范丝)
+  - DOMAIN-KEYWORD,yinfans
+  - DOMAIN-SUFFIX,playwoool.com
+  - DOMAIN-SUFFIX,scorecardresearch.com
   - DOMAIN-SUFFIX,dydytt.net
   - DOMAIN-KEYWORD,XL720
   - DOMAIN-KEYWORD,cupfox
@@ -34,8 +34,8 @@ payload:
   - DOMAIN-KEYWORD,proxmox
   - DOMAIN-SUFFIX,fanart.tv
   - DOMAIN-KEYWORD,aliyundrive
-  - DOMAIN-SUFFIX,wallpaperswide.com #(图片刮削)
-  - DOMAIN-SUFFIX,emojiterra.com #(表情包)
+  - DOMAIN-SUFFIX,wallpaperswide.com
+  - DOMAIN-SUFFIX,emojiterra.com
   - DOMAIN-SUFFIX,draw.io
   - DOMAIN-SUFFIX,app.diagrams.net
   - DOMAIN-SUFFIX,btsj6.com
