@@ -1,6 +1,6 @@
 <h1 align="center"> 🎯Openclash<br>⠀<br>🌐配置说明</h1>
 
-<p align="center"><b>本项目基于Aethersailor大佬配置文件微改，主要根据个人上网习惯少量🐟漏网之鱼的维护补录。</b></p>
+<p align="center"><b>本项目基于Aethersailor大佬配置文件微改，主要根据个人上网习惯持续🐟漏网之鱼的维护补录。</b></p>
 <p align="center"><b>🙏 感谢Aethersailor大佬🙏</b></p>
 
 #### Aethersailor大佬教程：[OpenClash-设置方案](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-设置方案)
