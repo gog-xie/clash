@@ -19,7 +19,7 @@ https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-设置方�
 #### [Github地址：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
 
 ```
-https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
+https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini
 ```
 
 #### [直连地址：](https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini)
@@ -29,4 +29,4 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini
 ```
 
 - 🛠️ **其他系统配置模板**
-> **PS：** 配置好OpenClash后，下载Openclash的配置订阅文件，将rules中RULE-SET（参照本项目的Custom_Direct_Classical.yaml等文件）改为具体的规则数据及策略组（尽可能不要改变规则的先后顺序），删除rule-providers后，可直接用于Windows Clash Verge，以及华硕路由器Merlinclash的配置文件，目前Merlinclash中不能调用GoeIP数据库（原因不明），但可调用GoeSite数据库，使用效果基本不受影响。
+> * **PS：** 配置好OpenClash后，下载Openclash的配置订阅文件，将rules中RULE-SET（参照本项目的Custom_Direct_Classical.yaml等文件）改为具体的规则数据及策略组（尽可能不要改变规则的先后顺序），删除rule-providers后，可直接用于Windows Clash Verge，以及华硕路由器Merlinclash的配置文件，目前Merlinclash中不能调用GoeIP数据库（原因不明），但可调用GoeSite数据库，使用效果基本不受影响。
