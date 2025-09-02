@@ -33,7 +33,6 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini
 
 > * **如图所示**
 
-将RULE-SET,Custom_Direct_Classical,🎯 全球直连
 
 ![](../pic/clash/RULE-SET.png)
 
@@ -41,4 +40,4 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini
 
 ![](../pic/clash/替换规则数据.png)
 
-![](../pic/clash/change rule.png)
+![](../pic/clash/change_rule.png)
