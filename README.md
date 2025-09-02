@@ -33,6 +33,6 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini
 
 > * **如图所示**
 
-<p ![](../pic/clash/RULE-SET.png)</p> 
-<p ![](../pic/clash/rule-providers.png)</p> 
-<p ![](../pic/clash/替换规则数据.png)</p> 
+![](../pic/clash/RULE-SET.png)
+![](../pic/clash/rule-providers.png)
+![](../pic/clash/替换规则数据.png)
