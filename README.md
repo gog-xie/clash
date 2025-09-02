@@ -35,4 +35,12 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini
 
 ***
 
-<p alingn="center">![](https://github.com/gog-xie/clash/blob/main/pic/clash/change_rule.png)</p>
+![](https://github.com/gog-xie/clash/blob/main/pic/clash/RULE-SET.png)
+
+![](https://github.com/gog-xie/clash/blob/main/pic/clash/rule-providers.png)
+
+![](https://github.com/gog-xie/clash/blob/main/pic/clash/change_rule.png)
+
+![](https://github.com/gog-xie/clash/blob/main/pic/clash/%E6%9B%BF%E6%8D%A2%E8%A7%84%E5%88%99%E6%95%B0%E6%8D%AE.png)
+
+![](https://github.com/gog-xie/clash/blob/main/pic/clash/merlinclash%E5%86%85%E7%BD%AE%E8%A7%84%E5%88%99%E8%B0%83%E7%94%A8.png)
