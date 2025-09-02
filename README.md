@@ -35,4 +35,4 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini
 
 ***
 
-!![](../pic/clash/change_rule.png)
+![](https://github.com/gog-xie/clash/blob/main/pic/clash/change_rule.png)
