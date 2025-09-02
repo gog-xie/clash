@@ -4,4 +4,20 @@
 <p align="center"><b>🙏 感谢Aethersailor大佬🙏</b></p>
 
 #### Aethersailor大佬教程：[OpenClash-设置方案](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-设置方案)
-#### 本订阅转换模板地址：[github地址](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)；[直连地址](https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini)
+
+```
+https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-设置方案
+```
+
+### 本订阅转换模板地址：
+#### [github地址](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)；
+
+```
+https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
+```
+
+#### [直连地址](https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini)
+
+```
+https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini
+```
