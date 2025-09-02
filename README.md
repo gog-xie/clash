@@ -2,7 +2,7 @@
 
 <h2 align="center">🙏 感谢Aethersailor大佬</h2>
 
-<h3 align="center">本项目基于Aethersailor大佬配置文件微改，主要根据个人上网习惯少量🐟漏网之鱼的维护补录</h3>
+<h3>本项目基于Aethersailor大佬配置文件微改，主要根据个人上网习惯少量🐟漏网之鱼的维护补录。🙏 感谢Aethersailor大佬</h3>
 
 
 #### Aethersailor大佬教程：https://github.com/Aethersailor/Custom_OpenClash_Rules
