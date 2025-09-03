@@ -1,7 +1,7 @@
 # NEW REPO: https://github.com/gog-xie/clash
 # OLD REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# Template Address: https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/rule/Custom_Direct_Classical.yaml
+# Template Address: https://raw.bgithub.xyz/gog-xie/clash/refs/heads/main/rule/Custom_Direct_Classical.yaml
 # Direct Template Address: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/Custom_Direct_Classical.yaml
 
 payload:
@@ -41,6 +41,17 @@ payload:
   - DOMAIN-SUFFIX,app.diagrams.net
   - DOMAIN-SUFFIX,btsj6.com
   - DOMAIN-SUFFIX,dyg5.com
+  - DOMAIN-SUFFIX,synology.me
+  - DOMAIN-SUFFIX,DiskStation.me
+  - DOMAIN-SUFFIX,i234.me
+  - DOMAIN-SUFFIX,DSCloud.biz
+  - DOMAIN-SUFFIX,DSCloud.mobi
+  - DOMAIN-SUFFIX,DSmyNAS.com
+  - DOMAIN-SUFFIX,DSmyNAS.net
+  - DOMAIN-SUFFIX,DSmyNAS.org
+  - DOMAIN-SUFFIX,FamilyDS.com
+  - DOMAIN-SUFFIX,FamilyDS.net
+  - DOMAIN-SUFFIX,FamilyDS.org
 
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,synology
