@@ -52,9 +52,9 @@ payload:
   - DOMAIN-SUFFIX,FamilyDS.com
   - DOMAIN-SUFFIX,FamilyDS.net
   - DOMAIN-SUFFIX,FamilyDS.org
-
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,synology
+
   - DOMAIN-SUFFIX,03241119.xyz
   - DOMAIN-SUFFIX,112114.xyz
   - DOMAIN-SUFFIX,1996999.xyz
