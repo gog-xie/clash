@@ -1,7 +1,5 @@
-# NEW REPO: https://github.com/gog-xie/clash
-# OLD REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# Template Address: https://raw.bgithub.xyz/gog-xie/clash/refs/heads/main/rule/Custom_Direct_Classical.yaml
+# Template Address: https://raw.github.com/gog-xie/clash/refs/heads/main/rule/Custom_Direct_Classical.yaml
 # Direct Template Address: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/Custom_Direct_Classical.yaml
 
 payload:
