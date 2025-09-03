@@ -50,9 +50,12 @@ payload:
   - DOMAIN-SUFFIX,FamilyDS.com
   - DOMAIN-SUFFIX,FamilyDS.net
   - DOMAIN-SUFFIX,FamilyDS.org
+  - DOMAIN-SUFFIX,fastly.jsdelivr.net
+  - DOMAIN-SUFFIX,testingcf.jsdelivr.net
+  - DOMAIN-SUFFIX,cdn.jsdelivr.net
+  
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,synology
-
   - DOMAIN-SUFFIX,03241119.xyz
   - DOMAIN-SUFFIX,112114.xyz
   - DOMAIN-SUFFIX,1996999.xyz
