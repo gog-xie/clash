@@ -1,4 +1,4 @@
-<h1 align="center"> ✈️Openclash<br>⠀<br>▶️配置说明</h1>
+<h1 align="center"> ✈️Openclash<br>⠀<br>配置说明</h1>
 
 ---
 
