@@ -17,7 +17,7 @@
 https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-设置方案
 ```
 
-- ### 本订阅转换模板地址
+- ### Custom_Clash.in
 #### [Github地址：](https://raw.bgithub.xyz/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
 
 ```
@@ -29,6 +29,20 @@ https://raw.bgithub.xyz/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini
 ```
 https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini
 ```
+
+- ### Custom_Clash_Smart
+#### [Github地址：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_Smart.ini)
+
+```
+https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_Smart.ini
+```
+
+#### [直连地址：](https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_Smart.ini)
+
+```
+https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_Smart.ini
+```
+
 
 -  ### 其他系统订阅模板配置
 > * **PS：** 主路由为华硕硬路由，配置MerlinClash订阅规则完全可借鉴OpenClash的订阅模板，稍加改动即可。配置好OpenClash后，下载Openclash的yaml配置订阅文件，将配置文件中rules的RULE-SET改为具体的规则数据（参照本项目的Custom_Direct_Classical.yaml等文件）及策略组（尽可能不要改变规则的先后顺序），并删除rule-providers相关数据后，可直接导入Windows Clash Verge、华硕路由器Merlinclash等系统的订阅规则文件，目前Merlinclash中不能调用GoeIP数据库（原因不明），但可调用GoeSite数据库，使用效果基本不受影响。
