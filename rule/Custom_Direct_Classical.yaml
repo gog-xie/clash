@@ -53,6 +53,7 @@ payload:
   - DOMAIN-SUFFIX,fastly.jsdelivr.net
   - DOMAIN-SUFFIX,testingcf.jsdelivr.net
   - DOMAIN-SUFFIX,cdn.jsdelivr.net
+  - DOMAIN-SUFFIX,btsj6.com
   
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,synology
