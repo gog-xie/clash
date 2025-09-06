@@ -38,6 +38,7 @@ payload:
   - DOMAIN-SUFFIX,draw.io
   - DOMAIN-SUFFIX,app.diagrams.net
   - DOMAIN-SUFFIX,btsj6.com
+  - DOMAIN-KEYWORD,btsj6
   - DOMAIN-SUFFIX,dyg5.com
   - DOMAIN-SUFFIX,synology.me
   - DOMAIN-SUFFIX,DiskStation.me
@@ -53,7 +54,6 @@ payload:
   - DOMAIN-SUFFIX,fastly.jsdelivr.net
   - DOMAIN-SUFFIX,testingcf.jsdelivr.net
   - DOMAIN-SUFFIX,cdn.jsdelivr.net
-  - DOMAIN-SUFFIX,btsj6.com
   
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,synology
