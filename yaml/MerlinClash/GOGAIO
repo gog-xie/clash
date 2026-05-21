@@ -253,9 +253,8 @@ rules:
   - RULE-SET,My_Proxy,国外流量
   - SRC-IP-CIDR,192.168.50.8/32,DIRECT,no-resolve
   - SRC-IP-CIDR,192.168.50.9/32,DIRECT,no-resolve
-  - SRC-IP-CIDR,fe80::9209:d0ff:fe06:a5d8/128,DIRECT,no-resolve
-  - SRC-IP-CIDR,fe80::9209:d0ff:fe06:a5d9/128,DIRECT,no-resolve
-
+  #- SRC-IP-CIDR,240e::3241:dfa3:t55e:hyy5/128,DIRECT,no-resolve #某设备固定IPV6直连
+ 
   # 自定义，完善漏网之鱼
   - RULE-SET,My_Direct,直接连接
   - RULE-SET,Custom_Direct_Domain,直接连接
