@@ -50,7 +50,7 @@ SelectUS: &SelectUS {type: select, proxies: [美国策略, 默认代理, 故障�
 # 注意：请提供您的机场订阅链接，每个链接一行，并为每个机场命名，末尾的[优][备]为每个节点添加机场名称前缀，可自定义
 proxy-providers:
   # 优质订阅源 - 优质节点集合，使用时请修改
-  牛逼机场: {<<: *BaseProvider, url: '优选订阅源地址', override: {additional-prefix: '[忧] '}}
+  牛逼机场: {<<: *BaseProvider, url: '优选订阅源地址', override: {additional-prefix: '[优] '}}
   # 备用订阅源 - 次优节点集合，使用时请修改
   #备用服务商: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[备] '}}
 
