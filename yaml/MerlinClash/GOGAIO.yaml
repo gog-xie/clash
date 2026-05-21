@@ -172,6 +172,8 @@ dns:
     - rule-set:Direct
     - rule-set:Private
     - rule-set:China
+    - '+.pub.3gppnetwork.org'
+    - "+.bing.com"
     - +.miwifi.com
     - +.docker.io
     - +.market.xiaomi.com
