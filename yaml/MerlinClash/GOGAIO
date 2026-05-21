@@ -251,8 +251,10 @@ rules:
   
   # 某内网设备部分代理，其余直连（本规则根据需要修订）
   - RULE-SET,My_Proxy,国外流量
-  - SRC-IP-CIDR,192.168.50.8/32,DIRECT
-  - SRC-IP-CIDR,192.168.50.9/32,DIRECT
+  - SRC-IP-CIDR,192.168.50.8/32,DIRECT,no-resolve
+  - SRC-IP-CIDR,192.168.50.9/32,DIRECT,no-resolve
+  - SRC-IP-CIDR,fe80::9209:d0ff:fe06:a5d8/128,DIRECT,no-resolve
+  - SRC-IP-CIDR,fe80::9209:d0ff:fe06:a5d9/128,DIRECT,no-resolve
 
   # 自定义，完善漏网之鱼
   - RULE-SET,My_Direct,直接连接
