@@ -7,9 +7,9 @@
 # ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ #
 # ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓██████▓▒░  #
 #####################################
-# Name: MihomoForNikki  
-# Designer: 666OS(YYDS666)
-# Revisor：HenryChiaoe、gog_xie
+# Name: MihomoAllInOne_Full  
+# Designer: HenryChiao
+# Reviser: gog_xie 
 # Version: v1-26.5.20
 # Date: 2026-05-20
 
@@ -33,6 +33,7 @@ FilterJP: &FilterJP '^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*
 FilterKR: &FilterKR '^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$'
 FilterUS: &FilterUS '^(?=.*(?i)(美|🇺🇸|US|USA|JFK|SJC|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(Plus|Australia|5x)).*$'
 FilterTW: &FilterTW '^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$'
+FilterUK: &FilterUK '^(?=.*(?i)(英|英国|UK|大不列颠|伦敦|Kingdom))(?!.*(排除1|排除2|5x)).*$'
 FilterEU: &FilterEU '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$'
 FilterOT: &FilterOT '^(?!.*(DIRECT|直接连接|美|港|坡|台|新|日|韩|奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇭🇰|🇼🇸|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|🇦🇹|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW))'
 FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
@@ -67,26 +68,52 @@ listeners:
   - {name: MIXED-EU, type: mixed, port: 50006, proxy: 欧盟策略}
   - {name: MIXED-AL, type: mixed, port: 50007, proxy: 默认代理}
 
-# ————————————————————————
-# 全局配置 
-# ————————————————————————
-mixed-port: 7890
+# ==================== 核心配置 ====================
+# 基础配置
+mode: rule
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: true
 allow-lan: true
-bind-address: "*"
-ipv6: false
 unified-delay: true
 tcp-concurrent: true
 log-level: warning
-global-client-fingerprint: chrome
-keep-alive-idle: 600
+bind-address: '*'
+find-process-mode: 'always'
 keep-alive-interval: 15
+keep-alive-idle: 600
+# global-client-fingerprint: chrome
+
+# 认证配置
+authentication:
+  - mihomo:choujiaoya
+skip-auth-prefixes:
+  - 192.168.1.0/24
+  - 192.168.50.0/24
+  - 192.168.31.0/24
+  - 192.168.100.0/24
+  - 127.0.0.1/8
+
+# 实验性功能
+experimental:
+  quic-go-disable-gso: true  
+     
+# 管理面板配置
+external-ui-url: https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
+external-ui-name: zashboard
+external-ui: ui
+external-controller: 127.0.0.1:9090
+secret: 3FZbvJ4w
+
+# 配置存储
 profile:
   store-selected: true
   store-fake-ip: true
 
-# ————————————————————————
-# 嗅探
-# ————————————————————————
+# 流量嗅探
 sniffer:
   enable: true
   sniff:
@@ -101,60 +128,63 @@ sniffer:
     - "Mijia Cloud"
     - "+.push.apple.com"
 
-# ————————————————————————
-# 入站
-# ————————————————————————
+# TUN模式配置
 tun:
-  enable: true
-  # system/gvisor/mixed
+  enable: false
   stack: mixed
-  dns-hijack: ["any:53", "tcp://any:53"]
-  #使用nikki，混入全部不修改的情况，开启接口指定为nikki
-  #device: nikki
-  #使用仅内核自行修改下面三项为true
-  auto-route: false
-  auto-redirect: false
-  auto-detect-interface: false
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
 
-# ————————————————————————
-# DNS模块
-# ————————————————————————
+hosts:
+  miwifi.com: 192.168.31.2
+  "epdg.epc.mnc010.mcc234.pub.3gppnetwork.org": [87.194.8.8, 87.194.88.8, 87.194.89.8, 87.194.9.8]
+  services.googleapis.cn: services.googleapis.com
+  cn.bing.com: www4.bing.com
+  dns.alidns.com: [223.5.5.5, 223.6.6.6, 2400:3200::1, 2400:3200:baba::1]
+  doh.pub: [1.12.12.12, 1.12.12.21, 120.53.53.53]
+  dns.google: [8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844]
+  cloudflare-dns.com: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
+    
+# DNS配置
 dns:
   enable: true
-  cache-algorithm: arc
+  ipv6: true
+  use-hosts: true
   listen: 0.0.0.0:1053
-  ipv6: false
-  respect-rules: true
+  fake-ip-range: 198.18.0.1/16
   enhanced-mode: fake-ip
-  fake-ip-range: 28.0.0.1/8
-  fake-ip-filter-mode: blacklist
-  fake-ip-filter:
-    - https://raw.githubusercontent.com/wwqgtxx/clash-rules/release/fakeip-filter.mrs
-# 牛逼   
-    - +.idsduf.com  
-    - +.66jc.top
-  default-nameserver:
-    - https://223.5.5.5/dns-query
+  respect-rules: true
+  nameserver:
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  nameserver:
+  direct-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-
-# ========================
-# 数据库
-# ========================
-
-geox-url:
-  mmdb: https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/Country.mmdb
-  geoip: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat
-  geosite: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
-  asn: https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb
-geo-auto-update: true 
-geo-update-interval: 24 
-geodata-mode: true
-
+  fake-ip-filter:
+    - rule-set:fakeip-filter
+    - rule-set:Direct
+    - rule-set:Private
+    - rule-set:China
+    - +.miwifi.com
+    - +.docker.io
+    - +.market.xiaomi.com
+    - +.push.apple.com
+    - +.nimenshishangdi.cc
+    - "*.lan"
+    - "*.local"
+    - "*.router.asus.com" # 确保梅林/华硕后台访问正常
+    - "rule-set:private_domain,cn_domain"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "time.*.com"
+    - +.jsdelivr.net
 
 # ==================== 代理策略组 ====================
 proxy-groups:
@@ -248,27 +278,21 @@ rules:
   - RULE-SET,Advertising,REJECT
   - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT  # 阻止 QUIC
 
-  ##=========本小节为特殊需求，视情况修订和启用=============
+  # 192.168.50.101 ~ 199 所有设备走直连（本规则根据需要修订）
+  - SRC-IP-CIDR,192.168.50.101/32,DIRECT,no-resolve
+  - SRC-IP-CIDR,192.168.50.102/31,DIRECT,no-resolve
+  - SRC-IP-CIDR,192.168.50.104/30,DIRECT,no-resolve
+  - SRC-IP-CIDR,192.168.50.108/30,DIRECT,no-resolve
+  - SRC-IP-CIDR,192.168.50.112/28,DIRECT,no-resolve
+  - SRC-IP-CIDR,192.168.50.128/26,DIRECT,no-resolve
+  - SRC-IP-CIDR,192.168.50.192/29,DIRECT,no-resolve
   
-  ## 192.168.1.101 ~ 199 所有设备走直连
+  # 某内网设备部分代理，其余直连（本规则根据需要修订）
+  - RULE-SET,My_Proxy,国外流量
+  - SRC-IP-CIDR,192.168.50.8/32,DIRECT,no-resolve
+  - SRC-IP-CIDR,192.168.50.9/32,DIRECT,no-resolve
+  - SRC-IP-CIDR,240e:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX/128,DIRECT,no-resolve
   
-  #- SRC-IP-CIDR,192.168.1.101/32,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.1.102/31,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.1.104/30,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.1.108/30,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.1.112/28,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.1.128/26,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.1.192/29,DIRECT,no-resolve
-  
-  ## 内网设备192.168.1.88所有链接走直连，设备192.168.1.98和240e:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx的部分链接（My_Proxy）走代理，其余走直连
- 
-  #- SRC-IP-CIDR,192.168.1.88/32,DIRECT,no-resolve
-  #- RULE-SET,My_Proxy,手动选择
-  #- SRC-IP-CIDR,192.168.1.98/32,DIRECT,no-resolve
-  #- SRC-IP-CIDR,240e:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx/128,DIRECT,no-resolve
-  
-  ##=======================================================
-
   #自定义
   - RULE-SET,My_Direct,直接连接
   - RULE-SET,Custom_Direct_Domain,直接连接
@@ -278,6 +302,8 @@ rules:
   - RULE-SET,Custom_Proxy_IP,国外流量
   - RULE-SET,Steam_CDN_Domain,直接连接
   - RULE-SET,Steam_CDN_IP,直接连接
+  - RULE-SET,private_domain,直接连接
+  - RULE-SET,cn_domain,直接连接
 
   # 域名规则
   - RULE-SET,ukwifi,UKwifi
@@ -346,6 +372,8 @@ ClassicalYaml: &ClassicalYaml {type: http, behavior: classical, interval: 3600, 
 # 规则提供者
 rule-providers:  
   # 域名规则
+  private_domain: {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs}
+  cn_domain:      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs}
   Tracking:       {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Tracking.mrs}
   Advertising:    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Advertising.mrs} 
   Direct:         {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Direct.mrs}
