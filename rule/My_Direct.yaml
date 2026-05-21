@@ -122,6 +122,7 @@ payload:
   - DOMAIN-SUFFIX,koolcenter.com
   - DOMAIN-SUFFIX,jsdelivr.com
   - DOMAIN-SUFFIX,jsdelivr.net
+  - DOMAIN-SUFFIX,testingcf.jsdelivr.net
   - DOMAIN-SUFFIX,nimenshishangdi.cc
   - DOMAIN-SUFFIX,fastnb.top
   
