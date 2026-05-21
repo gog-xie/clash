@@ -8,15 +8,15 @@
 ---
 
 - ## 1 前言
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;科学上网常常部署在旁路由，但旁路由时而会出现莫名的小问题，DHCP也有不便之处。其实家庭网络简单好用即可，仅一台硬路由也能满足家庭上网需求，如安装Merlinclash，实现国内外科学分流，沿用了Openclash的配置文件，效果还是挺好！但对路由硬件要求较高，试用BE86U开启MerlinClash后也会偶尔卡死自动重启。另外，广告拦截尽量不要放置在代理程序中，在终端安装例如AdGuard插件效果远远好于诸如OpenClash的广告拦截效果。
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过对比ClashVerge、MerlinClash、OpenClash、Nikki等代理程序，各种程序在不同的硬件和网络环境各有优劣：有稳定的旁路由（一般为7×24小时开机的独立旁路由），使用OpenClash、Nikki等比较稳定；旁路由部署在NAS或其他虚拟环境下，需经常性的开关机，部署在主路由上比较合适（如OpenClash、Nikki或merlinclash等）；科学上网需求不大的，在终端电脑上安装类似ClashVerge的代理程序，随用随开。
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;科学上网常常部署在旁路由，但旁路由时而会出现莫名的小问题，DHCP也有不便之处。其实家庭网络简单好用即可，仅一台硬路由也能满足家庭上网需求，如安装Merlinclash，实现国内外科学分流，沿用了Openclash的配置文件，效果还是挺好！接近无感科学上网，但路由硬件高一点比较好，试用BE86U开启MerlinClash后，不同的配置模板使用效果不一，有的模版会偶尔卡死自动重启。另外，广告拦截尽量不要放置在代理程序中，在终端安装例如AdGuard插件效果远远好于诸如OpenClash的广告拦截效果。
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过对比ClashVerge、MerlinClash、OpenClash、Nikki等代理程序，各种程序在不同的硬件和网络环境各有优劣：有稳定的旁路由（一般为7×24小时开机的独立旁路由），使用OpenClash、Nikki等比较稳定；如果旁路由需经常性的开关机，那部署在主路由上比较合适（如OpenClash、Nikki或Merlinclash等）；科学上网需求不大的，在终端电脑上安装类似ClashVerge的代理程序，随用随开。
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目主要是相关订阅模板的下载，各代理程序的设置请自行查阅相关教程，如OpenClash的设置建议参照 [Aethersailor](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88)大佬的设置方案🥊。其他若干模板可在[HenryChiao](https://github.com/HenryChiao/MIHOMO_YAMLS/tree/main/THEYAMLS/General_Config/HenryChiao)大佬处集中查看
 
 ***
 
 - ## 2 OpenClash订阅模板
 
-- ### 2.1 Yaml模板（推荐）
+- ### 2.1 openclash等通用模板（推荐）
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;采用Subconverter订阅时有小毛病出现，用yaml配置文件导入可减少小问题，而且可配置较为美观的Zashboard控制面板。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
 
@@ -27,45 +27,12 @@ https://github.com/gog-xie/Clash/blob/main/yaml/OpenClash/MihomoGOG
 ```
 
 
-
-
-- ### 2.2 Sub订阅转换ini链接（不推荐）
-#### [2.2.1 Custom_Clash订阅链接](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
-
-```
-https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini
-```
-
-```
-https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini
-```
-
-#### [2.2.2 Custom_Clash_Simple订阅链接](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_Simple.ini)
-
-```
-https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_Simple.ini
-```
-
-```
-https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_Simple.ini
-```
-
-#### [2.2.3 Custom_Clash_FallBack订阅链接](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_FallBack.ini)
-
-```
-https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_FallBack.ini
-```
-
-```
-https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_FallBack.ini
-```
-
--  ## 3 其他系统yaml模板
+-  ## 2 其他系统yaml模板
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若主路由为华硕硬路由，配置MerlinClash订阅规则完全可借鉴OpenClash的订阅模板，可直接导入模板使用或稍加改动即可。
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在OpenClash配置订阅中的规则集选择“启用”，避免yaml文件太大影响速度，再到配置管理中下载yaml配置文件导入Merlinclash中可直接使用。目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。同理，也可导入Windows Clash Verge中使用，导入Nikki时注意需带相关设置参数。这里推荐使用以下yaml文件，仅需修改yaml文件中的机场地址和名称即可：
 
 
-#### [3.1.1 ClashVerge综合模板](https://github.com/gog-xie/Clash/blob/main/yaml/ClashVerge/ClashVerge_GOG)
+#### [3.1.1 ClashVerge综合模板](https://github.com/gog-xie/Clash/blob/main/yaml/ClashVerge/ClashVerge_GOG)（可引用Openclash的模板）
 
 ```
 https://github.com/gog-xie/Clash/blob/main/yaml/ClashVerge/ClashVerge_GOG
@@ -102,10 +69,11 @@ rules:
 - SRC-IP-CIDR,192.168.1.128/26,DIRECT,no-resolve
 - SRC-IP-CIDR,192.168.1.192/29,DIRECT,no-resolve
 
-# 内网设备192.168.1.88走直连，设备192.168.1.98的部分域名（My_Proxy）走代理，其余走直连
+# 内网设备192.168.1.88所有链接走直连，设备192.168.1.98的部分链接（My_Proxy）走代理，其余走直连
 - SRC-IP-CIDR,192.168.1.88/32,DIRECT,no-resolve
 - RULE-SET,My_Proxy,手动选择
 - SRC-IP-CIDR,192.168.1.98/32,DIRECT,no-resolve
+- SRC-IP-CIDR,240e:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx/128,DIRECT,no-resolve  #某内网设备通过IPV6地址实现部分代理其余直连
 ......
 
 ```
