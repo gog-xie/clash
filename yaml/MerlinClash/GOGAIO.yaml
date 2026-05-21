@@ -68,84 +68,114 @@ listeners:
   - {name: MIXED-EU, type: mixed, port: 50006, proxy: 欧盟策略}
   - {name: MIXED-AL, type: mixed, port: 50007, proxy: 默认代理}
 
-# ======================== 
-#全局基础配置
-# ========================
+# ==================== 核心配置 ====================
+# 基础配置
+mode: rule
 port: 7890
 socks-port: 7891
 redir-port: 7892
 mixed-port: 7893
-tproxy-port: 7894
+tproxy-port: 7895
+ipv6: true
 allow-lan: true
-bind-address: "*"
-ipv6: false
-unified-delay: true      # 统一显示 TCP 延迟
-tcp-concurrent: true     # 开启并发提升网页加载速度
-log-level: warning       # 减少日志频率，保护路由器 Flash 寿命
-find-process-mode: 'off'
-global-client-fingerprint: chrome
+unified-delay: true
+tcp-concurrent: true
+log-level: warning
+bind-address: '*'
+find-process-mode: 'always'
+keep-alive-interval: 15
+keep-alive-idle: 600
+# global-client-fingerprint: chrome
 
+# 认证配置
+authentication:
+  - mihomo:choujiaoya
+skip-auth-prefixes:
+  - 192.168.1.0/24
+  - 192.168.50.0/24
+  - 192.168.31.0/24
+  - 192.168.100.0/24
+  - 127.0.0.1/8
+
+# 实验性功能
+experimental:
+  quic-go-disable-gso: true  
+     
+# 管理面板配置
+external-ui-url: https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
+external-ui-name: zashboard
+external-ui: ui
+external-controller: 127.0.0.1:9090
+secret: 3FZbvJ4w
+
+# 配置存储
 profile:
   store-selected: true
   store-fake-ip: true
 
-# ========================
-#流量嗅探
-# ========================
+# 流量嗅探
 sniffer:
   enable: true
   sniff:
-    HTTP: {ports: [80, 8080-8880], override-destination: false}
-    TLS: {ports: [443, 8443]}
-    QUIC: {ports: [443, 8443]}
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
   skip-domain:
     - "Mijia Cloud"
     - "+.push.apple.com"
 
-# ========================
-#入站设置 (由 MC 插件脚本处理路由逻辑)
-# ========================
+# TUN模式配置
 tun:
-  enable: true
+  enable: false
   stack: mixed
-  dns-hijack: ["any:53", "tcp://any:53"]
-  auto-route: false
-  auto-redirect: false
-  auto-detect-interface: false
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
 
-# ========================
-#DNS 模块 (针对 MC 插件 Fake-IP 模式深度优化)
-# ========================
+hosts:
+  miwifi.com: 192.168.31.2
+  "epdg.epc.mnc010.mcc234.pub.3gppnetwork.org": [87.194.8.8, 87.194.88.8, 87.194.89.8, 87.194.9.8]
+  services.googleapis.cn: services.googleapis.com
+  cn.bing.com: www4.bing.com
+  dns.alidns.com: [223.5.5.5, 223.6.6.6, 2400:3200::1, 2400:3200:baba::1]
+  doh.pub: [1.12.12.12, 1.12.12.21, 120.53.53.53]
+  dns.google: [8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844]
+  cloudflare-dns.com: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
+    
+# DNS配置
 dns:
   enable: true
-  listen: :23453        # 适配 MC 插件默认监听端口
-  ipv6: false
-  respect-rules: true
+  ipv6: true
+  use-hosts: true
+  listen: 0.0.0.0:1053
+  fake-ip-range: 198.18.0.1/16
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16 # 适配插件默认 Fake-IP 段
-  fake-ip-filter-mode: blacklist 
-  default-nameserver: [223.5.5.5, 119.29.29.29]
-  proxy-server-nameserver: [119.29.29.29]
-  nameserver: [223.5.5.5, 119.29.29.29, 180.76.76.76]
+  respect-rules: true
+  nameserver:
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
   fake-ip-filter:
     - rule-set:fakeip-filter
     - rule-set:Direct
     - rule-set:Private
     - rule-set:China
-    - '+.pub.3gppnetwork.org'
-    - "+.bing.com"
     - +.miwifi.com
     - +.docker.io
     - +.market.xiaomi.com
     - +.push.apple.com
-    - +.nimenshishangdi.cc
-    - "*.lan"
-    - "*.local"
-    - "*.router.asus.com" # 确保梅林/华硕后台访问正常
-    - "rule-set:private_domain,cn_domain"
-    - "+.msftconnecttest.com"
-    - "+.msftncsi.com"
-    - "time.*.com"
 
 # ==================== 代理策略组 ====================
 proxy-groups:
@@ -263,8 +293,6 @@ rules:
   - RULE-SET,Custom_Proxy_IP,国外流量
   - RULE-SET,Steam_CDN_Domain,直接连接
   - RULE-SET,Steam_CDN_IP,直接连接
-  - RULE-SET,private_domain,直接连接
-  - RULE-SET,cn_domain,直接连接
 
   # 域名规则
   - RULE-SET,ukwifi,UKwifi
@@ -333,8 +361,6 @@ ClassicalYaml: &ClassicalYaml {type: http, behavior: classical, interval: 3600, 
 # 规则提供者
 rule-providers:  
   # 域名规则
-  private_domain: {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs}
-  cn_domain:      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs}
   Tracking:       {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Tracking.mrs}
   Advertising:    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Advertising.mrs} 
   Direct:         {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Direct.mrs}
