@@ -177,7 +177,6 @@ dns:
     - +.docker.io
     - +.market.xiaomi.com
     - +.push.apple.com
-    - +.nimenshishangdi.cc
 
 # ==================== 代理策略组 ====================
 proxy-groups:
