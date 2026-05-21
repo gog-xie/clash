@@ -176,15 +176,6 @@ dns:
     - +.docker.io
     - +.market.xiaomi.com
     - +.push.apple.com
-    - +.nimenshishangdi.cc
-    - "*.lan"
-    - "*.local"
-    - "*.router.asus.com" # 确保梅林/华硕后台访问正常
-    - "rule-set:private_domain,cn_domain"
-    - "+.msftconnecttest.com"
-    - "+.msftncsi.com"
-    - "time.*.com"
-    - +.jsdelivr.net
 
 # ==================== 代理策略组 ====================
 proxy-groups:
@@ -302,8 +293,6 @@ rules:
   - RULE-SET,Custom_Proxy_IP,国外流量
   - RULE-SET,Steam_CDN_Domain,直接连接
   - RULE-SET,Steam_CDN_IP,直接连接
-  - RULE-SET,private_domain,直接连接
-  - RULE-SET,cn_domain,直接连接
 
   # 域名规则
   - RULE-SET,ukwifi,UKwifi
@@ -372,8 +361,6 @@ ClassicalYaml: &ClassicalYaml {type: http, behavior: classical, interval: 3600, 
 # 规则提供者
 rule-providers:  
   # 域名规则
-  private_domain: {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs}
-  cn_domain:      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs}
   Tracking:       {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Tracking.mrs}
   Advertising:    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Advertising.mrs} 
   Direct:         {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Direct.mrs}
