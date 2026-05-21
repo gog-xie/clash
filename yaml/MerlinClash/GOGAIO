@@ -240,20 +240,20 @@ rules:
   - RULE-SET,Advertising,REJECT
   - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT  # 阻止 QUIC
 
-  # 192.168.50.101 ~ 199 所有设备走直连（本规则根据需要修订）
-  - SRC-IP-CIDR,192.168.50.101/32,DIRECT,no-resolve
-  - SRC-IP-CIDR,192.168.50.102/31,DIRECT,no-resolve
-  - SRC-IP-CIDR,192.168.50.104/30,DIRECT,no-resolve
-  - SRC-IP-CIDR,192.168.50.108/30,DIRECT,no-resolve
-  - SRC-IP-CIDR,192.168.50.112/28,DIRECT,no-resolve
-  - SRC-IP-CIDR,192.168.50.128/26,DIRECT,no-resolve
-  - SRC-IP-CIDR,192.168.50.192/29,DIRECT,no-resolve
+  # 192.168.1.101 ~ 199 所有设备走直连（本规则根据需要修订和启用）
+  #- SRC-IP-CIDR,192.168.1.101/32,DIRECT,no-resolve
+  #- SRC-IP-CIDR,192.168.1.102/31,DIRECT,no-resolve
+  #- SRC-IP-CIDR,192.168.1.104/30,DIRECT,no-resolve
+  #- SRC-IP-CIDR,192.168.1.108/30,DIRECT,no-resolve
+  #- SRC-IP-CIDR,192.168.1.112/28,DIRECT,no-resolve
+  #- SRC-IP-CIDR,192.168.1.128/26,DIRECT,no-resolve
+  #- SRC-IP-CIDR,192.168.1.192/29,DIRECT,no-resolve
   
-  # 某内网设备部分代理，其余直连（本规则根据需要修订）
-  - RULE-SET,My_Proxy,国外流量
-  - SRC-IP-CIDR,192.168.50.8/32,DIRECT,no-resolve
-  - SRC-IP-CIDR,192.168.50.9/32,DIRECT,no-resolve
-  #- SRC-IP-CIDR,240e::3241:dfa3:t55e:hyy5/128,DIRECT,no-resolve #某设备固定IPV6直连
+  # 内网设备192.168.1.88所有链接走直连，设备192.168.1.98和240e:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx的部分链接（My_Proxy）走代理，其余走直连
+  #- SRC-IP-CIDR,192.168.1.88/32,DIRECT,no-resolve
+  #- RULE-SET,My_Proxy,手动选择
+  #- SRC-IP-CIDR,192.168.1.98/32,DIRECT,no-resolve
+  #- SRC-IP-CIDR,240e:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx/128,DIRECT,no-resolve
  
   # 自定义，完善漏网之鱼
   - RULE-SET,My_Direct,直接连接
