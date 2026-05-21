@@ -10,7 +10,7 @@
 # Name: MihomoAllInOne_Full  
 # Designer: HenryChiao
 # Reviser: gog_xie 
-# Version: v1-26.5.2
+# Version: v1-26.5.20
 # Date: 2026-05-20
 
 # Please add your subscription link in the proxy-providers section.
@@ -252,8 +252,7 @@ rules:
   - RULE-SET,My_Proxy,国外流量
   - SRC-IP-CIDR,192.168.50.8/32,DIRECT,no-resolve
   - SRC-IP-CIDR,192.168.50.9/32,DIRECT,no-resolve
-  - SRC-IP-CIDR,240e:399:1e65:3420:9209:d0ff:fe06:a5d8/128,DIRECT,no-resolve
-  - SRC-IP-CIDR,240e:399:1e65:3420:9209:d0ff:fe06:a5d9/128,DIRECT,no-resolve
+  - SRC-IP-CIDR,240e:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX/128,DIRECT,no-resolve
 
   #自定义
   - RULE-SET,My_Direct,直接连接
