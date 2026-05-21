@@ -251,7 +251,8 @@ rules:
 
   #某内网设备部分代理，其余直连
   - RULE-SET,My_Proxy,国外流量
-  - SRC-IP-CIDR,192.168.50.8/32,DIRECT
+  - SRC-IP-CIDR,192.168.1.88/32,DIRECT
+  - SRC-IP-CIDR,192.168.1.98/32,DIRECT
 
   #自定义
   - RULE-SET,My_Direct,直接连接
