@@ -3,6 +3,7 @@
 
 payload:
   - DOMAIN-SUFFIX,themoviedb.org
+  - DOMAIN-SUFFIX,tmdb.org
   - DOMAIN-SUFFIX,thetvdb.com
   - DOMAIN-SUFFIX,docker.com
   - DOMAIN-SUFFIX,docker.io
