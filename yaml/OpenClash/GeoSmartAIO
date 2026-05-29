@@ -313,9 +313,9 @@ rules:
   #- SRC-IP-CIDR,192.168.1.112/28,DIRECT,no-resolve
   #- SRC-IP-CIDR,192.168.1.128/26,DIRECT,no-resolve
   #- SRC-IP-CIDR,192.168.1.192/29,DIRECT,no-resolve
-  
-  # 5.3 某内网设备部分代理，其余直连（本项根据需要修订）
   #- SRC-IP-CIDR,192.168.1.88/32,DIRECT,no-resolve
+  
+# 5.3 某内网设备部分代理，其余直连（本项根据需要修订）
   #- RULE-SET,My_Proxy,手动选择
   #- SRC-IP-CIDR,192.168.1.98/32,DIRECT,no-resolve
   #- SRC-IP-CIDR,240e:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx/128,DIRECT,no-resolve
