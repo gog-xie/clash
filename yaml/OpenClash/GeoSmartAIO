@@ -142,7 +142,7 @@ tun:
   auto-redirect: true
   auto-detect-interface: true
 
-# 3.8本地静态域名映射表
+# 3.8本地静态域名映射表，优先级最高，用来强制把某个域名解析到指定 IP，不走 DNS、不经过规则判断。
 hosts:
   wifimimi.cc: 192.168.31.2
   "epdg.epc.mnc010.mcc234.pub.3gppnetwork.org": [87.194.8.8, 87.194.88.8, 87.194.89.8, 87.194.9.8]
