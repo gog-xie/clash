@@ -72,7 +72,6 @@ listeners:
   - {name: MIXED-AL, type: mixed, port: 50007, proxy: 一键智选}
   - {name: MIXED-OT, type: mixed, port: 50008, proxy: 冷门智选}
 
-
 # 3 核心配置
 # 3.1 基础配置
 mode: rule
@@ -143,6 +142,7 @@ tun:
   auto-redirect: true
   auto-detect-interface: true
 
+# 3.8本地静态域名映射表
 hosts:
   wifimimi.cc: 192.168.31.2
   "epdg.epc.mnc010.mcc234.pub.3gppnetwork.org": [87.194.8.8, 87.194.88.8, 87.194.89.8, 87.194.9.8]
@@ -153,7 +153,7 @@ hosts:
   dns.google: [8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844]
   cloudflare-dns.com: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
     
-# 3.8 DNS配置
+# 3.9 DNS配置
 dns:
   enable: true
   ipv6: true
