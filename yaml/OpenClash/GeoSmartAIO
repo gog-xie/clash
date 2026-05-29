@@ -330,53 +330,53 @@ rules:
   #- "RULE-SET,XPTV,直接连接"
 
   # 5.5 域名规则
-  - "GEOSITE,private,直接连接"  # 私有域名
-  - "GEOIP,private,直接连接,no-resolve"  # 私有IP
-  - "RULE-SET,Custom_Direct_Domain,直接连接"  # 自定义直连域名
-  - "RULE-SET,Custom_Direct_IP,直接连接,no-resolve"  # 自定义直连IP
-  - "RULE-SET,Custom_Direct_Port,直接连接"  # 自定义直连端口
-  - "RULE-SET,Custom_Proxy_Domain,全球手动"  # 自定义代理域名
-  - "RULE-SET,Custom_Proxy_IP,全球手动,no-resolve"  # 自定义代理IP
-  - "GEOSITE,google-cn,直接连接"  # Google中国服务
-  - "GEOSITE,category-games@cn,直接连接"  # 国内游戏
-  - "RULE-SET,Steam_CDN_Domain,直接连接"  # Steam CDN
-  - "RULE-SET,Steam_CDN_IP,直接连接,no-resolve"  # Steam CDN
-  - "GEOSITE,category-game-platforms-download,直接连接"  # 游戏平台下载
-  - "GEOSITE,category-public-tracker,直接连接"  # BT Tracker
-  - "GEOSITE,category-communication,即时通讯"  # 即时通讯
-  - "GEOSITE,category-social-media-!cn,社交媒体"  # 国外社交媒体
-  - "GEOSITE,openai,ChatGPT"  # OpenAI
-  - "GEOSITE,category-ai-!cn,AI服务"  # AI服务
-  - "GEOSITE,github,Github"  # GitHub
-  - "GEOSITE,category-speedtest,网络测试"  # 测速工具
-  - "GEOSITE,steam,游戏平台"  # Steam
-  - "GEOSITE,youtube,油管视频"  # YouTube
-  - "GEOSITE,apple-tvplus,Apple TV+"  # Apple TV+
-  - "GEOSITE,apple,苹果服务"  # 苹果服务
-  - "GEOSITE,microsoft,微软服务"  # 微软服务
-  - "GEOSITE,googlefcm,谷歌FCM"  # Google FCM推送
-  - "GEOSITE,google,谷歌服务"  # Google服务
-  - "GEOSITE,tiktok,TikTok"  # TikTok
-  - "GEOSITE,netflix,奈飞视频"  # Netflix
-  - "GEOSITE,disney,迪士尼+"  # Disney+
-  - "GEOSITE,hbo,HBO"  # HBO
-  - "GEOSITE,primevideo,Prime Video"  # Prime Video
-  - "GEOSITE,category-emby,Emby服"  # Emby
-  - "GEOSITE,spotify,Spotify"  # Spotify
-  - "GEOSITE,bahamut,Bahamut"  # 巴哈姆特
-  - "GEOSITE,category-games,游戏平台"  # 游戏平台
-  - "GEOSITE,category-entertainment,国外媒体"  # 国外媒体
-  - "GEOSITE,category-ecommerce,国外电商"  # 国外电商
-  - "GEOSITE,gfw,全球手动"  # GFW列表
-  - "GEOIP,telegram,即时通讯,no-resolve"  # Telegram IP
-  - "GEOIP,twitter,社交媒体,no-resolve"  # Twitter IP
-  - "GEOIP,facebook,社交媒体,no-resolve"  # Facebook IP
-  - "GEOIP,google,谷歌服务,no-resolve"  # Google IP
-  - "GEOIP,netflix,奈飞视频,no-resolve"  # Netflix IP
-  - "GEOSITE,cn,直接连接"  # 中国域名
-  - "GEOIP,cn,直接连接,no-resolve"  # 中国IP
-  - "RULE-SET,Custom_Port_Direct,非标端口"  # 非标端口
-  - "MATCH,漏网之鱼"  # 兜底规则
+  - "GEOSITE,private,直接连接"                               # 私有域名
+  - "GEOIP,private,直接连接,no-resolve"                      # 私有IP
+  - "RULE-SET,Custom_Direct_Domain,直接连接"                 # 自定义直连域名
+  - "RULE-SET,Custom_Direct_IP,直接连接,no-resolve"          # 自定义直连IP
+  - "RULE-SET,Custom_Direct_Port,直接连接"                   # 自定义直连端口
+  - "RULE-SET,Custom_Proxy_Domain,全球手动"                  # 自定义代理域名
+  - "RULE-SET,Custom_Proxy_IP,全球手动,no-resolve"           # 自定义代理IP
+  - "GEOSITE,google-cn,直接连接"                             # Google中国服务
+  - "GEOSITE,category-games@cn,直接连接"                     # 国内游戏
+  - "RULE-SET,Steam_CDN_Domain,直接连接"                     # Steam CDN
+  - "RULE-SET,Steam_CDN_IP,直接连接,no-resolve"              # Steam CDN
+  - "GEOSITE,category-game-platforms-download,直接连接"      # 游戏平台下载
+  - "GEOSITE,category-public-tracker,直接连接"               # BT Tracker
+  - "GEOSITE,category-communication,即时通讯"                # 即时通讯
+  - "GEOSITE,category-social-media-!cn,社交媒体"             # 国外社交媒体
+  - "GEOSITE,openai,ChatGPT"                                # OpenAI
+  - "GEOSITE,category-ai-!cn,AI服务"                         # AI服务
+  - "GEOSITE,github,Github"                                 # GitHub
+  - "GEOSITE,category-speedtest,网络测试"                    # 测速工具
+  - "GEOSITE,steam,游戏平台"                                 # Steam
+  - "GEOSITE,youtube,油管视频"                               # YouTube
+  - "GEOSITE,apple-tvplus,Apple TV+"                        # Apple TV+
+  - "GEOSITE,apple,苹果服务"                                 # 苹果服务
+  - "GEOSITE,microsoft,微软服务"                             # 微软服务
+  - "GEOSITE,googlefcm,谷歌FCM"                              # Google FCM推送
+  - "GEOSITE,google,谷歌服务"                                # Google服务
+  - "GEOSITE,tiktok,TikTok"                                 # TikTok
+  - "GEOSITE,netflix,奈飞视频"                               # Netflix
+  - "GEOSITE,disney,迪士尼+"                                 # Disney+
+  - "GEOSITE,hbo,HBO"                                       # HBO
+  - "GEOSITE,primevideo,Prime Video"                         # Prime Video
+  - "GEOSITE,category-emby,Emby服"                           # Emby
+  - "GEOSITE,spotify,Spotify"                                # Spotify
+  - "GEOSITE,bahamut,Bahamut"                                # 巴哈姆特
+  - "GEOSITE,category-games,游戏平台"                         # 游戏平台
+  - "GEOSITE,category-entertainment,国外媒体"                 # 国外媒体
+  - "GEOSITE,category-ecommerce,国外电商"                     # 国外电商
+  - "GEOSITE,gfw,全球手动"                                    # GFW列表
+  - "GEOIP,telegram,即时通讯,no-resolve"                      # Telegram IP
+  - "GEOIP,twitter,社交媒体,no-resolve"                       # Twitter IP
+  - "GEOIP,facebook,社交媒体,no-resolve"                      # Facebook IP
+  - "GEOIP,google,谷歌服务,no-resolve"                        # Google IP
+  - "GEOIP,netflix,奈飞视频,no-resolve"                       # Netflix IP
+  - "GEOSITE,cn,直接连接"                                     # 中国域名
+  - "GEOIP,cn,直接连接,no-resolve"                            # 中国IP
+  - "RULE-SET,Custom_Port_Direct,非标端口"                    # 非标端口
+  - "MATCH,漏网之鱼"                                          # 兜底规则
 
 # 6 规则集 
 # 6.1 规则集行为模板
