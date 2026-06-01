@@ -1,3 +1,6 @@
+# 原作者链接https://github.com/Lanlan13-14/Rules/blob/main/configfull_lite.yaml
+
+
 # 锚点区
 Proxy_first: &Proxy_first {type: select, proxies: [节点选择, 香港节点, 新加坡节点, 日本节点, 台湾节点, 美国节点, 欧洲节点, 全部节点, 自建/家宽节点, 全球直连]}
 
