@@ -234,7 +234,7 @@ proxy-groups:
   - {name: 冷门策略,     type: select, proxies: [冷门均衡-轮询, 冷门均衡-散列, 冷门自动], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
 
   # 4.4 其他策略组（放在这里仅为了界面美观）
-  - {name: 全球手动,     type: select, proxies: [策略故转SG, 策略故转HK, 策略故转US, 策略故转TW, 策略故转EU, 策略故转JP, 策略故转KR, 策略故转OT], include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png}
+  - {name: 全球手动,     type: select, proxies: [狮城策略, 香港策略, 美国策略, 台湾策略, 欧盟策略, 日本策略, 韩国策略, 冷门策略], include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png}
 
   # 4.5 自动测速组 
   - {name: 香港自动,     <<: *BaseUT, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
