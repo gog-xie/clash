@@ -1,12 +1,3 @@
-#####################################
-#  ░▒▓██████▓▒░░▒▓█▓▒░░▒▓██████▓▒░  #
-# ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ # 
-# ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ # 
-# ░▒▓████████▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ #
-# ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ # 
-# ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ #
-# ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓██████▓▒░  #
-#####################################
 # Name: Mihomo Geo General All In One 
 # Designer: gog_xie
 # Version: v1-26.1.1
@@ -105,7 +96,7 @@ external-ui-url: https://github.com/Zephyruso/zashboard/releases/latest/download
 external-ui-name: zashboard
 external-ui: ui
 external-controller: 127.0.0.1:9090
-secret: 3FZbvJ4w
+secret: mihomo
 
 # 配置存储
 profile:
@@ -199,30 +190,30 @@ proxy-groups:
   - {name: 直接连接,     type: select, proxies: [DIRECT], hidden: true, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png}
   
   # ==================== 业务策略组 ====================
-  - {name: Github,      <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
+  - {name: Github,       <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
   - {name: 油管视频,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png}
   - {name: 谷歌服务,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png}
   - {name: 谷歌FCM,      <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/googlevpn.png}
-  - {name: ChatGPT,     <<: *SelectUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
-  - {name: AI服务,      <<: *SelectUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png}
-  - {name: 国外媒体,     <<: *SelectPY, icon: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/icons/media.png"}
-  - {name: 国外电商,     <<: *SelectPY, icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/shopping.png"}
+  - {name: ChatGPT,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
+  - {name: AI服务,      <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png}
+  - {name: 国外娱乐,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png}
+  - {name: 国外电商,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/shopping.png}
   - {name: 即时通讯,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/whatsapp.png}
   - {name: 社交媒体,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PBS.png}
-  - {name: TikTok,      <<: *SelectSG, icon: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/icons/tiktok.png"}
+  - {name: TikTok,      <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png}
   - {name: 奈飞视频,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png}
-  - {name: 迪士尼+,      <<: *SelectPY, icon: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/icons/disney.png"}
-  - {name: HBO,         <<: *SelectPY, icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_1.png"}
-  - {name: Prime Video, <<: *SelectPY, icon: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/icons/primevideo.png"}
-  - {name: Spotify,     <<: *SelectPY, icon: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/icons/spotify.png"}
-  - {name: Copilot,     <<: *SelectUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Copilot.png}
+  - {name: 迪士尼+,      <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney%2B.png}
+  - {name: HBO,         <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png}
+  - {name: Prime Video, <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video.png}
+  - {name: Spotify,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png}
+  - {name: 加密货币,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency.png}
   - {name: 苹果服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png}
-  - {name: Apple TV+,   <<: *SelectDC, icon: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/icons/appletv.png"}
-  - {name: Emby服,      <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png}
+  - {name: Emby,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png}
+  - {name: Apple TV+,   <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_TV.png}
   - {name: 微软服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
   - {name: 游戏平台,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
   - {name: Bahamut, type: select, proxies: [直接连接, 台湾策略], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png}
-  - {name: 非标端口, type: select, proxies: [直接连接, 兜底流量], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bypass.png}
+  - {name: 非标端口, type: select, proxies: [直接连接, 漏网之鱼], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Clubhouse_2.png}
 
 # =============== 策略组-地区组分界识别 ===============
   - {name: 兜底流量,     <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png}
@@ -289,19 +280,18 @@ rules:
   
   # 某内网设备部分代理，其余直连（本规则根据需要修订）
   - RULE-SET,My_Proxy,默认代理
-  - SRC-IP-CIDR,192.168.50.8/32,DIRECT,no-resolve
-  - SRC-IP-CIDR,192.168.50.9/32,DIRECT,no-resolve
-  - SRC-IP-CIDR,XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX/128,DIRECT,no-resolve
+  - SRC-IP-CIDR,192.168.50.58/32,DIRECT,no-resolve
+  - SRC-IP-CIDR,192.168.50.59/32,DIRECT,no-resolve
+  #- SRC-IP-CIDR,XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX/128,DIRECT,no-resolve
 
   #自定义
-  - RULE-SET,My_Direct,直接连接
   - RULE-SET,fakeip-filter,直接连接
   #- RULE-SET,private_domain,直接连接  #fakeip-filter中开启private_domain和cn_domain时开启这两项
   #- RULE-SET,cn_domain,直接连接
 
   # 域名规则
   - "GEOSITE,private,直接连接"                                  # 私有域名
-  - "GEOIP,private,直接连接,no-resolve"                         # 私有IP
+  - "GEOIP,private,直接连接,no-resolve"                         # 内网 / 保留 IP(127/8、192.168/16…)
   - "RULE-SET,Custom_Direct_Domain,直接连接"                    # 自定义直连域名
   - "RULE-SET,Custom_Direct_IP,直接连接,no-resolve"             # 自定义直连IP
   - "RULE-SET,Custom_Direct_Port,直接连接"                      # 自定义直连端口
@@ -313,12 +303,14 @@ rules:
   - "RULE-SET,Steam_CDN_IP,直接连接,no-resolve"                 # Steam CDN
   - "GEOSITE,category-game-platforms-download,直接连接"         # 游戏平台下载
   - "GEOSITE,category-public-tracker,直接连接"                  # BT Tracker
-  - "GEOSITE,category-communication,即时通讯"                   # 即时通讯
-  - "GEOSITE,category-social-media-!cn,社交媒体"                # 国外社交媒体
-  - "GEOSITE,openai,ChatGPT"                                   # OpenAI
-  - "GEOSITE,category-ai-!cn,AI服务"                            # AI服务
+  - "GEOSITE,category-pt,直接连接"                              # PT站
+  - "GEOSITE,category-communication,即时通讯"                   # 即时通讯(含telegram、WhatsApp、clubhouse等)
+  - "GEOSITE,category-social-media-!cn,社交媒体"                # 国外社交媒体(含instagram、facebook、twitter、mixi等)
+  - "GEOSITE,openai,ChatGPT"                                   # OpenAI(在category-ai-!cn已含openai,如需单独分流,可启用本条规则,同时也启用"4.1 业务分组"中的ChatGPT)
+  - "GEOSITE,category-ai-!cn,AI服务"                            # AI服务(含openai)
   - "GEOSITE,github,Github"                                    # GitHub
   - "GEOSITE,category-speedtest,网络测试"                       # 测速工具
+  - "GEOSITE,test-ipv6,网络测试"                                # 测速工具
   - "GEOSITE,steam,游戏平台"                                    # Steam
   - "GEOSITE,youtube,油管视频"                                  # YouTube
   - "GEOSITE,apple-tvplus,Apple TV+"                           # Apple TV+
@@ -331,18 +323,23 @@ rules:
   - "GEOSITE,disney,迪士尼+"                                    # Disney+
   - "GEOSITE,hbo,HBO"                                          # HBO
   - "GEOSITE,primevideo,Prime Video"                           # Prime Video
-  - "GEOSITE,category-emby,Emby服"                             # Emby
+  - "GEOSITE,category-emby,Emby"                               # Emby
   - "GEOSITE,spotify,Spotify"                                  # Spotify
   - "GEOSITE,bahamut,Bahamut"                                  # 巴哈姆特
   - "GEOSITE,category-games,游戏平台"                           # 游戏平台
-  - "GEOSITE,category-entertainment,国外媒体"                   # 国外媒体
+  - "GEOSITE,category-entertainment,国外娱乐"                   # 国外娱乐(含youtube、bahamut、primevideo、netflix、disney、apple-tvplus、hbo、category-games-!cn、tmdb、imdb等国外游戏、音乐、播客与视频)
   - "GEOSITE,category-ecommerce,国外电商"                       # 国外电商
-  - "GEOSITE,gfw,全球手动"                                      # GFW列表
+  - "GEOSITE,category-cryptocurrency,加密货币"                  # 加密货币(大部分在gfw中)
+  - "GEOSITE,gfw,全球手动"                                      # GFW列表(主要规则，被墙列表)
   - "GEOIP,telegram,即时通讯,no-resolve"                        # Telegram IP
   - "GEOIP,twitter,社交媒体,no-resolve"                         # Twitter IP
   - "GEOIP,facebook,社交媒体,no-resolve"                        # Facebook IP
   - "GEOIP,google,谷歌服务,no-resolve"                          # Google IP
   - "GEOIP,netflix,奈飞视频,no-resolve"                         # Netflix IP
+  - "GEOSITE,geolocation-!cn,直接连接"                          # 非中国域名(本条主要是境外域名,但几乎未被墙,默认直连，视连接情况选择代理)
+  - "GEOIP,cloudflare,直接连接,no-resolve"                      # cloudflare(geolocation-!cn已包含cloudflare,这里IP补充)
+  - "GEOIP,cloudfront,直接连接,no-resolve"                      # 亚马逊旗下CDN(同上IP补充)
+  - "GEOIP,fastly,直接连接,no-resolve"                          # FSLY CDN(同上IP补充)
   - "GEOSITE,cn,直接连接"                                       # 中国域名
   - "GEOIP,cn,直接连接,no-resolve"                              # 中国IP
   - "RULE-SET,Custom_Port_Direct,非标端口"                      # 非标端口
