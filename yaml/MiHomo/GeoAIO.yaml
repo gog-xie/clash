@@ -355,7 +355,7 @@ rules:
   - "GEOSITE,spotify,Spotify"                                  # Spotify
   - "GEOSITE,bahamut,Bahamut"                                  # 巴哈姆特
   - "GEOSITE,category-games,游戏平台"                           # 游戏平台
-  - "GEOSITE,category-entertainment,国外娱乐"                   # 国外娱乐(含youtube、bahamut、primevideo、netflix、disney、apple-tvplus、hbo、category-games-!cn、tmdb、imdb等国外游戏、音乐、播客与视频)
+  - "GEOSITE,category-entertainment,国外娱乐"                   # 国外娱乐(含youtube、tiktok、bahamut、primevideo、netflix、disney、apple-tvplus、hbo、category-games-!cn、tmdb、imdb等国外游戏、音乐、播客与视频)
   - "GEOSITE,category-ecommerce,国外电商"                       # 国外电商
   - "GEOSITE,category-cryptocurrency,加密货币"                  # 加密货币(大部分在gfw中)
   - "GEOSITE,gfw,全球手动"                                      # GFW列表(主要规则，被墙列表)
