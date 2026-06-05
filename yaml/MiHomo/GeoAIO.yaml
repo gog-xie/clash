@@ -192,12 +192,13 @@ dns:
 proxy-groups:
   # 4.1 业务策略组(根据需求按“1.4 策略组代理列表”模板自行选择默认类型,仅是排列顺序不一样,包含的策略是一样的)
   - {name: 默认代理,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
+  - {name: 默认直连,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
   - {name: 故障转移,     <<: *BaseFB, proxies: [狮城策略, 台湾策略, 美国策略, 欧盟策略, 日本策略, 香港策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ULB.png}
   - {name: Github,      <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
   - {name: 油管视频,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png}
   - {name: 谷歌服务,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png}
   - {name: 谷歌FCM,      <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/googlevpn.png}
-  #- {name: ChatGPT,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
+  - {name: ChatGPT,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
   - {name: AI服务,      <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png}
   - {name: 国外娱乐,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png}
   - {name: 国外电商,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/shopping.png}
@@ -333,7 +334,7 @@ rules:
   - "GEOSITE,category-pt,直接连接"                              # PT站
   - "GEOSITE,category-communication,即时通讯"                   # 即时通讯(含telegram、WhatsApp、clubhouse等)
   - "GEOSITE,category-social-media-!cn,社交媒体"                # 国外社交媒体(含instagram、facebook、twitter、mixi等)
-  #- "GEOSITE,openai,ChatGPT"                                   # OpenAI(在category-ai-!cn已含openai,如需单独分流,可启用本条规则,同时也启用"4.1 业务分组"中的ChatGPT)
+  - "GEOSITE,openai,ChatGPT"                                   # OpenAI(在category-ai-!cn已含openai,如需单独分流,可启用本条规则,同时也启用"4.1 业务分组"中的ChatGPT)
   - "GEOSITE,category-ai-!cn,AI服务"                           # AI服务(含openai)
   - "GEOSITE,github,Github"                                    # GitHub
   - "GEOSITE,category-speedtest,网络测试"                       # 测速工具
@@ -363,10 +364,10 @@ rules:
   - "GEOIP,facebook,社交媒体,no-resolve"                        # Facebook IP
   - "GEOIP,google,谷歌服务,no-resolve"                          # Google IP
   - "GEOIP,netflix,奈飞视频,no-resolve"                         # Netflix IP
-  - "GEOSITE,geolocation-!cn,漏网之鱼"                          # 非中国域名(本条主要是境外域名,但几乎未被墙,直接连接，视连接情况代理)
-  - "GEOIP,cloudflare,漏网之鱼,no-resolve"                      # cloudflare(geolocation-!cn已包含cloudflare,这里IP补充)
-  - "GEOIP,cloudfront,漏网之鱼,no-resolve"                      # 亚马逊旗下CDN(同上IP补充)
-  - "GEOIP,fastly,漏网之鱼,no-resolve"                          # FSLY CDN(同上IP补充)
+  - "GEOSITE,geolocation-!cn,默认直连"                          # 非中国域名(本条主要是境外域名,但几乎未被墙,直接连接，若连不上再选择代理)
+  - "GEOIP,cloudflare,默认直连,no-resolve"                      # cloudflare(geolocation-!cn已包含cloudflare,这里IP补充)
+  - "GEOIP,cloudfront,默认直连,no-resolve"                      # 亚马逊旗下CDN(同上IP补充)
+  - "GEOIP,fastly,默认直连,no-resolve"                          # FSLY CDN(同上IP补充)
   - "GEOSITE,cn,直接连接"                                       # 中国域名
   - "GEOIP,cn,直接连接,no-resolve"                              # 中国IP
   - "RULE-SET,Custom_Port_Direct,非标端口"                      # 非标端口
