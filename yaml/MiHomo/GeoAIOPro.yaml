@@ -1,4 +1,4 @@
-# Name: Mihomo Geo All In One 
+# Name: Mihomo Geo All In One Pro
 # Designer: gog_xie
 # Version: v1-26.2.0
 # Date: 2026-05-24
@@ -324,7 +324,7 @@ rules:
   # 5.3 网设备(192.168.50.58)部分代理,其余直连（本条规则解决NAS、下载机少量需代理的问题，如docker、emby刮削等需代理，其余直连，避免跑流量，视个人需求修订）
   - "RULE-SET,My_Proxy,默认代理"
   - "SRC-IP-CIDR,192.168.50.58/32,DIRECT,no-resolve"
-  - "SRC-IP-CIDR,240e:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX/128,DIRECT,no-resolve"
+  #- "SRC-IP-CIDR,240e:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX/128,DIRECT,no-resolve"
 
   # 5.4 自定义fakeip-filter域名直连,fakeip-filter中开启后,本项也需同步开启
   - "RULE-SET,fakeip-filter,直接连接"
