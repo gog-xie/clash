@@ -156,18 +156,16 @@ dns:
   fake-ip-range: 198.18.0.1/16
   enhanced-mode: fake-ip
   respect-rules: true
-  nameserver:
-    - 218.6.200.139
-    - 202.98.96.68
-    #- https://dns.google/dns-query
-    #- https://cloudflare-dns.com/dns-query
+  nameserver: # 本项建议填入本地DNS
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   direct-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  fake-ip-filter:   #本条按需启用,如果开启了rule-set项,对应“5 规则路由”和“6 规则集”的项目也需同时启用
+  fake-ip-filter:   # 本项按需启用,如果开启了rule-set项,对应“5 规则路由”和“6 规则集”的项目也需同时启用
     - rule-set:fakeip-filter
     #- rule-set:Direct
     #- rule-set:Private
