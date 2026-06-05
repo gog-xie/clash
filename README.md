@@ -34,9 +34,6 @@ https://github.com/gog-xie/Mihomo/blob/main/yaml/MiHomo/GeoAIO.yaml
 https://github.com/gog-xie/Mihomo/blob/main/yaml/MiHomo/GeoAIOPro.yaml
 ```
 
-<p align="center"> <b>MerlinClash GeoIP数量显示为0 </b></p>
-<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/merlinclash%E5%86%85%E7%BD%AE%E8%A7%84%E5%88%99%E8%B0%83%E7%94%A8.png" width="360" heiht="190"></div>
-
 -  ## 3 特殊需求
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;科学插件部署在主路由的场景，常常有部分设备不需要科学代理，旁路由比较好设置，只需让需要代理设备的网关指向旁路由，不需代理的默认指向主路由即可；但也有设备仅少量代理需求，其余不走科学代理。特别是前者比较特殊，既要少量代理，又要大部分直连，比如白群仅docker镜像库、Emby海报刮削需要科学代理，其余全部绕过内核走直连的情况（主要是群晖按普通规则代理后，可能会产生不必要的代理流量，实际上是不需要的），可以利用规则先后顺序正则匹配的特点来实现部分代理其他不代理，按先后顺序匹配指令，如果没有匹配上，再去匹配下一项规则。根据这一特点，先将这类设备IP 与MAC地址绑定，再让不需代理的设备IP匹配走直连，其次让部分需要代理的设备IP 匹配Proxy规则，最后让部分需要代理的设备IP匹配走直连，把这三项放规则集的最前端即可。例如以下规则：
 
