@@ -10,7 +10,7 @@
 - ## 1 前言
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;科学上网常常部署在旁路由，但旁路由时而会出现莫名的小问题，DHCP也有不便之处。其实家庭网络简单好用即可，仅一台硬路由也能满足家庭上网需求，在主路由上安装Merlinclash，实现国内外科学分流，试用BE86U开启MerlinClash后，不同的配置模板使用效果不一，几乎可实现无感内外网。另外，广告拦截尽量不要放置在代理程序中，在终端安装例如AdGuard插件效果远远好于诸如OpenClash的广告拦截效果。
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过对比ClashVerge、MerlinClash、OpenClash、Nikki等代理程序，各种程序在不同的硬件和网络环境各有优劣：有稳定的旁路由（一般为7×24小时开机的独立旁路由），使用OpenClash、Nikki等比较稳定；如果旁路由需经常性的开关机，那部署在主路由上比较合适（如OpenClash、Nikki或Merlinclash等）；科学上网需求不大的，在终端电脑上安装类似Clash Verge的代理程序，随用随开。
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目主要是yaml配置模板的下载，各代理程序的设置请自行查阅相关教程，如OpenClash的设置可参照 [Aethersailor](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88)大佬的设置方案🥊。另外[HenryChiao](https://github.com/HenryChiao/MIHOMO_YAMLS/tree/main/THEYAMLS/General_Config/HenryChiao)大佬收集了全网做的较好的yaml模板，可集中参考借鉴
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;各代理程序的设置请自行查阅相关教程，如OpenClash的设置可参照 [Aethersailor](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88)大佬的设置方案🥊。另外[HenryChiao](https://github.com/HenryChiao/MIHOMO_YAMLS/tree/main/THEYAMLS/General_Config/HenryChiao)大佬收集了全网做的较好的yaml模板，可集中参考借鉴
 
 ***
 
