@@ -167,11 +167,9 @@ dns:
   fake-ip-range: 198.18.0.1/16
   enhanced-mode: fake-ip
   respect-rules: true
-  nameserver:
-    - 218.6.200.139
-    - 202.98.96.68
-    #- https://dns.google/dns-query
-    #- https://cloudflare-dns.com/dns-query
+  nameserver: #本项建议填入本地DNS
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
