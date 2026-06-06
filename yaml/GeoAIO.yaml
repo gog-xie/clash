@@ -152,42 +152,23 @@ hosts:
 dns:
   enable: true
   ipv6: true
-  use-hosts: true
-  listen: 0.0.0.0:1053
-  fake-ip-range: 198.18.0.1/16
   enhanced-mode: fake-ip
-  respect-rules: true
-  nameserver: # 本项建议填入本地DNS
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
-  proxy-server-nameserver:
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 119.29.29.29
+    - 180.184.1.1
+    - 223.5.5.5
+  nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  direct-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  fake-ip-filter:   # 本项按需启用,如果开启了rule-set项,对应“5 规则路由”和“6 规则集”的项目也需同时启用
-    - rule-set:fakeip-filter
-    #- rule-set:Direct
-    #- rule-set:Private
-    #- rule-set:China
-    #- "GEOSITE,private"
-    #- "GEOIP,private"
-    #- "GEOSITE,cn"
-    #- "GEOIP,cn"
-    - '+.pub.3gppnetwork.org'
-    - "+.bing.com"
+  fake-ip-filter:
+    - rule-set:Direct
+    - rule-set:Private
+    - rule-set:China
     - +.miwifi.com
     - +.docker.io
     - +.market.xiaomi.com
     - +.push.apple.com
-    #- "*.lan"
-    #- "*.local"
-    #- "*.router.asus.com" # 确保梅林/华硕后台访问正常
-    #- "rule-set:private_domain,cn_domain"
-    #- "+.msftconnecttest.com"
-    #- "+.msftncsi.com"
-    #- "time.*.com"
 
 # 4 代理策略组 
 proxy-groups:
