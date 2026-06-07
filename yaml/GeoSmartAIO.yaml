@@ -54,12 +54,12 @@ SelectKR: &SelectKR {type: select, proxies: [策略故转KR, 策略故转SG, 策
 # 1.5 代理提供者 
 # 注意：请提供您的机场订阅链接,每个链接一行,并为每个机场命名,视情况启用多个机场。末尾的[优][备]为每个节点添加机场名称前缀,可自定义。
 proxy-providers:
-  # 优质订阅源 - 优质节点集合,使用时请修改
-  优质机场名称: {<<: *BaseProvider, url: '优质订阅源地址', override: {additional-prefix: '[优] '}}
-  # 中转订阅源 - 次优节点集合,使用时请修改
-  中转订阅源: {<<: *BaseProvider, url: '中转订阅源地址', override: {additional-prefix: '[中] '}}
-  # 备用订阅源 - 次优节点集合,使用时请修改
-  备用订阅源: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[备] '}}
+  # 优质订阅源 - 优质节点集合，使用时请修改
+  优质服务商: {<<: *BaseProvider, url: '优质订阅源地址', override: {additional-prefix: '[优] '}}
+  # 备用订阅源 - 次优节点集合，使用时请修改
+  备用服务商: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[备] '}}
+  # 落地订阅源 - 落地服务连接，使用时请修改
+  落地服务商: {<<: *BaseProvider, url: '落地订阅源地址', override: {additional-prefix: '[中] ', dialer-proxy: 中转服务}}
   
 # 1.6 监听器 
 listeners:
@@ -293,6 +293,8 @@ proxy-groups:
   - {name: 欧洲智选,  <<: *BaseSmart, filter: *FilterEU, include-all: true, policy-priority: '优:2;中:1;备:0.5', icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/European_Union.png}
   - {name: 冷门智选,  <<: *BaseSmart, filter: *FilterOT, include-all: true, policy-priority: '优:2;中:1;备:0.5', icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
 
+  # 中转服务层 - LoadBalance负载均衡，提供中转服务提升连通性，选用一个或多个服务商做中转，比如 优质服务商，可通过正则表达式，过滤掉不需要的节点，使用时请修改
+  - {name: 中转服务,  <<: *BaseLB, use: [优质服务商], filter: '新加坡|台湾', hidden: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin.png}
 
 # 5 规则路由 （按照从上往下的顺序遍历,优先命中上位规则,规则重复无影响,修改顺序会影响分流效果）
 rules: 
