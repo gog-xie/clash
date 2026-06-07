@@ -24,7 +24,6 @@ BaseFB: &BaseFB {type: fallback, interval: 200, lazy: true, url: 'https://www.go
 BaseCH: &BaseCH {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: consistent-hashing, hidden: true}   #散列：根据指定关键字做哈希运算,将连接固定映射到对应节点,节点变动时仅少量连接重新分配。
 BaseCR: &BaseCR {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: round-robin, hidden: true}          #轮询：按顺序依次轮流分配连接到各个可用节点,循环往复。
 #BaseGL: &BaseGL {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: sticky-sessions, hidden: true}     #目标：识别同一客户端会话,强制该会话全程使用首次分配到的节点,直到会话结束。（本配置未启用该模式,如需启用,在“4.4 地理策略组”中添加各地区均衡目标模式,如“proxies: [香港均衡-轮询, 香港均衡-散列, 香港均衡-目标, 香港自动]”,并启用各地区“4.9 负载均衡-目标”）
-BaseUT: &BaseUT {type: url-test, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true}
 BaseSmart: &BaseSmart {type: smart, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true, uselightgbm: true}
 
 # 1.3 节点筛选正则表达式 - 基于地理位置和关键词过滤
