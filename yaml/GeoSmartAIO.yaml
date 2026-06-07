@@ -305,11 +305,11 @@ rules:
   #- "GEOSITE,category-ads-all,REJECT"                           # 全品类广告 + 跟踪
   #- "GEOSITE,category-tracking,REJECT"                          # 用户行为跟踪
   #- "GEOSITE,category-public-tracker,REJECT"                    # 公共跟踪 / 统计域名
-  #- "RULE-SET,Tracking,REJECT"
+  - "RULE-SET,Tracking,REJECT"
   #- "RULE-SET,AWAvenueAds,REJECT"
-  #- "RULE-SET,Advertising,REJECT"
-  #- "RULE-SET,AdvertisingIP,REJECT,no-resolve"
-  #- "AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN,no-resolve)))),REJECT"
+  - "RULE-SET,Advertising,REJECT"
+  - "RULE-SET,AdvertisingIP,REJECT,no-resolve"
+  - "AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN,no-resolve)))),REJECT"
   
   # 5.2 特殊设置:192.168.50.101 ~ 199 所有设备走直连（本规则根据需要修订）
   - "SRC-IP-CIDR,192.168.50.101/32,DIRECT,no-resolve"
