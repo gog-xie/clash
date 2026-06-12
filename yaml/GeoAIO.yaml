@@ -52,7 +52,7 @@ proxy-providers:
   # 备用订阅源 - 次优节点集合,使用时请修改
   #备用服务商: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[备] '}}
 
-# 1.6 监听器 
+# 2 监听器 
 listeners:
   # Shadowsocks监听器 - 代理节点 玩法：远程连接家庭网络,端口和密码,使用时请修改
   - {name: SS-IN,  type: shadowsocks, listen: '::', port: 10000, udp: true, password: Xf3#Lp9WqZ, cipher: aes-256-gcm}
@@ -151,16 +151,24 @@ hosts:
 # 3.9 DNS配置
 dns:
   enable: true
-  ipv6: true
-  enhanced-mode: fake-ip
+  ipv6: false
+  use-hosts: true
+  listen: 0.0.0.0:1053
   fake-ip-range: 198.18.0.1/16
-  default-nameserver:
-    - 119.29.29.29
-    - 180.184.1.1
-    - 223.5.5.5
+  enhanced-mode: fake-ip
+  respect-rules: true
   nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fallback-dns:
+    - 114.114.114.114
+    - 119.29.29.29
   fake-ip-filter: #本条按需启用,如果开启了rule-set项,对应“5 规则路由”和“6 规则集”的项目也需同时启用
     - rule-set:fakeip-filter  
     - rule-set:Direct
