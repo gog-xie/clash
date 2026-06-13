@@ -9,20 +9,27 @@
 #    这里需注意的是，"全球手动"的节点失联，故转至可用节点后，当"全球手动"的节点恢复后，短时间不会自动跳转回"全球手动"的节点，需要手动选择一下，这可能是Fallback的一个小bug。
 # 2) 需要全防泄漏,使用时将4.2中"漏网之鱼"和“网络测试”选择为任意代理节点即可(实际意义并不大)。
 # 3) 配置前仔细阅读配置中的相关说明,根据需要自行调整。
-# 4) 使用前在“1.5代理提供者”板块中添加你的订阅链接。
+# 4) 使用前在“1.6代理提供者”板块中添加你的订阅链接。
 
 # ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓配置区↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 # 1 锚点配置 
 # 1.1 代理提供者模板 - 订阅源基础配置 （根据自己机场特性,在filter参数中添加不需要的机场节点关键字,若需保留相关节点,删除该节点名称的关键字）
 BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(客户端|特殊|如果|导致|一下|教程|测试|剩余|套餐|0.5x|0.1x|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
 
-# 1.2 策略组类型模板 - 定义不同的策略组基础配置
+# 1.2 策略组类型锚点 - 定义不同的策略组基础配置
 BaseFB: &BaseFB {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true}
 BaseCH: &BaseCH {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: consistent-hashing, hidden: true}   #散列：根据指定关键字做哈希运算,将连接固定映射到对应节点,节点变动时仅少量连接重新分配。
 BaseCR: &BaseCR {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: round-robin, hidden: true}          #轮询：按顺序依次轮流分配连接到各个可用节点,循环往复。
 BaseUT: &BaseUT {type: url-test, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true}
 
-# 1.3 节点筛选正则表达式 - 基于地理位置和关键词过滤
+# 1.3 规则集行为锚点
+BehaviorDN:    &BehaviorDN {type: http, behavior: domain, format: mrs, interval: 86400}
+BehaviorDY:    &BehaviorDY {type: http, behavior: domain, format: yaml, interval: 86400}
+BehaviorIP:    &BehaviorIP {type: http, behavior: ipcidr, format: mrs, interval: 86400}
+ClassicalText: &ClassicalText {type: http, interval: 86400, behavior: classical, format: text}
+ClassicalYaml: &ClassicalYaml {type: http, behavior: classical, interval: 86400, format: yaml, proxy: DIRECT}
+
+# 1.4 节点筛选正则表达式 - 基于地理位置和关键词过滤
 FilterHK: &FilterHK '^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG|更新|建议))(?!.*(排除1|排除2|5x)).*$'
 FilterSG: &FilterSG '^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$'
 FilterJP: &FilterJP '^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(尼日利亚|排除2|5x)).*$'
@@ -34,7 +41,7 @@ FilterEU: &FilterEU '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|
 FilterOT: &FilterOT '^(?!.*(DIRECT|直接连接|美|港|坡|台|新|日|韩|奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇭🇰|🇼🇸|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|🇦🇹|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW))'
 FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
 
-# 1.4 策略组代理列表模板 - 预定义的代理节点优先级排序,根据自己需求在“4.1 业务策略组”选定策略组代理模板
+# 1.5 策略组代理列表锚点 - 预定义的代理节点优先级排序,根据自己需求在“4.1 业务策略组”选定策略组代理模板
 SelectFB: &SelectFB {type: select, proxies: [故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
 SelectPY: &SelectPY {type: select, proxies: [全球手动, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 直接连接]}
 SelectDC: &SelectDC {type: select, proxies: [直接连接, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动]}
@@ -42,7 +49,7 @@ SelectHK: &SelectHK {type: select, proxies: [香港策略, 故障转移, 狮城�
 SelectSG: &SelectSG {type: select, proxies: [狮城策略, 故障转移, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
 SelectUS: &SelectUS {type: select, proxies: [美国策略, 故障转移, 狮城策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
 
-# 1.5 代理提供者 
+# 1.6 代理提供者 
 # 注意：请提供您的机场订阅链接,每个链接一行,并为每个机场命名,视情况启用多个机场。末尾的[优][备]为每个节点添加机场名称前缀,可自定义。
 proxy-providers:
   # 优质订阅源 - 优质节点集合,使用时请修改
@@ -336,31 +343,23 @@ rules:
   - "RULE-SET,Custom_Port_Direct,非标端口"                      # 非标端口
   - "MATCH,漏网之鱼"                                            # 漏网之鱼
 
-# 6 规则集 
-# 6.1 规则集行为模板
-BehaviorDN:    &BehaviorDN {type: http, behavior: domain, format: mrs, interval: 86400}
-BehaviorDY:    &BehaviorDY {type: http, behavior: domain, format: yaml, interval: 86400}
-BehaviorIP:    &BehaviorIP {type: http, behavior: ipcidr, format: mrs, interval: 86400}
-ClassicalText: &ClassicalText {type: http, interval: 86400, behavior: classical, format: text}
-ClassicalYaml: &ClassicalYaml {type: http, behavior: classical, interval: 86400, format: yaml, proxy: DIRECT}
-
-# 7 规则提供者
+# 6 规则提供者
 rule-providers:  
-  # 7.1 拦截规则
+  # 6.1 拦截规则
   Tracking:       {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Tracking.mrs}
   Advertising:    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Advertising.mrs} 
   AdvertisingIP:  {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/ip/Advertising.mrs}
 
-  # 7.2 广告规则
+  # 6.2 广告规则
   AWAvenueAds:    {<<: *BehaviorDY, url: https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml}
 
-  # 7.3 fakeip-filter规则
+  # 6.3 fakeip-filter规则
   fakeip-filter:   {<<: *BehaviorDN, url: "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs"}
   China:           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/China.mrs}
   Private:         {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Private.mrs}
   Direct:          {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Direct.mrs}
 
-  # 7.4 自定义规则（收集平常在Geo中缺少或归类错误的域名及IP,实时更新）
+  # 6.4 自定义规则（收集平常在Geo中缺少或归类错误的域名及IP,实时更新）
   My_Proxy:              {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Rules@main/My_rules/Proxy.yaml}
   My_Direct:             {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Rules@main/My_rules/Direct.yaml}
   Custom_Direct_Domain:  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.mrs}
