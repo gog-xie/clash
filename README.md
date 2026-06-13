@@ -22,13 +22,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2 GeoAIO综合模板适用于高档机场，不易掉线的机场，但遇到区域整体掉线时需手动切换至其他地区节点，GeoAIOPro综合模板适用于较差的机场，特别时区域整体离线，会自动切换至下一地区节点，但切换逻辑相对套娃。
 
 
-#### [（1） GeoAIO综合模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml)
+#### [（1） GeoAIO综合模板（推荐）](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml)
 
 ```
 https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml
 ```
 
-#### [（2） GeoAIOPro综合模板（推荐）](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIOPro.yaml)
+#### [（2） GeoAIOPro综合模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIOPro.yaml)
 
 ```
 https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIOPro.yaml
