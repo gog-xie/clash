@@ -258,6 +258,7 @@ rules:
   - RULE-SET,Tracking,REJECT
   - RULE-SET,AWAvenueAds,REJECT
   - RULE-SET,Advertising,REJECT
+  - RULE-SET,AdvertisingIP,REJECT
   - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN,no-resolve)))),REJECT
   
   # 5.2 特殊设置:192.168.50.101 ~ 199 所有设备走直连（本条规则解决内网大部分设备不需代理，如智能家居设备，负责DHCP的路由器的DHCP范围需设置为192.168.50.101 ~ 199，视个人需求修订）
