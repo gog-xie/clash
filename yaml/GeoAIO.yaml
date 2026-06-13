@@ -5,8 +5,9 @@
 # Date: 2026-06-01
 
 # 配置说明：
-# 1) 需要全防泄漏,使用时将4.2中"漏网之鱼"和“网络测试”选择为任意代理节点即可(实际意义并不大)
-# 2) 配置前仔细阅读配置中的相关说明,根据需要自行调整
+# 1) 本配置采用四层策略，即分流策略组→故障转移→手动选择→地区策略→均衡or自动or手动，所以大部分流策略组默认为故障转移，故障转移首选为全球手动，可自定义喜欢的节点，当手选节点失联时，自动切换至可用节点，实现长时免维护；
+# 2) 需要全防泄漏,使用时将4.2中"漏网之鱼"和“网络测试”选择为任意代理节点即可(实际意义并不大)
+# 3) 配置前仔细阅读配置中的相关说明,根据需要自行调整
 # 3) 使用前在“1.5代理提供者”板块中添加你的订阅链接
 
 # ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓配置区↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
@@ -35,11 +36,11 @@ FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|
 
 # 1.4 策略组代理列表模板 - 预定义的代理节点优先级排序,根据自己需求在“4.1 业务策略组”选定策略组代理模板
 SelectFB: &SelectFB {type: select, proxies: [故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectPY: &SelectPY {type: select, proxies: [默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectDC: &SelectDC {type: select, proxies: [直接连接, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动]}
-SelectHK: &SelectHK {type: select, proxies: [香港策略, 默认代理, 故障转移, 狮城策略, 美国策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectSG: &SelectSG {type: select, proxies: [狮城策略, 默认代理, 故障转移, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectUS: &SelectUS {type: select, proxies: [美国策略, 默认代理, 故障转移, 狮城策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
+SelectPY: &SelectPY {type: select, proxies: [全球手动, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 直接连接]}
+SelectDC: &SelectDC {type: select, proxies: [直接连接, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动]}
+SelectHK: &SelectHK {type: select, proxies: [香港策略, 故障转移, 狮城策略, 美国策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
+SelectSG: &SelectSG {type: select, proxies: [狮城策略, 故障转移, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
+SelectUS: &SelectUS {type: select, proxies: [美国策略, 故障转移, 狮城策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
 
 # 1.5 代理提供者 
 # 注意：请提供您的机场订阅链接,每个链接一行,并为每个机场命名,视情况启用多个机场。末尾的[优][备]为每个节点添加机场名称前缀,可自定义。
@@ -176,31 +177,30 @@ dns:
 # 4 代理策略组 
 proxy-groups:
   # 4.1 业务策略组(根据需求按“1.4 策略组代理列表”模板自行选择默认类型,仅是排列顺序不一样,包含的策略是一样的)
-  - {name: 默认代理,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
-  - {name: 故障转移,     <<: *BaseFB, proxies: [狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ULB.png}
-  - {name: Github,      <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
-  - {name: 油管视频,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png}
-  - {name: 谷歌服务,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png}
-  - {name: 谷歌FCM,      <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/googlevpn.png}
-  #- {name: ChatGPT,     <<: *SelectUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
+  - {name: 故障转移,     <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ULB.png}
+  - {name: 默认直连,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
+  - {name: Github,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
+  - {name: 油管视频,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png}
+  - {name: 谷歌服务,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png}
+  - {name: 谷歌FCM,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/googlevpn.png}
+  - {name: ChatGPT,     <<: *SelectUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
   - {name: AI服务,      <<: *SelectUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png}
-  - {name: 国外娱乐,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png}
-  - {name: 国外电商,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/shopping.png}
-  - {name: 即时通讯,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/whatsapp.png}
-  - {name: 社交媒体,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PBS.png}
+  - {name: 国外娱乐,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png}
+  - {name: 国外电商,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/shopping.png}
+  - {name: 即时通讯,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/whatsapp.png}
+  - {name: 社交媒体,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PBS.png}
   - {name: TikTok,      <<: *SelectSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png}
-  - {name: 奈飞视频,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png}
-  - {name: 迪士尼+,      <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney%2B.png}
-  - {name: HBO,         <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png}
-  - {name: Prime Video, <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video.png}
-  - {name: Spotify,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png}
+  - {name: 奈飞视频,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png}
+  - {name: 迪士尼+,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney%2B.png}
+  - {name: HBO,         <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png}
+  - {name: Prime Video, <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video.png}
+  - {name: Spotify,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png}
   - {name: 加密货币,     <<: *SelectUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency.png}
   - {name: 苹果服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png}
   - {name: Emby,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png}
   - {name: Apple TV+,   <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_TV.png}
   - {name: 微软服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
   - {name: 游戏平台,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
-  - {name: 默认直连,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
   - {name: Bahamut, type: select, proxies: [直接连接, 台湾策略], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png}
   - {name: 非标端口, type: select, proxies: [直接连接, 漏网之鱼], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bypass.png}
   
@@ -220,7 +220,7 @@ proxy-groups:
   - {name: 冷门策略,     type: select, proxies: [冷门均衡-轮询, 冷门均衡-散列, 冷门自动], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
 
   # 4.4 其他策略组（放在这里仅为了界面美观）
-  - {name: 全球手动,     type: select, proxies: [故障转移, 狮城策略, 香港策略, 美国策略, 台湾策略, 欧盟策略, 日本策略, 韩国策略, 冷门策略], include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png}
+  - {name: 全球手动,     type: select, proxies: [狮城策略, 香港策略, 美国策略, 台湾策略, 欧盟策略, 日本策略, 韩国策略, 冷门策略], include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png}
 
   # 4.5 自动测速组 
   - {name: 香港自动,     <<: *BaseUT, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
@@ -271,7 +271,7 @@ rules:
   - "SRC-IP-CIDR,192.168.50.192/29,DIRECT,no-resolve"
   
   # 5.3 网设备(192.168.50.58)部分代理,其余直连（本条规则解决NAS、下载机少量需代理的问题，如docker、emby刮削等需代理，其余直连，避免跑流量，视个人需求修订）
-  - "RULE-SET,My_Proxy,默认代理"
+  - "RULE-SET,My_Proxy,全球手动"
   - "SRC-IP-CIDR,192.168.50.58/32,DIRECT,no-resolve"
   #- "SRC-IP-CIDR,240e:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX/128,DIRECT,no-resolve"
 
@@ -282,8 +282,8 @@ rules:
   - "RULE-SET,Custom_Direct_Domain,直接连接"                    # 自定义直连域名
   - "RULE-SET,Custom_Direct_IP,直接连接,no-resolve"             # 自定义直连IP
   - "RULE-SET,Custom_Direct_Port,直接连接"                      # 自定义直连端口
-  - "RULE-SET,Custom_Proxy_Domain,默认代理"                     # 自定义代理域名
-  - "RULE-SET,Custom_Proxy_IP,默认代理,no-resolve"              # 自定义代理IP
+  - "RULE-SET,Custom_Proxy_Domain,全球手动"                     # 自定义代理域名
+  - "RULE-SET,Custom_Proxy_IP,全球手动,no-resolve"              # 自定义代理IP
   - "GEOSITE,google-cn,直接连接"                                # Google中国服务
   - "GEOSITE,category-games@cn,直接连接"                        # 国内游戏
   - "RULE-SET,Steam_CDN_Domain,直接连接"                        # Steam CDN
@@ -293,7 +293,7 @@ rules:
   - "GEOSITE,category-pt,直接连接"                              # PT站
   - "GEOSITE,category-communication,即时通讯"                   # 即时通讯(含telegram、WhatsApp、clubhouse等，若需精简，可以将注释掉"4.1 业务策略组"中相应的分组)
   - "GEOSITE,category-social-media-!cn,社交媒体"                # 国外社交媒体(含instagram、facebook、twitter、mixi等，若需精简，可以将注释掉"4.1 业务策略组"中相应的分组)
-  #- "GEOSITE,openai,ChatGPT"                                   # OpenAI(在category-ai-!cn已含openai,如需单独分流,可启用本条规则,同时也启用"4.1 业务策略组"中的ChatGPT)
+  - "GEOSITE,openai,ChatGPT"                                   # OpenAI(在category-ai-!cn已含openai,如需单独分流,可启用本条规则,同时也启用"4.1 业务策略组"中的ChatGPT)
   - "GEOSITE,category-ai-!cn,AI服务"                            # AI服务(含openai ChatGPT)
   - "GEOSITE,github,Github"                                    # GitHub
   - "GEOSITE,category-speedtest,网络测试"                       # 测速工具
