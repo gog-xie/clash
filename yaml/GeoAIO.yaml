@@ -337,10 +337,6 @@ rules:
   - "GEOIP,fastly,默认直连,no-resolve"                          # FSLY CDN(同上IP补充)
   - "GEOSITE,cn,直接连接"                                       # 中国域名
   - "GEOIP,cn,直接连接,no-resolve"                              # 中国IP
-  - "RULE-SET,fakeip-filter,直接连接"                           # fakeip-filter
-  - "RULE-SET,China,直接连接"                                   # fakeip-filter
-  - "RULE-SET,Private,直接连接"                                 # fakeip-filter
-  - "RULE-SET,Direct,直接连接"                                  # fakeip-filter
   - "RULE-SET,Custom_Port_Direct,非标端口"                      # 非标端口
   - "MATCH,漏网之鱼"                                            # 漏网之鱼
 
