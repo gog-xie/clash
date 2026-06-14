@@ -28,7 +28,7 @@
 https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml
 ```
 
-#### [（2） GeoSmartAIO全功能模板]([https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoSmartAIO.yaml))
+#### [（2） GeoSmartAIO全功能模板]([https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoSmartAIO.yaml)
 
 ```
 https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoSmartAIO.yaml
