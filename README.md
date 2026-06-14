@@ -3,7 +3,7 @@
 ---
 
 <p align="center"><b>😂探讨用于Windows Clash Verge、ASUS MerlinClash、OpenWrt Nikki、OpenClash等mihomo内核代理程序的yaml配置模板😂</b></p>
-<p align="center"><b>🐜持续漏网之鱼🐟的维护补录，定制个人需求，如个别内网设备指定域名代理，其余直连的特殊需求🐜</b></p>
+<p align="center"><b>🐜持续漏网之鱼🐟的维护补录，定制个人需求🐜</b></p>
 
 ---
 
