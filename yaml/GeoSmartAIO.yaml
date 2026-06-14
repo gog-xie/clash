@@ -11,7 +11,7 @@
 # 3) 关于"默认直连"策略组，主要挂载了GEOSITE,geolocation-!cn非中国域名，是几乎未被墙的国外站点，其含有如cloudflare、cloudfront、fastly等CDN站点，可根据使用切换为代理。
 # 4) 保留了load-balance功能，使用时需在覆写设置→smart设置→取消"Smart 策略自动切换"勾选。
 # 5) 仔细阅读配置中的相关说明，根据需要自行调整
-# 6) 使用前在“1.5代理提供者”板块中添加你的订阅链接
+# 6) 使用前在“1.6代理提供者”板块中添加你的订阅链接
 
 # ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓配置区↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 # 1 锚点配置 
@@ -186,7 +186,7 @@ dns:
 
 # 4 代理策略组 
 proxy-groups:
-  # 4.1 业务策略组(根据需求按“1.4 策略组代理列表”模板自行选择默认类型,仅是排列顺序不一样,包含的策略是一样的)
+  # 4.1 业务策略组(根据需求按“1.5 策略组代理列表”模板自行选择默认类型,仅是排列顺序不一样,包含的策略是一样的)
   - {name: 故障转移,     <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
   - {name: 默认直连,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
   - {name: Github,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
@@ -304,7 +304,7 @@ rules:
   - "GEOSITE,category-pt,直接连接"                              # PT站
   - "GEOSITE,category-communication,即时通讯"                   # 即时通讯(含telegram、WhatsApp、clubhouse等，若需精简，可以将注释掉"4.1 业务策略组"中相应的分组)
   - "GEOSITE,category-social-media-!cn,社交媒体"                # 国外社交媒体(含instagram、facebook、twitter、mixi等，若需精简，可以将注释掉"4.1 业务策略组"中相应的分组)
-  - "GEOSITE,openai,ChatGPT"                                   # OpenAI(在category-ai-!cn已含openai,如需单独分流,可启用本条规则,同时也启用"4.1 业务分组"中的ChatGPT)
+  - "GEOSITE,openai,ChatGPT"                                   # OpenAI(在category-ai-!cn已含openai,如需单独分流,可启用本条规则,同时也启用"4.1 业务策略组"中的ChatGPT)
   - "GEOSITE,category-ai-!cn,AI服务"                            # AI服务(含openai)
   - "GEOSITE,github,Github"                                    # GitHub
   - "GEOSITE,category-speedtest,网络测试"                       # 测速工具
