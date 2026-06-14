@@ -15,7 +15,7 @@
 
 # ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓配置区↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 # 1 锚点配置 
-# 1.1 代理提供者模板 - 订阅源基础配置 （根据自己机场特性,在filter参数中添加不需要的机场节点关键字,若需保留相关节点,删除该节点名称的关键字）
+# 1.1 机场订阅配置锚点 （根据自己机场特性,在filter参数中添加不需要的机场节点关键字,若需保留相关节点,删除该节点名称的关键字）
 BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(客户端|特殊|如果|导致|一下|教程|测试|剩余|套餐))'}
 
 # 1.2策略组类型锚点 - 定义不同的策略组基础配置
@@ -24,7 +24,7 @@ BaseCH: &BaseCH {type: load-balance, interval: 200, lazy: true, url: 'https://ww
 BaseCR: &BaseCR {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: round-robin, hidden: true}
 BaseSmart: &BaseSmart {type: smart, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true, uselightgbm: true}
 
-# 1.3 规则集行为锚点
+# 1.3 规则集行为锚点 - 定义规则提供者类型
 BehaviorDN:    &BehaviorDN {type: http, behavior: domain, format: mrs, interval: 86400}
 BehaviorDY:    &BehaviorDY {type: http, behavior: domain, format: yaml, interval: 86400}
 BehaviorIP:    &BehaviorIP {type: http, behavior: ipcidr, format: mrs, interval: 86400}
