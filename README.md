@@ -17,9 +17,9 @@
 -  ## 2 Mihomo通用yaml模板
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本配置yaml模板适用于Mihomo内核的代理程序，如OpenClash、Nikki、Merlinclash、Clash Verge等，可直接导入模板使用或稍加改动即可。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1 配置GoeIP规则文件在zashboard中显示规则数为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。这里重点推荐两个All In One版本，配置中内置了分区域节点的自动选择、手动选择、故障转移、负载均衡等功能，仅需修改yaml文件中的机场地址和名称即可。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1 本配置采用四层策略，层次功能分明，故转层负责节点是否可用，地区策略层负责节点选择的形式，即分流策略组→故障转移→全球手动→地区策略→均衡or自动or手动，所以大部分流策略组默认为故障转移，故障转移首选为"全球手动"，可自定义喜欢的节点，当"全球手动"的节点失联时，自动切换至可用节点，实现长时免维护。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2 GeoAIO综合模板适用于高档机场，不易掉线的机场，但遇到区域整体掉线时需手动切换至其他地区节点，GeoAIOPro综合模板适用于较差的机场，特别时区域整体离线，会自动切换至下一地区节点，但切换逻辑相对套娃。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2 配置GoeIP规则文件在zashboard中显示规则数为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。这里重点推荐两个All In One版本，配置中内置了分区域节点的自动选择、手动选择、故障转移、负载均衡等功能，仅需修改yaml文件中的机场地址和名称即可。
 
 
 #### [（1） GeoAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml)
