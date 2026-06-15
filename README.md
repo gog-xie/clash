@@ -41,7 +41,7 @@ https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetAIO.yaml
 https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoSmartAIO.yaml
 ```
 
-#### [（4） RuleSetSmartAIO全功能模板（推荐）](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetSmartAIO.yaml)
+#### [（4） RuleSetSmartAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetSmartAIO.yaml)
 
 ```
 https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetSmartAIO.yaml
