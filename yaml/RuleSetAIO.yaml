@@ -173,8 +173,8 @@ dns:
   fake-ip-filter:          #本条按需启用,如果开启了rule-set项,对应“6 规则路由”和“7 规则集”的项目也需同时启用
     - rule-set:fakeip-filter
     - rule-set:Direct
-    - rule-set:Private
-    - rule-set:China
+    - rule-set:private
+    - rule-set:cn
     - '+.pub.3gppnetwork.org'
     - "+.bing.com"
     - +.miwifi.com
@@ -350,13 +350,11 @@ rule-providers:
   AdvertisingIP:    {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/ip/Advertising.mrs}
 
   # 6.2 广告规则
-  category-ads-all: { <<: *BehaviorDN, url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ads-all.mrs }
+  category-ads-all: {<<: *BehaviorDN, url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ads-all.mrs}
   AWAvenueAds:      {<<: *BehaviorDY, url: https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml}
 
   # 6.3 fakeip-filter规则
   fakeip-filter:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
-  China:           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/China.mrs}
-  Private:         {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Private.mrs}
   Direct:          {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Direct.mrs}
 
   # 6.4 自定义规则(收集平常在Geo中缺少或归类错误的域名及IP,实时更新)
