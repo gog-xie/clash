@@ -66,7 +66,7 @@ rules:
 - SRC-IP-CIDR,192.168.1.88/32,DIRECT,no-resolve
 - RULE-SET,My_Proxy,手动选择
 - SRC-IP-CIDR,192.168.1.98/32,DIRECT,no-resolve
-- SRC-IP-CIDR,240e:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx/128,DIRECT,no-resolve  #某内网设备通过IPV6地址实现部分代理其余直连
+- SRC-IP-SUFFIX,::abcd:1234:efgh:5678/64,DIRECT,no-resolve  #某内网设备通过IPV6地址实现部分代理其余直连，由于路由器重启后IPV6前四段会变化，但后四段是根据MAC地址生成的，匹配后缀即可
 ......
 
 ```
