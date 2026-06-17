@@ -173,7 +173,7 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   fake-ip-filter:          #本条按需启用,如果开启了rule-set项,对应“6 规则路由”和“7 规则集”的项目也需同时启用
-    fakeip-filter
+    - rule-set,fakeip-filter
     - rule-set,Direct
     - GEOSITE,private
     - GEOSITE,cn
