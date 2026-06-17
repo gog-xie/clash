@@ -285,7 +285,7 @@ rules:
   # 5.3 网设备(192.168.50.58)部分代理,其余直连（本条规则解决NAS、下载机少量需代理的问题，如docker、emby刮削等需代理，其余直连，避免跑流量，视个人需求修订）
   - "RULE-SET,My_Proxy,默认代理"
   - "SRC-IP-CIDR,192.168.50.58/32,DIRECT,no-resolve"
-  #- "SRC-IP-CIDR,240e:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX/128,DIRECT,no-resolve"
+  #- SRC-IP-SUFFIX,::abcd:1234:efgh:5678/64,DIRECT,no-resolve  #某内网设备通过IPV6地址实现部分代理其余直连，由于路由器重启后IPV6前四段会变化，但后四段是根据MAC地址生成的，匹配后缀即可
 
   # 5.4 域名规则
   - "RULE-SET,My_Direct,直接连接"                               # 自定义直连域名
