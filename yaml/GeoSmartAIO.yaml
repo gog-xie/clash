@@ -356,7 +356,6 @@ rule-providers:
   fakeip-filter:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
   China:           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/China.mrs}
   Private:         {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Private.mrs}
-  Direct:          {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Direct.mrs}
 
   # 6.4 自定义规则（收集平常在Geo中缺少或归类错误的域名及IP,实时更新）
   My_Proxy:              {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Rules@main/My_rules/Proxy.yaml}
