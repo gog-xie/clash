@@ -163,9 +163,12 @@ dns:
   fake-ip-range: 198.18.0.1/16
   enhanced-mode: fake-ip
   respect-rules: true
+  fake-ip-filter-mode: blacklist  
   nameserver:
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query  
+    #- https://dns.google/dns-query
+    #- https://cloudflare-dns.com/dns-query
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
