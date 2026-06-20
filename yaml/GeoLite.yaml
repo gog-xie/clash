@@ -42,12 +42,12 @@ FilterOT: &FilterOT '^(?!.*(DIRECT|直接连接|美|港|坡|台|新|日|韩|奥|
 FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
 
 # 1.5 策略组代理列表锚点 - 预定义的代理节点优先级排序,根据自己需求在“4.1 业务策略组”选定策略组代理模板
-SelectFB: &SelectFB {type: select, proxies: [故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
 SelectPY: &SelectPY {type: select, proxies: [全球手动, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 直接连接]}
-SelectDC: &SelectDC {type: select, proxies: [直接连接, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动]}
-SelectHK: &SelectHK {type: select, proxies: [香港策略, 故障转移, 狮城策略, 美国策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectSG: &SelectSG {type: select, proxies: [狮城策略, 故障转移, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectUS: &SelectUS {type: select, proxies: [美国策略, 故障转移, 狮城策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
+SelectDC: &SelectDC {type: select, proxies: [直接连接, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动]}
+SelectFB: &SelectFB {type: select, proxies: [故障转移, 默认代理, 默认直连, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
+SelectHK: &SelectHK {type: select, proxies: [香港策略, 默认代理, 默认直连, 故障转移, 狮城策略, 美国策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
+SelectSG: &SelectSG {type: select, proxies: [狮城策略, 默认代理, 默认直连, 故障转移, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
+SelectUS: &SelectUS {type: select, proxies: [美国策略, 默认代理, 默认直连, 故障转移, 狮城策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
 
 # 1.6 代理提供者 
 # 注意：请提供您的机场订阅链接,每个链接一行,并为每个机场命名,视情况启用多个机场。末尾的[优][备]为每个节点添加机场名称前缀,可自定义。
@@ -239,11 +239,13 @@ proxy-groups:
   
 # 5 规则路由 （按照从上往下的顺序遍历,优先命中上位规则,规则重复无影响,修改顺序会影响分流效果）
 rules: 
-  # 5.1 拦截规则（按需启用,可禁用拦截，不影响使用效果）
+  # 5.1 拦截规则（按需启用,可禁用拦截,不影响使用效果）
+  #- GEOSITE,category-ads-all,REJECT     # 轻量化广告拦截需求时启用GEOSITE,category-ads-all和RULE-SET,AWAvenueAds，同时禁用anti-AD广告过滤列表
   - RULE-SET,Tracking,REJECT
-  - RULE-SET,AWAvenueAds,REJECT
+  #- RULE-SET,AWAvenueAds,REJECT         # 秋风广告过滤列表
   - RULE-SET,Advertising,REJECT
   - RULE-SET,AdvertisingIP,REJECT
+  - RULE-SET,anti-ad,REJECT             # anti-AD广告过滤列表(较为全面的广告过滤列表，几乎涵盖秋风广告和GEOSITE,category-ads-all等过滤列表)
   - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN,no-resolve)))),REJECT
   
   # 5.2 特殊设置:192.168.50.101 ~ 199 所有设备走直连（本条规则解决内网大部分设备不需代理，如智能家居设备，负责DHCP的路由器的DHCP范围需设置为192.168.50.101 ~ 199，视个人需求修订）
@@ -304,10 +306,11 @@ rule-providers:
 
   # 6.2 广告规则
   AWAvenueAds:    {<<: *BehaviorDY, url: https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml}
-  Direct:          {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Direct.mrs}
+  anti-ad:        {<<: *BehaviorDY, url: https://gcore.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-clash.yaml}
   
   # 6.3 fakeip-filter规则
   fakeip-filter:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
+  Direct:          {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/666OS/rules@release/mihomo/domain/Direct.mrs}
 
   # 6.4 自定义规则（收集平常在Geo中缺少或归类错误的域名及IP,实时更新）
   My_Proxy:              {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Rules@main/My_rules/Proxy.yaml}
