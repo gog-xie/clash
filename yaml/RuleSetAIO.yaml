@@ -278,7 +278,6 @@ rules:
   - RULE-SET,anti-ad,REJECT             # anti-AD广告过滤列表(较为全面的广告过滤列表，几乎涵盖秋风广告和GEOSITE,category-ads-all等过滤列表)
   - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN,no-resolve)))),REJECT
 
-
   # 5.2 特殊设置:192.168.50.101 ~ 199 所有设备走直连（本条规则解决内网大部分设备不需代理，如智能家居设备，负责DHCP的路由器的DHCP范围需设置为192.168.50.101 ~ 199，视个人需求修订）
   - SRC-IP-CIDR,192.168.50.101/32,DIRECT,no-resolve
   - SRC-IP-CIDR,192.168.50.102/31,DIRECT,no-resolve
