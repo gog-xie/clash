@@ -188,29 +188,33 @@ dns:
 # 4 代理策略组 
 proxy-groups:
   # 4.1 业务策略组(根据需求按“1.4 策略组代理列表”模板自行选择默认类型,仅是排列顺序不一样,包含的策略是一样的)
-  - {name: 故障转移,     <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ULB.png}
+  - {name: 默认代理,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
   - {name: 默认直连,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
+  - {name: 故障转移,     <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
   - {name: Github,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
   - {name: 油管视频,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png}
   - {name: 谷歌服务,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png}
   - {name: 谷歌FCM,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/googlevpn.png}
-  - {name: ChatGPT,     <<: *SelectUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
-  - {name: AI服务,      <<: *SelectUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png}
+  - {name: Gemini,      <<: *SelectFB, icon: https://fastly.jsdelivr.net/gh/lobehub/lobe-icons@master/packages/static-png/light/gemini-color.png}
+  - {name: Claude,      <<: *SelectFB, icon: https://fastly.jsdelivr.net/gh/lobehub/lobe-icons@master/packages/static-png/light/claude-color.png}
+  - {name: ChatGPT,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
+  - {name: AI服务,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png}
   - {name: 国外娱乐,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png}
   - {name: 国外电商,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/shopping.png}
   - {name: 即时通讯,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/whatsapp.png}
   - {name: 社交媒体,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PBS.png}
-  - {name: TikTok,      <<: *SelectSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png}
+  - {name: TikTok,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png}
   - {name: 奈飞视频,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png}
   - {name: 迪士尼+,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney%2B.png}
   - {name: HBO,         <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png}
   - {name: Prime Video, <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video.png}
   - {name: Spotify,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png}
-  - {name: 加密货币,     <<: *SelectUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency.png}
+  - {name: 加密货币,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency.png}
+  - {name: OneDrive,    <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png}
   - {name: 苹果服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png}
   - {name: Emby,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png}
-  - {name: Apple TV+,   <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_TV.png}
   - {name: 微软服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
+  - {name: Apple TV+,   <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_TV.png}
   - {name: 游戏平台,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
   - {name: Bahamut, type: select, proxies: [直接连接, 台湾策略], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png}
   - {name: 非标端口, type: select, proxies: [直接连接, 漏网之鱼], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bypass.png}
