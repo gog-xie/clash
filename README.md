@@ -74,27 +74,5 @@ rules:
                      
 ***
 
-<p align="center"> <b>手机端Zashboard控制面板效果 </b></p>
-<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard3.png?raw=true" width="256" heiht="560"></div>
-
----
-
-<p align="center"> <b>电脑端Zashboard控制面板局部效果 </b></p>
-<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard1.png?raw=true" width="720" heiht="380"></div>
-
----
-
-<p align="center"> <b>电脑端Zashboard控制面板分流策略组 </b></p>
-<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard2.png?raw=true" width="720" heiht="380"></div>
-
----
-
-<p align="center"> <b>电脑端Zashboard控制面板连接列表 </b></p>
-<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard4.png" width="1080" heiht="760"></div>
-
----
-
-<p align="center"> <b>电脑端Zashboard控制面板连接详情 </b></p>
-<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard5.png" width="1080" heiht="760"></div>
 
 ---
