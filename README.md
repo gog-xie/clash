@@ -71,7 +71,7 @@ rules:
 
 # 内网设备192.168.1.88所有链接走直连，设备192.168.1.98的部分链接（My_Proxy）走代理，其余走直连
 - SRC-IP-CIDR,192.168.1.88/32,DIRECT,no-resolve
-- RULE-SET,My_Proxy,手动选择
+- RULE-SET,My_Proxy,默认代理
 - SRC-IP-CIDR,192.168.1.98/32,DIRECT,no-resolve
 - SRC-IP-SUFFIX,::abcd:1234:efgh:5678/64,DIRECT,no-resolve  #某内网设备通过IPV6地址实现部分代理其余直连，由于路由器重启后IPV6前四段会变化，但后四段是根据MAC地址生成的，匹配后缀即可
 ......
