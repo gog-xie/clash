@@ -25,7 +25,7 @@
 
 
 <details>
-<summary><strong>[（1）GeoAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml)</strong></summary>
+<summary><strong>（1）GeoAIO全功能模板</strong></summary>
 
 ```bash
 
