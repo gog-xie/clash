@@ -33,21 +33,21 @@ https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml
 </details>
 
 <details>
-<summary><strong>（2） RuleSetAIO全功能模板（推荐）
+<summary><strong>（2） RuleSetAIO全功能模板（推荐）</strong></summary>
 ```bash
 https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetAIO.yaml
 ```
 </details>
   
 <details>
-<summary><strong>（3）GeoSmartAIO全功能模板
+<summary><strong>（3）GeoSmartAIO全功能模板</strong></summary>
 ```bash
 https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoSmartAIO.yaml
 ```
 </details>
 
 <details>
-<summary><strong>（4） RuleSetSmartAIO全功能模板
+<summary><strong>（4） RuleSetSmartAIO全功能模板</strong></summary>
 ```bash
 https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetSmartAIO.yaml
 ```
