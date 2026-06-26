@@ -23,12 +23,15 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2 配置GoeIP规则文件mmdb格式在zashboard中显示规则数为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。这里重点推荐两个All In One版本，配置中内置了分区域节点的smart智能选择、自动选择、手动选择、故障转移、负载均衡等功能，仅需修改yaml文件中的机场地址和名称即可。
 
-#### [（1） GeoAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml)
 
+<details>
+<summary><strong>#### [（1） GeoAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml)</strong></summary>
+
+```bash
 ```
 https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml
 ```
-
+</details>
 #### [（2） RuleSetAIO全功能模板（推荐）](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetAIO.yaml)
 
 ```
