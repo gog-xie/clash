@@ -32,6 +32,8 @@
 https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml
 ```
 </details>
+
+
 #### [（2） RuleSetAIO全功能模板（推荐）](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetAIO.yaml)
 
 ```
