@@ -25,13 +25,15 @@
 
 
 <details>
-<summary><strong>#### [（1） GeoAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml)</strong></summary>
+<summary><strong>[（1）GeoAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml)</strong></summary>
 
 ```bash
-```
+
 https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml
 ```
 </details>
+
+
 
 
 #### [（2） RuleSetAIO全功能模板（推荐）](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetAIO.yaml)
