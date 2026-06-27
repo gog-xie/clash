@@ -290,7 +290,7 @@ rules:
   - SRC-IP-CIDR,192.168.50.128/26,DIRECT,no-resolve
   - SRC-IP-CIDR,192.168.50.192/29,DIRECT,no-resolve
   
-  # 5.3 网设备(192.168.50.58)部分代理,其余直连（本条规则解决NAS、下载机少量需代理的问题，如docker、emby刮削等需代理，其余直连，避免跑流量，视个人需求修订）
+  # 5.3 网设备(192.168.50.58)部分代理,其余直连
   - RULE-SET,My_Proxy,默认代理
   - GEOSITE,docker,Docker   # 群晖会无故连docker跑流量,需要时才开启代理,无此项需求的删除掉,并删除4.1 业务策略组相应分组
   - SRC-IP-CIDR,192.168.50.58/32,DIRECT,no-resolve
