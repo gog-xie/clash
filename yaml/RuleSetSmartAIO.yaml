@@ -19,9 +19,9 @@
 BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(客户端|特殊|如果|导致|一下|教程|测试|剩余|套餐))'}
 
 # 1.2策略组类型锚点 - 定义不同的策略组基础配置
-BaseFB: &BaseFB {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204'}
-BaseCH: &BaseCH {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: consistent-hashing, hidden: true, include-all: true}
-BaseCR: &BaseCR {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: round-robin, hidden: true, include-all: true}
+BaseFB:    &BaseFB    {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204'}
+BaseCH:    &BaseCH    {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: consistent-hashing, hidden: true, include-all: true}
+BaseCR:    &BaseCR    {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: round-robin, hidden: true, include-all: true}
 BaseSmart: &BaseSmart {type: smart, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true, uselightgbm: true, include-all: true}
 
 # 1.3 规则集行为锚点 - 定义规则提供者类型
