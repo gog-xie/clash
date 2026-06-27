@@ -44,8 +44,7 @@ FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|
 
 # 1.5 策略组代理列表锚点 - 预定义的代理节点优先级排序,根据自己需求在“4.1 业务策略组”选定策略组代理模板
 SelectPY: &SelectPY {type: select, proxies: [全球手动, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 直接连接]}
-SelectDC: &SelectDC {type: select, proxies: [直接连接, 默认直连, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动]}
-SelectDD: &SelectDD {type: select, proxies: [默认直连, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
+SelectDC: &SelectDC {type: select, proxies: [默认直连, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
 SelectFB: &SelectFB {type: select, proxies: [故障转移, 默认代理, 默认直连, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
 SelectHK: &SelectHK {type: select, proxies: [香港策略, 默认代理, 默认直连, 故障转移, 狮城策略, 美国策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
 SelectSG: &SelectSG {type: select, proxies: [狮城策略, 默认代理, 默认直连, 故障转移, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
@@ -212,9 +211,9 @@ proxy-groups:
   - {name: Prime Video, <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video.png}
   - {name: Spotify,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png}
   - {name: 加密货币,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency.png}
-  - {name: Docker,      <<: *SelectDD, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Docker.png}
-  - {name: OneDrive,    <<: *SelectDD, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png}
-  - {name: Bing,        <<: *SelectDD, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Bing.png}
+  - {name: Docker,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Docker.png}
+  - {name: OneDrive,    <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png}
+  - {name: Bing,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Bing.png}
   - {name: 微软服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
   - {name: 苹果服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png}
   - {name: Emby,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png}
