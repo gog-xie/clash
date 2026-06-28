@@ -24,10 +24,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2 重点推荐两个类型版本，一个是采用内置GEO数据库，另一个是采用实时更新的数据库（ruleset），配置中内置了分区域节点的smart智能选择、自动选择、手动选择、故障转移、负载均衡等功能，仅需修改yaml文件中的机场地址和名称即可。
 
 
-#### [（1）RuleSetAIOPro全功能模板(推荐)](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetAIOPro.yaml)
+#### [（1）RuleAIOPro全功能模板(推荐)](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml)
 
 ```bash
-https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetAIOPro.yaml
+https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml
 ```
 
 
@@ -38,7 +38,7 @@ https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml
 ```
 
   
-#### [（3） RuleSetAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetAIO.yaml)
+#### [（3） RuleAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIO.yaml)
   
 ```bash
 https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetAIO.yaml
@@ -52,7 +52,7 @@ https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoSmartAIO.yaml
 ```
 
 
-#### [（5） RuleSetSmartAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetSmartAIO.yaml)
+#### [（5） RuleSmartAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSmartAIO.yaml)
   
 ```bash
 https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetSmartAIO.yaml
