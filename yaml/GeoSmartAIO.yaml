@@ -188,7 +188,7 @@ dns:
 
 # 4 代理策略组 
 proxy-groups:
-  # 4.1 业务策略组(根据需求按“1.4 策略组代理列表”模板自行选择默认类型)
+  # 4.1 业务策略组(根据需求按“1.5 策略组代理列表”模板自行选择默认类型)
   - {name: 故障转移,     <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
   - {name: 默认代理,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
   - {name: 默认直连,     type: select, proxies: [直接连接, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
