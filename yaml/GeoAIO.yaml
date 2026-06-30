@@ -274,7 +274,7 @@ rules:
   # 5.1 拦截规则(按需启用,可禁用拦截,不影响使用效果)
   - GEOSITE,category-ads-all,REJECT     # 轻量化广告拦截需求时启用GEOSITE,category-ads-all和RULE-SET,AWAvenueAds,同时禁用anti-AD广告过滤列表
   - RULE-SET,AWAvenueAds,REJECT         # 秋风广告过滤列表
-  - RULE-SET,anti-ad,REJECT             # anti-AD广告过滤列表(较为全面的广告过滤列表,几乎涵盖秋风广告和category-ads-all等过滤列表,但有误杀情况)
+  #- RULE-SET,anti-ad,REJECT             # anti-AD广告过滤列表(较为全面的广告过滤列表,几乎涵盖秋风广告和category-ads-all等过滤列表,但有误杀情况)
   - AND,((NETWORK,UDP),(DST-PORT,443),(NOT,((OR,((GEOSITE,cn),(GEOIP,cn,no-resolve)))))),REJECT
   
   # 5.2 特殊设置:192.168.50.101 ~ 199 所有设备走直连（本条规则解决内网大部分设备不需代理，如智能家居设备，负责DHCP的路由器的DHCP范围需设置为192.168.50.101 ~ 199，视个人需求修订）
