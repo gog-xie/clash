@@ -55,9 +55,9 @@ SelectUS: &SelectUS {type: select, proxies: [美国策略, 默认代理, 默认�
 # 注意：请填入机场订阅链接,每个链接一行,并为每个机场命名,视情况启用多个机场。末尾的[主][中]为每个节点添加机场名称前缀,可自定义。
 proxy-providers:
   # Airport1订阅源 - 首选机场节点集合，使用时请修改
-  Airport1Name: {<<: *BaseProvider, url: 'Airport1订阅源地址', override: {additional-prefix: '[主] '}}
+  Airport1: {<<: *BaseProvider, url: 'Airport1订阅源地址', override: {additional-prefix: '[主] '}}
   # Airport2订阅源 - 次选机场节点集合，使用时请修改
-  Airport2Name: {<<: *BaseProvider, url: 'Airport2订阅源地址', override: {additional-prefix: '[中] '}}
+  Airport2: {<<: *BaseProvider, url: 'Airport2订阅源地址', override: {additional-prefix: '[中] '}}
   
 #2 监听器 
 listeners:
@@ -237,7 +237,7 @@ proxy-groups:
   - {name: 韩国策略,     type: select, proxies: [韩国智能, 韩国均衡-散列, 韩国均衡-轮询], include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png}
   - {name: 冷门策略,     type: select, proxies: [冷门智能, 冷门均衡-轮询, 冷门均衡-散列], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
 
-  # 4.4 其他策略组(放在这里仅为了界面美观)
+  # 4.4 其他策略组(放在这里仅为了zashboard界面布局美观)
   - {name: 全球手动,     type: select, proxies: [狮城策略, 香港策略, 美国策略, 台湾策略, 欧盟策略, 日本策略, 韩国策略, 冷门策略], include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png}
 
   # 4.5 负载均衡-散列 
