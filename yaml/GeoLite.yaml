@@ -245,25 +245,25 @@ rules:
   # 5.1 拦截规则(按需启用,可禁用拦截,不影响使用效果)
   - GEOSITE,category-ads-all,REJECT     # 轻量化广告拦截需求时启用GEOSITE,category-ads-all和RULE-SET,AWAvenueAds,同时禁用anti-AD广告过滤列表
   - RULE-SET,AWAvenueAds,REJECT         # 秋风广告过滤列表
-  #- RULE-SET,anti-ad,REJECT             # anti-AD广告过滤列表(较为全面的广告过滤列表,几乎涵盖秋风广告和category-ads-all等过滤列表,但有误杀情况)
+  - RULE-SET,anti-ad,REJECT             # anti-AD广告过滤列表(较为全面的广告过滤列表,几乎涵盖秋风广告和category-ads-all等过滤列表,但有误杀情况,使用时在zashboard面板中切换)
   - AND,((NETWORK,UDP),(DST-PORT,443),(NOT,((OR,((GEOSITE,cn),(GEOIP,cn,no-resolve)))))),REJECT
   
   # 5.2 特殊设置:192.168.50.101 ~ 199 所有设备走直连（本条规则解决内网大部分设备不需代理，如智能家居设备，负责DHCP的路由器的DHCP范围需设置为192.168.50.101 ~ 199，视个人需求修订）
-  - "SRC-IP-CIDR,192.168.50.101/32,DIRECT,no-resolve"
-  - "SRC-IP-CIDR,192.168.50.102/31,DIRECT,no-resolve"
-  - "SRC-IP-CIDR,192.168.50.104/30,DIRECT,no-resolve"
-  - "SRC-IP-CIDR,192.168.50.108/30,DIRECT,no-resolve"
-  - "SRC-IP-CIDR,192.168.50.112/28,DIRECT,no-resolve"
-  - "SRC-IP-CIDR,192.168.50.128/26,DIRECT,no-resolve"
-  - "SRC-IP-CIDR,192.168.50.192/29,DIRECT,no-resolve"
+  #- SRC-IP-CIDR,192.168.50.101/32,DIRECT,no-resolve
+  #- SRC-IP-CIDR,192.168.50.102/31,DIRECT,no-resolve
+  #- SRC-IP-CIDR,192.168.50.104/30,DIRECT,no-resolve
+  #- SRC-IP-CIDR,192.168.50.108/30,DIRECT,no-resolve
+  #- SRC-IP-CIDR,192.168.50.112/28,DIRECT,no-resolve
+  #- SRC-IP-CIDR,192.168.50.128/26,DIRECT,no-resolve
+  #- SRC-IP-CIDR,192.168.50.192/29,DIRECT,no-resolve
   
-  # 5.3 网设备(192.168.50.58)部分代理,其余直连
-  - RULE-SET,My_Proxy,默认代理
-  - GEOSITE,docker,Docker   # 群晖会无故连docker跑流量,需要时才开启代理,无此项需求的删除掉,并删除4.1 业务策略组相应分组
-  - SRC-IP-CIDR,192.168.50.58/32,DIRECT,no-resolve
+  # 内网设备(192.168.50.58、::abcd:1234:efgh:5678/64)部分代理,其余直连
+  #- RULE-SET,My_Proxy,默认代理
+  - GEOSITE,docker,Docker   # 群晖会定期连docker跑流量,需要时才开启代理,无此项需求的删除掉,并删除4.1 业务策略组相应分组
+  #- SRC-IP-CIDR,192.168.50.58/32,DIRECT,no-resolve
   #- SRC-IP-SUFFIX,::abcd:1234:efgh:5678/64,DIRECT,no-resolve  #某内网设备通过IPV6地址实现部分代理其余直连，由于路由器重启后IPV6前四段会变化，但后四段是根据MAC地址生成的，匹配后缀即可
 
-  # 5.4 域名规则
+  # 5.3 域名规则
   - RULE-SET,My_Direct,直接连接                               # 自定义直连域名
   - GEOSITE,private,直接连接                                  # 私有域名
   - GEOIP,private,直接连接,no-resolve                         # 内网 / 保留 IP(127/8、192.168/16…)
