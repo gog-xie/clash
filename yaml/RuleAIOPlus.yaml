@@ -241,8 +241,8 @@ proxy-groups:
   - {name: 故转-狮城,    <<: *BaseFB, proxies: [狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Singapore_1.png}
   - {name: 故转-美国,    <<: *BaseFB, proxies: [美国策略, 香港策略, 日本策略, 台湾策略, 狮城策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/United_States_1.png}
   - {name: 故转-香港,    <<: *BaseFB, proxies: [香港策略, 日本策略, 台湾策略, 狮城策略, 美国策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Hong_Kong_1.png}
-  - {name: 故转-日本,    <<: *BaseFB, proxies: [日本策略, 台湾策略, 狮城策略, 美国策略, 香港策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Hong_Kong_1.png}
-  - {name: 故转-台湾,    <<: *BaseFB, proxies: [台湾策略, 狮城策略, 美国策略, 香港策略, 日本策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Hong_Kong_1.png}
+  - {name: 故转-日本,    <<: *BaseFB, proxies: [日本策略, 台湾策略, 狮城策略, 美国策略, 香港策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Japan_1.png}
+  - {name: 故转-台湾,    <<: *BaseFB, proxies: [台湾策略, 狮城策略, 美国策略, 香港策略, 日本策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Taiwan_1.png}
   - {name: 全球手动,    type: select, proxies: [狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 欧盟策略, 韩国策略, 冷门策略], include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png}
 
   # 4.5 负载均衡-散列  (需更改机场名称,与1.6小节机场名称一致)
