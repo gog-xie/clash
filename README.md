@@ -28,7 +28,7 @@
 <div align="center">
 
 
-| <div align="center">☑️序号</div> | <div align="center">🧮配置文件</div> | <div align="center">🥇推荐指数</div> | <div align="center">📈配置详情</div> | <div align="center">📑说明</div> |
+| <div align="center">☑️</div> | <div align="center">🧮配置文件</div> | <div align="center">🥇推荐指数</div> | <div align="center">📈配置详情</div> | <div align="center">📑说明</div> |
 | :--- | :--- | :--- | :--- | :--- |
 | <div align="center">**1**</div> | 📄**GeoAIO.yaml** | <div align="center">★★★</div> | <div align="center">[跳转](yaml/GeoAIO.yaml)</div> | 采用内置Geo数据库，五层策略 |
 | <div align="center">**2**</div> | 📄**GeoLite.yaml** | <div align="center">★★☆</div> | <div align="center">[跳转](yaml/GeoLite.yaml)</div> | 采用内置Geo数据库，极简分流 |
