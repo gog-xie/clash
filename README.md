@@ -19,10 +19,11 @@
 -  ## 2 Mihomo通用yaml模板
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本配置yaml模板适用于Mihomo内核的代理程序，如OpenClash、Nikki、Merlinclash、Clash Verge等，可直接导入模板使用或稍加改动即可。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1 本配置模板主要采用了四层策略规则，层次功能分明，故转层负责检测和确保节点可用，地区策略层负责节点选择的形式（均衡、自动、smart、手动），即分流策略组→故障转移→全球手动→地区策略→均衡or自动（或smart）or手动，所以大部分流策略组默认为故障转移，故障转移第一选项为"全球手动"，“全球手动”可自定义选择喜欢的地区策略或单一节点，当"全球手动"的节点失联时，自动切换至可用节点，闲时几乎不产生代理流量，响应迅速，实现长时免维护。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1 本配置模板主要采用了四层策略规则，层次功能分明，故转层负责检测和确保节点可用，地区策略层负责节点选择的形式（均衡、自动、smart、手动），即分流策略组→故障转移→全球手动→地区策略→均衡or自动（或smart）or手动，所以大部分流策略组默认为故障转移，而故障转移第一选项（即回退选项）为"全球手动"，“全球手动”可自定义选择喜欢的地区策略或单一节点，当"全球手动"的节点失联时，自动切换至可用节点，闲时几乎不产生代理流量，响应迅速，可实现长时免维护。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2 重点推荐两个类型版本，一个是采用mihomo内置GEO数据库，另一个是采用的[MetaCubeX](https://github.com/gog-xie/meta-rules-dat/tree/meta/geo)大佬实时更新的GEO数据库，配置中内置了分区域节点的smart智能选择、自动选择、手动选择、故障转移、负载均衡等功能，仅需修改yaml文件中的机场地址和名称即可。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2 规则来源主要是mihomo官方数据库，一个是采用Mihomo内置GEOSITE和GEOIP数据库，另一个是采用的[MetaCubeX](https://github.com/gog-xie/meta-rules-dat/tree/meta/geo)大佬实时更新的GEO数据库，配置中内置了分区域节点的smart智能选择、自动选择、手动选择、故障转移、负载均衡等功能，仅需修改yaml文件中的机场地址和名称即可。
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3 RuleAIOPro配置模板可实现自定义地区节点集出站机场，其余模板都不区分出站机场。
 
 #### [（1）RuleAIOPro全功能模板(推荐)](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml)
 
