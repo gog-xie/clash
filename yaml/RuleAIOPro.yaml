@@ -203,7 +203,7 @@ proxy-groups:
   - {name: Gemini,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Google_Gemini.png}
   - {name: Claude,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Claude.png}
   - {name: ChatGPT,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
-  - {name: Grok,        <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/X.png}  
+  - {name: Grok,        <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Grok.png}   
   - {name: AI服务,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png}
   - {name: 国外电商,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Ecommerce_1.png}
   - {name: 即时通讯,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Communication.png}
