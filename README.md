@@ -25,7 +25,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3 RuleAIOPro和RuleAIOPlus配置模板可实现按地区节点集自定义出站机场，其余模板不区分出站机场。
 
-
+<div align="center">
 
 | <div align="center">序号</div> | <div align="center">配置文件</div> | <div align="center">推荐指数</div> | <div align="center">配置详情</div> |
 | :--- | :--- | :--- | :--- |
@@ -37,7 +37,7 @@
 | <div align="center">**6**</div> | **RuleAIOPro.yaml** | <div align="center">★★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml)</div> |
 | <div align="center">**7**</div> | **RuleLite.yaml** | <div align="center">★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleLite.yaml)</div> |
 | <div align="center">**8**</div> | **RuleSmartAIO.yaml** | <div align="center">★★★☆</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSmartAIO)</div> |
-
+</div>
 ***  
 
 -  ## 3 特殊需求
