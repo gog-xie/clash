@@ -19,13 +19,10 @@
 BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(客户端|特殊|如果|导致|一下|教程|测试|剩余|套餐|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
 
 # 1.2策略组类型锚点 - 定义不同的策略组基础配置
-BaseCH:     &BaseCH     {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: consistent-hashing, hidden: true}
-BaseCR:     &BaseCR     {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: round-robin, hidden: true}
-BaseUT:     &BaseUT     {type: url-test, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true}
-Fallback:   &Fallback   {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', proxies: [全球手动, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 直接连接]}
-FallbackSG: &FallbackSG {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', proxies: [狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-FallbackUS: &FallbackUS {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', proxies: [美国策略, 狮城策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-FallbackHK: &FallbackHK {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', proxies: [香港策略, 美国策略, 狮城策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
+BaseFB:  &BaseFB  {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true}
+BaseCH:  &BaseCH  {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: consistent-hashing, hidden: true}
+BaseCR:  &BaseCR  {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: round-robin, hidden: true}
+BaseUT:  &BaseUT  {type: url-test, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true}
 
 # 1.3 规则集行为锚点
 BehaviorDN:    &BehaviorDN {type: http, behavior: domain, format: mrs, interval: 86400}
@@ -239,11 +236,11 @@ proxy-groups:
   - {name: 韩国策略,     type: select, proxies: ['[主] 韩国-轮询', '[备] 韩国-轮询', '[主] 韩国-散列', '[备] 韩国-散列', '[主] 韩国-自动', '[备] 韩国-自动'], include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png}
   - {name: 冷门策略,     type: select, proxies: ['[主] 冷门-轮询', '[备] 冷门-轮询', '[主] 冷门-散列', '[备] 冷门-散列', '[主] 冷门-自动', '[备] 冷门-自动'], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
 
-  # 4.4 其他策略组
-  - {name: 故转-手动,    <<: *Fallback,   icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Back_1.png}
-  - {name: 故转-狮城,    <<: *FallbackSG, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Singapore_1.png}
-  - {name: 故转-美国,    <<: *FallbackUS, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/United_States_1.png}
-  - {name: 故转-香港,    <<: *FallbackHK, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Hong_Kong_1.png}
+  # 4.4 其他策略组(放在这里仅为了Zashboard界面布局整齐)
+  - {name: 故转-手动,    <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Back_1.png}
+  - {name: 故转-狮城,    <<: *BaseFB, proxies: [狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Singapore_1.png}
+  - {name: 故转-美国,    <<: *BaseFB, proxies: [美国策略, 狮城策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/United_States_1.png}
+  - {name: 故转-香港,    <<: *BaseFB, proxies: [香港策略, 美国策略, 狮城策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Hong_Kong_1.png}
   - {name: 全球手动,    type: select, proxies: [狮城策略, 香港策略, 美国策略, 台湾策略, 欧盟策略, 日本策略, 韩国策略, 冷门策略], include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png}
 
   # 4.5 负载均衡-散列  (需更改机场名称,与1.6小节机场名称一致)
