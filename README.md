@@ -29,8 +29,7 @@
 
 | 特性 | `GeoAIO.yaml` | `GeoLite.yaml` | `GeoSmartAIO.yaml` | `RuleAIO.yaml` | `RuleAIOPlus.yaml` | `RuleAIOPro.yaml` | `RuleLite.yaml` | `RuleSmartAIO.yaml` |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **规则来源** | 内置GEO | 内置GEO | 内置GEO | 官方实时更新GEO | 官方实时更新GEO | 官方实时更新GEO | 官方实时更新GEO | 官方实时更新GEO |
-| **配置详情** | [查看](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIO.yaml) | [查看](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoLite.yaml) | [查看](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoSmartAIO.yaml) | [查看](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIO.yaml) | [查看](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPlus.yaml) | [查看](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml) | [查看](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleLite.yaml) | [查看](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSmartAIO.yaml) |
+| **配置详情** | [<div align="center">查看</div>](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIO.yaml) | [<div align="center">查看</div>](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoLite.yaml) | [<div align="center">查看</div>](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoSmartAIO.yaml) | [<div align="center">查看</div>](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIO.yaml) | [<div align="center">查看</div>](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPlus.yaml) | [<div align="center">查看</div>](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml) | [<div align="center">查看</div>](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleLite.yaml) | [<div align="center">查看</div>](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSmartAIO.yaml) |
 
 #### [（1）RuleAIOPro全功能模板(推荐)](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml)
 
