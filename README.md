@@ -38,6 +38,7 @@
 | <div align="center">**7**</div> | **RuleLite.yaml** | <div align="center">★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleLite.yaml)</div> |
 | <div align="center">**8**</div> | **RuleSmartAIO.yaml** | <div align="center">★★★☆</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSmartAIO)</div> |
 </div>
+
 ***  
 
 -  ## 3 特殊需求
