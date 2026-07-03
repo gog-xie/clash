@@ -26,12 +26,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3 RuleAIOPro配置模板可实现按地区节点集自定义出站机场，其余模板不区分出站机场。
 
 
-| 特性 | `GeoAIO.yaml` | `GeoLite.yaml` | `GeoSmartAIO.yaml` | `RuleAIO.yaml` | `RuleAIOPlus.yaml` | `RuleAIOPro.yaml` | `RuleLite.yaml` | `RuleSmartAIO.yaml` |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **推荐指数** | <div align="center">★★★</div> | <div align="center">★★☆</div> | <div align="center">★★★</div> | <div align="center">★★★☆</div> | <div align="center">★★★★★</div> | <div align="center">★★★★</div> | <div align="center">★★★</div> | <div align="center">★★★☆</div> |
-| **配置详情** | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoLite.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoSmartAIO.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIO.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPlus.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleLite.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSmartAIO)</div> |
 
-| 序号 | 配置 | 推荐指数 | 配置详情 |
+| <div align="center">序号</div> | <div align="center">配置文件</div> | <div align="center">推荐指数</div> | <div align="center">配置详情</div> |
 | :--- | :--- | :--- | :--- |
 | <div align="center">**1**</div> | **GeoAIO.yaml** | <div align="center">★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml)</div> |
 | <div align="center">**2**</div> | **GeoLite.yaml** | <div align="center">★★☆</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoLite.yaml)</div> |
