@@ -300,7 +300,7 @@ rules:
 # 6 规则提供者
 rule-providers:  
   # 6.1 广告拦截规则
-  AWAvenueAds:    {<<: *BehaviorDY, url: https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml}
+  AWAvenueAds:    {<<: *BehaviorDN, url: https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.mrs}
   anti-ad:        {<<: *BehaviorDY, url: https://gcore.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-clash.yaml}
   
   # 6.2 fakeip-filter规则
