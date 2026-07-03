@@ -23,7 +23,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2 规则来源主要是mihomo官方数据库，一个是采用Mihomo内置GEOSITE和GEOIP数据库，另一个是采用的[MetaCubeX](https://github.com/gog-xie/meta-rules-dat/tree/meta/geo)大佬实时更新的GEO数据库，配置中内置了分区域节点的smart智能选择、自动选择、手动选择、故障转移、负载均衡等功能，仅需修改yaml文件中的机场地址和名称即可。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3 RuleAIOPro配置模板可实现自定义地区节点集出站机场，其余模板都不区分出站机场。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3 RuleAIOPro配置模板可实现按地区节点集自定义出站机场，其余模板不区分出站机场。
 
 #### [（1）RuleAIOPro全功能模板(推荐)](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml)
 
