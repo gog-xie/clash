@@ -23,7 +23,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2 规则来源主要是mihomo官方数据库，一个是采用Mihomo内置GEOSITE和GEOIP数据库，另一个是采用的[MetaCubeX](https://github.com/gog-xie/meta-rules-dat/tree/meta/geo)大佬实时更新的GEO数据库，配置中内置了分区域节点的smart智能选择、自动选择、手动选择、故障转移、负载均衡等功能，仅需修改yaml文件中的机场地址和名称即可。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3 RuleAIOPro配置模板可实现按地区节点集自定义出站机场，其余模板不区分出站机场。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3 RuleAIOPro和RuleAIOPlus配置模板可实现按地区节点集自定义出站机场，其余模板不区分出站机场。
 
 
 
@@ -37,39 +37,6 @@
 | <div align="center">**6**</div> | **RuleAIOPro.yaml** | <div align="center">★★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml)</div> |
 | <div align="center">**7**</div> | **RuleLite.yaml** | <div align="center">★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleLite.yaml)</div> |
 | <div align="center">**8**</div> | **RuleSmartAIO.yaml** | <div align="center">★★★☆</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSmartAIO)</div> |
-#### [（1）RuleAIOPro全功能模板(推荐)](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml)
-
-```bash
-https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml
-```
-
-
-#### [（2）GeoAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml)
-
-```bash
-https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml
-```
-
-  
-#### [（3） RuleAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIO.yaml)
-  
-```bash
-https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetAIO.yaml
-```
-
-  
-#### [（4）GeoSmartAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoSmartAIO.yaml)
-  
-```bash
-https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoSmartAIO.yaml
-```
-
-
-#### [（5） RuleSmartAIO全功能模板](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSmartAIO.yaml)
-  
-```bash
-https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSetSmartAIO.yaml
-```
 
 ***  
 
