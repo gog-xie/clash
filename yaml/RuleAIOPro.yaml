@@ -357,7 +357,7 @@ rules:
   - RULE-SET,apple-cn,直接连接                                 # 苹果中国
   - RULE-SET,apple-tvplus,Apple TV+                           # Apple TV+
   - RULE-SET,apple,苹果服务                                    # 苹果服务
-  - RULE-SET,onedrive,OneDrive                                # OneDrive
+  #- RULE-SET,onedrive,OneDrive                                # OneDrive
   - RULE-SET,microsoft@cn,直接连接                             # 微软中国
   - RULE-SET,microsoft,微软服务                                # 微软服务
   - RULE-SET,googlefcm,谷歌FCM                                 # Google FCM推送
