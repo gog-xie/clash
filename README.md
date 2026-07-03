@@ -31,6 +31,15 @@
 | **推荐指数** | <div align="center">★★★</div> | <div align="center">★★☆</div> | <div align="center">★★★</div> | <div align="center">★★★☆</div> | <div align="center">★★★★★</div> | <div align="center">★★★★</div> | <div align="center">★★★</div> | <div align="center">★★★☆</div> |
 | **配置详情** | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoLite.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoSmartAIO.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIO.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPlus.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleLite.yaml)</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSmartAIO)</div> |
 
+| 序号 | 配置 | 推荐指数 | 配置详情 |
+| <div align="center">**1**</div> | **GeoAIO.yaml** | <div align="center">★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIO.yaml)</div> |
+| <div align="center">**2**</div> | **GeoLite.yaml** | <div align="center">★★☆</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoLite.yaml)</div> |
+| <div align="center">**3**</div> | **GeoSmartAIO.yaml** | <div align="center">★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoSmartAIO.yaml)</div> |
+| <div align="center">**4**</div> | **RuleAIO.yaml** | <div align="center">★★★☆</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIO.yaml)</div> |
+| <div align="center">**5**</div> | **RuleAIOPlus.yaml** | <div align="center">★★★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPlus.yaml)</div> |
+| <div align="center">**6**</div> | **RuleAIOPro.yaml** | <div align="center">★★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml)</div> |
+| <div align="center">**7**</div> | **RuleLite.yaml** | <div align="center">★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleLite.yaml)</div> |
+| <div align="center">**8**</div> | **RuleSmartAIO.yaml** | <div align="center">★★★☆</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSmartAIO)</div> |
 #### [（1）RuleAIOPro全功能模板(推荐)](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml)
 
 ```bash
