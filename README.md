@@ -35,7 +35,7 @@
 | <div align="center">**4**</div> | 📄**RuleAIO.yaml** | <div align="center">★★★☆</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIO.yaml)</div> | 采用官方实时更新Geo数据库，五层策略 |
 | <div align="center">**5**</div> | 📄**RuleAIOPlus.yaml** | <div align="center">★★★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPlus.yaml)</div> | 采用官方实时更新Geo数据库，自定义出站机场，强化故转 |
 | <div align="center">**6**</div> | 📄**RuleAIOPro.yaml** | <div align="center">★★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIOPro.yaml)</div> | 采用官方实时更新Geo数据库，自定义出站机场 |
-| <div align="center">**7**</div> | 📄**RuleLite.yaml** | <div align="center">★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleLite.yaml)</div> | 采用官方实时更新Geo数据库，自定义出站机场 |极简分流
+| <div align="center">**7**</div> | 📄**RuleLite.yaml** | <div align="center">★★★</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleLite.yaml)</div> | 采用官方实时更新Geo数据库，极简分流
 | <div align="center">**8**</div> | 📄**RuleSmartAIO.yaml** | <div align="center">★★★☆</div> | <div align="center">[跳转](https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleSmartAIO)</div> | 采用官方实时更新Geo数据库，适配Smart核心 |
 </div>
 
