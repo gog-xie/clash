@@ -5,7 +5,7 @@
 # Date: 2026-06-30
 
 # 配置说明：
-# 1) 本配置最多采用五层策略,层次功能分明,故转层负责节点是否可用,地区策略层负责节点选择的形式,例如故转-狮城→狮城策略→狮城均衡or散列or自动→某狮城节点,再如：故转-手动→全球手动→日本策略→日本均衡or散列or自动→某日本节点,"全球手动"可自定义喜欢的节点,当手选地区策略或节点的失联时,自动切换至下一可用节点,实现长时免维护；
+# 1) 本配置最多采用五层策略,略有套娃,但层次功能分明,故转层负责节点是否可用,地区策略层负责节点选择的形式,例如故转-狮城→狮城策略→狮城均衡or散列or自动or手动→某狮城节点,再如：故转-手动→全球手动→日本策略→日本均衡or散列or自动or手动→某日本节点,"全球手动"可自定义喜欢的节点,当手选地区策略或指定节点失联时,自动切换至下一可用区域节点,实现长时免维护；
 # 2) 本配置可自主选择出站机场,采用多机场分别控制选择出站节点的模式,比如台湾策略可选Airport1机场的台湾均衡或自动,香港策略可选Airport2机场的香港均衡或自动等等,如果Airport2机场里没有香港节点,那默认香港策略的香港均衡或自动全部直连；
 # 3) 本配置采用金字塔式分流过滤规则模式,通过子集与集合规则的关系按规则从上至下匹配实现精细分流。
 # 4) 需要全防泄漏,使用时将分流策略的"漏网之鱼"、“网络测试”和“默认直连”选择为任意代理节点即可(实际意义并不大)。
@@ -192,7 +192,6 @@ proxy-groups:
   - {name: 默认直连,     type: select, proxies: [直接连接, 默认代理, 故转-手动, 故转-狮城, 故转-美国, 故转-香港, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
   - {name: Github,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
   - {name: 油管视频,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png}
-  - {name: 国外娱乐,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png}
   - {name: 谷歌FCM,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Google_FCM.png}
   - {name: 谷歌服务,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png}
   - {name: Gemini,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Google_Gemini.png}
@@ -200,16 +199,17 @@ proxy-groups:
   - {name: ChatGPT,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
   - {name: Grok,        <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Grok.png} 
   - {name: AI服务,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png}
-  - {name: 国外电商,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Ecommerce_1.png}
   - {name: 即时通讯,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Communication.png}
+  - {name: 国外电商,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Ecommerce_1.png}
+  - {name: 加密货币,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency.png}
   - {name: 社交媒体,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Media_1.png}
+  - {name: 国外娱乐,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png}
   - {name: TikTok,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png}
   - {name: 奈飞视频,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png}
   - {name: 迪士尼+,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney%2B.png}
   - {name: HBO,         <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png}
   - {name: Prime Video, <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video.png}
   - {name: Spotify,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png}
-  - {name: 加密货币,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency.png}
   - {name: Docker,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Docker.png}
   - {name: OneDrive,    <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png}
   - {name: Bing,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Bing.png}
@@ -220,7 +220,7 @@ proxy-groups:
   - {name: 游戏平台,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
   - {name: Bahamut,     type: select, proxies: [直接连接, 台湾策略], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png}
   - {name: 非标端口,     type: select, proxies: [直接连接, 漏网之鱼], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bypass.png}
-  
+ 
   # 4.2 策略组与地理策略组分界识别(为了zashboard面板美观)
   - {name: 漏网之鱼,     <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png}
   - {name: 网络测试,     <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png}
