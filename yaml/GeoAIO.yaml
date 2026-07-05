@@ -199,6 +199,7 @@ proxy-groups:
   - {name: Gemini,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Google_Gemini.png}
   - {name: Claude,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Claude.png}
   - {name: ChatGPT,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
+  - {name: Grok,        <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Grok.png}   
   - {name: AI服务,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png}
   - {name: 国外电商,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Ecommerce_1.png}
   - {name: 即时通讯,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Communication.png}
@@ -309,12 +310,16 @@ rules:
   - GEOSITE,category-game-platforms-download,直接连接         # 游戏平台下载
   - GEOSITE,category-public-tracker,直接连接                  # BT Tracker
   - GEOSITE,category-pt,直接连接                              # PT站
+  - GEOSITE,microsoft@cn,直接连接                              # 微软服务
+  - GEOSITE,onedrive,OneDrive                                 # OneDrive
+  - GEOSITE,bing,Bing                                        # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)  
+  - GEOSITE,microsoft,微软服务                                # 微软服务
   - GEOSITE,category-communication,即时通讯                   # 即时通讯(通讯类兜底,含telegram、WhatsApp、clubhouse等,若需精简,可以注释掉相应规则及"4.1 业务策略组"中相应的分组)
   - GEOSITE,category-social-media-!cn,社交媒体                # 国外社交媒体(社交媒体类兜底,含instagram、facebook、twitter、mixi等,若需精简,可以注释掉相应规则及"4.1 业务策略组"中相应的分组)
   - GEOSITE,google-gemini,Gemini                             # Gemini(在category-ai-!cn已含Gemini,若需精简,可以将注释掉本条规则及"4.1 业务策略组"中相应的分组)
   - GEOSITE,anthropic,Claude                                 # Cloude(在category-ai-!cn已含Cloude,若需精简,可以将注释掉本条规则及"4.1 业务策略组"中相应的分组)
   - GEOSITE,openai,ChatGPT                                   # OpenAI(在category-ai-!cn已含openai,若需精简,可以将注释掉本条规则及"4.1 业务策略组"中相应的分组)
-  - GEOSITE,bing,Bing                                        # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)
+  - GEOSITE,x,Grok                                           # Grok(在category-ai-!cn已含Grok,如需单独分流,可启用本条规则,同时也启用"4.1 业务分组"中的Grok)  
   - GEOSITE,category-ai-!cn,AI服务                            # AI服务(国外AI兜底,含openai、gemini、copilot、claude等)
   - GEOSITE,github,Github                                    # GitHub
   - GEOSITE,category-speedtest,网络测试                       # 测速工具
@@ -324,9 +329,6 @@ rules:
   - GEOSITE,apple-cn,直接连接                                 # 苹果中国
   - GEOSITE,apple-tvplus,Apple TV+                           # Apple TV+
   - GEOSITE,apple,苹果服务                                    # 苹果服务
-  - GEOSITE,onedrive,OneDrive                                 # OneDrive
-  - GEOSITE,microsoft@cn,直接连接                              # 微软服务
-  - GEOSITE,microsoft,微软服务                                # 微软服务
   - GEOSITE,googlefcm,谷歌FCM                                 # Google FCM推送
   - GEOSITE,google,谷歌服务                                   # Google服务
   - GEOSITE,tiktok,TikTok                                     # TikTok
