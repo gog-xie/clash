@@ -341,13 +341,16 @@ rules:
   - RULE-SET,category-game-platforms-download,直接连接         # 游戏平台下载
   - RULE-SET,category-public-tracker,直接连接                  # BT Tracker
   - RULE-SET,category-pt,直接连接                              # PT站
+  - RULE-SET,microsoft@cn,直接连接                             # 微软中国
+  #- RULE-SET,onedrive,OneDrive                                # OneDrive
+  - RULE-SET,bing,Bing                                        # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)  
+  - RULE-SET,microsoft,微软服务                                # 微软服务  
   - RULE-SET,category-communication,即时通讯                   # 即时通讯(含telegram、WhatsApp、clubhouse等,若需精简,可以将注释掉"4.1 业务策略组"中相应的分组)
   - RULE-SET,category-social-media-!cn,社交媒体                # 国外社交媒体(含instagram、facebook、twitter、mixi等,若需精简,可以将注释掉"4.1 业务策略组"中相应的分组)
   - RULE-SET,google-gemini,Gemini                             # Gemini(在category-ai-!cn已含Gemini,若需精简,可以将注释掉本条规则及"4.1 业务策略组"中相应的分组)
   - RULE-SET,anthropic,Claude                                 # Cloude(在category-ai-!cn已含Cloude,若需精简,可以将注释掉本条规则及"4.1 业务策略组"中相应的分组)
   - RULE-SET,openai,ChatGPT                                   # OpenAI(在category-ai-!cn已含openai,如需单独分流,可启用本条规则,同时也启用"4.1 业务分组"中的ChatGPT)
   - RULE-SET,x,Grok                                           # Grok(在category-ai-!cn已含Grok,如需单独分流,可启用本条规则,同时也启用"4.1 业务分组"中的Grok)  
-  - RULE-SET,bing,Bing                                        # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)
   - RULE-SET,category-ai-!cn,AI服务                           # AI服务(国外AI兜底,含openai、gemini、copilot、claude、grok等)
   - RULE-SET,github,Github                                    # GitHub
   - RULE-SET,category-speedtest,网络测试                       # 测速工具
@@ -357,9 +360,6 @@ rules:
   - RULE-SET,apple-cn,直接连接                                 # 苹果中国
   - RULE-SET,apple-tvplus,Apple TV+                           # Apple TV+
   - RULE-SET,apple,苹果服务                                    # 苹果服务
-  #- RULE-SET,onedrive,OneDrive                                # OneDrive
-  - RULE-SET,microsoft@cn,直接连接                             # 微软中国
-  - RULE-SET,microsoft,微软服务                                # 微软服务
   - RULE-SET,googlefcm,谷歌FCM                                 # Google FCM推送
   - RULE-SET,google,谷歌服务                                   # Google服务
   - RULE-SET,tiktok,TikTok                                     # TikTok
