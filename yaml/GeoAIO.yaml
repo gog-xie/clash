@@ -302,35 +302,32 @@ rules:
   - RULE-SET,Custom_Direct_Port,直接连接                      # 自定义直连端口
   - RULE-SET,Custom_Proxy_Domain,默认代理                     # 自定义代理域名
   - RULE-SET,Custom_Proxy_IP,默认代理,no-resolve              # 自定义代理IP
-  - GEOSITE,bing@cn,直接连接                                  # bing中国
-  - GEOSITE,google-cn,直接连接                                # Google中国服务
-  - GEOSITE,category-games@cn,直接连接                        # 国内游戏
   - RULE-SET,Steam_CDN_Domain,直接连接                        # Steam CDN
   - RULE-SET,Steam_CDN_IP,直接连接,no-resolve                 # Steam CDN
   - GEOSITE,category-game-platforms-download,直接连接         # 游戏平台下载
   - GEOSITE,category-public-tracker,直接连接                  # BT Tracker
   - GEOSITE,category-pt,直接连接                              # PT站
+  - GEOSITE,bing@cn,直接连接                                  # bing中国
   - GEOSITE,microsoft@cn,直接连接                              # 微软服务
   #- GEOSITE,onedrive,OneDrive                                 # OneDrive
-  - GEOSITE,bing,Bing                                        # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)  
+  - GEOSITE,bing,Bing                                        # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)
   - GEOSITE,microsoft,微软服务                                # 微软服务
-  - GEOSITE,category-communication,即时通讯                   # 即时通讯(通讯类兜底,含telegram、WhatsApp、clubhouse等,若需精简,可以注释掉相应规则及"4.1 业务策略组"中相应的分组)
-  - GEOSITE,category-social-media-!cn,社交媒体                # 国外社交媒体(社交媒体类兜底,含instagram、facebook、twitter、mixi等,若需精简,可以注释掉相应规则及"4.1 业务策略组"中相应的分组)
+  - GEOSITE,apple-cn,直接连接                                 # 苹果中国
+  - GEOSITE,apple-tvplus,Apple TV+                           # Apple TV+
+  - GEOSITE,apple,苹果服务                                    # 苹果服务
+  - GEOSITE,category-speedtest,网络测试                       # 测速工具
+  - GEOSITE,test-ipv6,网络测试                                # 测速工具
+  - GEOSITE,github,Github                                    # GitHub
+  - GEOSITE,google-cn,直接连接                                # Google中国服务
   - GEOSITE,google-gemini,Gemini                             # Gemini(在category-ai-!cn已含Gemini,若需精简,可以将注释掉本条规则及"4.1 业务策略组"中相应的分组)
+  - GEOSITE,googlefcm,谷歌FCM                                 # Google FCM推送
+  - GEOSITE,google,谷歌服务                                   # Google服务  
   - GEOSITE,anthropic,Claude                                 # Cloude(在category-ai-!cn已含Cloude,若需精简,可以将注释掉本条规则及"4.1 业务策略组"中相应的分组)
   - GEOSITE,openai,ChatGPT                                   # OpenAI(在category-ai-!cn已含openai,若需精简,可以将注释掉本条规则及"4.1 业务策略组"中相应的分组)
   - GEOSITE,x,Grok                                           # Grok(在category-ai-!cn已含Grok,如需单独分流,可启用本条规则,同时也启用"4.1 业务分组"中的Grok)  
   - GEOSITE,category-ai-!cn,AI服务                            # AI服务(国外AI兜底,含openai、gemini、copilot、claude等)
-  - GEOSITE,github,Github                                    # GitHub
-  - GEOSITE,category-speedtest,网络测试                       # 测速工具
-  - GEOSITE,test-ipv6,网络测试                                # 测速工具
-  - GEOSITE,youtube,油管视频                                  # YouTube
   - GEOSITE,bilibili@!cn,默认代理                             # 哔哩哔哩海外版
-  - GEOSITE,apple-cn,直接连接                                 # 苹果中国
-  - GEOSITE,apple-tvplus,Apple TV+                           # Apple TV+
-  - GEOSITE,apple,苹果服务                                    # 苹果服务
-  - GEOSITE,googlefcm,谷歌FCM                                 # Google FCM推送
-  - GEOSITE,google,谷歌服务                                   # Google服务
+  - GEOSITE,youtube,油管视频                                  # YouTube
   - GEOSITE,tiktok,TikTok                                     # TikTok
   - GEOSITE,netflix,奈飞视频                                  # Netflix
   - GEOSITE,disney,迪士尼+                                    # Disney+
@@ -340,9 +337,12 @@ rules:
   - GEOSITE,spotify,Spotify                                  # Spotify
   - GEOSITE,bahamut,Bahamut                                  # 巴哈姆特
   - GEOSITE,steam@cn,直接连接                                 # steam国区
+  - GEOSITE,category-games@cn,直接连接                        # 国内游戏
   - GEOSITE,category-games-cn,直接连接                        # 国区游戏平台
   - GEOSITE,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
-  - GEOSITE,category-entertainment,国外娱乐                   # 国外娱乐(含youtube、tiktok、bahamut、primevideo、netflix、disney、apple-tvplus、hbo、category-games-!cn、tmdb、imdb等,若需精简,可以注释掉5.3相应的规则及"4.1 业务策略组"中对应的分组,最终到此规则兜底)
+  - GEOSITE,category-communication,即时通讯                   # 即时通讯(通讯类兜底,含telegram、WhatsApp、clubhouse等,若需精简,可以注释掉相应规则及"4.1 业务策略组"中相应的分组)
+  - GEOSITE,category-social-media-!cn,社交媒体                # 国外社交媒体(社交媒体类兜底,含instagram、facebook、twitter、mixi等,若需精简,可以注释掉相应规则及"4.1 业务策略组"中相应的分组)
+  - GEOSITE,category-entertainment,国外娱乐                   # 国外娱乐(含youtube、tiktok、bahamut、primevideo、netflix、disney、apple-tvplus、hbo、category-games-!cn、tmdb、imdb等,若需精简,可以注释掉5.4相应的规则及"4.1 业务策略组"中对应的分组,最终到此规则兜底)
   - GEOSITE,category-ecommerce,国外电商                       # 国外电商
   - GEOSITE,category-cryptocurrency,加密货币                  # 加密货币(大部分在gfw中)
   - GEOSITE,gfw,默认代理                                      # GFW列表(主要规则,被墙列表,几乎包含以上所有分组的代理域名)
