@@ -30,14 +30,14 @@
 
 | <div align="center">☑️</div> | <div align="center">🧮配置文件</div> | <div align="center">🥇推荐指数</div> | <div align="center">📈配置详情</div> | <div align="center">📑说明</div> |
 | :--- | :--- | :--- | :--- | :--- |
-| <div align="center">**1**</div> | 📄**GeoAIO.yaml** | <div align="center">★★★</div> | <div align="center">[跳转](yaml/GeoAIO.yaml)</div> | 五层策略，可自定义故转默认节点 |
-| <div align="center">**2**</div> | 📄**GeoLite.yaml** | <div align="center">★★☆</div> | <div align="center">[跳转](yaml/GeoLite.yaml)</div> | 极简分流，可自定义故转默认节点 |
-| <div align="center">**3**</div> | 📄**GeoSmartAIO.yaml** | <div align="center">★★★</div> | <div align="center">[跳转](yaml/GeoSmartAIO.yaml)</div> | 内置Geo数据库，适配Smart核心 |
+| <div align="center">**1**</div> | 📄**GeoAIO.yaml** | <div align="center">🥈★★★☆</div> | <div align="center">[跳转](yaml/GeoAIO.yaml)</div> | 五层策略，可自定义故转默认节点 |
+| <div align="center">**2**</div> | 📄**GeoLite.yaml** | <div align="center">🥉★★☆</div> | <div align="center">[跳转](yaml/GeoLite.yaml)</div> | 极简分流，可自定义故转默认节点 |
+| <div align="center">**3**</div> | 📄**GeoSmartAIO.yaml** | <div align="center">🥉★★★</div> | <div align="center">[跳转](yaml/GeoSmartAIO.yaml)</div> | 内置Geo数据库，适配Smart核心 |
 | <div align="center">**4**</div> | 📄**RuleAIO.yaml** | <div align="center">★★★☆</div> | <div align="center">[跳转](yaml/RuleAIO.yaml)</div> | 官方实时Geo数据库，五层策略 |
-| <div align="center">**5**</div> | 📄**RuleAIOPlus.yaml** | <div align="center">★★★★☆</div> | <div align="center">[跳转](yaml/RuleAIOPlus.yaml)</div> | 自定义出站机场，多元默认故转 |
-| <div align="center">**6**</div> | 📄**RuleAIOPro.yaml** | <div align="center">★★★★</div> | <div align="center">[跳转](yaml/RuleAIOPro.yaml)</div> | 官方实时Geo数据库，自定义出站机场 |
-| <div align="center">**7**</div> | 📄**RuleLite.yaml** | <div align="center">★★★</div> | <div align="center">[跳转](yaml/RuleLite.yaml)</div> | 官方实时Geo数据库，极简分流
-| <div align="center">**8**</div> | 📄**RuleSmartAIO.yaml** | <div align="center">★★★☆</div> | <div align="center">[跳转](yaml/RuleSmartAIO)</div> | 官方实时Geo数据库，适配Smart核心 |
+| <div align="center">**5**</div> | 📄**RuleAIOPlus.yaml** | <div align="center">🥇★★★★☆</div> | <div align="center">[跳转](yaml/RuleAIOPlus.yaml)</div> | 自定义出站机场，多元默认故转 |
+| <div align="center">**6**</div> | 📄**RuleAIOPro.yaml** | <div align="center">🥈★★★★</div> | <div align="center">[跳转](yaml/RuleAIOPro.yaml)</div> | 官方实时Geo数据库，自定义出站机场 |
+| <div align="center">**7**</div> | 📄**RuleLite.yaml** | <div align="center">🥉★★★</div> | <div align="center">[跳转](yaml/RuleLite.yaml)</div> | 官方实时Geo数据库，极简分流
+| <div align="center">**8**</div> | 📄**RuleSmartAIO.yaml** | <div align="center">🥈★★★☆</div> | <div align="center">[跳转](yaml/RuleSmartAIO)</div> | 官方实时Geo数据库，适配Smart核心 |
 </div>
 
 ***  
