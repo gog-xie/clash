@@ -171,9 +171,10 @@ proxy-groups:
   # 3.1 业务策略组
   - {name: 默认代理,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
   - {name: 默认直连,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
-  - {name: 故障转移,     <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
   - {name: Github,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}  
   - {name: Docker,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Docker.png}
+  - {name: 游戏平台,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
+  - {name: 故障转移,     <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
 
   # 3.2 策略组与地理策略组分界识别
   - {name: 漏网之鱼,     <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png}
@@ -257,12 +258,17 @@ rules:
   - RULE-SET,Custom_Proxy_IP,默认代理,no-resolve              # 自定义代理IP
   - RULE-SET,google-cn,直接连接                                # Google中国服务
   - RULE-SET,geolocation-cn,直接连接                           # 中国域名
-  - RULE-SET,category-games,直接连接                           # 游戏平台(含category-games-cn、Steam)
   - RULE-SET,Steam_CDN_Domain,直接连接                        # Steam CDN
   - RULE-SET,Steam_CDN_IP,直接连接,no-resolve                 # Steam CDN
   - RULE-SET,category-game-platforms-download,直接连接         # 游戏平台下载
+  - RULE-SET,steam@cn,直接连接                                 # Steam国区
+  - RULE-SET,category-games@cn,直接连接                        # 国内游戏
+  - RULE-SET,category-games-cn,直接连接                        # 国区游戏平台
+  - RULE-SET,steam,游戏平台                                    # Steam
+  - RULE-SET,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
   - RULE-SET,category-public-tracker,直接连接                  # BT Tracker
   - RULE-SET,category-pt,直接连接                              # PT站
+  - RULE-SET,Speedtest,网络测试                                # 测速工具
   - RULE-SET,category-speedtest,网络测试                       # 测速工具
   - RULE-SET,test-ipv6,网络测试                                # 测速工具
   - RULE-SET,github,Github                                    # GitHub(采用Github520的hosts文件后，Github可直连)  
@@ -272,7 +278,7 @@ rules:
   - RULE-SET,twitter_IP,默认代理,no-resolve                    # Twitter IP
   - RULE-SET,facebook_IP,默认代理,no-resolve                   # Facebook IP
   - RULE-SET,netflix_IP,默认代理,no-resolve                    # Netflix IP
-  - RULE-SET,geolocation-!cn,默认直连                          # 非中国域名(涵盖gfw被墙域名,除gfw外,大都未被墙,给gfw兜底)
+  - RULE-SET,geolocation-!cn,默认直连                          # 非中国域名(属于gfw的父集,除gfw列表外,大多数境外域名未被墙,给gfw兜底，如果境外域名有连不上的情况，尝试"默认直连"分组切换为任意代理)
   - RULE-SET,cloudflare_IP,默认直连,no-resolve                 # cloudflare(geolocation-!cn已包含cloudflare,这里IP补充)
   - RULE-SET,cloudfront_IP,默认直连,no-resolve                 # 亚马逊旗下CDN(同上IP补充)
   - RULE-SET,fastly_IP,默认直连,no-resolve                     # FSLY CDN(同上IP补充)
