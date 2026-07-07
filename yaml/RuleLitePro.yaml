@@ -330,6 +330,18 @@ rule-providers:
   # 5.2 fakeip-filter规则
   fakeip-filter:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
 
+  # 5.4 自定义规则
+  My_Proxy:              {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Rules@main/My_rules/Proxy.yaml}
+  My_Direct:             {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Rules@main/My_rules/Direct.yaml}
+  Custom_Direct_Domain:  {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.mrs}
+  Custom_Direct_IP:      {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Direct_IP.mrs}
+  Custom_Direct_Port:    {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_Port.yaml}
+  Custom_Port_Direct:    {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml}
+  Custom_Proxy_Domain:   {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.mrs}
+  Custom_Proxy_IP:       {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Proxy_IP.mrs}
+  Steam_CDN_Domain:      {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Steam_CDN_Domain.mrs}
+  Steam_CDN_IP:          {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Steam_CDN_IP.mrs}
+  
   # 5.5 规则集提供者 
   private:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs}
   docker:                              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/docker.mrs}
