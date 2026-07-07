@@ -42,7 +42,7 @@ FilterEU: &FilterEU '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|
 FilterOT: &FilterOT '^(?!.*(DIRECT|直接连接|美|港|坡|台|新|日|韩|奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇭🇰|🇼🇸|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|🇦🇹|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW))'
 FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
 
-# 1.5 策略组代理锚点 - 预定义的代理节点优先级排序,根据自己需求在“4.1 业务策略组”选定策略组代理模板
+# 1.5 策略组代理锚点 - 预定义的代理节点优先级排序,根据自己需求在“3.1 业务策略组”选定策略组代理模板
 SelectPY: &SelectPY {type: select, proxies: [全球手动, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 直接连接]}
 SelectDC: &SelectDC {type: select, proxies: [默认直连, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
 SelectFB: &SelectFB {type: select, proxies: [故障转移, 默认代理, 默认直连, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
@@ -58,22 +58,8 @@ proxy-providers:
   # Airport2订阅源 - 次选机场节点集合，使用时请修改
   Airport2: {<<: *BaseProvider, url: 'Airport2订阅源地址', override: {additional-prefix: '[备] '}}
 
-# 2 监听器 
-listeners:
-  # Shadowsocks监听器 - 代理节点 玩法：远程连接家庭网络,端口和密码,使用时请修改
-  - {name: SS-IN,  type: shadowsocks, listen: '::', port: 10000, udp: true, password: Xf3#Lp9WqZ, cipher: aes-256-gcm}
-  # Mixed监听器 - 分地区专用端口 玩法：本地浏览器插件或手机APP配置代理,实现分地区访问
-  - {name: MIXED-SG, type: mixed, port: 50000, proxy: 狮城策略}
-  - {name: MIXED-US, type: mixed, port: 50001, proxy: 美国策略}
-  - {name: MIXED-TW, type: mixed, port: 50002, proxy: 台湾策略}
-  - {name: MIXED-HK, type: mixed, port: 50003, proxy: 香港策略}
-  - {name: MIXED-JP, type: mixed, port: 50004, proxy: 日本策略}
-  - {name: MIXED-KR, type: mixed, port: 50005, proxy: 韩国策略}
-  - {name: MIXED-EU, type: mixed, port: 50006, proxy: 欧盟策略}
-  - {name: MIXED-OT, type: mixed, port: 50007, proxy: 冷门策略}
-
-# 3 核心配置
-# 3.1 基础配置
+# 2 核心配置
+# 2.1 基础配置
 mode: rule
 port: 7890
 socks-port: 7891
@@ -91,7 +77,7 @@ keep-alive-interval: 15
 keep-alive-idle: 600
 # global-client-fingerprint: chrome
 
-# 3.2 认证配置
+# 2.2 认证配置
 authentication:
   - mihomo:mihomo
 skip-auth-prefixes:
@@ -100,23 +86,23 @@ skip-auth-prefixes:
   - 192.168.100.0/24
   - 127.0.0.1/8
 
-# 3.3 实验性功能
+# 2.3 实验性功能
 experimental:
   quic-go-disable-gso: true  
      
-# 3.4管理面板配置
+# 2.4管理面板配置
 external-ui-url: https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
 external-ui-name: zashboard
 external-ui: ui
 external-controller: 127.0.0.1:9090
 secret: mihomo
 
-# 3.5 配置存储
+# 2.5 配置存储
 profile:
   store-selected: true
   store-fake-ip: true
 
-# 3.6 流量嗅探
+# 2.6 流量嗅探
 sniffer:
   enable: true
   sniff:
@@ -131,7 +117,7 @@ sniffer:
     - "Mijia Cloud"
     - "+.push.apple.com"
 
-# 3.7 TUN模式配置
+# 2.7 TUN模式配置
 tun:
   enable: false
   stack: mixed
@@ -142,7 +128,7 @@ tun:
   auto-redirect: true
   auto-detect-interface: true
 
-# 3.8本地静态域名映射表(优先级最高,用来强制把某个域名解析到指定 IP,不走 DNS、不经过规则判断)
+# 2.8本地静态域名映射表(优先级最高,用来强制把某个域名解析到指定 IP,不走 DNS、不经过规则判断)
 hosts:
   "epdg.epc.mnc010.mcc234.pub.3gppnetwork.org": [87.194.8.8, 87.194.88.8, 87.194.89.8, 87.194.9.8]
   services.googleapis.cn: services.googleapis.com
@@ -152,7 +138,7 @@ hosts:
   dns.google: [8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844]
   cloudflare-dns.com: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
     
-# 3.9 DNS配置
+# 2.9 DNS配置
 dns:
   enable: true
   ipv6: true
@@ -184,19 +170,19 @@ dns:
     - +.market.xiaomi.com
     - +.push.apple.com
 
-# 4 代理策略组 
+# 3 代理策略组 
 proxy-groups:
-  # 4.1 业务策略组(根据需求按“1.5 策略组代理列表”模板自行选择默认类型,仅是排列顺序不一样,包含的策略是一样的)
+  # 3.1 业务策略组(根据需求按“1.5 策略组代理列表”模板自行选择默认类型,仅是排列顺序不一样,包含的策略是一样的)
   - {name: 默认代理,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
   - {name: 默认直连,     type: select, proxies: [直接连接, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
   - {name: 故障转移,     <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
   - {name: Docker,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Docker.png}
 
-  # 4.2 策略组与地理策略组分界识别(为了zashboard面板美观)
+  # 3.2 策略组与地理策略组分界识别
   - {name: 漏网之鱼,     <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png}
   - {name: 网络测试,     <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png}
 
-  # 4.3 地理策略组
+  # 3.3 地理策略组
   - {name: 狮城策略,     type: select, proxies: [狮城均衡-轮询, 狮城均衡-散列, 狮城自动], include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png}
   - {name: 香港策略,     type: select, proxies: [香港均衡-轮询, 香港均衡-散列, 香港自动], include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png}
   - {name: 日本策略,     type: select, proxies: [日本均衡-轮询, 日本均衡-散列, 日本自动], include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png}
@@ -206,11 +192,11 @@ proxy-groups:
   - {name: 韩国策略,     type: select, proxies: [韩国均衡-轮询, 韩国均衡-散列, 韩国自动], include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png}
   - {name: 冷门策略,     type: select, proxies: [冷门均衡-轮询, 冷门均衡-散列, 冷门自动], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
 
-  # 4.4 其他策略组(放在这里仅为了zashboard界面布局整齐)
+  # 3.4 其他策略组
   - {name: 全球手动,     type: select, proxies: [狮城策略, 香港策略, 美国策略, 台湾策略, 欧盟策略, 日本策略, 韩国策略, 冷门策略], include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png}
   - {name: 直接连接,     type: select, proxies: [DIRECT], hidden: true, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png}
 
-  # 4.5 负载均衡-散列 
+  # 3.5 负载均衡-散列 
   - {name: 香港均衡-散列, <<: *BaseCH, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
   - {name: 台湾均衡-散列, <<: *BaseCH, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
   - {name: 狮城均衡-散列, <<: *BaseCH, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
@@ -220,7 +206,7 @@ proxy-groups:
   - {name: 欧盟均衡-散列, <<: *BaseCH, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
   - {name: 冷门均衡-散列, <<: *BaseCH, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
 
-  # 4.6 负载均衡-轮询 
+  # 3.6 负载均衡-轮询 
   - {name: 香港均衡-轮询, <<: *BaseCR, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
   - {name: 台湾均衡-轮询, <<: *BaseCR, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
   - {name: 狮城均衡-轮询, <<: *BaseCR, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
@@ -230,7 +216,7 @@ proxy-groups:
   - {name: 欧盟均衡-轮询, <<: *BaseCR, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
   - {name: 冷门均衡-轮询, <<: *BaseCR, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
 
-  # 4.5 自动测速组 
+  # 3.5 自动测速组 
   - {name: 香港自动,     <<: *BaseUT, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
   - {name: 台湾自动,     <<: *BaseUT, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
   - {name: 狮城自动,     <<: *BaseUT, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
@@ -240,7 +226,7 @@ proxy-groups:
   - {name: 欧盟自动,     <<: *BaseUT, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
   - {name: 冷门自动,     <<: *BaseUT, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
 
-# 5 规则路由 (按照从上往下的顺序遍历,优先命中上位规则,规则重复无影响,修改顺序会影响分流效果)
+# 4 规则路由 (按照从上往下的顺序遍历,优先命中上位规则,规则重复无影响,修改顺序会影响分流效果)
 rules: 
   # 5.1 拦截规则(按需启用,可禁用拦截,不影响使用效果)
   - RULE-SET,category-ads-all,REJECT    # 轻量化广告拦截,与秋风广告配合使用,同时启用category-ads-all和AWAvenueAds,禁用anti-AD广告过滤列表
@@ -259,11 +245,11 @@ rules:
   
   # 内网设备(192.168.50.58、::abcd:1234:efgh:5678/64)部分代理,其余直连
   #- RULE-SET,My_Proxy,默认代理
-  - RULE-SET,docker,Docker   # 群晖会定期连docker跑流量,需要时才开启代理,无此项需求的删除掉,并删除4.1 业务策略组相应分组
+  - RULE-SET,docker,Docker   # 群晖会定期连docker跑流量,需要时才开启代理,无此项需求的删除掉,并删除3.1 业务策略组相应分组
   #- SRC-IP-CIDR,192.168.50.58/32,DIRECT,no-resolve
   #- SRC-IP-SUFFIX,::abcd:1234:efgh:5678/64,DIRECT,no-resolve  #某内网设备通过IPV6地址实现部分代理其余直连，由于路由器重启后IPV6前四段会变化，但后四段是根据MAC地址生成的，匹配后缀即可
 
-  # 5.3 域名规则
+  # 4.3 域名规则
   - RULE-SET,My_Direct,直接连接                               # 自定义直连域名
   - RULE-SET,private,直接连接                                  # 私有域名
   - RULE-SET,private_IP,直接连接,no-resolve                    # 内网 / 保留 IP(127/8、192.168/16…)
@@ -297,17 +283,17 @@ rules:
   - RULE-SET,Custom_Port_Direct,直接连接                      # 非标端口
   - MATCH,漏网之鱼                                            # 漏网之鱼
 
-# 6 规则提供者
+# 5 规则提供者
 rule-providers:  
-  # 6.1 广告拦截规则
+  # 5.1 广告拦截规则
   category-ads-all: {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ads-all.mrs }
   AWAvenueAds:      {<<: *BehaviorDN, url: https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.mrs}
   anti-ad:          {<<: *BehaviorDY, url: https://testingcf.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-clash.yaml}
 
-  # 6.3 fakeip-filter规则
+  # 5.2 fakeip-filter规则
   fakeip-filter:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
 
-  # 6.4 自定义规则
+  # 5.3 自定义规则
   My_Proxy:              {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Rules@main/My_rules/Proxy.yaml}
   My_Direct:             {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Rules@main/My_rules/Direct.yaml}
   Custom_Direct_Domain:  {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.mrs}
@@ -319,7 +305,7 @@ rule-providers:
   Steam_CDN_Domain:      {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Steam_CDN_Domain.mrs}
   Steam_CDN_IP:          {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Steam_CDN_IP.mrs}
 
-  # 6.5 规则集提供者 
+  # 5.4 规则集提供者 
   private:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs}
   docker:                              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/docker.mrs}
   private_IP:                          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs}
@@ -343,5 +329,4 @@ rule-providers:
   fastly_IP:                           {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/fastly.mrs}
   cn:                                  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs}
   cn_IP:                               {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.mrs}
-
 # ==================== EOF ====================
