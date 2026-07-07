@@ -257,7 +257,6 @@ rules:
   - RULE-SET,Custom_Proxy_Domain,默认代理                     # 自定义代理域名
   - RULE-SET,Custom_Proxy_IP,默认代理,no-resolve              # 自定义代理IP
   - RULE-SET,google-cn,直接连接                                # Google中国服务
-  - RULE-SET,geolocation-cn,直接连接                           # 中国域名
   - RULE-SET,Steam_CDN_Domain,直接连接                        # Steam CDN
   - RULE-SET,Steam_CDN_IP,直接连接,no-resolve                 # Steam CDN
   - RULE-SET,category-game-platforms-download,直接连接         # 游戏平台下载
@@ -270,6 +269,9 @@ rules:
   - RULE-SET,category-pt,直接连接                              # PT站
   - RULE-SET,category-speedtest,网络测试                       # 测速工具
   - RULE-SET,test-ipv6,网络测试                                # 测速工具
+  - RULE-SET,microsoft-dev@cn,直接连接                         # 国内微软开发者平台
+  - RULE-SET,microsoft@cn,直接连接                             # 微软中国
+  - RULE-SET,geolocation-cn,直接连接                           # 中国域名
   - RULE-SET,github,Github                                    # GitHub(采用Github520的hosts文件后，Github可直连)  
   - RULE-SET,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
   - RULE-SET,google_IP,默认代理,no-resolve                     # google IP
@@ -313,6 +315,8 @@ rule-providers:
   docker:                              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/docker.mrs}
   private_IP:                          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs}
   google-cn:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google-cn.mrs}
+  microsoft-dev@cn:                    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft-dev@cn.mrs}
+  microsoft@cn:                        {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft@cn.mrs}
   geolocation-cn:                      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-cn.mrs}
   category-game-platforms-download:    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-game-platforms-download.mrs}
   category-public-tracker:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-public-tracker.mrs}
