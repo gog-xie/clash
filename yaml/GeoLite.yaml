@@ -257,7 +257,6 @@ rules:
   - RULE-SET,Custom_Proxy_Domain,默认代理                     # 自定义代理域名
   - RULE-SET,Custom_Proxy_IP,默认代理,no-resolve              # 自定义代理IP
   - GEOSITE,google-cn,直接连接                                # Google中国服务
-  - GEOSITE,geolocation-cn,直接连接                           # 中国域名
   - RULE-SET,Steam_CDN_Domain,直接连接                        # Steam CDN
   - RULE-SET,Steam_CDN_IP,直接连接,no-resolve                 # Steam CDN
   - GEOSITE,category-game-platforms-download,直接连接         # 游戏平台下载
@@ -270,6 +269,9 @@ rules:
   - GEOSITE,category-pt,直接连接                              # PT站
   - GEOSITE,category-speedtest,网络测试                       # 测速工具
   - GEOSITE,test-ipv6,网络测试                                # 测速工具
+  - GEOSITE,microsoft-dev@cn,直接连接                         # 国内微软开发者平台
+  - GEOSITE,microsoft@cn,直接连接                             # 微软中国  
+  - GEOSITE,geolocation-cn,直接连接                           # 中国域名
   - GEOSITE,github,Github                                    # GitHub(采用Github520的hosts文件后，Github可直连)  
   - GEOSITE,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
   - GEOIP,google,默认代理,no-resolve                          # google IP
