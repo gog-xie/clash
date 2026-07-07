@@ -286,15 +286,20 @@ rules:
   - RULE-SET,Custom_Proxy_IP,默认代理,no-resolve              # 自定义代理IP
   - RULE-SET,google-cn,直接连接                                # Google中国服务
   - RULE-SET,geolocation-cn,直接连接                           # 中国域名
-  - RULE-SET,category-games,直接连接                           # 游戏平台(含category-games-cn、Steam)
   - RULE-SET,Steam_CDN_Domain,直接连接                        # Steam CDN
   - RULE-SET,Steam_CDN_IP,直接连接,no-resolve                 # Steam CDN
   - RULE-SET,category-game-platforms-download,直接连接         # 游戏平台下载
+  - RULE-SET,steam@cn,直接连接                                 # Steam国区
+  - RULE-SET,steam,默认直连                                    # Steam(如果steam连不上,尝试"默认直连"分组切换为任意代理)
+  - RULE-SET,category-games@cn,直接连接                        # 国内游戏
+  - RULE-SET,category-games-cn,直接连接                        # 国区游戏平台
+  - RULE-SET,category-games,默认直连                           # 游戏平台(含category-games-cn、Steam)
   - RULE-SET,category-public-tracker,直接连接                  # BT Tracker
   - RULE-SET,category-pt,直接连接                              # PT站
+  - RULE-SET,Speedtest,网络测试                                # 测速工具
   - RULE-SET,category-speedtest,网络测试                       # 测速工具
   - RULE-SET,test-ipv6,网络测试                                # 测速工具
-  - RULE-SET,github,Github                                    # GitHub(采用Github520的hosts文件后，Github可直连，详见https://github.com/521xueweihan/GitHub520)  
+  - RULE-SET,github,Github                                    # GitHub(采用Github520的hosts文件后，Github可直连)  
   - RULE-SET,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
   - RULE-SET,google_IP,默认代理,no-resolve                     # google IP
   - RULE-SET,telegram_IP,默认代理,no-resolve                   # Telegram IP
@@ -308,8 +313,8 @@ rules:
   - RULE-SET,cn,直接连接                                       # 中国域名
   - RULE-SET,cn_IP,直接连接,no-resolve                         # 中国IP
   - RULE-SET,Custom_Port_Direct,直接连接                      # 非标端口
-  - MATCH,漏网之鱼                                            # 漏网之鱼
-
+  - MATCH,漏网之鱼               
+  
 # 5 规则提供者
 rule-providers:  
   # 5.1 广告拦截规则
@@ -332,16 +337,20 @@ rule-providers:
   Steam_CDN_Domain:      {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Steam_CDN_Domain.mrs}
   Steam_CDN_IP:          {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Steam_CDN_IP.mrs}
 
-  # 5.4 规则集提供者 
+  # 5.5 规则集提供者 
   private:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs}
   docker:                              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/docker.mrs}
   private_IP:                          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs}
   google-cn:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google-cn.mrs}
   geolocation-cn:                      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-cn.mrs}
-  category-games:                      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games.mrs}
   category-game-platforms-download:    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-game-platforms-download.mrs}
   category-public-tracker:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-public-tracker.mrs}
   category-pt:                         {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-pt.mrs}
+  steam@cn:                            {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam@cn.mrs}
+  steam:                               {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.mrs}
+  category-games@cn:                   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games@cn.mrs}
+  category-games-cn:                   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games-cn.mrs}
+  category-games:                      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games.mrs}
   category-speedtest:                  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-speedtest.mrs}
   test-ipv6:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/test-ipv6.mrs}
   github:                              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs}
