@@ -42,13 +42,9 @@ FilterEU: &FilterEU '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|
 FilterOT: &FilterOT '^(?!.*(DIRECT|直接连接|美|港|坡|台|新|日|韩|奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇭🇰|🇼🇸|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|🇦🇹|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW))'
 FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
 
-# 1.5 策略组代理锚点 - 预定义的代理节点优先级排序,根据自己需求在“3.1 业务策略组”选定策略组代理模板
-SelectPY: &SelectPY {type: select, proxies: [全球手动, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 直接连接]}
+# 1.5 策略组代理锚点 - 预定义的代理节点优先级排序
 SelectDC: &SelectDC {type: select, proxies: [默认直连, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectFB: &SelectFB {type: select, proxies: [故障转移, 默认代理, 默认直连, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectHK: &SelectHK {type: select, proxies: [香港策略, 默认代理, 默认直连, 故障转移, 狮城策略, 美国策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectSG: &SelectSG {type: select, proxies: [狮城策略, 默认代理, 默认直连, 故障转移, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectUS: &SelectUS {type: select, proxies: [美国策略, 默认代理, 默认直连, 故障转移, 狮城策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
+SelectFB: &SelectFB {type: select, proxies: [故障转移, 全球手动, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 默认直连, 直接连接]}
 
 # 1.6 代理提供者 
 # 注意：请填入机场订阅链接,每个链接一行,并为每个机场命名,视情况启用多个机场。末尾的[主][备]为每个节点添加机场名称前缀,可自定义。
@@ -172,11 +168,11 @@ dns:
 
 # 3 代理策略组 
 proxy-groups:
-  # 3.1 业务策略组(根据需求按“1.5 策略组代理列表”模板自行选择默认类型,仅是排列顺序不一样,包含的策略是一样的)
-  - {name: 默认代理,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
+  # 3.1 业务策略组
+  - {name: 默认代理,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
   - {name: 默认直连,     type: select, proxies: [直接连接, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
   - {name: 故障转移,     <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
-  - {name: Github,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}  
+  - {name: Github,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}  
   - {name: Docker,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Docker.png}
 
   # 3.2 策略组与地理策略组分界识别
