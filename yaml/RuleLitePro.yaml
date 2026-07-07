@@ -18,7 +18,7 @@
 BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(客户端|特殊|如果|导致|一下|教程|测试|剩余|套餐|0.5x|0.1x|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
 
 # 1.2策略组类型锚点 - 定义不同的策略组基础配置
-BaseFB: &BaseFB {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204'}
+BaseFB: &BaseFB {type: fallback, interval: 200, lazy: true, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], url: 'https://www.google.com/generate_204', hidden: true}
 BaseCH: &BaseCH {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: consistent-hashing, hidden: true, include-all: true}
 BaseCR: &BaseCR {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: round-robin, hidden: true, include-all: true}
 BaseUT: &BaseUT {type: url-test, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true, include-all: true}
@@ -43,8 +43,8 @@ FilterOT: &FilterOT '^(?!.*(DIRECT|直接连接|美|港|坡|台|新|日|韩|奥|
 FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
 
 # 1.5 策略组代理锚点 - 预定义的代理节点优先级排序
+SelectPY: &SelectPY {type: select, proxies: [故障转移, 全球手动, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 直接连接]}
 SelectDC: &SelectDC {type: select, proxies: [直接连接, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动]}
-SelectFB: &SelectFB {type: select, proxies: [故障转移, 全球手动, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 直接连接]}
 
 # 1.6 代理提供者 
 # 注意：
@@ -171,12 +171,14 @@ dns:
 # 3 代理策略组 
 proxy-groups:
   # 3.1 业务策略组
-  - {name: 默认代理,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
+  # 3.1 业务策略组
+  - {name: 默认代理,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
   - {name: 默认直连,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
   - {name: Github,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}  
   - {name: Docker,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Docker.png}
+  - {name: 微软服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
   - {name: 游戏平台,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
-  - {name: 故障转移,     <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
+  - {name: 故障转移,     <<: *BaseFB,   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
 
   # 3.2 策略组与地理策略组分界识别
   - {name: 漏网之鱼,     <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png}
@@ -302,6 +304,7 @@ rules:
   - RULE-SET,microsoft@cn,直接连接                             # 微软中国
   - RULE-SET,geolocation-cn,直接连接                           # 中国域名
   - RULE-SET,github,Github                                    # GitHub(采用Github520的hosts文件后，Github可直连)  
+  - RULE-SET,microsoft,微软服务                                # 微软服务
   - RULE-SET,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
   - RULE-SET,google_IP,默认代理,no-resolve                     # google IP
   - RULE-SET,telegram_IP,默认代理,no-resolve                   # Telegram IP
@@ -327,18 +330,6 @@ rule-providers:
   # 5.2 fakeip-filter规则
   fakeip-filter:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
 
-  # 5.3 自定义规则
-  My_Proxy:              {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Rules@main/My_rules/Proxy.yaml}
-  My_Direct:             {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Rules@main/My_rules/Direct.yaml}
-  Custom_Direct_Domain:  {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.mrs}
-  Custom_Direct_IP:      {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Direct_IP.mrs}
-  Custom_Direct_Port:    {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_Port.yaml}
-  Custom_Port_Direct:    {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml}
-  Custom_Proxy_Domain:   {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.mrs}
-  Custom_Proxy_IP:       {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Proxy_IP.mrs}
-  Steam_CDN_Domain:      {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Steam_CDN_Domain.mrs}
-  Steam_CDN_IP:          {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Steam_CDN_IP.mrs}
-
   # 5.5 规则集提供者 
   private:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs}
   docker:                              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/docker.mrs}
@@ -346,6 +337,7 @@ rule-providers:
   google-cn:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google-cn.mrs}
   microsoft-dev@cn:                    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft-dev@cn.mrs}
   microsoft@cn:                        {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft@cn.mrs}
+  microsoft:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs}
   geolocation-cn:                      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-cn.mrs}
   category-game-platforms-download:    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-game-platforms-download.mrs}
   category-public-tracker:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-public-tracker.mrs}
