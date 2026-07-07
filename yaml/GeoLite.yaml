@@ -250,7 +250,7 @@ rules:
   # 4.3 域名规则
   - RULE-SET,My_Direct,直接连接                               # 自定义直连域名
   - GEOSITE,private,直接连接                                  # 私有域名
-  - GEOSITE,private,直接连接,no-resolve                    # 内网 / 保留 IP(127/8、192.168/16…)
+  - GEOSITE,private,直接连接,no-resolve                       # 内网 / 保留 IP(127/8、192.168/16…)
   - RULE-SET,Custom_Direct_Domain,直接连接                    # 自定义直连域名
   - RULE-SET,Custom_Direct_IP,直接连接,no-resolve             # 自定义直连IP
   - RULE-SET,Custom_Direct_Port,直接连接                      # 自定义直连端口
@@ -272,17 +272,17 @@ rules:
   - GEOSITE,test-ipv6,网络测试                                # 测速工具
   - GEOSITE,github,Github                                    # GitHub(采用Github520的hosts文件后，Github可直连)  
   - GEOSITE,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
-  - GEOIP,google,默认代理,no-resolve                     # google IP
-  - GEOIP,telegram,默认代理,no-resolve                   # Telegram IP
-  - GEOIP,twitter,默认代理,no-resolve                    # Twitter IP
-  - GEOIP,facebook,默认代理,no-resolve                   # Facebook IP
-  - GEOIP,netflix,默认代理,no-resolve                    # Netflix IP
-  - GEOIP,geolocation-!cn,默认直连                          # 非中国域名(属于gfw的父集,除gfw列表外,大多数境外域名未被墙,给gfw兜底，如果境外域名有连不上的情况，尝试"默认直连"分组切换为任意代理)
-  - GEOIP,cloudflare,默认直连,no-resolve                 # cloudflare(geolocation-!cn已包含cloudflare,这里IP补充)
-  - GEOIP,cloudfront,默认直连,no-resolve                 # 亚马逊旗下CDN(同上IP补充)
-  - GEOIP,fastly,默认直连,no-resolve                     # FSLY CDN(同上IP补充)
+  - GEOIP,google,默认代理,no-resolve                          # google IP
+  - GEOIP,telegram,默认代理,no-resolve                        # Telegram IP
+  - GEOIP,twitter,默认代理,no-resolve                         # Twitter IP
+  - GEOIP,facebook,默认代理,no-resolve                        # Facebook IP
+  - GEOIP,netflix,默认代理,no-resolve                         # Netflix IP
+  - GEOIP,geolocation-!cn,默认直连                            # 非中国域名(属于gfw的父集,除gfw列表外,大多数境外域名未被墙,给gfw兜底，如果境外域名有连不上的情况，尝试"默认直连"分组切换为任意代理)
+  - GEOIP,cloudflare,默认直连,no-resolve                      # cloudflare(geolocation-!cn已包含cloudflare,这里IP补充)
+  - GEOIP,cloudfront,默认直连,no-resolve                      # 亚马逊旗下CDN(同上IP补充)
+  - GEOIP,fastly,默认直连,no-resolve                          # FSLY CDN(同上IP补充)
   - GEOSITE,cn,直接连接                                       # 中国域名
-  - GEOIP,cn,直接连接,no-resolve                         # 中国IP
+  - GEOIP,cn,直接连接,no-resolve                              # 中国IP
   - RULE-SET,Custom_Port_Direct,直接连接                      # 非标端口
   - MATCH,漏网之鱼                                            # 漏网之鱼
 
