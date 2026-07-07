@@ -18,7 +18,7 @@
 BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(客户端|特殊|如果|导致|一下|教程|测试|剩余|套餐|0.5x|0.1x|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
 
 # 1.2策略组类型锚点 - 定义不同的策略组基础配置
-BaseFB: &BaseFB {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204'}
+BaseFB: &BaseFB {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true}
 BaseCH: &BaseCH {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: consistent-hashing, hidden: true, include-all: true}
 BaseCR: &BaseCR {type: load-balance, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', strategy: round-robin, hidden: true, include-all: true}
 BaseUT: &BaseUT {type: url-test, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true, include-all: true}
@@ -170,6 +170,7 @@ dns:
 proxy-groups:
   # 3.1 业务策略组
   - {name: 默认代理,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
+  - {name: 默认直连,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
   - {name: 故障转移,     <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
   - {name: Github,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}  
   - {name: Docker,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Docker.png}
@@ -271,10 +272,10 @@ rules:
   - RULE-SET,twitter_IP,默认代理,no-resolve                    # Twitter IP
   - RULE-SET,facebook_IP,默认代理,no-resolve                   # Facebook IP
   - RULE-SET,netflix_IP,默认代理,no-resolve                    # Netflix IP
-  - RULE-SET,geolocation-!cn,直接连接                          # 非中国域名(涵盖gfw被墙域名,除gfw外,大都未被墙,给gfw兜底)
-  - RULE-SET,cloudflare_IP,直接连接,no-resolve                 # cloudflare(geolocation-!cn已包含cloudflare,这里IP补充)
-  - RULE-SET,cloudfront_IP,直接连接,no-resolve                 # 亚马逊旗下CDN(同上IP补充)
-  - RULE-SET,fastly_IP,直接连接,no-resolve                     # FSLY CDN(同上IP补充)
+  - RULE-SET,geolocation-!cn,默认直连                          # 非中国域名(涵盖gfw被墙域名,除gfw外,大都未被墙,给gfw兜底)
+  - RULE-SET,cloudflare_IP,默认直连,no-resolve                 # cloudflare(geolocation-!cn已包含cloudflare,这里IP补充)
+  - RULE-SET,cloudfront_IP,默认直连,no-resolve                 # 亚马逊旗下CDN(同上IP补充)
+  - RULE-SET,fastly_IP,默认直连,no-resolve                     # FSLY CDN(同上IP补充)
   - RULE-SET,cn,直接连接                                       # 中国域名
   - RULE-SET,cn_IP,直接连接,no-resolve                         # 中国IP
   - RULE-SET,Custom_Port_Direct,直接连接                      # 非标端口
