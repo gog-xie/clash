@@ -25,6 +25,8 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3 RuleAIOPro和RuleAIOPlus配置模板可实现按地区节点集自定义出站机场，其余模板不区分出站机场。
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4 在控制面板中，有的人很在意节点是灰色的，不是绿色的喜欢不停的点击，一直点到绿色，其实显示绿色还是灰色无关大雅，系统上线后选择好分流策略即可使用，系统是根据代码规则设定去判定节点的选择。
+
 <div align="center">
 
 
