@@ -41,13 +41,9 @@ FilterEU: &FilterEU '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|
 FilterOT: &FilterOT '^(?!.*(DIRECT|直接连接|美|港|坡|台|新|日|韩|奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇭🇰|🇼🇸|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|🇦🇹|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW))'
 FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
 
-# 1.5 策略组代理列表锚点 - 预定义的代理节点优先级排序,根据自己需求在“3.1 业务策略组”选定策略组代理模板
-SelectPY: &SelectPY {type: select, proxies: [全球手动, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 直接连接]}
-SelectDC: &SelectDC {type: select, proxies: [默认直连, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectFB: &SelectFB {type: select, proxies: [故障转移, 默认代理, 默认直连, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectHK: &SelectHK {type: select, proxies: [香港策略, 默认代理, 默认直连, 故障转移, 狮城策略, 美国策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectSG: &SelectSG {type: select, proxies: [狮城策略, 默认代理, 默认直连, 故障转移, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
-SelectUS: &SelectUS {type: select, proxies: [美国策略, 默认代理, 默认直连, 故障转移, 狮城策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动, 直接连接]}
+# 1.5 策略组代理锚点 - 预定义的代理节点优先级排序
+SelectDC: &SelectDC {type: select, proxies: [直接连接, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动]}
+SelectFB: &SelectFB {type: select, proxies: [故障转移, 全球手动, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 直接连接]}
 
 # 1.6 代理提供者 
 # 注意：请填入机场订阅链接,每个链接一行,并为每个机场命名,视情况启用多个机场。末尾的[主][备]为每个节点添加机场名称前缀,可自定义。
@@ -172,16 +168,19 @@ dns:
 
 # 3 代理策略组 
 proxy-groups:
-  # 3.1 业务策略组(根据需求按“1.5 策略组代理列表”模板自行选择默认类型,仅是排列顺序不一样,包含的策略是一样的)
-  - {name: 默认代理,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
-  - {name: 默认直连,     type: select, proxies: [直接连接, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
-  - {name: 故障转移,     <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
+  # 3.1 业务策略组
+  - {name: 默认代理,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
+  - {name: 默认直连,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
+  - {name: Github,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}  
   - {name: Docker,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Docker.png}
+  - {name: 游戏平台,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
+  - {name: 故障转移,     <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧盟策略, 韩国策略, 冷门策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
 
   # 3.2 策略组与地理策略组分界识别(为了zashboard面板美观)
   - {name: 漏网之鱼,     <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png}
   - {name: 网络测试,     <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png}
-
+  - {name: 直接连接,     type: select, proxies: [DIRECT], hidden: true, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png}
+  
   # 3.3 地理策略组
   - {name: 狮城策略,     type: select, proxies: [狮城均衡-轮询, 狮城均衡-散列, 狮城自动], include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png}
   - {name: 香港策略,     type: select, proxies: [香港均衡-轮询, 香港均衡-散列, 香港自动], include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png}
@@ -192,9 +191,8 @@ proxy-groups:
   - {name: 韩国策略,     type: select, proxies: [韩国均衡-轮询, 韩国均衡-散列, 韩国自动], include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png}
   - {name: 冷门策略,     type: select, proxies: [冷门均衡-轮询, 冷门均衡-散列, 冷门自动], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
 
-  # 3.4 其他策略组(放在这里仅为了zashboard界面布局美观)
+  # 3.4 其他策略组
   - {name: 全球手动,     type: select, proxies: [狮城策略, 香港策略, 美国策略, 台湾策略, 欧盟策略, 日本策略, 韩国策略, 冷门策略], include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png}
-  - {name: 直接连接,     type: select, proxies: [DIRECT], hidden: true, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png}
 
   # 3.5 负载均衡-散列 
   - {name: 香港均衡-散列, <<: *BaseCH, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
@@ -225,7 +223,7 @@ proxy-groups:
   - {name: 美国自动,     <<: *BaseUT, filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
   - {name: 欧盟自动,     <<: *BaseUT, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
   - {name: 冷门自动,     <<: *BaseUT, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-
+  
 # 4 规则路由 （按照从上往下的顺序遍历,优先命中上位规则,规则重复无影响,修改顺序会影响分流效果）
 rules: 
   # 4.1 拦截规则(按需启用,可禁用拦截,不影响使用效果)
@@ -252,7 +250,7 @@ rules:
   # 4.3 域名规则
   - RULE-SET,My_Direct,直接连接                               # 自定义直连域名
   - GEOSITE,private,直接连接                                  # 私有域名
-  - GEOIP,private,直接连接,no-resolve                         # 内网 / 保留 IP(127/8、192.168/16…)
+  - GEOSITE,private,直接连接,no-resolve                    # 内网 / 保留 IP(127/8、192.168/16…)
   - RULE-SET,Custom_Direct_Domain,直接连接                    # 自定义直连域名
   - RULE-SET,Custom_Direct_IP,直接连接,no-resolve             # 自定义直连IP
   - RULE-SET,Custom_Direct_Port,直接连接                      # 自定义直连端口
@@ -260,26 +258,31 @@ rules:
   - RULE-SET,Custom_Proxy_IP,默认代理,no-resolve              # 自定义代理IP
   - GEOSITE,google-cn,直接连接                                # Google中国服务
   - GEOSITE,geolocation-cn,直接连接                           # 中国域名
-  - GEOSITE,category-games,直接连接                           # 游戏平台(含category-games-cn、Steam)
   - RULE-SET,Steam_CDN_Domain,直接连接                        # Steam CDN
   - RULE-SET,Steam_CDN_IP,直接连接,no-resolve                 # Steam CDN
   - GEOSITE,category-game-platforms-download,直接连接         # 游戏平台下载
+  - GEOSITE,steam@cn,直接连接                                 # Steam国区
+  - GEOSITE,category-games@cn,直接连接                        # 国内游戏
+  - GEOSITE,category-games-cn,直接连接                        # 国区游戏平台
+  - GEOSITE,steam,游戏平台                                    # Steam
+  - GEOSITE,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
   - GEOSITE,category-public-tracker,直接连接                  # BT Tracker
   - GEOSITE,category-pt,直接连接                              # PT站
   - GEOSITE,category-speedtest,网络测试                       # 测速工具
   - GEOSITE,test-ipv6,网络测试                                # 测速工具
+  - GEOSITE,github,Github                                    # GitHub(采用Github520的hosts文件后，Github可直连)  
   - GEOSITE,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
-  - GEOIP,google,默认代理,no-resolve                          # google IP
-  - GEOIP,telegram,默认代理,no-resolve                        # Telegram IP
-  - GEOIP,twitter,默认代理,no-resolve                         # Twitter IP
-  - GEOIP,facebook,默认代理,no-resolve                        # Facebook IP
-  - GEOIP,netflix,默认代理,no-resolve                         # Netflix IP
-  - GEOSITE,geolocation-!cn,默认直连                          # 非中国域名(涵盖gfw被墙域名,除gfw外,大都未被墙,给gfw兜底)
-  - GEOIP,cloudflare,默认直连,no-resolve                      # cloudflare(geolocation-!cn已包含cloudflare,这里IP补充)
-  - GEOIP,cloudfront,默认直连,no-resolve                      # 亚马逊旗下CDN(同上IP补充)
-  - GEOIP,fastly,默认直连,no-resolve                          # FSLY CDN(同上IP补充)
+  - GEOIP,google,默认代理,no-resolve                     # google IP
+  - GEOIP,telegram,默认代理,no-resolve                   # Telegram IP
+  - GEOIP,twitter,默认代理,no-resolve                    # Twitter IP
+  - GEOIP,facebook,默认代理,no-resolve                   # Facebook IP
+  - GEOIP,netflix,默认代理,no-resolve                    # Netflix IP
+  - GEOIP,geolocation-!cn,默认直连                          # 非中国域名(属于gfw的父集,除gfw列表外,大多数境外域名未被墙,给gfw兜底，如果境外域名有连不上的情况，尝试"默认直连"分组切换为任意代理)
+  - GEOIP,cloudflare,默认直连,no-resolve                 # cloudflare(geolocation-!cn已包含cloudflare,这里IP补充)
+  - GEOIP,cloudfront,默认直连,no-resolve                 # 亚马逊旗下CDN(同上IP补充)
+  - GEOIP,fastly,默认直连,no-resolve                     # FSLY CDN(同上IP补充)
   - GEOSITE,cn,直接连接                                       # 中国域名
-  - GEOIP,cn,直接连接,no-resolve                              # 中国IP
+  - GEOIP,cn,直接连接,no-resolve                         # 中国IP
   - RULE-SET,Custom_Port_Direct,直接连接                      # 非标端口
   - MATCH,漏网之鱼                                            # 漏网之鱼
 
