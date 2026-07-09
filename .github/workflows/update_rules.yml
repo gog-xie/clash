@@ -23,9 +23,6 @@ jobs:
 
 
             # 广告拉取
-            "geo/geosite/ads.mrs|https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/ads.mrs"
-            "geo/geosite/ads.list|https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/ads.list"
-            
             "geo/geosite/Tracking.mrs|https://github.com/666OS/rules/raw/release/mihomo/domain/Tracking.mrs"
             "geo/geosite/Tracking.txt|https://github.com/666OS/rules/raw/release/mihomo/domain/Tracking.txt"
             
