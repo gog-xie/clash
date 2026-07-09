@@ -1,0 +1,10 @@
+# 本Porxy列表仅为局域网内某台设备某些域名走代理，其余均走直连
+# TOTAL:1
+
+payload:
+  - DOMAIN-SUFFIX,themoviedb.org
+  - DOMAIN-SUFFIX,tmdb.org
+  - DOMAIN-SUFFIX,thetvdb.com
+  - DOMAIN-SUFFIX,docker.com
+  - DOMAIN-SUFFIX,docker.io
+  - DOMAIN-SUFFIX,pppoe.top
