@@ -24,9 +24,9 @@ BaseCR: &BaseCR {type: load-balance, interval: 200, lazy: true, url: 'https://ww
 BaseUT: &BaseUT {type: url-test, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true, include-all: true}
 
 # 1.3 规则集行为锚点
-BehaviorDN:    &BehaviorDN {type: http, behavior: domain,    format: mrs, interval: 86400}
+BehaviorDN:    &BehaviorDN {type: http, behavior: domain,    format: mrs,  interval: 86400}
 BehaviorDY:    &BehaviorDY {type: http, behavior: domain,    format: yaml, interval: 86400}
-BehaviorIP:    &BehaviorIP {type: http, behavior: ipcidr,    format: mrs, interval: 86400}
+BehaviorIP:    &BehaviorIP {type: http, behavior: ipcidr,    format: mrs,  interval: 86400}
 BehaviorCY:    &BehaviorCY {type: http, behavior: classical, format: yaml, interval: 86400}
 
 # 1.4 节点筛选正则表达式 - 基于地理位置和关键词过滤
