@@ -342,7 +342,7 @@ rule-providers:
   Steam_CDN_IP:          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Steam_CDN_IP.mrs}
   Speedtest:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/speedtest.mrs}
   
-  # 5.5 规则集提供者 
+  # 5.5 主要分流规则 
   private:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/private.mrs}
   docker:                              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/docker.mrs}
   private_IP:                          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geoip/private.mrs}
