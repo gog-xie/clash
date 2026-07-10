@@ -172,7 +172,6 @@ dns:
 # 3 代理策略组 
 proxy-groups:
   # 3.1 业务策略组
-  # 3.1 业务策略组
   - {name: 默认代理,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Proxy.png}
   - {name: 默认直连,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Static.png}
   - {name: Github,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/GitHub.png}  
