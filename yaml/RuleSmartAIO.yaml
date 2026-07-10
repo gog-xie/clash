@@ -384,6 +384,7 @@ rule-providers:
   anthropic:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/anthropic.mrs}
   google-gemini:                       {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google-gemini.mrs}  
   openai:                              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.mrs}
+  x:                                   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/x.mrs}  
   category-ai-!cn:                     {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-!cn.mrs}
   github:                              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs}
   category-speedtest:                  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-speedtest.mrs}
