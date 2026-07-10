@@ -25,10 +25,10 @@ BaseCR:    &BaseCR    {type: load-balance, interval: 200, lazy: true, url: 'http
 BaseSmart: &BaseSmart {type: smart, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true, uselightgbm: true, include-all: true}
 
 # 1.3 规则集行为锚点
-BehaviorDN:    &BehaviorDN    {type: http, behavior: domain,    format: mrs, interval: 86400}
-BehaviorDY:    &BehaviorDY    {type: http, behavior: domain,    format: yaml, interval: 86400}
-BehaviorIP:    &BehaviorIP    {type: http, behavior: ipcidr,    format: mrs, interval: 86400}
-ClassicalYaml: &ClassicalYaml {type: http, behavior: classical, format: yaml, interval: 86400}
+BehaviorDN:    &BehaviorDN {type: http, behavior: domain,    format: mrs,  interval: 86400}
+BehaviorDY:    &BehaviorDY {type: http, behavior: domain,    format: yaml, interval: 86400}
+BehaviorIP:    &BehaviorIP {type: http, behavior: ipcidr,    format: mrs,  interval: 86400}
+BehaviorCY:    &BehaviorCY {type: http, behavior: classical, format: yaml, interval: 86400}
 
 # 1.4 机场节点筛选正则表达式 - 基于地理位置和关键词过滤
 FilterHK: &FilterHK '^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$'
@@ -302,6 +302,7 @@ rules:
   - GEOSITE,apple-cn,直接连接                                 # 苹果中国
   - GEOSITE,apple-tvplus,Apple TV+                           # Apple TV+
   - GEOSITE,apple,苹果服务                                    # 苹果服务
+  - RULE-SET,Speedtest,网络测试                               # 测速工具  
   - GEOSITE,category-speedtest,网络测试                       # 测速工具
   - GEOSITE,test-ipv6,网络测试                                # 测速工具
   - GEOSITE,google-cn,直接连接                                # Google中国服务
@@ -356,14 +357,15 @@ rule-providers:
   fakeip-filter:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
 
   # 5.4 自定义规则(收集平常在Geo中缺少或归类错误的域名及IP,实时更新)
-  My_Proxy:              {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Proxy.yaml}
-  My_Direct:             {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Direct.yaml}
-  Custom_Direct_Domain:  {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Direct_Domain.mrs}
-  Custom_Direct_IP:      {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Direct_IP.mrs}
-  Custom_Direct_Port:    {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Direct_Classical_Port.yaml}
-  Custom_Port_Direct:    {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Port_Direct.yaml}
-  Custom_Proxy_Domain:   {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Proxy_Domain.mrs}
-  Custom_Proxy_IP:       {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Proxy_IP.mrs}
-  Steam_CDN_Domain:      {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Steam_CDN_Domain.mrs}
-  Steam_CDN_IP:          {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Steam_CDN_IP.mrs}
+  My_Proxy:              {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Proxy.yaml}
+  My_Direct:             {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Direct.yaml}
+  Custom_Direct_Domain:  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Direct_Domain.mrs}
+  Custom_Direct_IP:      {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Direct_IP.mrs}
+  Custom_Direct_Port:    {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Direct_Classical_Port.yaml}
+  Custom_Port_Direct:    {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Port_Direct.yaml}
+  Custom_Proxy_Domain:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Proxy_Domain.mrs}
+  Custom_Proxy_IP:       {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Proxy_IP.mrs}
+  Steam_CDN_Domain:      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Steam_CDN_Domain.mrs}
+  Steam_CDN_IP:          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Steam_CDN_IP.mrs}
+  Speedtest:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/speedtest.mrs}
 # ==================== EOF ====================
