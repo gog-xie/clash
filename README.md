@@ -25,7 +25,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3 RuleAIOPro和RuleAIOPlus配置模板可实现按地区节点集自定义出站机场，其余模板不区分出站机场。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4 在控制面板中，总想所有节点ping都是绿色的，不是绿色的一直点，有点强迫症，其实绿色还是灰色无关大雅，系统上线后按自己需求选择好分流策略即可使用，系统是根据代码规则设定去判定节点的 ${\color{red}\text{选择。}}$
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4 在控制面板中，总想所有节点ping都是绿色的，不是绿色的一直点，有点强迫症，其实绿色还是灰色无关大雅，系统上线后按自己需求选择好分流策略即可使用，系统是根据代码规则设定去判定节点的选择。
 
 <div align="center">
 
@@ -36,7 +36,7 @@
 | <div align="center">**2**</div> | 📄**GeoLite.yaml** | 🥉★★☆ | <div align="center">[跳转](yaml/GeoLite.yaml)</div> | 极简分流，自定义故转默认节点，多机场混合出站 |
 | <div align="center">**3**</div> | 📄**GeoSmartAIO.yaml** | 🥉★★★ | <div align="center">[跳转](yaml/GeoSmartAIO.yaml)</div> | 内置Geo数据库，适配Smart核心 |
 | <div align="center">**4**</div> | 📄**RuleAIO.yaml** | 🥈★★★☆ | <div align="center">[跳转](yaml/RuleAIO.yaml)</div> | 多组分流，自定义故转默认节点，多机场混合出站 |
-| <div align="center">**5**</div> | 📄**RuleAIOPlus.yaml** | 🥇★★★★☆ | <div align="center">[跳转](yaml/RuleAIOPlus.yaml)</div> | 多机场**自定义**出站，**多元**默认故转 【**推荐**】 |
+| <div align="center">**5**</div> | 📄**RuleAIOPlus.yaml** | 🥇★★★★☆ | <div align="center">[跳转](yaml/RuleAIOPlus.yaml)</div> | 多机场**自定义**出站，**多元**默认故转  ${\color{red}\text{【**推荐**】 }}$ |
 | <div align="center">**6**</div> | 📄**RuleAIOPro.yaml** | 🥈★★★★ | <div align="center">[跳转](yaml/RuleAIOPro.yaml)</div> | 多组分流，多机场**自定义**出站 |
 | <div align="center">**7**</div> | 📄**RuleLite.yaml** | 🥉★★★ | <div align="center">[跳转](yaml/RuleLite.yaml)</div> | 极简分流，多机场混合出站
 | <div align="center">**8**</div> | 📄**RuleLitePro.yaml** | 🥈★★★★ | <div align="center">[跳转](yaml/RuleLitePro.yaml)</div> | 极简分流，多机场**自定义**出站【**推荐**】
