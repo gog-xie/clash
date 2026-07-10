@@ -166,8 +166,8 @@ dns:
     - https://doh.pub/dns-query
   fake-ip-filter:          #本条按需启用,如果开启了rule-set项,对应“5 规则集”的项目也需同时启用
     - rule-set:fakeip-filter
-    - rule-set:private
-    - rule-set:cn
+    - GEOSITE:private
+    - GEOSITE:cn
     - '+.pub.3gppnetwork.org'
     - "+.bing.com"
     - "+.miwifi.com"
