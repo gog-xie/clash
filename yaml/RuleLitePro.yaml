@@ -298,11 +298,11 @@ rules:
   - RULE-SET,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
   - RULE-SET,category-public-tracker,直接连接                  # BT Tracker
   - RULE-SET,category-pt,直接连接                              # PT站
+  - RULE-SET,Speedtest,网络测试                                # 测速工具
   - RULE-SET,category-speedtest,网络测试                       # 测速工具
   - RULE-SET,test-ipv6,网络测试                                # 测速工具
   - RULE-SET,microsoft-dev@cn,直接连接                         # 国内微软开发者平台
   - RULE-SET,microsoft@cn,直接连接                             # 微软中国
-  - RULE-SET,geolocation-cn,直接连接                           # 中国域名
   - RULE-SET,github,Github                                    # GitHub(采用Github520的hosts文件后，Github可直连)  
   - RULE-SET,microsoft,微软服务                                # 微软服务
   - RULE-SET,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
@@ -350,7 +350,6 @@ rule-providers:
   microsoft-dev@cn:                    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/microsoft-dev@cn.mrs}
   microsoft@cn:                        {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/microsoft@cn.mrs}
   microsoft:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/microsoft.mrs}
-  geolocation-cn:                      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/geolocation-cn.mrs}
   category-game-platforms-download:    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-game-platforms-download.mrs}
   category-public-tracker:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-public-tracker.mrs}
   category-pt:                         {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-pt.mrs}
@@ -359,6 +358,7 @@ rule-providers:
   category-games@cn:                   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-games@cn.mrs}
   category-games-cn:                   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-games-cn.mrs}
   category-games:                      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-games.mrs}
+  Speedtest:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/speedtest.mrs}  
   category-speedtest:                  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-speedtest.mrs}
   test-ipv6:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/test-ipv6.mrs}
   github:                              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/github.mrs}
