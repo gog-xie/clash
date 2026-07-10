@@ -198,7 +198,7 @@ proxy-groups:
   - {name: Spotify,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png}
   - {name: 加密货币,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency.png}
   - {name: Docker,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Docker.png}
-  #- {name: OneDrive,    <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png}
+  - {name: OneDrive,    <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png}
   - {name: Bing,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Bing.png}
   - {name: 微软服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
   - {name: 苹果服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png}
@@ -295,7 +295,7 @@ rules:
   - GEOSITE,category-pt,直接连接                              # PT站
   - GEOSITE,bing@cn,直接连接                                  # bing中国
   - GEOSITE,microsoft@cn,直接连接                              # 微软服务
-  #- GEOSITE,onedrive,OneDrive                                 # OneDrive
+  - GEOSITE,onedrive,OneDrive                                 # OneDrive
   - GEOSITE,bing,Bing                                        # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)
   - GEOSITE,github,Github                                    # GitHub(Microsoft的子集,置其前才能分流)
   - GEOSITE,microsoft,微软服务                                # 微软服务
