@@ -267,11 +267,11 @@ rules:
   - RULE-SET,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
   - RULE-SET,category-public-tracker,直接连接                  # BT Tracker
   - RULE-SET,category-pt,直接连接                              # PT站
+  - RULE-SET,Speedtest,网络测试                                # 测速工具
   - RULE-SET,category-speedtest,网络测试                       # 测速工具
   - RULE-SET,test-ipv6,网络测试                                # 测速工具
   - RULE-SET,microsoft-dev@cn,直接连接                         # 国内微软开发者平台
   - RULE-SET,microsoft@cn,直接连接                             # 微软中国
-  - RULE-SET,geolocation-cn,直接连接                           # 中国域名
   - RULE-SET,github,Github                                    # GitHub(采用Github520的hosts文件后，Github可直连)  
   - RULE-SET,microsoft,微软服务                                # 微软服务
   - RULE-SET,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
@@ -300,16 +300,16 @@ rule-providers:
   fakeip-filter:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
 
   # 5.3 自定义规则
-  My_Proxy:              {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Rules@main/My_rules/Proxy.yaml}
-  My_Direct:             {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Rules@main/My_rules/Direct.yaml}
-  Custom_Direct_Domain:  {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.mrs}
-  Custom_Direct_IP:      {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Direct_IP.mrs}
-  Custom_Direct_Port:    {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_Port.yaml}
-  Custom_Port_Direct:    {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml}
-  Custom_Proxy_Domain:   {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.mrs}
-  Custom_Proxy_IP:       {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Custom_Proxy_IP.mrs}
-  Steam_CDN_Domain:      {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Steam_CDN_Domain.mrs}
-  Steam_CDN_IP:          {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Custom_OpenClash_Rules@main/rule/Steam_CDN_IP.mrs}
+  My_Proxy:              {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Proxy.yaml}
+  My_Direct:             {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Direct.yaml}
+  Custom_Direct_Domain:  {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Direct_Domain.mrs}
+  Custom_Direct_IP:      {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Direct_IP.mrs}
+  Custom_Direct_Port:    {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Direct_Classical_Port.yaml}
+  Custom_Port_Direct:    {<<: *ClassicalYaml, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Port_Direct.yaml}
+  Custom_Proxy_Domain:   {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Proxy_Domain.mrs}
+  Custom_Proxy_IP:       {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Proxy_IP.mrs}
+  Steam_CDN_Domain:      {<<: *BehaviorDN,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Steam_CDN_Domain.mrs}
+  Steam_CDN_IP:          {<<: *BehaviorIP,    url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Steam_CDN_IP.mrs}
 
   # 5.5 规则集提供者 
   private:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs}
@@ -328,6 +328,7 @@ rule-providers:
   category-games@cn:                   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games@cn.mrs}
   category-games-cn:                   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games-cn.mrs}
   category-games:                      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games.mrs}
+  Speedtest:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/speedtest.mrs}  
   category-speedtest:                  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-speedtest.mrs}
   test-ipv6:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/test-ipv6.mrs}
   github:                              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs}
