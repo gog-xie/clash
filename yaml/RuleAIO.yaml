@@ -258,10 +258,9 @@ proxy-groups:
 # 4 规则路由 (按照从上往下的顺序遍历,优先命中上位规则,规则重复无影响,修改顺序会影响分流效果)
 rules: 
   # 4.1 拦截规则(按需启用,可禁用拦截,不影响使用效果)
-  - RULE-SET,category-ads-all,REJECT    # 轻量化广告拦截,与秋风广告配合使用,同时启用category-ads-all和AWAvenueAds,禁用anti-AD广告过滤列表
-  - RULE-SET,AWAvenueAds,REJECT         # 秋风广告过滤列表
-  - RULE-SET,anti-ad,REJECT             # anti-AD广告过滤列表(较为全面的广告过滤列表,几乎涵盖AWAvenueAds和category-ads-all等过滤列表,但有误杀情况,使用时在zashboard面板中切换)
-  - AND,((NETWORK,UDP),(DST-PORT,443),(NOT,((OR,((RULE-SET,cn),(RULE-SET,cn_IP,no-resolve)))))),REJECT
+  - RULE-SET,category-ads-all,REJECT    # 轻量化广告拦截列表,搭配AWAvenueAds秋风广告列表使用,同时禁用anti-AD广告过滤列表
+  - RULE-SET,AWAvenueAds,REJECT         # 秋风广告过滤列表,搭配category-ads-all广告列表使用,同时禁用anti-AD广告过滤列表
+  - RULE-SET,anti-ad,REJECT             # anti-AD广告过滤列表(较为全面的广告过滤列表,几乎涵盖秋风广告和category-ads-all等过滤列表,但有误杀情况,使用时在zashboard面板中切换)
 
   # 4.2 特殊设置:192.168.50.101 ~ 199 所有设备走直连（本条规则解决内网大部分设备不需代理，如智能家居设备，负责DHCP的路由器的DHCP范围需设置为192.168.50.101 ~ 199，视个人需求修订）
   #- SRC-IP-CIDR,192.168.50.101/32,DIRECT,no-resolve
