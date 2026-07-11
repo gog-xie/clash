@@ -23,9 +23,9 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2 规则来源主要是mihomo官方数据库，一个是采用Mihomo内置GEOSITE和GEOIP数据库，另一个是采用的[MetaCubeX](https://github.com/gog-xie/meta-rules-dat/tree/meta/geo)大佬实时更新的GEO数据库，配置中内置了分区域节点的smart智能选择、自动选择、手动选择、故障转移、负载均衡等功能，仅需修改yaml文件中的机场地址和名称即可。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3 RuleAIOPro和RuleAIOPlus配置模板可实现按地区节点集自定义出站机场，其余模板不区分出站机场。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3 Pro和Plus类配置模板可实现按地区节点集自定义出站机场，其余模板不区分出站机场。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4 在控制面板中，总想所有节点ping都是绿色的，不是绿色的一直点，有点强迫症，其实绿色还是灰色无关大雅，系统上线后按自己需求选择好分流策略即可使用，系统是根据代码规则设定去判定节点的选择。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4 在控制面板中，总想所有节点ping都是绿色的，有点强迫症，其实绿色还是灰色无关大雅，系统上线后按自己需求选择好分流策略即可使用，系统是根据代码规则设定去判定节点的选择。
 
 <div align="center">
 
