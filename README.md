@@ -12,7 +12,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过对比ClashVerge、MerlinClash、OpenClash、Nikki等代理程序，各种程序在不同的硬件和网络环境各有优劣：有稳定的旁路由（一般为7×24小时开机的独立旁路由），使用OpenClash、Nikki等比较稳定；如果旁路由需经常性的开关机，那部署在主路由上比较合适（如OpenClash、Nikki或Merlinclash等）；科学上网需求不大的，在终端电脑上安装类似Clash Verge的代理程序，随用随开。作者以华硕路由器BE86U作主路由，采用梅林改版固件，在Merlinclash部署了本配置的yaml文件，已长期验证，十分稳定，长期免维护。
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;各代理程序的设置请自行查阅相关教程，如OpenClash的设置可参照 [Aethersailor](https://github.com/gog-xie/Custom_OpenClash_Rules/blob/main/wiki/1.OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88.md)大佬的设置方案🥊。另外[HenryChiao](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gog-xie/RuleAIOPro.yaml)大佬收集了全网做的较好的yaml模板，可集中参考借鉴
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;各代理程序的设置请自行查阅相关教程，如OpenClash的设置可参照 [Aethersailor](https://github.com/gog-xie/Custom_OpenClash_Rules/blob/main/wiki/1.OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88.md)大佬的设置方案🥊。另外[HenryChiao](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gog-xie/RuleAIOPro.yaml)大佬收集了全网做的较好的yaml模板，可集思广益参考借鉴。
 
 ***
 
