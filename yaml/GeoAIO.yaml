@@ -299,6 +299,7 @@ rules:
   - GEOSITE,apple-cn,直接连接                                 # 苹果中国
   - GEOSITE,apple-tvplus,Apple TV+                           # Apple TV+
   - GEOSITE,apple,苹果服务                                    # 苹果服务
+  - RULE-SET,Speedtest,网络测试                                # 测速工具
   - GEOSITE,category-speedtest,网络测试                       # 测速工具
   - GEOSITE,test-ipv6,网络测试                                # 测速工具
   - GEOSITE,google-cn,直接连接                                # Google中国服务
@@ -363,4 +364,5 @@ rule-providers:
   Custom_Proxy_IP:       {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Proxy_IP.mrs}
   Steam_CDN_Domain:      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Steam_CDN_Domain.mrs}
   Steam_CDN_IP:          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Steam_CDN_IP.mrs}
+  Speedtest:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/speedtest.mrs}
 # ==================== EOF ====================
