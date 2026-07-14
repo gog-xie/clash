@@ -8,18 +8,18 @@
 ---
 
 - ## 1 前言
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;科学上网常常部署在旁路由，但旁路由时而会出现莫名的小问题，DHCP也有不便。其实家庭网络简单好用即可，仅一台硬路由也能满足家庭上网需求，在主路由BE86U安装Merlinclash，实现国内外科学分流，几乎可实现无感内外网。另外，广告拦截尽量不要放置在代理程序中，在终端安装例如AdGuard插件效果远远好于诸如OpenClash的广告拦截效果。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;科学上网常常部署在旁路由，但旁路由时而会出现莫名的小问题和不便之处。其实家庭网络简单好用即可，仅一台硬路由也能满足家庭上网需求。另外，广告拦截尽量不要放置在代理程序中，在终端安装例如AdGuard插件效果远远好于诸如OpenClash的广告拦截效果。
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过对比ClashVerge、MerlinClash、OpenClash、Nikki等代理程序，各种程序在不同的硬件和网络环境各有优劣：有稳定的旁路由（一般为7×24小时开机的独立旁路由），使用OpenClash、Nikki等比较稳定；如果旁路由需经常性的开关机，那部署在主路由上比较合适（如OpenClash、Nikki或Merlinclash等）；科学上网需求不大的，在终端电脑上安装类似Clash Verge的代理程序，随用随开。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 到底什么配置文件才好用？很多大佬教程，他们的机场本身质量非常好，同一配置模板当换成质量差的机场时就不好用了，特别是喜欢采用url-test节点选择模式，往往在实际使用中，ping的高低并不等于连接速率，往往选择ping低的节点，却十分卡顿。作者以华硕路由器BE86U作主路由，采用梅林改版固件，在Merlinclash采用了本配置的yaml文件，两个廉价机场长时间验证，十分稳定，可实现长期免维护。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 到底什么配置文件才好用？很多大佬教程，他们的机场本身质量非常好，同一配置模板当换成质量差的机场时就不好用了，往往在实际使用中，ping的高低并不等于连接速率，有时选择ping低的节点，却十分卡顿。作者以华硕路由器BE86U作主路由，刷了梅林改版固件，在Merlinclash采用了本配置的yaml文件，采用两个廉价机场长时验证，十分稳定，可实现长期免维护。
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目仅提供基于mihomo的配置文件示例，各代理程序的设置可自行查阅相关教程，如OpenClash的设置可参照 [Aethersailor](https://github.com/gog-xie/Custom_OpenClash_Rules/blob/main/wiki/1.OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88.md)大佬的设置方案🥊。另外[HenryChiao](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gog-xie/RuleAIOPro.yaml)大佬收集了全网做的较好的yaml配置模板，可集思广益参考借鉴，有好建议敬请探讨。
 
 ***
 
 -  ## 2 Mihomo通用yaml模板
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本配置yaml模板适用于Mihomo内核的代理程序，如OpenClash、Nikki、Merlinclash、Clash Verge等，可直接导入模板使用或稍加改动即可。
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;配置模板适用于Mihomo内核的代理程序，如OpenClash、Nikki、Merlinclash、Clash Verge等，可直接导入模板使用或稍加改动即可。
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1 配置模板最多采用了五层策略，层次功能分明，故转层负责检测和确保节点可用，地区策略层负责节点选择的形式，节点选择方式有均衡、自动、smart、手动，所有故障转移均不直接选择最底层节点，而是地区策略组之间故障转移，如：故转-手动→全球手动→地区策略→均衡or自动（或smart）or手动→机场节点，“全球手动”可自定义选择喜欢的地区策略或单一节点，当"全球手动"的节点失联时，自动切换至可用节点，闲时几乎不产生代理流量，响应迅速，可实现长时免维护。
 
