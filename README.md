@@ -14,7 +14,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 到底什么配置文件才好用？很多大佬教程，他们的机场本身质量非常好，同一配置模板当换成质量差的机场时就不好用了，特别是喜欢采用url-test节点选择模式，往往在实际使用中，ping的高低并不等于连接速率，往往选择ping低的节点，却十分卡顿。作者以华硕路由器BE86U作主路由，采用梅林改版固件，在Merlinclash采用了本配置的yaml文件，两个廉价机场长时间验证，十分稳定，可实现长期免维护。
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目仅提供基于mihomo的配置文件示例，各代理程序的设置请自行查阅相关教程，如OpenClash的设置可参照 [Aethersailor](https://github.com/gog-xie/Custom_OpenClash_Rules/blob/main/wiki/1.OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88.md)大佬的设置方案🥊。另外[HenryChiao](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gog-xie/RuleAIOPro.yaml)大佬收集了全网做的较好的yaml配置模板，可集思广益参考借鉴。
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目仅提供基于mihomo的配置文件示例，各代理程序的设置可自行查阅相关教程，如OpenClash的设置可参照 [Aethersailor](https://github.com/gog-xie/Custom_OpenClash_Rules/blob/main/wiki/1.OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88.md)大佬的设置方案🥊。另外[HenryChiao](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gog-xie/RuleAIOPro.yaml)大佬收集了全网做的较好的yaml配置模板，可集思广益参考借鉴，有好建议敬请探讨。
 
 ***
 
@@ -27,7 +27,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3 各种配置大同小异，Pro和Plus类配置模板可实现指定机场分流出站，其余模板均是多机场节点混用出站。Plus采用多元故转默认地区界节点，可实现更为灵活的分流策略。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4 在控制面板中，总想所有节点ping都是绿色的，有点强迫症，其实绿色还是灰色无关大雅，系统上线后按自己需求选择好分流策略即可使用，系统是根据相关规则设定去判定节点的选择。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4 系统上线后按自己需求选择好分流策略即可使用，控制面板中各个策略和节点连通性是否绿色的其实无关紧要，不用强迫症的不停点击测试连通性，系统会根据相关规则设定去判定节点的选择。
 
 <div align="center">
 
