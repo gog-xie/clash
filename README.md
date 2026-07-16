@@ -14,7 +14,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 到底什么配置文件才好用？很多大佬教程，他们的机场质量本身就非常好，怎么选节点都好用，但同一配置模板当换成质量差的机场时就不好用了，往往在实际使用中，ping的高低并不等于连接速率，有时选择ping低的节点，却十分卡顿。本项目以华硕路由器BE86U作主路由为例，刷了梅林改版固件，在Merlinclash采用了本配置的yaml文件，采用两个廉价机场长时验证，十分稳定，可实现长期免维护。在OpenWrt的OpenClash和Nikki也长时测试同样稳定。
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目仅提供基于Mihomo的配置文件示例，各代理程序的设置可自行查阅相关教程，如OpenClash的设置可参照 [Aethersailor](https://github.com/gog-xie/Custom_OpenClash_Rules/blob/main/wiki/1.OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88.md)大佬的设置方案🥊。另外[HenryChiao](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gog-xie/RuleAIOPro.yaml)大佬收集了全网做的较好的yaml配置模板，可集思广益参考借鉴，有好建议敬请探讨。
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目仅提供基于Mihomo的配置文件示例，各代理程序的设置可自行查阅相关教程，如OpenClash的设置可参照 [Aethersailor](https://github.com/gog-xie/Custom_OpenClash_Rules/blob/main/wiki/1.OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88.md)大佬的设置方案🥊。另外[HenryChiao](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config)大佬收集了全网做的较好的yaml配置模板，可集思广益参考借鉴，有好建议敬请探讨。
 
 ***
 
