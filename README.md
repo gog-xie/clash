@@ -55,7 +55,7 @@
 ```
 rules:
 
-# 192.168.1.101 ~ 199 所有设备走直连
+# DHCP的192.168.1.101 ~ 199 范围所有设备走直连，即使访客连入网络也不会走代理
 - SRC-IP-CIDR,192.168.1.101/32,DIRECT,no-resolve
 - SRC-IP-CIDR,192.168.1.102/31,DIRECT,no-resolve
 - SRC-IP-CIDR,192.168.1.104/30,DIRECT,no-resolve
@@ -64,7 +64,7 @@ rules:
 - SRC-IP-CIDR,192.168.1.128/26,DIRECT,no-resolve
 - SRC-IP-CIDR,192.168.1.192/29,DIRECT,no-resolve
 
-# 内网设备192.168.1.88所有链接走直连，设备192.168.1.98的部分链接（My_Proxy）走代理，其余走直连
+# 内网MAC绑定设备192.168.1.88所有链接走直连，设备192.168.1.98的部分链接（My_Proxy）走代理，其余走直连
 - SRC-IP-CIDR,192.168.1.88/32,DIRECT,no-resolve
 - RULE-SET,My_Proxy,默认代理
 - SRC-IP-CIDR,192.168.1.98/32,DIRECT,no-resolve
