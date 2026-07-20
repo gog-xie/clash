@@ -39,7 +39,7 @@
 | <div align="center">**3**</div> | 📄**RuleAIOPlus.yaml** | 🥇★★★★☆ | <div align="center">[跳转](yaml/RuleAIOPlus.yaml)</div> | 多组分流，多机场**自定义**出站，**多元**默认故转 **${\color{blue}\text{【推荐】}}$** |
 | <div align="center">**4**</div> | 📄**RuleLite.yaml** | 🥉★★★ | <div align="center">[跳转](yaml/RuleLite.yaml)</div> | 极简分流，多机场混合出站
 | <div align="center">**5**</div> | 📄**RuleLitePro.yaml** | 🥈★★★★ | <div align="center">[跳转](yaml/RuleLitePro.yaml)</div> | 极简分流，多机场**自定义**出站  **${\color{blue}\text{【推荐】}}$** |
-| <div align="center">**6**</div> | 📄**RuleSmartAIO.yaml** | 🥈★★★☆ | <div align="center">[跳转](yaml/RuleSmartAIO)</div> | 多组分流，适配Smart核心，自定义故转默认区域节点，多机场混合出站 |
+| <div align="center">**6**</div> | 📄**RuleSmartAIO.yaml** | 🥈★★★☆ | <div align="center">[跳转](yaml/RuleSmartAIO)</div> | 多组分流，适配Smart核心，多机场混合出站 |
 </div>
 
 ***  
