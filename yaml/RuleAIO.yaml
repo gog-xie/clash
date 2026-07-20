@@ -1,8 +1,5 @@
 # Name: Mihomo Rule Set All In One
 # Link: https://github.com/gog-xie/Mihomo/blob/main/yaml/RuleAIO.yaml
-# Designer: gog-xie
-# Version: v2-1.2
-# Date: 2026-06-08
 
 # 配置说明：
 # 1) 本配置最多采用五层策略,略有套娃,但层次功能分明,故转层负责节点是否可用,地区策略层负责节点选择的形式,例如故转-狮城→狮城策略→狮城均衡or散列or自动or手动→某狮城节点,再如：故转-手动→全球手动→日本策略→日本均衡or散列or自动or手动→某日本节点,"全球手动"可自定义喜欢的节点,当手选地区策略或指定节点失联时,自动切换至下一可用区域节点,实现长时免维护；
