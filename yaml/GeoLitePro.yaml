@@ -1,8 +1,6 @@
 # Name: Mihomo Geo Lite Pro
 # Link: https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoLitePro.yaml
 # Designer: gog-xie
-# Version: v2-1.0
-# Date: 2026-06-01
 
 # 配置说明：
 # 1) 本配置采用极简分流，由于有的域名有时可直连，有时需代理，只留了github、docker、微软、steam等四个分流策略组，默认为直连，根据使用情况切换代理。
