@@ -26,12 +26,12 @@ jobs:
             "geo/geosite/Tracking.mrs|https://github.com/666OS/rules/raw/release/mihomo/domain/Tracking.mrs"
             "geo/geosite/Tracking.txt|https://github.com/666OS/rules/raw/release/mihomo/domain/Tracking.txt"
             
-            "geo/geosite/Advertising.mrs|https://github.com/666OS/rules/raw/release/mihomo/domain/Advertising.mrs"
-            "geo/geosite/Advertising.txt|https://github.com/666OS/rules/raw/release/mihomo/domain/Advertising.txt"
+            "geo/geosite/adblockmihomo.mrs|https://github.com/217heidai/adblockfilters/raw/main/rules/adblockmihomo.mrs"
+            "geo/geosite/adblockmihomo.yaml|https://github.com/217heidai/adblockfilters/raw/main/rules/adblockmihomo.yaml"
 
-            "geo/geoip/Advertising.mrs|https://github.com/666OS/rules/raw/release/mihomo/ip/Advertising.mrs"
-            "geo/geoip/Advertising.txt|https://github.com/666OS/rules/raw/release/mihomo/ip/Advertising.txt"
-
+            "geo/geosite/adblockmihomolite.mrs|https://github.com/217heidai/adblockfilters/raw/main/rules/adblockmihomolite.mrs"
+            "geo/geosite/adblockmihomolite.yaml|https://github.com/217heidai/adblockfilters/raw/main/rules/adblockmihomolite.yaml"
+            
             "geo/geosite/category-ads-all.mrs|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ads-all.mrs"
             "geo/geosite/category-ads-all.list|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ads-all.list"
 
