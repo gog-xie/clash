@@ -263,9 +263,8 @@ rules:
   - GEOSITE,test-ipv6,网络测试                                # 测速工具
   - GEOSITE,microsoft-dev@cn,直接连接                         # 国内微软开发者平台
   - GEOSITE,microsoft@cn,直接连接                             # 微软中国  
-  - GEOSITE,github,默认代理                                    # GitHub(采用Github520的hosts文件后，Github可直连)  
-  - GEOSITE,microsoft,默认直连                                # 微软服务
   - GEOSITE,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
+  - GEOSITE,microsoft,默认直连                                # 微软服务  
   - GEOIP,google,默认代理,no-resolve                          # google IP
   - GEOIP,telegram,默认代理,no-resolve                        # Telegram IP
   - GEOIP,twitter,默认代理,no-resolve                         # Twitter IP
