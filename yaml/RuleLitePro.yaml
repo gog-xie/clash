@@ -285,7 +285,6 @@ rules:
   - RULE-SET,steam@cn,直接连接                                 # Steam国区
   - RULE-SET,category-games@cn,直接连接                        # 国内游戏
   - RULE-SET,category-games-cn,直接连接                        # 国区游戏平台
-  - RULE-SET,steam,默认直连                                    # Steam
   - RULE-SET,category-games,默认直连                           # 游戏平台(含category-games-cn、Steam)
   - RULE-SET,category-public-tracker,直接连接                  # BT Tracker
   - RULE-SET,category-pt,直接连接                              # PT站
