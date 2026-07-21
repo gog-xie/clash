@@ -2,12 +2,13 @@
 # Link: https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoLitePro.yaml
 
 # 配置说明：
-# 1) 本配置采用极简分流，由于有的域名有时可直连，有时需代理，只留了github、docker、微软、steam等四个分流策略组，默认为直连，根据使用情况切换代理。
-# 2) 本配置可自主选择出站机场,采用多机场分别控制选择出站节点的模式,但需确保机场自定义名称前后一致；
+# 1) 本配置最多采用五层策略,略有套娃,但层次功能分明,故转层负责节点是否可用,地区策略层负责节点选择的形式,策略层级逻辑：故转-手动 -→ 全球手动 -→ 地区策略 -→ 均衡or散列or自动or手动 -→ 该地区某节点,例如：故转-手动 -→ 全球手动 -→日本策略 -→ 日本自动(所有机场节点混用) -→ 某具体的日本节点(所有机场当中ping最低的日本节点),"全球手动"可自定义喜欢的节点,当"全球手动"节点失联时,自动切换至下一可用区域节点,实现长时免维护；
+# 2) 关于"默认直连"策略组,主要挂载了Microsoft、steam等时而需代理的域名，以及geolocation-!cn非中国域名,geolocation-!cn包含了gfw被墙域名,以及其他几乎未被墙的境外域名,含有如cloudflare、cloudfront、fastly等CDN站点,由于先滤掉了gfw被墙域名,剩下的几乎未被墙,可根据使用情况切换代理。
 # 3) 需要全防泄漏,使用时将分流策略的"漏网之鱼"、“网络测试”和“默认直连”选择为任意代理节点即可(实际意义并不大)。
-# 4) 关于"默认直连"策略组,主要挂载了geolocation-!cn非中国域名,它包含了gfw被墙域名,以及其他几乎未被墙的境外域名,含有如cloudflare、cloudfront、fastly等CDN站点,由于先滤掉了gfw被墙域名,剩下的几乎未被墙,可根据使用情况切换代理。
-# 5) 配置前仔细阅读配置中的相关说明,根据需要自行调整。
-# 6) 使用前在“1.6代理提供者”板块中添加你的订阅链接及机场名称,并在3.4、3.5、3.6分别填入你机场名称(注意机场名称前后都有一个空格),要确保1.6与3.4、3.5、3.6中的机场名称保持一致，否则会报错。
+# 4) 本配置采用极简分流，仅需将"默认代理"选择好代理策略，以及各地区出站的方式(负载均衡、自动、手动)，当某些网站或链接不能访问时，可尝试将"默认直连"选择为代理节点，如Steam登录器大厅，登陆时需将"默认直连"设置为代理节点，游戏下载不会走代理；
+# 5) 本配置可自主选择出站机场,采用多机场分别控制选择出站节点的模式,但需确保机场自定义名称前后一致；
+# 6) 配置前仔细阅读配置中的相关说明,根据需要自行调整。
+# 7) 使用前在“1.6代理提供者”板块中添加你的订阅链接及机场名称,并在3.4、3.5、3.6分别填入你机场名称(注意机场名称前后都有一个空格),要确保1.6与3.4、3.5、3.6中的机场名称保持一致，否则会报错。
 
 # ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓配置区↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 # 1 锚点配置 
@@ -170,10 +171,6 @@ proxy-groups:
   # 3.1 业务策略组
   - {name: 默认代理,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Proxy.png}
   - {name: 默认直连,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Static.png}
-  - {name: Github,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/GitHub.png}  
-  - {name: Docker,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Docker.png}
-  - {name: 微软服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Microsoft.png}
-  - {name: 游戏平台,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Game.png}
   - {name: 故障转移,     <<: *BaseFB,   icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Back.png}
 
   # 3.2 策略组与地理策略组分界识别
@@ -269,7 +266,6 @@ rules:
   
   # 内网设备(192.168.50.58、::abcd:1234:efgh:5678/64)部分代理,其余直连
   #- RULE-SET,My_Proxy,默认代理
-  - GEOSITE,docker,Docker   # 群晖会定期连docker跑流量,需要时才开启代理,无此项需求的删除掉,并删除3.1 业务策略组相应分组
   #- SRC-IP-CIDR,192.168.50.58/32,DIRECT,no-resolve
   #- SRC-IP-SUFFIX,::abcd:1234:efgh:5678/64,DIRECT,no-resolve  #某内网设备通过IPV6地址实现部分代理其余直连，由于路由器重启后IPV6前四段会变化，但后四段是根据MAC地址生成的，匹配后缀即可
 
@@ -289,18 +285,17 @@ rules:
   - GEOSITE,steam@cn,直接连接                                 # Steam国区
   - GEOSITE,category-games@cn,直接连接                        # 国内游戏
   - GEOSITE,category-games-cn,直接连接                        # 国区游戏平台
-  - GEOSITE,steam,游戏平台                                    # Steam
-  - GEOSITE,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
+  - GEOSITE,steam,默认直连                                    # Steam
+  - GEOSITE,category-games,默认直连                           # 游戏平台(含category-games-cn、Steam)
   - GEOSITE,category-public-tracker,直接连接                  # BT Tracker
   - GEOSITE,category-pt,直接连接                              # PT站
-  - RULE-SET,Speedtest,网络测试                               # 测速工具
+  - RULE-SET,Speedtest,网络测试                                # 测速工具
   - GEOSITE,category-speedtest,网络测试                       # 测速工具
   - GEOSITE,test-ipv6,网络测试                                # 测速工具
   - GEOSITE,microsoft-dev@cn,直接连接                         # 国内微软开发者平台
   - GEOSITE,microsoft@cn,直接连接                             # 微软中国  
-  - GEOSITE,github,Github                                    # GitHub(采用Github520的hosts文件后，Github可直连)  
-  - GEOSITE,microsoft,微软服务                                # 微软服务
   - GEOSITE,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
+  - GEOSITE,microsoft,默认直连                                # 微软服务  
   - GEOIP,google,默认代理,no-resolve                          # google IP
   - GEOIP,telegram,默认代理,no-resolve                        # Telegram IP
   - GEOIP,twitter,默认代理,no-resolve                         # Twitter IP
