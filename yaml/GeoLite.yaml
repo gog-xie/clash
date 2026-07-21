@@ -254,7 +254,6 @@ rules:
   - GEOSITE,steam@cn,直接连接                                 # Steam国区
   - GEOSITE,category-games@cn,直接连接                        # 国内游戏
   - GEOSITE,category-games-cn,直接连接                        # 国区游戏平台
-  - GEOSITE,steam,默认直连                                    # Steam
   - GEOSITE,category-games,默认直连                           # 游戏平台(含category-games-cn、Steam)
   - GEOSITE,category-public-tracker,直接连接                  # BT Tracker
   - GEOSITE,category-pt,直接连接                              # PT站
