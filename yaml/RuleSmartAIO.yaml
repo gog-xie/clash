@@ -156,13 +156,12 @@ dns:
   direct-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  fake-ip-filter:          #本条按需启用,如果开启了rule-set项,对应“5 规则集”的项目也需同时启用
+  fake-ip-filter: 
     - rule-set:fakeip-filter
     - rule-set:private
     - rule-set:cn
     - '+.pub.3gppnetwork.org'
     - "+.bing.com"
-    - +.miwifi.com
     - +.docker.io
     - +.market.xiaomi.com
     - +.push.apple.com
@@ -258,17 +257,8 @@ rules:
   - RULE-SET,category-ads-all,REJECT    # 轻量化广告拦截列表,搭配AWAvenueAds秋风广告列表使用,同时禁用adblock广告过滤列表
   - RULE-SET,AWAvenueAds,REJECT         # 秋风广告过滤列表,搭配category-ads-all广告列表使用,同时禁用adblock广告过滤列表
   - RULE-SET,adblock,REJECT             # adblock广告过滤列表,与秋风、category-ads-all广告列表单独使用
-  
-  # 4.2 特殊设置:192.168.50.101 ~ 199 所有设备走直连（本条规则解决内网大部分设备不需代理，如智能家居设备，负责DHCP的路由器的DHCP范围需设置为192.168.50.101 ~ 199，视个人需求修订）
-  #- SRC-IP-CIDR,192.168.50.101/32,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.50.102/31,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.50.104/30,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.50.108/30,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.50.112/28,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.50.128/26,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.50.192/29,DIRECT,no-resolve
-  
-  # 4.3 域名规则
+
+  # 4.2 分流规则
   - RULE-SET,My_Direct,直接连接                               # 自定义直连域名
   - RULE-SET,private,直接连接                                 # 私有域名
   - RULE-SET,private_IP,直接连接,no-resolve                   # 内网 / 保留 IP(127/8、192.168/16…)
@@ -319,7 +309,7 @@ rules:
   - RULE-SET,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
   - RULE-SET,category-communication,即时通讯                   # 即时通讯(含telegram、WhatsApp、clubhouse等,若需精简,可以将注释掉"3.1 业务策略组"中相应的分组)
   - RULE-SET,category-social-media-!cn,社交媒体                # 国外社交媒体(含instagram、facebook、twitter、mixi等,若需精简,可以将注释掉"3.1 业务策略组"中相应的分组)
-  - RULE-SET,category-entertainment,国外娱乐                   # 国外娱乐(含youtube、tiktok、bahamut、primevideo、netflix、disney、apple-tvplus、hbo、category-games-!cn、tmdb、imdb等,若需精简,可以注释掉5.3相应的规则及"3.1 业务策略组"中对应的分组,最终到此规则兜底)
+  - RULE-SET,category-entertainment,国外娱乐                   # 国外娱乐(含youtube、tiktok、bahamut、primevideo、netflix、disney、apple-tvplus、hbo、category-games-!cn、tmdb、imdb等,若需精简,可以注释掉4.2相应的规则及"3.1 业务策略组"中对应的分组,最终到此规则兜底)
   - RULE-SET,category-ecommerce,国外电商                       # 国外电商
   - RULE-SET,category-cryptocurrency,加密货币                  # 加密货币(大部分在gfw中)
   - RULE-SET,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
