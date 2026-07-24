@@ -336,7 +336,7 @@ rules:
   
   # 内网设备(192.168.50.58、::abcd:1234:efgh:5678/64)部分代理,其余直连
   #- RULE-SET,My_Proxy,默认代理
-  - RULE-SET,docker,Docker   # 群晖会定期连docker跑流量,需要时才开启代理,无此项需求的删除掉,并删除3.1 业务策略组相应分组
+  - RULE-SET,docker,Docker   # 需要时才开启代理,无此项需求的可删除掉,并删除3.1 业务策略组相应分组
   #- SRC-IP-CIDR,192.168.50.58/32,DIRECT,no-resolve
   #- SRC-IP-SUFFIX,::abcd:1234:efgh:5678/64,DIRECT,no-resolve  #某内网设备通过IPV6地址实现部分代理其余直连,由于路由器重启后IPV6前四段会变化,但后四段是根据MAC地址生成的,匹配后缀即可
 
