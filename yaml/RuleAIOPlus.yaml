@@ -219,7 +219,7 @@ proxy-groups:
   - {name: 韩国策略,     type: select, proxies: ['[全] 韩国-轮询', '[全] 韩国-散列', '[全] 韩国-自动', '[主] 韩国-轮询', '[主] 韩国-散列', '[主] 韩国-自动', '[备] 韩国-轮询', '[备] 韩国-散列', '[备] 韩国-自动'], icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Korea.png}
   - {name: 冷门策略,     type: select, proxies: ['[全] 冷门-轮询', '[全] 冷门-散列', '[全] 冷门-自动', '[主] 冷门-轮询', '[主] 冷门-散列', '[主] 冷门-自动', '[备] 冷门-轮询', '[备] 冷门-散列', '[备] 冷门-自动'], icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Europe_Map.png}
 
-  # 3.4 全部机场混合负载均衡-散列(需更改机场名称,与1.6小节机场名称一致)
+  # 3.4 全部机场混合负载均衡-散列
   - {name: '[全] 香港-散列', <<: *BaseCH, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Round_Robin_1.png}
   - {name: '[全] 台湾-散列', <<: *BaseCH, include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Round_Robin_1.png}
   - {name: '[全] 狮城-散列', <<: *BaseCH, include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Round_Robin_1.png}
@@ -229,7 +229,7 @@ proxy-groups:
   - {name: '[全] 欧盟-散列', <<: *BaseCH, include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Round_Robin_1.png}
   - {name: '[全] 冷门-散列', <<: *BaseCH, include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Round_Robin_1.png}
 
-  # 3.5 全部机场混合负载均衡-轮询(需更改机场名称,与1.6小节机场名称一致)
+  # 3.5 全部机场混合负载均衡-轮询
   - {name: '[全] 香港-轮询', <<: *BaseCR, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Round_Robin.png}
   - {name: '[全] 台湾-轮询', <<: *BaseCR, include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Round_Robin.png}
   - {name: '[全] 狮城-轮询', <<: *BaseCR, include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Round_Robin.png}
@@ -239,7 +239,7 @@ proxy-groups:
   - {name: '[全] 欧盟-轮询', <<: *BaseCR, include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Round_Robin.png}
   - {name: '[全] 冷门-轮询', <<: *BaseCR, include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Round_Robin.png}
 
-  # 3.6 全部机场混合自动测速组(需更改机场名称,与1.6小节机场名称一致)
+  # 3.6 全部机场混合自动测速组
   - {name: '[全] 香港-自动', <<: *BaseUT, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Auto.png}
   - {name: '[全] 台湾-自动', <<: *BaseUT, include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Auto.png}
   - {name: '[全] 狮城-自动', <<: *BaseUT, include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Auto.png}
