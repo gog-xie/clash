@@ -210,7 +210,7 @@ proxy-groups:
   - {name: 网络测试,     <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Speedtest.png}
   - {name: 直接连接,     type: select, proxies: [DIRECT], hidden: true, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Direct.png}
 
-  # 3.3 地理策略组 (如果喜欢策略组更整洁,去掉各个具体的节点,可删除掉本小节的include-all和filte参数)
+  # 3.3 地理策略组 (如果喜欢地区策略组更为整洁,去掉各个具体的节点,只保留type功能组，可删除掉本小节的include-all和filte参数)
   - {name: 狮城策略,     type: select, proxies: ['[全] 狮城-轮询', '[全] 狮城-散列', '[全] 狮城-自动', '[主] 狮城-轮询', '[主] 狮城-散列', '[主] 狮城-自动', '[备] 狮城-轮询', '[备] 狮城-散列', '[备] 狮城-自动'], include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Singapore.png}
   - {name: 香港策略,     type: select, proxies: ['[全] 香港-轮询', '[全] 香港-散列', '[全] 香港-自动', '[主] 香港-轮询', '[主] 香港-散列', '[主] 香港-自动', '[备] 香港-轮询', '[备] 香港-散列', '[备] 香港-自动'], include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Hong_Kong.png}
   - {name: 日本策略,     type: select, proxies: ['[全] 日本-轮询', '[全] 日本-散列', '[全] 日本-自动', '[主] 日本-轮询', '[主] 日本-散列', '[主] 日本-自动', '[备] 日本-轮询', '[备] 日本-散列', '[备] 日本-自动'], include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Japan.png}
