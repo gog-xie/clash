@@ -152,13 +152,12 @@ dns:
   direct-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  fake-ip-filter:          #本条按需启用,如果开启了rule-set项,对应“6 规则集”的项目也需同时启用
+  fake-ip-filter: 
     - rule-set:fakeip-filter
     - GEOSITE:private
     - GEOSITE:cn
     - '+.pub.3gppnetwork.org'
     - "+.bing.com"
-    - +.miwifi.com
     - +.docker.io
     - +.market.xiaomi.com
     - +.push.apple.com
