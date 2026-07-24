@@ -157,7 +157,6 @@ dns:
     - rule-set:cn
     - '+.pub.3gppnetwork.org'
     - "+.bing.com"
-    - +.miwifi.com
     - +.docker.io
     - +.market.xiaomi.com
     - +.push.apple.com
