@@ -224,7 +224,7 @@ rules:
   - RULE-SET,AWAvenueAds,REJECT         # 秋风广告过滤列表,搭配category-ads-all广告列表使用,同时禁用adblock广告过滤列表
   - RULE-SET,adblock,REJECT             # adblock广告过滤列表,与秋风、category-ads-all广告列表单独使用
   
-  # 5.2 特殊设置:192.168.50.101 ~ 199 所有设备走直连（本条规则解决内网大部分设备不需代理，如智能家居设备，负责DHCP的路由器的DHCP范围需设置为192.168.50.101 ~ 199，视个人需求修订）
+  # 4.2 特殊设置:192.168.50.101 ~ 199 所有设备走直连（本条规则解决内网大部分设备不需代理，如智能家居设备，负责DHCP的路由器的DHCP范围需设置为192.168.50.101 ~ 199，视个人需求修订）
   #- SRC-IP-CIDR,192.168.50.101/32,DIRECT,no-resolve
   #- SRC-IP-CIDR,192.168.50.102/31,DIRECT,no-resolve
   #- SRC-IP-CIDR,192.168.50.104/30,DIRECT,no-resolve
@@ -232,11 +232,6 @@ rules:
   #- SRC-IP-CIDR,192.168.50.112/28,DIRECT,no-resolve
   #- SRC-IP-CIDR,192.168.50.128/26,DIRECT,no-resolve
   #- SRC-IP-CIDR,192.168.50.192/29,DIRECT,no-resolve
-  
-  # 内网设备(192.168.50.58、::abcd:1234:efgh:5678/64)部分代理,其余直连
-  #- RULE-SET,My_Proxy,默认代理
-  #- SRC-IP-CIDR,192.168.50.58/32,DIRECT,no-resolve
-  #- SRC-IP-SUFFIX,::abcd:1234:efgh:5678/64,DIRECT,no-resolve  #某内网设备通过IPV6地址实现部分代理其余直连，由于路由器重启后IPV6前四段会变化，但后四段是根据MAC地址生成的，匹配后缀即可
 
   # 4.3 域名规则
   - RULE-SET,My_Direct,直接连接                               # 自定义直连域名
