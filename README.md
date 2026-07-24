@@ -1,5 +1,6 @@
-<h1 align="center"> ✈️基于mihomo内核代理程序<br>⠀123 <br>配置模板</h1>
+<h1 align="center"> ✈️基于mihomo内核代理程序<br> <br>配置模板</h1>
 
+<h3 align="center">  [1 前言](#-1 前言) </h3>
 ---
 
 <p align="center"><b>😂探讨用于Windows Clash Verge、ASUS MerlinClash、OpenWrt Nikki、OpenClash等mihomo内核代理程序的yaml配置模板😂</b></p>
