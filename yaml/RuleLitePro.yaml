@@ -286,8 +286,6 @@ rules:
   - RULE-SET,Speedtest,网络测试                                # 测速工具
   - RULE-SET,category-speedtest,网络测试                       # 测速工具
   - RULE-SET,test-ipv6,网络测试                                # 测速工具
-  - RULE-SET,microsoft-dev@cn,直接连接                         # 国内微软开发者平台
-  - RULE-SET,microsoft@cn,直接连接                             # 微软中国
   - RULE-SET,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
   - RULE-SET,microsoft,默认直连                                # 微软服务
   - RULE-SET,google_IP,默认代理,no-resolve                     # google IP
@@ -331,20 +329,16 @@ rule-providers:
   private:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/private.mrs}
   private_IP:                          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geoip/private.mrs}
   google-cn:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/google-cn.mrs}
-  microsoft-dev@cn:                    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/microsoft-dev@cn.mrs}
-  microsoft@cn:                        {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/microsoft@cn.mrs}
   microsoft:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/microsoft.mrs}
   category-game-platforms-download:    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-game-platforms-download.mrs}
   category-public-tracker:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-public-tracker.mrs}
   category-pt:                         {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-pt.mrs}
   steam@cn:                            {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/steam@cn.mrs}
-  steam:                               {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/steam.mrs}
   category-games@cn:                   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-games@cn.mrs}
   category-games-cn:                   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-games-cn.mrs}
   category-games:                      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-games.mrs}
   category-speedtest:                  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/category-speedtest.mrs}
   test-ipv6:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/test-ipv6.mrs}
-  github:                              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/github.mrs}
   gfw:                                 {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/gfw.mrs}
   google_IP:                           {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geoip/google.mrs}
   telegram_IP:                         {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geoip/telegram.mrs}
