@@ -290,16 +290,7 @@ rules:
   - RULE-SET,AWAvenueAds,REJECT         # 秋风广告过滤列表,搭配category-ads-all广告列表使用,同时禁用adblock广告过滤列表
   - RULE-SET,adblock,REJECT             # adblock广告过滤列表,与秋风、category-ads-all广告列表单独使用
   
-  # 4.2 特殊设置:192.168.50.101 ~ 199 所有设备走直连（本条规则解决内网大部分设备不需代理，如智能家居设备，负责DHCP的路由器的DHCP范围需设置为192.168.50.101 ~ 199，视个人需求修订）
-  #- SRC-IP-CIDR,192.168.50.101/32,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.50.102/31,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.50.104/30,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.50.108/30,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.50.112/28,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.50.128/26,DIRECT,no-resolve
-  #- SRC-IP-CIDR,192.168.50.192/29,DIRECT,no-resolve
-
-  # 4.3 域名规则
+  # 4.2 分流规则
   - RULE-SET,My_Direct,直接连接                               # 自定义直连域名
   - GEOSITE,private,直接连接                                  # 私有域名
   - GEOIP,private,直接连接,no-resolve                         # 内网 / 保留 IP(127/8、192.168/16…)
