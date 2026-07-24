@@ -271,7 +271,7 @@ rules:
   #- SRC-IP-CIDR,192.168.50.58/32,DIRECT,no-resolve
   #- SRC-IP-SUFFIX,::abcd:1234:efgh:5678/64,DIRECT,no-resolve  #某内网设备通过IPV6地址实现部分代理其余直连，由于路由器重启后IPV6前四段会变化，但后四段是根据MAC地址生成的，匹配后缀即可
 
-  # 4.3 域名规则
+  # 4.2 分流规则
   - RULE-SET,My_Direct,直接连接                               # 自定义直连域名
   - GEOSITE,private,直接连接                                  # 私有域名
   - GEOIP,private,直接连接,no-resolve                         # 内网 / 保留 IP(127/8、192.168/16…)
