@@ -1,6 +1,6 @@
 <h1 align="center"> ✈️基于mihomo内核代理程序<br> <br>配置模板</h1>
 
-* [📌 前言](#-前言)
+<h1 align="center"> * [📌 前言](#-前言)    </h1>
 ---
 
 <p align="center"><b>😂探讨用于Windows Clash Verge、ASUS MerlinClash、OpenWrt Nikki、OpenClash等mihomo内核代理程序的yaml配置模板😂</b></p>
@@ -21,7 +21,7 @@
 
 ***
 
--  ## 2 Mihomo通用yaml模板
+-  ## ⚡ Mihomo通用yaml模板
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;配置模板适用于Mihomo内核的代理程序，如OpenClash、Nikki、Merlinclash、Clash Verge等，可直接导入模板使用或稍加改动即可。
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1 配置模板最多采用了五层策略，层次功能分明，故转层负责检测和确保节点可用，地区策略层负责节点选择的形式，节点选择方式有均衡、自动、smart、手动，所有故障转移均不直接选择最底层节点，而是地区策略组之间故障转移，如：故转-手动→全球手动→地区策略→均衡or自动（或smart）or手动→机场节点，“全球手动”可自定义选择喜欢的地区策略或单一节点，当"全球手动"的节点失联时，自动切换至可用节点，闲时几乎不产生代理流量，响应迅速，可实现长时免维护。
