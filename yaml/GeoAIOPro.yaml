@@ -313,6 +313,7 @@ rules:
   - GEOSITE,category-game-platforms-download,直接连接         # 游戏平台下载
   - GEOSITE,category-public-tracker,直接连接                  # BT Tracker
   - GEOSITE,category-pt,直接连接                              # PT站
+  - GEOSITE,docker,Docker                                    # 防止docker跑流量,需要时才开启代理,无此项需求的可删除掉,并删除3.1 业务策略组相应分组  
   - GEOSITE,bing@cn,直接连接                                  # bing中国
   - GEOSITE,microsoft@cn,直接连接                              # 微软服务
   - GEOSITE,onedrive,OneDrive                                 # OneDrive
