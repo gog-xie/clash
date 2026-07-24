@@ -1,12 +1,13 @@
 <h1 align="center"> ✈️基于mihomo内核代理程序<br> <br>配置模板</h1>
 
-* [📌 前言](#-前言)      [⚡ Mihomo通用yaml模板](#-Mihomo通用yaml模板)       [⚙️ 特殊需求](#-特殊需求)
 ---
 
 <p align="center"><b>😂探讨用于Windows Clash Verge、ASUS MerlinClash、OpenWrt Nikki、OpenClash等mihomo内核代理程序的yaml配置模板😂</b></p>
 <p align="center"><b>🐜持续漏网之鱼🐟的维护补录，定制个人需求🐜</b></p>
 
 ---
+<h1 align="center"> [ * [📌 前言](#-前言)      [⚡ Mihomo通用yaml模板](#-Mihomo通用yaml模板)       [⚙️ 特殊需求](#-特殊需求) ]</h1>
+
 
 ## 📌 前言
 
