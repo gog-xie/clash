@@ -19,7 +19,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ini订阅配置文件简单实用，而yaml配置文件通用性较强，适用于各种mihomo代理程序，导入即用，各有千秋；到底什么配置文件才好用？在YouTube上很多大佬的配置教程，他们用的机场本身质量就非常好，怎么选节点都好用，同一配置模板当换成质量相对不稳定的机场时就不好用了，往往在实际使用中，ping的高低并不等于连接速率，有时选择ping低的节点，却十分卡顿。本项目在merlinclash、openclash、nikki、clashverge长时测试，merlinclash为主路由，openclash和nikki为旁路由，采用两个廉价机场长时验证，十分稳定，可实现长期免维护。
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目仅提供基于Mihomo的配置文件示例，分流规则参照[Aethersailor/Custom_OpenClash_Rules](https://github.com/Aethersailor/Custom_OpenClash_Rules)项目、配置架构参照[666OS/YYDS](https://github.com/666OS/YYDS)项目优化而来，规则数据来源主要是[MetaCubeX](https://github.com/MetaCubeX/meta-rules-dat/tree/meta/geo/geosite)规则数据库；各代理程序的设置可自行查阅相关教程，如OpenClash的设置可参照 Aethersailor的[设置方案](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88)🥊。另外[HenryChiao/MIHOMO_YAMLS](https://github.com/gog-xie/MIHOMO_YAMLS/tree/main/THEYAMLS/General_Config)项目收集了全网相对典型的yaml和ini订阅配置模板，可集思广益参考借鉴。
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目仅提供基于Mihomo的配置文件示例，分流规则参照[Aethersailor/Custom_OpenClash_Rules](https://github.com/Aethersailor/Custom_OpenClash_Rules)项目、配置架构参照[666OS/YYDS](https://github.com/666OS/YYDS)项目优化而来，规则数据来源主要是[MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat/tree/meta/geo/geosite)项目的规则数据库；各代理程序的设置可自行查阅相关教程，如OpenClash的设置可参照 Aethersailor的[设置方案](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88)🥊。另外[HenryChiao/MIHOMO_YAMLS](https://github.com/gog-xie/MIHOMO_YAMLS/tree/main/THEYAMLS/General_Config)项目收集了全网相对典型的yaml和ini订阅配置模板，可集思广益参考借鉴。
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对以上作者表示感谢🙏🙏🙏。
 
 ***
