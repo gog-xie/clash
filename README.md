@@ -19,7 +19,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ini订阅配置文件简单实用，而yaml配置文件通用性较强，适用于各种mihomo代理程序，导入即用，各有千秋；到底什么配置文件才好用？在YouTube上很多大佬的配置教程，他们用的机场本身质量就非常好，怎么选节点都好用，同一配置模板当换成质量相对不稳定的机场时就不好用了，往往在实际使用中，ping的高低并不等于连接速率，有时选择ping低的节点，却十分卡顿。本项目在merlinclash、openclash、nikki、clashverge长时测试，merlinclash为主路由，openclash和nikki为旁路由，采用两个廉价机场长时验证，十分稳定，可实现长期免维护。
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目仅提供基于Mihomo的配置文件示例，分流规则参照[Aethersailor/Custom_OpenClash_Rules](https://github.com/Aethersailor/Custom_OpenClash_Rules)项目、配置架构参照[666OS/YYDS](https://github.com/666OS/YYDS)项目优化而来，各代理程序的设置可自行查阅相关教程，如OpenClash的设置可参照 Aethersailor的[设置方案](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88)🥊。另外[HenryChiao/MIHOMO_YAMLS](https://github.com/gog-xie/MIHOMO_YAMLS/tree/main/THEYAMLS/General_Config)项目收集了全网相对典型的yaml和ini订阅配置模板，可集思广益参考借鉴。
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目仅提供基于Mihomo的配置文件示例，分流规则参照[Aethersailor/Custom_OpenClash_Rules](https://github.com/Aethersailor/Custom_OpenClash_Rules)项目、配置架构参照[666OS/YYDS](https://github.com/666OS/YYDS)项目优化而来，规则数据来源主要是[MetaCubeX](https://github.com/MetaCubeX/meta-rules-dat/tree/meta/geo/geosite)规则数据库；各代理程序的设置可自行查阅相关教程，如OpenClash的设置可参照 Aethersailor的[设置方案](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88)🥊。另外[HenryChiao/MIHOMO_YAMLS](https://github.com/gog-xie/MIHOMO_YAMLS/tree/main/THEYAMLS/General_Config)项目收集了全网相对典型的yaml和ini订阅配置模板，可集思广益参考借鉴。
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对以上作者表示感谢🙏🙏🙏。
 
 ***
@@ -29,7 +29,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ 配置模板最多采用了五层策略，层次功能分明，故转层负责检测和确保节点可用，地区策略层负责节点选择的形式，节点选择方式有均衡、自动、smart、手动，所有故障转移均不直接选择最底层节点，而是地区策略组之间故障转移，如：故转-手动→全球手动→地区策略→均衡or自动（或smart）or手动→机场节点，“全球手动”可自定义选择喜欢的地区策略或单一节点，当"全球手动"的节点失联时，自动切换至可用节点，闲时几乎不产生代理流量，响应迅速，可实现长时免维护。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ 规则数据来源主要是 **[MetaCubeX](https://github.com/gog-xie/meta-rules-dat/tree/meta/geo)** 规则数据库，一个是采用mihomo内置GEOSITE和GEOIP数据库，另一个是采用的MetaCubeX实时更新的GEO数据库，配置中内置了分区域节点的smart智能选择、自动选择、手动选择、故障转移、负载均衡等功能，仅需修改yaml文件中的机场地址和名称即可。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ 规则数据来源主要是MetaCubeX和Aethersailor规则数据库，MetaCubeX的规则一个是采用mihomo内置GEOSITE和GEOIP数据库，另一个是采用的MetaCubeX实时更新的GEO数据库，配置中内置了分区域节点的smart智能选择、自动选择、手动选择、故障转移、负载均衡等功能，仅需修改yaml文件中的机场地址和名称即可。
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ 各种配置大同小异，Pro和Plus类配置模板可实现指定机场分流出站，其余模板均是多机场节点混用出站。Plus采用多元故转默认地区界节点，可实现更为灵活的分流策略。
 
