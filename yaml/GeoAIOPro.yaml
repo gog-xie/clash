@@ -1,5 +1,5 @@
 # Name: Mihomo GEO All In One Pro
-# Link: https://github.com/gog-xie/Mihomo/blob/main/yaml/GeoAIOPro.yaml
+# Link: https://github.com/GOGYTMF/Mihomo/blob/main/yaml/GeoAIOPro.yaml
 
 # 配置说明：
 # 1) 本配置最多采用五层策略,略有套娃,但层次功能分明,故转层负责节点是否可用,地区策略层负责节点选择的形式,策略层级逻辑：故转-手动 -→ 全球手动 -→ 地区策略 -→ 均衡or散列or自动or手动 -→ 该地区某节点,例如：故转-手动 -→ 全球手动 -→日本策略 -→ 日本自动(所有机场节点混用) -→ 某具体的日本节点(所有机场当中ping最低的日本节点),"全球手动"可自定义喜欢的节点,当"全球手动"节点失联时,自动切换至下一可用区域节点,实现长时免维护；
@@ -179,16 +179,16 @@ proxy-groups:
   - {name: Github,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
   - {name: 油管视频,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png}
   - {name: 国外娱乐,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png}
-  - {name: 谷歌FCM,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Google_FCM.png}
+  - {name: 谷歌FCM,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/GOGYTMF/Qure@master/IconSet/Color/Google_FCM.png}
   - {name: 谷歌服务,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png}
-  - {name: Gemini,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Google_Gemini.png}
-  - {name: Claude,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Claude.png}
+  - {name: Gemini,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/GOGYTMF/Qure@master/IconSet/Color/Google_Gemini.png}
+  - {name: Claude,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/GOGYTMF/Qure@master/IconSet/Color/Claude.png}
   - {name: ChatGPT,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
-  - {name: Grok,        <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Grok.png}   
+  - {name: Grok,        <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/GOGYTMF/Qure@master/IconSet/Color/Grok.png}   
   - {name: AI服务,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png}
-  - {name: 国外电商,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Ecommerce_1.png}
-  - {name: 即时通讯,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Communication.png}
-  - {name: 社交媒体,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Media_1.png}
+  - {name: 国外电商,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/GOGYTMF/Qure@master/IconSet/Color/Ecommerce_1.png}
+  - {name: 即时通讯,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/GOGYTMF/Qure@master/IconSet/Color/Communication.png}
+  - {name: 社交媒体,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/GOGYTMF/Qure@master/IconSet/Color/Media_1.png}
   - {name: TikTok,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png}
   - {name: 奈飞视频,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png}
   - {name: 迪士尼+,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney%2B.png}
@@ -196,9 +196,9 @@ proxy-groups:
   - {name: Prime Video, <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video.png}
   - {name: Spotify,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png}
   - {name: 加密货币,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency.png}
-  - {name: Docker,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Docker.png}
+  - {name: Docker,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/GOGYTMF/Qure@master/IconSet/Color/Docker.png}
   - {name: OneDrive,    <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png}
-  - {name: Bing,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Bing.png}
+  - {name: Bing,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/GOGYTMF/Qure@master/IconSet/Color/Bing.png}
   - {name: 微软服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
   - {name: 苹果服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png}
   - {name: Emby,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png}
@@ -362,21 +362,21 @@ rules:
 rule-providers:  
   # 5.1 广告拦截规则
   AWAvenueAds:      {<<: *BehaviorDN, url: https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.mrs}
-  adblock:          {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/adblock.mrs} 
+  adblock:          {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/GOGYTMF/Mihomo@main/geo/geosite/adblock.mrs} 
 
   # 5.2 fakeip-filter规则
   fakeip-filter:    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
 
   # 5.3 自定义规则
-  My_Proxy:              {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Proxy.yaml}
-  My_Direct:             {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Direct.yaml}
-  Custom_Direct_Domain:  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Direct_Domain.mrs}
-  Custom_Direct_IP:      {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Direct_IP.mrs}
-  Custom_Direct_Port:    {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Direct_Classical_Port.yaml}
-  Custom_Port_Direct:    {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Port_Direct.yaml}
-  Custom_Proxy_Domain:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Proxy_Domain.mrs}
-  Custom_Proxy_IP:       {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Custom_Proxy_IP.mrs}
-  Steam_CDN_Domain:      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Steam_CDN_Domain.mrs}
-  Steam_CDN_IP:          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/rule/Steam_CDN_IP.mrs}
-  Speedtest:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/speedtest.mrs}
+  My_Proxy:              {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/GOGYTMF/Mihomo@main/rule/Proxy.yaml}
+  My_Direct:             {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/GOGYTMF/Mihomo@main/rule/Direct.yaml}
+  Custom_Direct_Domain:  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/GOGYTMF/Mihomo@main/rule/Custom_Direct_Domain.mrs}
+  Custom_Direct_IP:      {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/GOGYTMF/Mihomo@main/rule/Custom_Direct_IP.mrs}
+  Custom_Direct_Port:    {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/GOGYTMF/Mihomo@main/rule/Custom_Direct_Classical_Port.yaml}
+  Custom_Port_Direct:    {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/GOGYTMF/Mihomo@main/rule/Custom_Port_Direct.yaml}
+  Custom_Proxy_Domain:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/GOGYTMF/Mihomo@main/rule/Custom_Proxy_Domain.mrs}
+  Custom_Proxy_IP:       {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/GOGYTMF/Mihomo@main/rule/Custom_Proxy_IP.mrs}
+  Steam_CDN_Domain:      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/GOGYTMF/Mihomo@main/rule/Steam_CDN_Domain.mrs}
+  Steam_CDN_IP:          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/GOGYTMF/Mihomo@main/rule/Steam_CDN_IP.mrs}
+  Speedtest:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/GOGYTMF/Mihomo@main/geo/geosite/speedtest.mrs}
 # ==================== EOF ====================
