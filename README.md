@@ -24,7 +24,7 @@
 ## 🚫  关于广告拦截
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 在openclash等mihomo代理程序中，广告拦截可部署简单的规则拦截，其他复杂拦截功能尽量不要放置在代理程序中，在终端安装例如AdGuard插件效果远远好于诸如OpenClash的广告拦截效果。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 试用过[anti-AD](https://github.com/privacy-protection-tools/anti-AD/blob/master/anti-ad-clash.yaml)、[adblock](https://github.com/217heidai/adblockfilters/blob/main/rules/adblockmihomo.yaml)、[AWAvenue](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/Filters/AWAvenue-Ads-Rule-Clash.yaml)、[category-ads-all](https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/category-ads-all.list)等广告过滤列表，其中anti-AD、adblock是比较全面的广告列表，AWAvenue(秋风)、category-ads-all是轻量化的广告列表，可相互搭配适用。adblock目前有接近20万条拦截规则，拦截率可达惊人的50%左右(10万次连接，5万次拦截)，anti-AD也有十多万条规则，拦截率也很高，但网评有误杀情况，当然，这跟个人上网习惯有关，推荐单独使用adblock，以及AWAvenue、category-ads-all搭配使用。还得看你硬件的情况，硬件扛不住的，就用轻量化，或在路由上设置拦截规则，作者在华硕的BE86U上测试，adblock也轻松运行。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 试用过[anti-AD](https://github.com/privacy-protection-tools/anti-AD/blob/master/anti-ad-clash.yaml)、[adblock](https://github.com/217heidai/adblockfilters/blob/main/rules/adblockmihomo.yaml)、[AWAvenue](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/Filters/AWAvenue-Ads-Rule-Clash.yaml)、[category-ads-all](https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/category-ads-all.list)等广告过滤列表，其中anti-AD、adblock是比较全面的广告列表，AWAvenue(秋风)、category-ads-all是轻量化的广告列表，可相互搭配适用。adblock目前有接近20万条拦截规则，拦截率可达惊人的50%左右(10万次连接，5万次拦截)，anti-AD也有十多万条规则，拦截率也很高，但网评有误杀情况，当然，这跟个人上网习惯有关，推荐单独使用adblock，以及AWAvenue、category-ads-all搭配使用。还得看硬件的情况，硬件扛不住的，就用轻量化，或不在路由上设置拦截规则，作者在华硕的BE86U上测试，adblock轻松运行，X86上就更没问题了。
 
 ---
 
