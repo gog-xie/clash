@@ -291,7 +291,6 @@ rules:
   - RULE-SET,onedrive,OneDrive                                # OneDrive
   - RULE-SET,bing,Bing                                        # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)
   - RULE-SET,github,Github                                    # GitHub(Microsoft的子集,置其前才能分流)
-  - RULE-SET,microsoft,微软服务                                # 微软服务
   - RULE-SET,apple-cn,直接连接                                 # 苹果中国
   - RULE-SET,apple-tvplus,Apple TV+                           # Apple TV+
   - RULE-SET,apple,苹果服务                                    # 苹果服务
@@ -326,6 +325,7 @@ rules:
   - RULE-SET,category-ecommerce,国外电商                       # 国外电商
   - RULE-SET,category-cryptocurrency,加密货币                  # 加密货币(大部分在gfw中)
   - RULE-SET,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
+  - RULE-SET,microsoft,微软服务                                # 微软服务  
   - RULE-SET,telegram_IP,即时通讯,no-resolve                   # Telegram IP
   - RULE-SET,twitter_IP,社交媒体,no-resolve                    # Twitter IP
   - RULE-SET,facebook_IP,社交媒体,no-resolve                   # Facebook IP
