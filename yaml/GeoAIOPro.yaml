@@ -309,7 +309,6 @@ rules:
   - GEOSITE,onedrive,OneDrive                                 # OneDrive
   - GEOSITE,bing,Bing                                        # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)
   - GEOSITE,github,Github                                    # GitHub(属Microsoft的子集,置其前才能分流)
-  - GEOSITE,microsoft,微软服务                                # 微软服务
   - GEOSITE,apple-cn,直接连接                                 # 苹果中国
   - GEOSITE,apple-tvplus,Apple TV+                           # Apple TV+
   - GEOSITE,apple,苹果服务                                    # 苹果服务
@@ -344,6 +343,7 @@ rules:
   - GEOSITE,category-ecommerce,国外电商                       # 国外电商
   - GEOSITE,category-cryptocurrency,加密货币                  # 加密货币(大部分在gfw中)
   - GEOSITE,gfw,默认代理                                      # GFW列表(主要规则,被墙列表,几乎包含以上所有分组的代理域名)
+  - GEOSITE,microsoft,微软服务                                # 微软服务  
   - GEOIP,telegram,即时通讯,no-resolve                        # Telegram IP
   - GEOIP,twitter,社交媒体,no-resolve                         # Twitter IP
   - GEOIP,facebook,社交媒体,no-resolve                        # Facebook IP
