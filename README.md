@@ -21,7 +21,7 @@
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目仅提供基于Mihomo的配置文件示例，OpenClash、Nikki、Merlinclash等代理程序的设置可自行查阅相关教程，如OpenClash的设置可参照 [Aethersailor的设置方案](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88)🥊。另外[HenryChiao/MIHOMO_YAMLS](https://github.com/gogyt/MIHOMO_YAMLS/tree/main/THEYAMLS/General_Config)项目收集了全网相对典型的yaml和ini订阅配置模板，可集思广益参考借鉴。
 
 ---
-## 🚫  关于广告拦截
+## 🚫 关于广告拦截
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 在openclash等mihomo代理程序中，广告拦截可部署简单的规则拦截，其他复杂拦截功能尽量不要放置在代理程序中，在终端安装例如AdGuard插件效果远远好于诸如OpenClash的广告拦截效果。
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 试用过[anti-AD](https://github.com/privacy-protection-tools/anti-AD/blob/master/anti-ad-clash.yaml)、[adblock](https://github.com/217heidai/adblockfilters/blob/main/rules/adblockmihomo.yaml)、[AWAvenue](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/Filters/AWAvenue-Ads-Rule-Clash.yaml)、[category-ads-all](https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/category-ads-all.list)等广告过滤列表，其中anti-AD、adblock是比较全面的广告列表，AWAvenue(秋风)、category-ads-all是轻量化的广告列表，可相互搭配适用。adblock目前有接近20万条拦截规则，拦截率可达惊人的50%左右(10万次连接，5万次拦截)，anti-AD也有十多万条规则，拦截率也很高，但网评有误杀情况，当然，这跟个人上网习惯有关，推荐单独使用adblock，以及AWAvenue、category-ads-all搭配使用。还得看硬件的情况，硬件扛不住的，就用轻量化，或不在路由上设置拦截规则，作者在华硕的BE86U上测试，adblock轻松运行，X86上就更没问题了。
