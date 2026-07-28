@@ -7,9 +7,4 @@ payload:
   - DOMAIN-SUFFIX,thetvdb.com
   - DOMAIN-SUFFIX,docker.com
   - DOMAIN-SUFFIX,docker.io
-  - DOMAIN-SUFFIX,nih.gov          # 美国国立卫生研究院
-  - DOMAIN-SUFFIX,ncbi.nlm.nih.gov # 美国国家生物技术信息中心
-  - DOMAIN-SUFFIX,science.gov      # 美国政府科学信息门户
   - DOMAIN-SUFFIX,ntrl.ntis.gov    # 美国国家技术报告库
-  - DOMAIN-SUFFIX,govinfo.gov      # 美国政府出版物数据库
-  - DOMAIN-SUFFIX,api.org          # 美国石油协会
