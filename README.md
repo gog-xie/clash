@@ -9,7 +9,7 @@
 * [📌 前言](#-前言)
 * [🚫 关于广告拦截](#-关于广告拦截)
 * [⚡ Mihomo通用yaml模板](#-Mihomo通用yaml模板)
-* [⚓ 特殊需求](#-特殊需求)
+* [⚓ 特殊设置](#-特殊设置)
 
 ---
 ## 📌 前言
@@ -18,7 +18,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ini订阅配置文件简单实用，而yaml配置文件通用性较强，适用于各种mihomo代理程序，导入即用，各有千秋；到底什么配置文件才好用？在YouTube上很多大佬的配置教程，他们用的机场本身质量就非常好，怎么选节点都好用，同一配置模板当换成质量相对不稳定的机场时就不好用了，往往在实际使用中，ping的高低并不等于连接速率，有时选择ping低的节点，却十分卡顿。本项目在merlinclash、openclash、nikki、clashverge长时测试，merlinclash为主路由，openclash和nikki为旁路由，采用两个廉价机场长时验证，十分稳定，可实现长期免维护。
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目仅提供基于Mihomo的配置文件示例，OpenClash、Nikki、Merlinclash等代理程序的设置可自行查阅相关教程，如OpenClash的设置可参照 [Aethersailor的设置方案](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88)🥊。另外[HenryChiao/MIHOMO_YAMLS](https://github.com/gogyt/MIHOMO_YAMLS/tree/main/THEYAMLS/General_Config)项目收集了全网相对典型的yaml和ini订阅配置模板，可集思广益参考借鉴。
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目仅提供基于Mihomo的配置文件示例，OpenClash、Nikki、Merlinclash等代理程序的设置可自行查阅相关教程。另外[HenryChiao/MIHOMO_YAMLS](https://github.com/gogyt/MIHOMO_YAMLS/tree/main/THEYAMLS/General_Config)项目收集了全网相对典型的yaml和ini订阅配置模板，可集思广益参考借鉴。
 
 ---
 ## 🚫 关于广告拦截
@@ -54,7 +54,7 @@
 
 ---
 
--  ## ⚓ 特殊需求
+-  ## ⚓ 特殊设置
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在家庭网络中，常常有部分设备不需要科学代理，旁路由比较好设置，只需让需要代理设备的网关指向旁路由，不需代理的默认指向主路由即可；但也有设备仅少量代理需求，其余不走科学代理。特别是主路由比较特殊，既要少量代理，又要大部分直连，比如白群仅docker镜像库、Emby海报刮削需要科学代理，其余全部绕过内核走直连的情况（主要是群晖按普通规则代理后，可能会产生不必要的代理流量，实际上是不需要的），可以利用规则先后顺序正则匹配的特点来实现部分代理的要求，按先后顺序匹配指令，如果上位规则没有匹配上，则匹配下一项规则。根据这一特点，先将这类设备IP 与MAC地址绑定，再将不需代理的设备IP匹配走直连，其次让部分需要代理的设备IP 匹配Proxy规则，最后让部分需要代理的设备IP匹配走直连，将其放置在规则集的最前端即可。例如以下规则：
 
 ```
