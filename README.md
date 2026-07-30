@@ -24,7 +24,7 @@
 ## 🚫 关于广告拦截
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 在代理程序中设置广告拦截仅仅是顺带功能，可设置简单的规则拦截，其他复杂拦截功能尽量不要放置在代理程序中，在终端安装例如AdGuard插件效果远远好于诸如OpenClash的广告拦截效果，还是遵循分工明确的原则，代理程序就主要干分流和代理的事。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 试用过[anti-AD](https://github.com/privacy-protection-tools/anti-AD)、[adblock](https://github.com/217heidai/adblockfilters)、[AWAvenue](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)、[GEOSITE,category-ads-all](https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/category-ads-all.list)等广告过滤列表，其中anti-AD、adblock是比较全面的广告列表，AWAvenue(秋风)、GEOSIET,category-ads-all是轻量化的广告列表，可相互搭配使用。adblock有近20万条拦截规则，拦截率可达惊人的50%左右(10万次连接，5万次拦截)，anti-AD也有十多万条规则，拦截率也很高，但网评有误杀情况，当然，这跟个人上网习惯有关，推荐单独使用adblock，以及AWAvenue、category-ads-all搭配使用。还得看硬件的情况，硬件扛不住的，就用轻量化，或不用拦截规则，作者在华硕BE86U上测试，adblock能轻松运行，X86上就更没问题了。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 试用过[anti-AD](https://github.com/privacy-protection-tools/anti-AD)、[adblock](https://github.com/217heidai/adblockfilters)、[AWAvenue](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)、[GEOSITE,category-ads-all](https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/category-ads-all.list)等广告过滤列表，其中anti-AD、adblock是比较全面的广告列表，AWAvenue(秋风)、GEOSIET,category-ads-all是轻量化的广告列表，可相互搭配使用。adblock有近20万条拦截规则，拦截率可达惊人的50%以上(10万次连接，拦截数5万次以上)，anti-AD也有十多万条规则，拦截率也很高，但网评有误杀情况，当然，这跟个人上网习惯有关，推荐单独使用adblock，以及AWAvenue、category-ads-all搭配使用。还得看硬件的情况，硬件扛不住的，就用轻量化，或不用拦截规则，作者在华硕BE86U上测试，adblock能轻松运行，X86上就更没问题了。
 
 ---
 
@@ -35,7 +35,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ 规则数据来源主要是[MetaCubeX](https://github.com/MetaCubeX/meta-rules-dat/tree/meta/geo)规则数据库，MetaCubeX的规则一个是采用mihomo内置GEOSITE和GEOIP数据库，另一个是采用的MetaCubeX实时更新的GEO数据库，配置中内置了分区域节点的smart智能选择、自动选择、手动选择、故障转移、负载均衡等功能，仅需修改yaml文件中的机场地址和名称即可。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ 各种配置大同小异，Pro和Plus类配置模板可实现指定机场分流出站，其余模板均是多机场节点混用出站。Plus采用多元故转默认地区界节点，当首选地区策略全部节点断连时，自动切换至下一可用地区策略，实现更为稳定的网络体验。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ 各种配置大同小异，Pro和Plus类配置模板可实现指定机场分流出站，其余模板均是多机场节点混用出站。Plus采用多元故转默认地区节点，当首选地区策略全部节点断连时，自动切换至下一可用地区策略，实现更为稳定的网络体验。
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔️ 系统上线后按自己需求选择好分流策略即可使用，控制面板中各个策略和节点连通性是否绿色的其实无关紧要，不用强迫症的不停点击测试连通性，系统会根据相关规则设定去判定节点的选择。
 
