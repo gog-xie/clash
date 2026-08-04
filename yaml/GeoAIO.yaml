@@ -247,61 +247,61 @@ rules:
   
   # 4.2 域名规则
   - RULE-SET,My_Direct,直接连接                               # 自定义直连域名
-  - RULE-SET,private,直接连接                                 # 私有域名
-  - RULE-SET,private_IP,直接连接,no-resolve                   # 内网 / 保留 IP(127/8、192.168/16…)
+  - GEOSITE,private,直接连接                                 # 私有域名
+  - GEOIP,private,直接连接,no-resolve                   # 内网 / 保留 IP(127/8、192.168/16…)
   - RULE-SET,Custom_Direct_Domain,直接连接                    # 自定义直连域名
-  - RULE-SET,Custom_Direct_IP,直接连接,no-resolve             # 自定义直连IP
+  - GEOIP,Custom_Direct_IP,直接连接,no-resolve             # 自定义直连IP
   - RULE-SET,Custom_Direct_Port,直接连接                      # 自定义直连端口
   - RULE-SET,Custom_Proxy_Domain,默认代理                     # 自定义代理域名
   - RULE-SET,Custom_Proxy_IP,默认代理,no-resolve              # 自定义代理IP
   - RULE-SET,Steam_CDN_Domain,直接连接                        # Steam CDN
   - RULE-SET,Steam_CDN_IP,直接连接,no-resolve                 # Steam CDN
-  - RULE-SET,category-game-platforms-download,直接连接         # 游戏平台下载
-  - RULE-SET,category-public-tracker,直接连接                  # BT Tracker
-  - RULE-SET,category-pt,直接连接                              # PT站
-  - RULE-SET,bing@cn,直接连接                                  # bing中国
-  - RULE-SET,microsoft@cn,直接连接                             # 微软中国
-  - RULE-SET,github,Github                                    # GitHub(属Microsoft的子集,置其前才能分流)
-  - RULE-SET,apple-cn,直接连接                                 # 苹果中国
-  - RULE-SET,apple-tvplus,苹果服务                           # Apple TV+
-  - RULE-SET,apple,苹果服务                                    # 苹果服务
-  - RULE-SET,Speedtest,网络测试                                # 测速工具
-  - RULE-SET,category-speedtest,网络测试                       # 测速工具
-  - RULE-SET,test-ipv6,网络测试                                # 测速工具
-  - RULE-SET,google-cn,直接连接                                # Google中国服务
-  - RULE-SET,googlefcm,谷歌服务                                 # Google FCM推送
-  - RULE-SET,google,谷歌服务                                   # Google服务
-  - RULE-SET,category-ai-!cn,AI服务                           # AI服务(国外AI兜底,含openai、gemini、copilot、claude、grok等)
-  - RULE-SET,youtube,油管视频                                  # YouTube
-  - RULE-SET,tiktok,TikTok                                     # TikTok
-  - RULE-SET,netflix,奈飞视频                                  # Netflix
-  - RULE-SET,disney,迪士尼+                                    # Disney+
-  - RULE-SET,hbo,HBO                                          # HBO
-  - RULE-SET,primevideo,Prime Video                           # Prime Video
-  - RULE-SET,category-emby,Emby                               # Emby
-  - RULE-SET,spotify,Spotify                                  # Spotify
-  - RULE-SET,steam@cn,直接连接                                 # Steam国区
-  - RULE-SET,category-games@cn,直接连接                        # 国内游戏
-  - RULE-SET,category-games-cn,直接连接                        # 国区游戏平台
-  - RULE-SET,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
-  - RULE-SET,category-communication,即时通讯                   # 即时通讯(含telegram、WhatsApp、clubhouse等,若需精简,可以将注释掉"4.1 业务策略组"中相应的分组)
-  - RULE-SET,category-social-media-!cn,社交媒体                # 国外社交媒体(含instagram、facebook、twitter、mixi等,若需精简,可以将注释掉"4.1 业务策略组"中相应的分组)
-  - RULE-SET,category-entertainment,国外娱乐                   # 国外娱乐(含youtube、tiktok、bahamut、primevideo、netflix、disney、apple-tvplus、hbo、category-games-!cn、tmdb、imdb等,若需精简,可以注释掉5.3相应的规则及"4.1 业务策略组"中对应的分组,最终到此规则兜底)
-  - RULE-SET,category-ecommerce,国外电商                       # 国外电商
-  - RULE-SET,category-cryptocurrency,加密货币                  # 加密货币(大部分在gfw中)
-  - RULE-SET,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
-  - RULE-SET,microsoft,微软服务                                # 微软服务
-  - RULE-SET,telegram_IP,即时通讯,no-resolve                   # Telegram IP
-  - RULE-SET,twitter_IP,社交媒体,no-resolve                    # Twitter IP
-  - RULE-SET,facebook_IP,社交媒体,no-resolve                   # Facebook IP
-  - RULE-SET,google_IP,谷歌服务,no-resolve                     # Google IP
-  - RULE-SET,netflix_IP,奈飞视频,no-resolve                    # Netflix IP
-  - RULE-SET,geolocation-!cn,默认直连                          # 非中国域名(本条主要是境外域名,涵盖gfw被墙域名,其余几乎未被墙,前面gfw滤掉了被墙域名,这里默认直连,视连接情况切换代理)
-  - RULE-SET,cloudflare_IP,默认直连,no-resolve                 # cloudflare(geolocation-!cn已包含cloudflare,这里IP补充)
-  - RULE-SET,cloudfront_IP,默认直连,no-resolve                 # 亚马逊旗下CDN(同上IP补充)
-  - RULE-SET,fastly_IP,默认直连,no-resolve                     # FSLY CDN(同上IP补充)
-  - RULE-SET,cn,直接连接                                       # 中国域名
-  - RULE-SET,cn_IP,直接连接,no-resolve                         # 中国IP
+  - GEOSITE,category-game-platforms-download,直接连接         # 游戏平台下载
+  - GEOSITE,category-public-tracker,直接连接                  # BT Tracker
+  - GEOSITE,category-pt,直接连接                              # PT站
+  - GEOSITE,bing@cn,直接连接                                  # bing中国
+  - GEOSITE,microsoft@cn,直接连接                             # 微软中国
+  - GEOSITE,github,Github                                    # GitHub(属Microsoft的子集,置其前才能分流)
+  - GEOSITE,apple-cn,直接连接                                 # 苹果中国
+  - GEOSITE,apple-tvplus,苹果服务                           # Apple TV+
+  - GEOSITE,apple,苹果服务                                    # 苹果服务
+  - GEOSITE,Speedtest,网络测试                                # 测速工具
+  - GEOSITE,category-speedtest,网络测试                       # 测速工具
+  - GEOSITE,test-ipv6,网络测试                                # 测速工具
+  - GEOSITE,google-cn,直接连接                                # Google中国服务
+  - GEOSITE,googlefcm,谷歌服务                                 # Google FCM推送
+  - GEOSITE,google,谷歌服务                                   # Google服务
+  - GEOSITE,category-ai-!cn,AI服务                           # AI服务(国外AI兜底,含openai、gemini、copilot、claude、grok等)
+  - GEOSITE,youtube,油管视频                                  # YouTube
+  - GEOSITE,tiktok,TikTok                                     # TikTok
+  - GEOSITE,netflix,奈飞视频                                  # Netflix
+  - GEOSITE,disney,迪士尼+                                    # Disney+
+  - GEOSITE,hbo,HBO                                          # HBO
+  - GEOSITE,primevideo,Prime Video                           # Prime Video
+  - GEOSITE,category-emby,Emby                               # Emby
+  - GEOSITE,spotify,Spotify                                  # Spotify
+  - GEOSITE,steam@cn,直接连接                                 # Steam国区
+  - GEOSITE,category-games@cn,直接连接                        # 国内游戏
+  - GEOSITE,category-games-cn,直接连接                        # 国区游戏平台
+  - GEOSITE,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
+  - GEOSITE,category-communication,即时通讯                   # 即时通讯(含telegram、WhatsApp、clubhouse等,若需精简,可以将注释掉"4.1 业务策略组"中相应的分组)
+  - GEOSITE,category-social-media-!cn,社交媒体                # 国外社交媒体(含instagram、facebook、twitter、mixi等,若需精简,可以将注释掉"4.1 业务策略组"中相应的分组)
+  - GEOSITE,category-entertainment,国外娱乐                   # 国外娱乐(含youtube、tiktok、bahamut、primevideo、netflix、disney、apple-tvplus、hbo、category-games-!cn、tmdb、imdb等,若需精简,可以注释掉5.3相应的规则及"4.1 业务策略组"中对应的分组,最终到此规则兜底)
+  - GEOSITE,category-ecommerce,国外电商                       # 国外电商
+  - GEOSITE,category-cryptocurrency,加密货币                  # 加密货币(大部分在gfw中)
+  - GEOSITE,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
+  - GEOSITE,microsoft,微软服务                                # 微软服务
+  - GEOIP,telegram,即时通讯,no-resolve                   # Telegram IP
+  - GEOIP,twitter,社交媒体,no-resolve                    # Twitter IP
+  - GEOIP,facebook,社交媒体,no-resolve                   # Facebook IP
+  - GEOIP,google,谷歌服务,no-resolve                     # Google IP
+  - GEOIP,netflix,奈飞视频,no-resolve                    # Netflix IP
+  - GEOSITE,geolocation-!cn,默认直连                          # 非中国域名(本条主要是境外域名,涵盖gfw被墙域名,其余几乎未被墙,前面gfw滤掉了被墙域名,这里默认直连,视连接情况切换代理)
+  - GEOIP,cloudflare,默认直连,no-resolve                 # cloudflare(geolocation-!cn已包含cloudflare,这里IP补充)
+  - GEOIP,cloudfront,默认直连,no-resolve                 # 亚马逊旗下CDN(同上IP补充)
+  - GEOIP,fastly,默认直连,no-resolve                     # FSLY CDN(同上IP补充)
+  - GEOSITE,cn,直接连接                                       # 中国域名
+  - GEOIP,cn,直接连接,no-resolve                         # 中国IP
   - RULE-SET,Custom_Port_Direct,非标端口                       # 非标端口
   - MATCH,漏网之鱼                                             # 漏网之鱼
 
