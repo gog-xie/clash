@@ -254,7 +254,7 @@ rules:
   - GEOSITE,category-pt,直接连接                              # PT站
   - GEOSITE,bing@cn,直接连接                                  # bing中国
   - GEOSITE,microsoft@cn,直接连接                             # 微软中国
-  - GEOSITE,github,Github                                    # GitHub(属Microsoft的子集,置其前才能分流,这里有gfw兜底，需要分流时启用，同时启用3.1业务分组)
+  - GEOSITE,github,Github                                    # GitHub
   - GEOSITE,apple-cn,直接连接                                 # 苹果中国
   - GEOSITE,apple-tvplus,苹果服务                           # Apple TV+
   - GEOSITE,apple,苹果服务                                    # 苹果服务
@@ -283,7 +283,7 @@ rules:
   - GEOSITE,category-ecommerce,国外电商                       # 国外电商
   - GEOSITE,category-cryptocurrency,加密货币                  # 加密货币(大部分在gfw中)
   - GEOSITE,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
-#  - GEOSITE,microsoft,微软服务                                # 微软服务
+#  - GEOSITE,microsoft,微软服务                                # 微软服务(有geolocation-!cn兜底，需要分流时启用，同时启用3.1业务分组)
   - GEOIP,telegram,即时通讯,no-resolve                        # Telegram IP
   - GEOIP,twitter,社交媒体,no-resolve                         # Twitter IP
   - GEOIP,facebook,社交媒体,no-resolve                        # Facebook IP
