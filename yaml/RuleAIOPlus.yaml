@@ -196,13 +196,12 @@ proxy-groups:
   - {name: Docker,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Docker.png}
   - {name: OneDrive,    <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/OneDrive.png}
   - {name: Bing,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Bing.png}
-  - {name: 微软服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Microsoft.png}
+#  - {name: 微软服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Microsoft.png}
   - {name: 苹果服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Apple.png}
   - {name: Emby,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Emby.png}
   - {name: Apple TV+,   <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Apple_TV.png}
   - {name: 游戏平台,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Game.png}
   - {name: Bahamut,     type: select, proxies: [直接连接, 故转-台湾], icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Bahamut.png}
-  - {name: 非标端口,     type: select, proxies: [直接连接, 漏网之鱼], icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Bypass.png}
  
   # 3.2 策略组与地理策略组分界识别
   - {name: 漏网之鱼,     <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Final.png}
@@ -372,7 +371,7 @@ rules:
   - RULE-SET,category-ecommerce,国外电商                       # 国外电商
   - RULE-SET,category-cryptocurrency,加密货币                  # 加密货币(大部分在gfw中)
   - RULE-SET,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
-  - RULE-SET,microsoft,微软服务                                # 微软服务  
+#  - RULE-SET,microsoft,微软服务                                # 微软服务(有geolocation-!cn兜底，需要分流时启用，同时启用3.1业务分组)
   - RULE-SET,telegram_IP,即时通讯,no-resolve                   # Telegram IP
   - RULE-SET,twitter_IP,社交媒体,no-resolve                    # Twitter IP
   - RULE-SET,facebook_IP,社交媒体,no-resolve                   # Facebook IP
@@ -384,7 +383,6 @@ rules:
   - RULE-SET,fastly_IP,默认直连,no-resolve                     # FSLY CDN(同上IP补充)
   - RULE-SET,cn,直接连接                                       # 中国域名
   - RULE-SET,cn_IP,直接连接,no-resolve                         # 中国IP
-  - RULE-SET,Custom_Port_Direct,非标端口                       # 非标端口
   - MATCH,漏网之鱼                                             # 漏网之鱼
 
 # 5 规则提供者
