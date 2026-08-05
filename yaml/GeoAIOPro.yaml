@@ -212,14 +212,14 @@ proxy-groups:
   - {name: 直接连接,     type: select, proxies: [DIRECT], hidden: true, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png}
 
   # 3.3 地理策略组 (如果喜欢策略组更整洁,去掉各个具体的节点,可删除掉本小节的include-all和filte参数)
-  - {name: 狮城策略,     type: select, proxies: ['[主] 狮城-轮询', '[备] 狮城-轮询', '[主] 狮城-散列', '[备] 狮城-散列', '[主] 狮城-自动', '[备] 狮城-自动'], include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png}
-  - {name: 香港策略,     type: select, proxies: ['[主] 香港-轮询', '[备] 香港-轮询', '[主] 香港-散列', '[备] 香港-散列', '[主] 香港-自动', '[备] 香港-自动'], include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png}
-  - {name: 日本策略,     type: select, proxies: ['[主] 日本-轮询', '[备] 日本-轮询', '[主] 日本-散列', '[备] 日本-散列', '[主] 日本-自动', '[备] 日本-自动'], include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png}
-  - {name: 美国策略,     type: select, proxies: ['[主] 美国-轮询', '[备] 美国-轮询', '[主] 美国-散列', '[备] 美国-散列', '[主] 美国-自动', '[备] 美国-自动'], include-all: true, filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png}
-  - {name: 台湾策略,     type: select, proxies: ['[主] 台湾-轮询', '[备] 台湾-轮询', '[主] 台湾-散列', '[备] 台湾-散列', '[主] 台湾-自动', '[备] 台湾-自动'], include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png}
-  - {name: 欧盟策略,     type: select, proxies: ['[主] 欧盟-轮询', '[备] 欧盟-轮询', '[主] 欧盟-散列', '[备] 欧盟-散列', '[主] 欧盟-自动', '[备] 欧盟-自动'], include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/European_Union.png}
-  - {name: 韩国策略,     type: select, proxies: ['[主] 韩国-轮询', '[备] 韩国-轮询', '[主] 韩国-散列', '[备] 韩国-散列', '[主] 韩国-自动', '[备] 韩国-自动'], include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png}
-  - {name: 冷门策略,     type: select, proxies: ['[主] 冷门-轮询', '[备] 冷门-轮询', '[主] 冷门-散列', '[备] 冷门-散列', '[主] 冷门-自动', '[备] 冷门-自动'], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
+  - {name: 狮城策略,     type: select, proxies: ['[主] 狮城-轮询', '[主] 狮城-散列', '[主] 狮城-自动', '[备] 狮城-轮询', '[备] 狮城-散列', '[备] 狮城-自动'], include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Singapore.png}
+  - {name: 香港策略,     type: select, proxies: ['[主] 香港-轮询', '[主] 香港-散列', '[主] 香港-自动', '[备] 香港-轮询', '[备] 香港-散列', '[备] 香港-自动'], include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Hong_Kong.png}
+  - {name: 日本策略,     type: select, proxies: ['[主] 日本-轮询', '[主] 日本-散列', '[主] 日本-自动', '[备] 日本-轮询', '[备] 日本-散列', '[备] 日本-自动'], include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Japan.png}
+  - {name: 美国策略,     type: select, proxies: ['[主] 美国-轮询', '[主] 美国-散列', '[主] 美国-自动', '[备] 美国-轮询', '[备] 美国-散列', '[备] 美国-自动'], include-all: true, filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/United_States.png}
+  - {name: 台湾策略,     type: select, proxies: ['[主] 台湾-轮询', '[主] 台湾-散列', '[主] 台湾-自动', '[备] 台湾-轮询', '[备] 台湾-散列', '[备] 台湾-自动'], include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Taiwan.png}
+  - {name: 欧盟策略,     type: select, proxies: ['[主] 欧盟-轮询', '[主] 欧盟-散列', '[主] 欧盟-自动', '[备] 欧盟-轮询', '[备] 欧盟-散列', '[备] 欧盟-自动'], include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/European_Union.png}
+  - {name: 韩国策略,     type: select, proxies: ['[主] 韩国-轮询', '[主] 韩国-散列', '[主] 韩国-自动', '[备] 韩国-轮询', '[备] 韩国-散列', '[备] 韩国-自动'], include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Korea.png}
+  - {name: 冷门策略,     type: select, proxies: ['[主] 冷门-轮询', '[主] 冷门-散列', '[主] 冷门-自动', '[备] 冷门-轮询', '[备] 冷门-散列', '[备] 冷门-自动'], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Europe_Map.png}
 
   # 3.4 负载均衡-散列  (需更改机场名称,与1.6小节机场名称一致)
   - {name: '[主] 香港-散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
