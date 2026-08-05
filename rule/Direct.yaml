@@ -136,5 +136,10 @@ payload:
 
   - DST-PORT,7844
   - SRC-PORT,41641
+
+  - DST-PORT,1-79
+  - DST-PORT,81-442
+  - DST-PORT,444-65535
+  
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
