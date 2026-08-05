@@ -169,7 +169,7 @@ proxy-groups:
   - {name: 故障转移,     <<: *BaseFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
   - {name: 默认代理,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
   - {name: 默认直连,     type: select, proxies: [直接连接, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
-  - {name: Github,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
+#  - {name: Github,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
   - {name: 油管视频,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png}
   - {name: 国外娱乐,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png}
   - {name: 谷歌服务,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png}
@@ -254,7 +254,7 @@ rules:
   - GEOSITE,category-pt,直接连接                              # PT站
   - GEOSITE,bing@cn,直接连接                                  # bing中国
   - GEOSITE,microsoft@cn,直接连接                             # 微软中国
-  - GEOSITE,github,Github                                    # GitHub(属Microsoft的子集,置其前才能分流)
+#  - GEOSITE,github,Github                                    # GitHub(属Microsoft的子集,置其前才能分流,这里有gfw兜底，需要分流时启用，同时启用3.1业务分组)
   - GEOSITE,apple-cn,直接连接                                 # 苹果中国
   - GEOSITE,apple-tvplus,苹果服务                           # Apple TV+
   - GEOSITE,apple,苹果服务                                    # 苹果服务
@@ -310,12 +310,5 @@ rule-providers:
   My_Proxy:              {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Proxy.yaml}
   My_Direct:             {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Direct.yaml}
   Custom_Direct_Domain:  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_Domain.mrs}
-  Custom_Direct_IP:      {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_IP.mrs}
-  Custom_Direct_Port:    {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_Classical_Port.yaml}
-  Custom_Port_Direct:    {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Port_Direct.yaml}
-  Custom_Proxy_Domain:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Proxy_Domain.mrs}
-  Custom_Proxy_IP:       {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Proxy_IP.mrs}
-  Steam_CDN_Domain:      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Steam_CDN_Domain.mrs}
-  Steam_CDN_IP:          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Steam_CDN_IP.mrs}
   Speedtest:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/speedtest.mrs}
 # ==================== EOF ====================
