@@ -184,7 +184,8 @@ proxy-groups:
   - {name: Prime Video, <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video.png}
   - {name: Spotify,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png}
   - {name: 加密货币,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency.png}
-#  - {name: 微软服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
+  - {name: Bing,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gog-xie/Qure@master/IconSet/Color/Bing.png}
+  - {name: 微软服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
   - {name: 苹果服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png}
   - {name: Emby,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png}
   - {name: 游戏平台,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
@@ -254,6 +255,7 @@ rules:
   - RULE-SET,category-pt,直接连接                              # PT站
   - RULE-SET,bing@cn,直接连接                                  # bing中国
   - RULE-SET,microsoft@cn,直接连接                             # 微软中国
+  - RULE-SET,bing,Bing                                        # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)
   - RULE-SET,github,Github                                    # GitHub(属Microsoft的子集,置其前才能分流)
   - RULE-SET,apple-cn,直接连接                                 # 苹果中国
   - RULE-SET,apple-tvplus,苹果服务                           # Apple TV+
@@ -283,7 +285,7 @@ rules:
   - RULE-SET,category-ecommerce,国外电商                       # 国外电商
   - RULE-SET,category-cryptocurrency,加密货币                  # 加密货币(大部分在gfw中)
   - RULE-SET,gfw,默认代理                                      # GFW列表(主要规则,被墙列表)
-#  - RULE-SET,microsoft,微软服务                                # 微软服务(有geolocation-!cn兜底，需要分流时启用，同时启用3.1业务分组)
+  - RULE-SET,microsoft,微软服务                                # 微软服务
   - RULE-SET,telegram_IP,即时通讯,no-resolve                   # Telegram IP
   - RULE-SET,twitter_IP,社交媒体,no-resolve                    # Twitter IP
   - RULE-SET,facebook_IP,社交媒体,no-resolve                   # Facebook IP
@@ -330,7 +332,8 @@ rule-providers:
   apple-tvplus:                        {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple-tvplus.mrs}
   apple-cn:                            {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple-cn.mrs}
   apple:                               {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs}
-  bing@cn:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bing@cn.mrs}
+  bing@cn:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/bing@cn.mrs}
+  bing:                                {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gog-xie/Mihomo@main/geo/geosite/bing.mrs}
   microsoft@cn:                        {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft@cn.mrs}
   microsoft:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs}
   googlefcm:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/googlefcm.mrs}
