@@ -362,7 +362,6 @@ rule-providers:
   fakeip-filter:    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
 
   # 5.3 自定义规则
-  My_Proxy:              {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Proxy.yaml}
   My_Direct:             {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Direct.yaml}
   Custom_Direct_Domain:  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_Domain.mrs}
   Speedtest:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/speedtest.mrs}
