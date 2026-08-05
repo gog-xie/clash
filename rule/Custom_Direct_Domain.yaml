@@ -1,7 +1,7 @@
 # Generated from rule/Custom_Direct.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 673
+# TOTAL: 676
 
 payload:
   - '*m-team*'
@@ -11,6 +11,7 @@ payload:
   - '+.0044696.com'
   - '+.03241119.xyz'
   - '+.0734cn.top'
+  - '+.0759mall.com'
   - '+.112114.xyz'
   - '+.115cdn.de'
   - '+.17van.com'
@@ -46,6 +47,7 @@ payload:
   - '+.86656.net'
   - '+.88996api.cloud'
   - '+.8kc.top'
+  - '+.8x14khzwmi.com'
   - '+.900cha.com'
   - '+.91shenfan.com'
   - '+.97973399.com'
@@ -197,6 +199,7 @@ payload:
   - '+.feizhiyi.com'
   - '+.fengda.me'
   - '+.fengsutb.com'
+  - '+.fffff.games'
   - '+.ffhome.com'
   - '+.fjpit.com'
   - '+.flingtrainer.com'
