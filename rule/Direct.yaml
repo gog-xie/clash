@@ -133,6 +133,8 @@ payload:
   - DOMAIN-SUFFIX,jueduibupao.top
   - DOMAIN-SUFFIX,xxxyun.top
   - DOMAIN-SUFFIX,wzsgyy.com
-  
+
+  - DST-PORT,7844
+  - SRC-PORT,41641
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
