@@ -169,7 +169,7 @@ proxy-groups:
   - {name: 故障转移,     <<: *BaseFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
   - {name: 默认代理,     <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
   - {name: 默认直连,     type: select, proxies: [直接连接, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧盟策略, 冷门策略, 全球手动], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
-  - {name: Github,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
+#  - {name: Github,      <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
   - {name: 油管视频,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png}
   - {name: 国外娱乐,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png}
   - {name: 谷歌服务,     <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png}
@@ -188,7 +188,6 @@ proxy-groups:
   - {name: 苹果服务,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png}
   - {name: Emby,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Emby.png}
   - {name: 游戏平台,     <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
-  - {name: 非标端口,     type: select, proxies: [直接连接, 漏网之鱼], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bypass.png}
  
   # 3.2 策略组与地理策略组分界识别
   - {name: 漏网之鱼,     <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png}
@@ -250,18 +249,12 @@ rules:
   - RULE-SET,private,直接连接                                 # 私有域名
   - RULE-SET,private_IP,直接连接,no-resolve                   # 内网 / 保留 IP(127/8、192.168/16…)
   - RULE-SET,Custom_Direct_Domain,直接连接                    # 自定义直连域名
-  - RULE-SET,Custom_Direct_IP,直接连接,no-resolve             # 自定义直连IP
-  - RULE-SET,Custom_Direct_Port,直接连接                      # 自定义直连端口
-  - RULE-SET,Custom_Proxy_Domain,默认代理                     # 自定义代理域名
-  - RULE-SET,Custom_Proxy_IP,默认代理,no-resolve              # 自定义代理IP
-  - RULE-SET,Steam_CDN_Domain,直接连接                        # Steam CDN
-  - RULE-SET,Steam_CDN_IP,直接连接,no-resolve                 # Steam CDN
   - RULE-SET,category-game-platforms-download,直接连接         # 游戏平台下载
   - RULE-SET,category-public-tracker,直接连接                  # BT Tracker
   - RULE-SET,category-pt,直接连接                              # PT站
   - RULE-SET,bing@cn,直接连接                                  # bing中国
   - RULE-SET,microsoft@cn,直接连接                             # 微软中国
-  - RULE-SET,github,Github                                    # GitHub(属Microsoft的子集,置其前才能分流)
+#  - RULE-SET,github,Github                                    # GitHub(属Microsoft的子集,置其前才能分流,这里gfw兜底，需要分流时启用，同时启用3.1业务分组)
   - RULE-SET,apple-cn,直接连接                                 # 苹果中国
   - RULE-SET,apple-tvplus,苹果服务                           # Apple TV+
   - RULE-SET,apple,苹果服务                                    # 苹果服务
@@ -302,7 +295,6 @@ rules:
   - RULE-SET,fastly_IP,默认直连,no-resolve                     # FSLY CDN(同上IP补充)
   - RULE-SET,cn,直接连接                                       # 中国域名
   - RULE-SET,cn_IP,直接连接,no-resolve                         # 中国IP
-  - RULE-SET,Custom_Port_Direct,非标端口                       # 非标端口
   - MATCH,漏网之鱼                                             # 漏网之鱼
 
 # 5 规则提供者
@@ -319,13 +311,6 @@ rule-providers:
   My_Proxy:              {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Proxy.yaml}
   My_Direct:             {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Direct.yaml}
   Custom_Direct_Domain:  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_Domain.mrs}
-  Custom_Direct_IP:      {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_IP.mrs}
-  Custom_Direct_Port:    {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_Classical_Port.yaml}
-  Custom_Port_Direct:    {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Port_Direct.yaml}
-  Custom_Proxy_Domain:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Proxy_Domain.mrs}
-  Custom_Proxy_IP:       {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Proxy_IP.mrs}
-  Steam_CDN_Domain:      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Steam_CDN_Domain.mrs}
-  Steam_CDN_IP:          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Steam_CDN_IP.mrs}
   Speedtest:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/speedtest.mrs}
 
   # 5.4 规则集提供者 
