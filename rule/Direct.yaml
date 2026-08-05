@@ -133,6 +133,7 @@ payload:
   - DOMAIN-SUFFIX,jueduibupao.top
   - DOMAIN-SUFFIX,xxxyun.top
   - DOMAIN-SUFFIX,wzsgyy.com
+  - DOMAIN-SUFFIX,adtidy.org
 
   - DST-PORT,7844
   - SRC-PORT,41641
