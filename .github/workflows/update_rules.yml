@@ -128,9 +128,6 @@ jobs:
             "geo/geosite/youtube.mrs|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs"
             "geo/geosite/youtube.list|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.list"
 
-            "geo/geosite/biliintl.mrs|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/biliintl.mrs"
-            "geo/geosite/biliintl.list|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/biliintl.list"
-
             "geo/geosite/apple-tvplus.mrs|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-tvplus.mrs"
             "geo/geosite/apple-tvplus.list|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-tvplus.list"
 
@@ -190,9 +187,6 @@ jobs:
 
             "geo/geosite/bahamut.mrs|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bahamut.mrs"
             "geo/geosite/bahamut.list|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bahamut.list"
-
-            "geo/geosite/steam@cn.mrs|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam@cn.mrs"
-            "geo/geosite/steam@cn.list|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam@cn.list"
 
             "geo/geosite/steam.mrs|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam.mrs"
             "geo/geosite/steam.list|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam.list"
