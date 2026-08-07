@@ -283,7 +283,6 @@ rules:
   - GEOSITE,openai,ChatGPT                                   # OpenAI(在category-ai-!cn已含openai,若需精简,可以将注释掉本条规则及"4.1 业务策略组"中相应的分组)
   - GEOSITE,x,Grok                                           # Grok(在category-ai-!cn已含Grok,如需单独分流,可启用本条规则,同时也启用"4.1 业务分组"中的Grok)  
   - GEOSITE,category-ai-!cn,AI服务                            # AI服务(国外AI兜底,含openai、gemini、copilot、claude等)
-  - GEOSITE,bilibili@!cn,默认代理                             # 哔哩哔哩海外版
   - GEOSITE,youtube,油管视频                                  # YouTube
   - GEOSITE,tiktok,TikTok                                     # TikTok
   - GEOSITE,netflix,奈飞视频                                  # Netflix
