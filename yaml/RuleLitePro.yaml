@@ -261,8 +261,7 @@ rules:
   - RULE-SET,Custom_Direct_Domain,直接连接                    # 自定义直连域名
   - RULE-SET,google-cn,直接连接                                # Google中国服务
   - RULE-SET,category-game-platforms-download,直接连接         # 游戏平台下载
-  - RULE-SET,steam@cn,直接连接                                 # Steam国区
-  - RULE-SET,category-games@cn,直接连接                        # 国内游戏
+  - RULE-SET,category-games@cn,直接连接                        # 国内游戏(含steam@cn)
   - RULE-SET,category-games-cn,直接连接                        # 国区游戏平台
   - RULE-SET,category-games,默认直连                           # 游戏平台(含category-games-cn、Steam)
   - RULE-SET,category-public-tracker,直接连接                  # BT Tracker
@@ -308,7 +307,6 @@ rule-providers:
   category-game-platforms-download:    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/category-game-platforms-download.mrs}
   category-public-tracker:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/category-public-tracker.mrs}
   category-pt:                         {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/category-pt.mrs}
-  steam@cn:                            {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/steam@cn.mrs}
   category-games@cn:                   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/category-games@cn.mrs}
   category-games-cn:                   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/category-games-cn.mrs}
   category-games:                      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/category-games.mrs}
