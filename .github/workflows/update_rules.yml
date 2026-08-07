@@ -136,6 +136,9 @@ jobs:
 
             "geo/geosite/apple-cn.mrs|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-cn.mrs"
             "geo/geosite/apple-cn.list|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-cn.list"
+ 
+            "geo/geosite/apple@cn.mrs|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple@cn.mrs"
+            "geo/geosite/apple@cn.list|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple@cn.list"
 
             "geo/geosite/apple.mrs|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs"
             "geo/geosite/apple.list|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.list"
