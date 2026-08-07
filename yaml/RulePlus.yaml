@@ -350,7 +350,6 @@ rules:
   - RULE-SET,openai,ChatGPT                                   # OpenAI(在category-ai-!cn已含openai,如需单独分流,可启用本条规则,同时也启用"3.1 业务分组"中的ChatGPT)
   - RULE-SET,x,Grok                                           # Grok(在category-ai-!cn已含Grok,如需单独分流,可启用本条规则,同时也启用"3.1 业务分组"中的Grok)  
   - RULE-SET,category-ai-!cn,AI服务                           # AI服务(国外AI兜底,含openai、gemini、copilot、claude、grok等)
-  - RULE-SET,biliintl,默认代理                                 # 哔哩哔哩海外版
   - RULE-SET,youtube,油管视频                                  # YouTube
   - RULE-SET,tiktok,TikTok                                     # TikTok
   - RULE-SET,netflix,奈飞视频                                  # Netflix
@@ -417,7 +416,6 @@ rule-providers:
   category-speedtest:                  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/category-speedtest.mrs}
   test-ipv6:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/test-ipv6.mrs}
   youtube:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/youtube.mrs}
-  biliintl:                            {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/biliintl.mrs}
   apple-tvplus:                        {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/apple-tvplus.mrs}
   apple-cn:                            {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/apple-cn.mrs}
   apple:                               {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/apple.mrs}
