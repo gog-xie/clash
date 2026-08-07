@@ -260,8 +260,7 @@ rules:
   - RULE-SET,Custom_Direct_Domain,直接连接                    # 自定义直连域名
   - GEOSITE,google-cn,直接连接                                # Google中国服务
   - GEOSITE,category-game-platforms-download,直接连接         # 游戏平台下载
-  - GEOSITE,steam@cn,直接连接                                 # Steam国区
-  - GEOSITE,category-games@cn,直接连接                        # 国内游戏
+  - GEOSITE,category-games@cn,直接连接                        # 国内游戏(含Steam国区)
   - GEOSITE,category-games-cn,直接连接                        # 国区游戏平台
   - GEOSITE,category-games,默认直连                           # 游戏平台(含category-games-cn、Steam)
   - GEOSITE,category-public-tracker,直接连接                  # BT Tracker
