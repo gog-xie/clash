@@ -274,8 +274,7 @@ rules:
   - GEOSITE,primevideo,Prime Video                           # Prime Video
   - GEOSITE,category-emby,Emby                               # Emby
   - GEOSITE,spotify,Spotify                                  # Spotify
-  - GEOSITE,steam@cn,直接连接                                 # Steam国区
-  - GEOSITE,category-games@cn,直接连接                        # 国内游戏
+  - GEOSITE,category-games@cn,直接连接                        # 国内游戏(含Steam国区)
   - GEOSITE,category-games-cn,直接连接                        # 国区游戏平台
   - GEOSITE,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
   - GEOSITE,category-communication,即时通讯                   # 即时通讯(含telegram、WhatsApp、clubhouse等,若需精简,可以将注释掉"4.1 业务策略组"中相应的分组)
