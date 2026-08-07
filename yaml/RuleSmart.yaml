@@ -283,7 +283,6 @@ rules:
   - RULE-SET,openai,ChatGPT                                   # OpenAI(在category-ai-!cn已含openai,如需单独分流,可启用本条规则,同时也启用"3.1 业务分组"中的ChatGPT)
   - RULE-SET,x,Grok                                           # Grok(在category-ai-!cn已含Grok,如需单独分流,可启用本条规则,同时也启用"3.1 业务分组"中的Grok)  
   - RULE-SET,category-ai-!cn,AI服务                           # AI服务(国外AI兜底,含openai、gemini、copilot、claude、grok等)
-  - RULE-SET,biliintl,默认代理                                 # 哔哩哔哩海外版
   - RULE-SET,youtube,油管视频                                  # YouTube
   - RULE-SET,tiktok,TikTok                                     # TikTok
   - RULE-SET,netflix,奈飞视频                                  # Netflix
@@ -293,8 +292,7 @@ rules:
   - RULE-SET,category-emby,Emby                               # Emby
   - RULE-SET,spotify,Spotify                                  # Spotify
   - RULE-SET,bahamut,Bahamut                                  # 巴哈姆特
-  - RULE-SET,steam@cn,直接连接                                 # Steam国区
-  - RULE-SET,category-games@cn,直接连接                        # 国内游戏
+  - RULE-SET,category-games@cn,直接连接                        # 国内游戏(含steam@cn)
   - RULE-SET,category-games-cn,直接连接                        # 国区游戏平台
   - RULE-SET,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
   - RULE-SET,category-communication,即时通讯                   # 即时通讯(含telegram、WhatsApp、clubhouse等,若需精简,可以将注释掉"3.1 业务策略组"中相应的分组)
@@ -351,7 +349,6 @@ rule-providers:
   category-speedtest:                  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-speedtest.mrs}
   test-ipv6:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/test-ipv6.mrs}
   youtube:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.mrs}
-  biliintl:                            {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/biliintl.mrs}
   apple-tvplus:                        {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple-tvplus.mrs}
   apple-cn:                            {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple-cn.mrs}
   apple:                               {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs}
@@ -370,7 +367,6 @@ rule-providers:
   category-emby:                       {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-emby.mrs}
   spotify:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.mrs}
   bahamut:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bahamut.mrs}
-  steam@cn:                            {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam@cn.mrs}
   category-games-cn:                   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games-cn.mrs}
   category-games:                      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-games.mrs}
   category-entertainment:              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-entertainment.mrs}
