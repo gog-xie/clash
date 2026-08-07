@@ -275,8 +275,7 @@ rules:
   - RULE-SET,primevideo,Prime Video                           # Prime Video
   - RULE-SET,category-emby,Emby                               # Emby
   - RULE-SET,spotify,Spotify                                  # Spotify
-  - RULE-SET,steam@cn,直接连接                                 # Steam国区
-  - RULE-SET,category-games@cn,直接连接                        # 国内游戏
+  - RULE-SET,category-games@cn,直接连接                        # 国内游戏(含Steam国区)
   - RULE-SET,category-games-cn,直接连接                        # 国区游戏平台
   - RULE-SET,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
   - RULE-SET,category-communication,即时通讯                   # 即时通讯(含telegram、WhatsApp、clubhouse等,若需精简,可以将注释掉"4.1 业务策略组"中相应的分组)
