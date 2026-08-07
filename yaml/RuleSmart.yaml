@@ -278,7 +278,6 @@ rules:
   - RULE-SET,google-cn,直接连接                                # Google中国服务
   - RULE-SET,google-gemini,Gemini                             # Gemini(在category-ai-!cn已含Gemini,若需精简,可以将注释掉本条规则及"3.1 业务策略组"中相应的分组)
   - RULE-SET,googlefcm,谷歌FCM                                 # Google FCM推送
-  - RULE-SET,google,谷歌服务                                   # Google服务
   - RULE-SET,anthropic,Claude                                 # Cloude(在category-ai-!cn已含Cloude,若需精简,可以将注释掉本条规则及"3.1 业务策略组"中相应的分组)
   - RULE-SET,openai,ChatGPT                                   # OpenAI(在category-ai-!cn已含openai,如需单独分流,可启用本条规则,同时也启用"3.1 业务分组"中的ChatGPT)
   - RULE-SET,x,Grok                                           # Grok(在category-ai-!cn已含Grok,如需单独分流,可启用本条规则,同时也启用"3.1 业务分组"中的Grok)  
@@ -292,6 +291,7 @@ rules:
   - RULE-SET,category-emby,Emby                               # Emby
   - RULE-SET,spotify,Spotify                                  # Spotify
   - RULE-SET,bahamut,Bahamut                                  # 巴哈姆特
+  - RULE-SET,google,谷歌服务                                   # Google服务  
   - RULE-SET,category-games@cn,直接连接                        # 国内游戏(含steam@cn)
   - RULE-SET,category-games-cn,直接连接                        # 国区游戏平台
   - RULE-SET,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
