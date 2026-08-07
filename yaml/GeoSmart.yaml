@@ -278,7 +278,6 @@ rules:
   - GEOSITE,google-cn,直接连接                                # Google中国服务
   - GEOSITE,google-gemini,Gemini                             # Gemini(在category-ai-!cn已含Gemini,若需精简,可以将注释掉本条规则及"4.1 业务策略组"中相应的分组)
   - GEOSITE,googlefcm,谷歌FCM                                 # Google FCM推送
-  - GEOSITE,google,谷歌服务                                   # Google服务  
   - GEOSITE,anthropic,Claude                                 # Cloude(在category-ai-!cn已含Cloude,若需精简,可以将注释掉本条规则及"4.1 业务策略组"中相应的分组)
   - GEOSITE,openai,ChatGPT                                   # OpenAI(在category-ai-!cn已含openai,若需精简,可以将注释掉本条规则及"4.1 业务策略组"中相应的分组)
   - GEOSITE,x,Grok                                           # Grok(在category-ai-!cn已含Grok,如需单独分流,可启用本条规则,同时也启用"4.1 业务分组"中的Grok)  
@@ -292,7 +291,7 @@ rules:
   - GEOSITE,category-emby,Emby                               # Emby
   - GEOSITE,spotify,Spotify                                  # Spotify
   - GEOSITE,bahamut,Bahamut                                  # 巴哈姆特
-  - GEOSITE,steam@cn,直接连接                                 # steam国区
+  - GEOSITE,google,谷歌服务                                   # Google服务  
   - GEOSITE,category-games@cn,直接连接                        # 国内游戏(含steam@cn)
   - GEOSITE,category-games-cn,直接连接                        # 国区游戏平台
   - GEOSITE,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
