@@ -263,7 +263,6 @@ rules:
   - GEOSITE,category-speedtest,网络测试                       # 测速工具
   - GEOSITE,test-ipv6,网络测试                                # 测速工具
   - GEOSITE,google-cn,直接连接                                # Google中国服务
-  - GEOSITE,googlefcm,谷歌服务                                 # Google FCM推送
   - GEOSITE,google,谷歌服务                                   # Google服务
   - GEOSITE,category-ai-!cn,AI服务                           # AI服务(国外AI兜底,含openai、gemini、copilot、claude、grok等)
   - GEOSITE,youtube,油管视频                                  # YouTube
