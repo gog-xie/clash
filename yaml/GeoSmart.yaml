@@ -294,7 +294,7 @@ rules:
   - GEOSITE,spotify,Spotify                                  # Spotify
   - GEOSITE,bahamut,Bahamut                                  # 巴哈姆特
   - GEOSITE,steam@cn,直接连接                                 # steam国区
-  - GEOSITE,category-games@cn,直接连接                        # 国内游戏
+  - GEOSITE,category-games@cn,直接连接                        # 国内游戏(含steam@cn)
   - GEOSITE,category-games-cn,直接连接                        # 国区游戏平台
   - GEOSITE,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
   - GEOSITE,category-communication,即时通讯                   # 即时通讯(通讯类兜底,含telegram、WhatsApp、clubhouse等,若需精简,可以注释掉相应规则及"4.1 业务策略组"中相应的分组)
