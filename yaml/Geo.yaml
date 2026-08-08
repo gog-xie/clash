@@ -246,17 +246,18 @@ rules:
   - GEOSITE,category-game-platforms-download,直接连接         # 游戏平台下载
   - GEOSITE,category-public-tracker,直接连接                  # BT Tracker
   - GEOSITE,category-pt,直接连接                              # PT站
+  - GEOSITE,category-games@cn,直接连接                        # 国内游戏
+  - GEOSITE,category-games-cn,直接连接                        # 国区游戏平台
+  - GEOSITE,google-cn,直接连接                                # Google中国服务
+  - GEOSITE,apple@cn,直接连接                                 # 苹果中国
   - GEOSITE,bing@cn,直接连接                                  # bing中国
   - GEOSITE,microsoft@cn,直接连接                             # 微软中国
   - GEOSITE,bing,Bing                                        # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)
   - GEOSITE,github,Github                                    # GitHub(属Microsoft的子集,置其前才能分流)
-  - GEOSITE,apple@cn,直接连接                                 # 苹果中国
   - GEOSITE,apple,苹果服务                                    # 苹果服务
   - RULE-SET,Speedtest,网络测试                                # 测速工具
   - GEOSITE,category-speedtest,网络测试                       # 测速工具
   - GEOSITE,test-ipv6,网络测试                                # 测速工具
-  - GEOSITE,google-cn,直接连接                                # Google中国服务
-  - GEOSITE,google,谷歌服务                                   # Google服务
   - GEOSITE,category-ai-!cn,AI服务                           # AI服务(国外AI兜底,含openai、gemini、copilot、claude、grok等)
   - GEOSITE,youtube,油管视频                                  # YouTube
   - GEOSITE,tiktok,TikTok                                     # TikTok
@@ -266,8 +267,7 @@ rules:
   - GEOSITE,primevideo,Prime Video                           # Prime Video
   - GEOSITE,category-emby,Emby                               # Emby
   - GEOSITE,spotify,Spotify                                  # Spotify
-  - GEOSITE,category-games@cn,直接连接                        # 国内游戏
-  - GEOSITE,category-games-cn,直接连接                        # 国区游戏平台
+  - GEOSITE,google,谷歌服务                                   # Google服务
   - GEOSITE,category-games,游戏平台                           # 游戏平台(含category-games-cn、Steam)
   - GEOSITE,category-communication,即时通讯                   # 即时通讯(含telegram、WhatsApp、clubhouse等,若需精简,可以将注释掉"4.1 业务策略组"中相应的分组)
   - GEOSITE,category-social-media-!cn,社交媒体                # 国外社交媒体(含instagram、facebook、twitter、mixi等,若需精简,可以将注释掉"4.1 业务策略组"中相应的分组)
