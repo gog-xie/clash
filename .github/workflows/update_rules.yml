@@ -245,6 +245,9 @@ jobs:
             "geo/geoip/cn.mrs|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.mrs"
             "geo/geoip/cn.list|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.list"
 
+            "geo/geosite/wikimedia.mrs|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/wikimedia.mrs"
+            "geo/geosite/wikimedia.list|https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/wikimedia.list"
+
             
           )
 
