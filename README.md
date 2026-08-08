@@ -46,7 +46,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | <div align="center">**1**</div> | [**Rule.yaml**](yaml/Rule.yaml) | ★★★☆ | <div align="center">59</div> | <div align="center">55</div> | 多机场混合出站 |
 | <div align="center">**2**</div> | [**RulePro.yaml**](yaml/RulePro.yaml) | ★★★★ | <div align="center">91</div> | <div align="center">62</div> | 多机场**自定义**出站 |
-| <div align="center">**3**</div> | [**RulePlus.yaml**](yaml/RulePlus.yaml) | ★★★★☆ | <div align="center">120</div> | <div align="center">62</div> | 多机场**混合**或**自定义**出站， **${\color{orange}\text{ 多元 }}$** 默认故转 **${\color{blue}\text{【推荐】}}$** |
+| <div align="center">**3**</div> | [**RulePlus.yaml**](yaml/RulePlus.yaml) | ★★★★☆ | <div align="center">120</div> | <div align="center">62</div> | 多机场**混合**或**自定义**出站， **${\color{orange}\text{ 多元默认故转 }}$**  **${\color{blue}\text{【推荐】}}$** |
 | <div align="center">**4**</div> | [**RuleLite.yaml**](yaml/RuleLite.yaml) | ★★★ | <div align="center">39</div> | <div align="center">32</div> | 极简分流，多机场混合出站
 | <div align="center">**5**</div> | [**RuleLitePro.yaml**](yaml/RuleLitePro.yaml) | ★★★★ | <div align="center">63</div> | <div align="center">32</div> | 极简分流，多机场**自定义**出站  **${\color{blue}\text{【推荐】}}$** |
 | <div align="center">**6**</div> | [**RuleSmart.yaml**](yaml/RuleSmart) | ★★★☆ | <div align="center">67</div> | <div align="center">62</div> | 适配Smart核心，多机场混合出站 |
