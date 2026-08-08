@@ -135,7 +135,7 @@ payload:
   - DOMAIN-SUFFIX,adtidy.org
 
 # Steam_CDN
-  - DOMAIN-SUFFIX,cm.steampowered.com
+  - DOMAIN-SUFFIX,steampowered.com
   - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net
   - DOMAIN-SUFFIX,steamserver.net
 
