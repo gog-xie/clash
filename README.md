@@ -42,7 +42,7 @@
 <div align="center">
 
 
-| <div align="center">☑️</div> | <div align="center">🧮配置文件</div> | <div align="center">🥇推荐指数</div> | <div align="center">📈策略数</div> | <div align="center">📈规则数</div> | <div align="center">📑特点</div> |
+| <div align="center">☑️</div> | <div align="center">🧮配置文件</div> | <div align="center">🥇推荐指数</div> | <div align="center">🔍策略数</div> | <div align="center">📝规则数</div> | <div align="center">📑特点</div> |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | <div align="center">**1**</div> | [**Rule.yaml**](yaml/Rule.yaml) | ★★★☆ | <div align="center">59</div> | <div align="center">55</div> | 多机场混合出站 |
 | <div align="center">**2**</div> | [**RulePro.yaml**](yaml/RulePro.yaml) | ★★★★ | <div align="center">91</div> | <div align="center">62</div> | 多机场**自定义**出站 |
