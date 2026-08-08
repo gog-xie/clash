@@ -49,7 +49,7 @@
 | <div align="center">**3**</div> | [**RulePlus.yaml**](yaml/RulePlus.yaml) | ★★★★☆ | <div align="center">49</div> | <div align="center">65</div> | 多机场**混合**或**自定义**出站，**${\color{orange}\text{ 多元默认故转 }}$**  **${\color{blue}\text{【推荐】}}$** |
 | <div align="center">**4**</div> | [**RuleLite.yaml**](yaml/RuleLite.yaml) | ★★★ | <div align="center">14</div> | <div align="center">35</div> | 极简分流，多机场混合出站
 | <div align="center">**5**</div> | [**RuleLitePro.yaml**](yaml/RuleLitePro.yaml) | ★★★★ | <div align="center">14</div> | <div align="center">35</div> | 极简分流，多机场**自定义**出站  **${\color{blue}\text{【推荐】}}$** |
-| <div align="center">**6**</div> | [**RuleSmart.yaml**](yaml/RuleSmart) | ★★★☆ | <div align="center">44</div> | <div align="center">64</div> | 适配Smart核心，多机场混合出站 |
+| <div align="center">**6**</div> | [**RuleSmart.yaml**](yaml/RuleSmart) | ★★★☆ | <div align="center">44</div> | <div align="center">65</div> | 适配Smart核心，多机场混合出站 |
 </div>
 
 ---
