@@ -348,7 +348,7 @@ rules:
   - GEOIP,cn,直接连接,no-resolve                              # 中国IP
   - MATCH,漏网之鱼                                            # 漏网之鱼
 
-# 5 规则提供者
+# 5 补充规则
 rule-providers:  
   # 5.1 广告拦截规则
   AWAvenueAds:      {<<: *BehaviorDN, url: https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.mrs}
