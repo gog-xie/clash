@@ -319,10 +319,10 @@ rules:
   - RULE-SET,adblock,REJECT             # adblock广告过滤列表,与秋风、category-ads-all广告列表单独使用,使用时可在Zashboard面板规则中切换
 
   # 4.2 分流规则
-  - RULE-SET,private,直接连接                                 # 私有域名
-  - RULE-SET,private_IP,直接连接,no-resolve                   # 内网 / 保留 IP(127/8、192.168/16…)
-  - RULE-SET,My_Direct,直接连接                               # 自定义直连域名
-  - RULE-SET,Custom_Direct_Domain,直接连接                    # 自定义直连域名
+  - RULE-SET,private,直接连接                                  # 私有域名
+  - RULE-SET,private_IP,直接连接,no-resolve                    # 内网 / 保留 IP(127/8、192.168/16…)
+  - RULE-SET,My_Direct,直接连接                                # 自定义直连域名
+  - RULE-SET,Custom_Direct_Domain,直接连接                     # 自定义直连域名
   - RULE-SET,category-game-platforms-download,直接连接         # 游戏平台下载
   - RULE-SET,category-public-tracker,直接连接                  # BT Tracker
   - RULE-SET,category-pt,直接连接                              # PT站
@@ -346,15 +346,15 @@ rules:
   - RULE-SET,x,Grok                                           # Grok(在category-ai-!cn已含Grok,如需单独分流,可启用本条规则,同时也启用"3.1 业务分组"中的Grok)  
   - RULE-SET,category-ai-!cn,AI服务                           # AI服务(国外AI兜底,含openai、gemini、copilot、claude、grok等)
   - RULE-SET,wikimedia,维基百科                               # 维基媒体
-  - RULE-SET,youtube,油管视频                                  # YouTube
-  - RULE-SET,tiktok,TikTok                                     # TikTok
-  - RULE-SET,netflix,奈飞视频                                  # Netflix
-  - RULE-SET,disney,迪士尼+                                    # Disney+
+  - RULE-SET,youtube,油管视频                                 # YouTube
+  - RULE-SET,tiktok,TikTok                                    # TikTok
+  - RULE-SET,netflix,奈飞视频                                 # Netflix
+  - RULE-SET,disney,迪士尼+                                   # Disney+
   - RULE-SET,hbo,HBO                                          # HBO
   - RULE-SET,primevideo,Prime Video                           # Prime Video
   - RULE-SET,category-emby,Emby                               # Emby
   - RULE-SET,spotify,Spotify                                  # Spotify
-#  - RULE-SET,bahamut,Bahamut                                  # 巴哈姆特
+#  - RULE-SET,bahamut,Bahamut                                 # 巴哈姆特
   - RULE-SET,googlefcm,谷歌FCM                                 # Google FCM推送
   - RULE-SET,google,谷歌服务                                   # Google服务
   - RULE-SET,steam,Steam                                      # Steam
@@ -382,17 +382,17 @@ rules:
 # 5 规则提供者
 rule-providers:  
   # 5.1 广告拦截规则
-  category-ads-all: {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/category-ads-all.mrs }
-  AWAvenueAds:      {<<: *BehaviorDN, url: https://gcore.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/AWAvenue-Ads-Rule-Clash.mrs}
-  adblock:          {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/adblock.mrs} 
+  category-ads-all:                    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/category-ads-all.mrs }
+  AWAvenueAds:                         {<<: *BehaviorDN, url: https://gcore.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/AWAvenue-Ads-Rule-Clash.mrs}
+  adblock:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/adblock.mrs} 
 
   # 5.2 fakeip-filter规则
-  fakeip-filter:    {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
+  fakeip-filter:                       {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
 
   # 5.3 自定义规则集
-  My_Direct:             {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Direct.yaml}
-  Custom_Direct_Domain:  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_Domain.mrs}
-  Speedtest:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/speedtest.mrs}
+  My_Direct:                           {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Direct.yaml}
+  Custom_Direct_Domain:                {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_Domain.mrs}
+  Speedtest:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/speedtest.mrs}
 
   # 5.4 主要规则集提供者 
   wikimedia:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/wikimedia.mrs}
