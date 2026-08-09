@@ -155,7 +155,7 @@ dns:
   fake-ip-filter:
     - "+.lan"                                                           # 真实解析  常见局域网域名后缀
     - "rule-set:fakeip-filter"                                          # 真实解析  fakeip-filter
-    - "GEOSITE:cn"                                                     # 真实解析  大陆域 GeoSite 数据
+    - "GEOSITE:cn"                                                      # 真实解析  大陆域 GeoSite 数据
     - "rule-set:My_Direct"                                              # 真实解析  大陆冷门域名
     - "rule-set:Custom_Direct_Domain"                                   # 真实解析  大陆冷门域名
 
@@ -260,7 +260,7 @@ rules:
   - GEOSITE,category-games,默认直连                           # 游戏平台(含category-games-cn、Steam)
   - GEOSITE,category-public-tracker,直接连接                  # BT Tracker
   - GEOSITE,category-pt,直接连接                              # PT站
-  - RULE-SET,Speedtest,网络测试                                # 测速工具
+  - RULE-SET,Speedtest,网络测试                               # 测速工具
   - GEOSITE,category-speedtest,网络测试                       # 测速工具
   - GEOSITE,test-ipv6,网络测试                                # 测速工具
   - GEOSITE,microsoft@cn,直接连接                             # 微软中国
@@ -287,7 +287,7 @@ rule-providers:
   # 5.2 fakeip-filter规则
   fakeip-filter:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/fakeip-filter.mrs}
 
-  # 5.3 自定义规则
+  # 5.3 其他规则
   My_Direct:             {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Direct.yaml}
   Custom_Direct_Domain:  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_Domain.mrs}
   Speedtest:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/speedtest.mrs}
