@@ -291,11 +291,11 @@ rules:
 # 5 补充规则
 rule-providers:  
   # 5.1 拦截规则
-  AWAvenueAds:    {<<: *BehaviorDN, url: https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.mrs}
-  adblock:        {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/adblock.mrs} 
+  AWAvenueAds:           {<<: *BehaviorDN, url: https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.mrs}
+  adblock:               {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/adblock.mrs} 
 
   # 5.2 fakeip-filter规则
-  fakeip-filter:  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
+  fakeip-filter:         {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
   
   # 5.3 其他规则
   My_Direct:             {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Direct.yaml}
