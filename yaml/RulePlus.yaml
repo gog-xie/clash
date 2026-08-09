@@ -394,7 +394,7 @@ rule-providers:
   Custom_Direct_Domain:                {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_Domain.mrs}
   Speedtest:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/speedtest.mrs}
 
-  # 5.4 主要规则集提供者 
+  # 5.4 主要规则集 
   wikimedia:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/wikimedia.mrs}
   private:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/private.mrs}
   docker:                              {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/docker.mrs}  
