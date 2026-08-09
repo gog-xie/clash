@@ -241,10 +241,10 @@ rules:
   - RULE-SET,adblock,REJECT             # adblock广告过滤列表,与秋风、category-ads-all广告列表单独使用
   
   # 4.2 域名规则
-  - RULE-SET,private,直接连接                                 # 私有域名
-  - RULE-SET,private_IP,直接连接,no-resolve                   # 内网 / 保留 IP(127/8、192.168/16…)
-  - RULE-SET,My_Direct,直接连接                               # 自定义直连域名
-  - RULE-SET,Custom_Direct_Domain,直接连接                    # 自定义直连域名
+  - RULE-SET,private,直接连接                                  # 私有域名
+  - RULE-SET,private_IP,直接连接,no-resolve                    # 内网 / 保留 IP(127/8、192.168/16…)
+  - RULE-SET,My_Direct,直接连接                                # 自定义直连域名
+  - RULE-SET,Custom_Direct_Domain,直接连接                     # 自定义直连域名
   - RULE-SET,category-game-platforms-download,直接连接         # 游戏平台下载
   - RULE-SET,category-public-tracker,直接连接                  # BT Tracker
   - RULE-SET,category-pt,直接连接                              # PT站
@@ -262,7 +262,7 @@ rules:
   - RULE-SET,test-ipv6,网络测试                                # 测速工具
   - RULE-SET,category-ai-!cn,AI服务                           # AI服务(国外AI兜底,含openai、gemini、copilot、claude、grok等)
   - RULE-SET,youtube,油管视频                                  # YouTube
-  - RULE-SET,tiktok,TikTok                                     # TikTok
+  - RULE-SET,tiktok,TikTok                                    # TikTok
   - RULE-SET,netflix,奈飞视频                                  # Netflix
   - RULE-SET,disney,迪士尼+                                    # Disney+
   - RULE-SET,hbo,HBO                                          # HBO
