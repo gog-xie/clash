@@ -295,7 +295,7 @@ rule-providers:
   Custom_Direct_Domain:                {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_Domain.mrs}
   Speedtest:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/speedtest.mrs}
   
-  # 5.5 主要分流规则 
+  # 5.5 主要规则集 
   private:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs}
   private_IP:                          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs}
   google-cn:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google-cn.mrs}
