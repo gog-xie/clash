@@ -280,7 +280,7 @@ rules:
   - GEOSITE,category-ai-!cn,AI服务                           # AI服务(国外AI兜底,含openai、gemini、copilot、claude、grok等)
   - GEOSITE,wikimedia,维基百科                               # 维基媒体
   - GEOSITE,youtube,油管视频                                  # YouTube
-  - GEOSITE,tiktok,TikTok                                     # TikTok
+  - GEOSITE,tiktok,TikTok                                    # TikTok
   - GEOSITE,netflix,奈飞视频                                  # Netflix
   - GEOSITE,disney,迪士尼+                                    # Disney+
   - GEOSITE,hbo,HBO                                          # HBO
@@ -320,7 +320,7 @@ rule-providers:
   # 5.3 fakeip-filter规则
   fakeip-filter:   {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs}
 
-  # 5.4 自定义规则(收集平常在Geo中缺少或归类错误的域名及IP,实时更新)
+  # 5.4 其他规则
   My_Direct:             {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Direct.yaml}
   Custom_Direct_Domain:  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_Domain.mrs}
   Speedtest:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/speedtest.mrs}
