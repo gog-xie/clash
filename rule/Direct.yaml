@@ -1,6 +1,6 @@
 # 根据个人上网习惯收录的漏网之鱼Direct列表
 # REPO: https://raw.githubusercontent.com/gogyt/Mihomo/refs/heads/main/rule/Direct.yaml
-# TOTAL:165
+# TOTAL:166
 payload:
   - DOMAIN-SUFFIX,docker.amingg.com
   - DOMAIN-SUFFIX,docker-cf.mrs.1ms.run
@@ -134,6 +134,7 @@ payload:
   - DOMAIN-SUFFIX,wzsgyy.com
   - DOMAIN-SUFFIX,adtidy.org
   - DOMAIN-SUFFIX,lx-us1.777078.xyz
+  - DOMAIN-SUFFIX,zimuku.org  
   
 # Steam_CDN
   - DOMAIN-SUFFIX,steampowered.com
