@@ -150,8 +150,8 @@ dns:
     - 114.114.114.114
   fake-ip-filter:
     - "+.lan"                                                           # 真实解析  常见局域网域名后缀
-    - "GEOSITE:cn"                                                      # 真实解析  大陆域名 GeoSite 数据
-    - "GEOSITE:geolocation-cn"                                          # 真实解析  中国域名 GeoSite 数据
+    - "GEOSITE:cn"                                                      # 真实解析  中国域名
+    - "GEOSITE:geolocation-cn"                                          # 真实解析  补充中国域名
     - "rule-set:fakeip-filter"                                          # 真实解析  fakeip-filter
 
 # 3 代理策略组 
