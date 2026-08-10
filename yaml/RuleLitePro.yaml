@@ -148,8 +148,11 @@ dns:
     - 114.114.114.114
   fake-ip-filter:
     - "+.lan"                                                           # 真实解析  常见局域网域名后缀
-    - "rule-set:cn"                                                     # 真实解析  大陆域名
-    - "rule-set:geolocation-cn"                                         # 真实解析  补充大陆域名
+    - "+.local"                                                         # 真实解析  常见局域网域名后缀
+    - "+.home"                                                          # 真实解析  常见局域网域名后缀
+    - "+.internal"                                                      # 真实解析  常见局域网域名后缀
+    - "rule-set:cn"                                                     # 真实解析  中国域名
+    - "rule-set:geolocation-cn"                                         # 真实解析  补充中国域名
     - "rule-set:fakeip-filter"                                          # 真实解析  fakeip-filter
 
 # 3 代理策略组 
