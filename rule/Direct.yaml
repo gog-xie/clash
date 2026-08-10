@@ -136,6 +136,7 @@ payload:
   - DOMAIN-SUFFIX,777078.xyz
   - DOMAIN-SUFFIX,zimuku.org  
   - DOMAIN-SUFFIX,lxy1015.top
+  - DOMAIN-SUFFIX,icones.js.org
   
 # Steam_CDN
   - DOMAIN-SUFFIX,steampowered.com
