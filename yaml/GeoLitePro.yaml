@@ -141,23 +141,16 @@ dns:
   fake-ip-range: 198.18.0.1/16                                          # 虚拟地址  Fake-IP 虚拟地址池范围
   fake-ip-filter-mode: blacklist                                        # 过滤模式  Fake-IP 过滤模式(命中规则则返回真实 IP)
   respect-rules: false                                                  # 遵循规则  不强制遵循规则顺序
-  nameserver:                                                           # 解析服务  请使用运营商提供的 DNS
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
-    #- 114.114.114.114
-    #- 223.5.5.5
-  proxy-server-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  direct-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+  nameserver:                                                           # 解析服务  可改为运营商提供的 DNS
+    - 119.29.29.29
+    - 223.5.5.5
+    - 180.76.76.76
+    - 114.114.114.114
   fake-ip-filter:
     - "+.lan"                                                           # 真实解析  常见局域网域名后缀
+    - "GEOSITE:cn"                                                      # 真实解析  大陆域名 GeoSite 数据
+    - "GEOSITE:geolocation-cn"                                          # 真实解析  中国域名 GeoSite 数据
     - "rule-set:fakeip-filter"                                          # 真实解析  fakeip-filter
-    - "GEOSITE:cn"                                                      # 真实解析  大陆域 GeoSite 数据
-    - "rule-set:My_Direct"                                              # 真实解析  大陆冷门域名
-    - "rule-set:Custom_Direct_Domain"                                   # 真实解析  大陆冷门域名
 
 # 3 代理策略组 
 proxy-groups:
