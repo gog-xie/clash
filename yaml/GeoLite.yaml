@@ -148,7 +148,7 @@ dns:
     - "+.internal"                                                      # 真实解析  常见局域网域名后缀
     - "GEOSITE:cn"                                                      # 真实解析  中国域名
     - "GEOSITE:geolocation-cn"                                          # 真实解析  补充中国域名
-    - "rule-set:fakeip-filter"                                          # 真实解析  fakeip-filter
+    - "rule-set:fakeip-filter"                                          # 真实解析  主要包含授时服务器、广告拦截服务器、标准公网中继服务器
 
 # 3 代理策略组 
 proxy-groups:
