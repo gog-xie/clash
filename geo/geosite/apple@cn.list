@@ -205,6 +205,14 @@ music.apple.com
 musicstatus.music.apple.com
 play.music.apple.com
 speedysub.music.apple.com
++.apple-icloud.cn
++.appleicloud.cn
++.icloud-apple.cn
++.icloud-content.com.cn
++.icloud.cn
++.icloud.com.cn
++.icloud.net.cn
++.icloudapple.cn
 certs-lb.apple.com.akadns.net
 certs.apple.com
 crl-lb.apple.com.akadns.net
@@ -286,11 +294,3 @@ cdn-cn4.apple-mapkit.com
 +.researchkit.com.cn
 +.swiftui.cn
 +.swiftui.com.cn
-+.apple-icloud.cn
-+.appleicloud.cn
-+.icloud-apple.cn
-+.icloud-content.com.cn
-+.icloud.cn
-+.icloud.com.cn
-+.icloud.net.cn
-+.icloudapple.cn
