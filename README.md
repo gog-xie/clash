@@ -19,11 +19,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ini订阅配置文件简单实用，而yaml配置文件通用性较强，适用于各种mihomo代理程序，导入即用，各有千秋；到底什么配置文件才好用？在YouTube上很多大佬的配置教程，他们用的机场本身质量就非常好，怎么选节点都好用，同一配置模板当换成质量相对不稳定的机场时就不好用了，往往在实际使用中，ping的高低并不等于连接速率，有时选择ping低的节点，却十分卡顿，采用多个节点尝试连接，选择到连接速率最高节点概率将大幅度增加。另一方面，每个人上网习惯不同，有些小众网站分流，对于有的人是经常使用的分流，所以只有适合自己的配置才是最好的配置，本项目在merlinclash、openclash、nikki、clashverge长时测试，merlinclash为主路由，openclash和nikki为旁路由，采用两个廉价机场长时验证，十分稳定，可实现长期免维护。
 
 > [!NOTE]
-> #### 本仓仅提供基于Mihomo的配置文件示例，OpenClash、Nikki、Merlinclash等代理程序的设置可自行查阅相关教程，需一定科学网络配置基础才能上手。另外[HenryChiao/MIHOMO_YAMLS](https://github.com/gogyt/MIHOMO_YAMLS/tree/main/THEYAMLS/General_Config)项目收集了全网相对典型的yaml和ini订阅配置模板，可集思广益参考借鉴。
+> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本仓仅提供基于Mihomo的配置文件示例，OpenClash、Nikki、Merlinclash等代理程序的设置可自行查阅相关教程，需一定科学网络配置基础才能上手。另外[HenryChiao/MIHOMO_YAMLS](https://github.com/gogyt/MIHOMO_YAMLS/tree/main/THEYAMLS/General_Config)项目收集了全网相对典型的yaml和ini订阅配置模板，可集思广益参考借鉴。
 
 > [!WARNING]
 > 
-> #### 严正申明：本仓涉及的脚本仅用于学习研究与探讨，不能保证其合规性、准确性、完整性和有效性，请根据情况自行判断，勿将本仓库的任何内容用于商业或非法目的，禁止任何形式的转载或发布至中国大陆境内的任何公共平台，请严格遵守相关法律法规，下载后请在24小时内删除，否则后果自负。
+> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;严正申明：本仓涉及的脚本仅用于学习研究与探讨，不能保证其合规性、准确性、完整性和有效性，请根据情况自行判断，勿将本仓库的任何内容用于商业或非法目的，禁止任何形式的转载或发布至中国大陆境内的任何公共平台，请严格遵守相关法律法规，下载后请在24小时内删除，否则后果自负。
 ---
 ## 🚫 关于广告拦截
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 在代理程序中设置广告拦截仅仅是顺带功能，可设置简单的规则拦截，其他复杂拦截功能尽量不要放置在代理程序中，在终端安装例如AdGuard插件效果远远好于诸如OpenClash的广告拦截效果，还是遵循分工明确的原则，代理程序就主要干分流和代理的事。
