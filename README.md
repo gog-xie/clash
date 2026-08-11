@@ -20,7 +20,7 @@
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本仓仅提供基于Mihomo的配置文件示例，OpenClash、Nikki、Merlinclash等代理程序的设置可自行查阅相关教程，需一定科学网络配置基础才能上手。另外[HenryChiao/MIHOMO_YAMLS](https://github.com/gogyt/MIHOMO_YAMLS/tree/main/THEYAMLS/General_Config)项目收集了全网相对典型的yaml和ini订阅配置模板，可集思广益参考借鉴。
 
-> ⛔️[!WARNING]
+> [!WARNING]
 > 严正申明
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 本仓库涉及的脚本仅用于学习研究与探讨，不能保证其合规性、准确性、完整性和有效性，请根据情况自行判断，勿将本仓库的任何内容用于商业或非法目的，禁止任何形式的转载或发布至中国大陆境内的任何公共平台，中国大陆用户请严格遵守《中华人民共和国网络安全法》及相关法律法规，下载后请在24小时内删除，否则后果自负。
 ---
