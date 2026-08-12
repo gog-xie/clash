@@ -347,8 +347,8 @@ rules:
   - RULE-SET,bing@cn,直接连接                                  # bing中国
   - RULE-SET,microsoft@cn,直接连接                             # 微软中国
   - RULE-SET,onedrive,OneDrive                                # OneDrive
-  - RULE-SET,bing,Bing                                        # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)
-  - RULE-SET,github,Github                                    # GitHub(属Microsoft的子集,置其前才能分流)
+  - RULE-SET,bing,Bing                                        # bing (是Mircosoft、category-ai-!cn共同子集,含copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)
+  - RULE-SET,github,Github                                    # GitHub(是Microsoft的子集,前置分流)
   - RULE-SET,apple-tvplus,Apple TV+                           # Apple TV+
   - RULE-SET,apple,苹果服务                                    # 苹果服务
   - RULE-SET,Speedtest,网络测试                                # 测速工具
@@ -360,7 +360,7 @@ rules:
   - RULE-SET,x,Grok                                           # Grok(在category-ai-!cn已含Grok,如需单独分流,可启用本条规则,同时也启用"3.1 业务分组"中的Grok)  
   - RULE-SET,category-ai-!cn,AI服务                           # AI服务(国外AI兜底,含openai、gemini、copilot、claude、grok等)
   - RULE-SET,wikimedia,维基百科                               # 维基媒体
-  - RULE-SET,youtube,油管视频                                 # YouTube
+  - RULE-SET,youtube,油管视频                                 # YouTube(是Google、category-entertainment共同子集，前置分流)
   - RULE-SET,tiktok,TikTok                                    # TikTok
   - RULE-SET,netflix,奈飞视频                                 # Netflix
   - RULE-SET,disney,迪士尼+                                   # Disney+
