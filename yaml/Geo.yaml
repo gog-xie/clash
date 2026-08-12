@@ -281,6 +281,7 @@ rules:
   - GEOSITE,geolocation-!cn,默认直连                          # 非中国域名(本条主要是境外域名,涵盖gfw被墙域名,其余几乎未被墙,前面gfw滤掉了被墙域名,这里默认直连,视连接情况切换代理)
   - GEOIP,cloudflare,默认直连,no-resolve                      # cloudflare(geolocation-!cn已包含cloudflare,这里IP补充)
   - GEOIP,cloudfront,默认直连,no-resolve                      # 亚马逊旗下CDN(同上IP补充)
+ # - GEOIP,fastly,默认直连,no-resolve                          # FSLY CDN(同上IP补充，注意：有的代理软件GEO数据中缺少GEOIP,fastly数据，请尝试启用)
   - GEOSITE,cn,直接连接                                       # 中国域名
   - GEOIP,cn,直接连接,no-resolve                              # 中国IP
   - MATCH,漏网之鱼                                            # 漏网之鱼
