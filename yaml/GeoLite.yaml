@@ -179,34 +179,34 @@ proxy-groups:
   - {name: 直接连接,     <<: *BaseHS, proxies: [DIRECT], hidden: true, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png}
   
   # 3.3 地理策略组
-  - {name: 狮城策略,     <<: *BaseHS, proxies: [狮城均衡-轮询, 狮城均衡-散列, 狮城自动], include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png}
-  - {name: 香港策略,     <<: *BaseHS, proxies: [香港均衡-轮询, 香港均衡-散列, 香港自动], include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png}
-  - {name: 日本策略,     <<: *BaseHS, proxies: [日本均衡-轮询, 日本均衡-散列, 日本自动], include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png}
-  - {name: 美国策略,     <<: *BaseHS, proxies: [美国均衡-轮询, 美国均衡-散列, 美国自动], include-all: true, filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png}
-  - {name: 台湾策略,     <<: *BaseHS, proxies: [台湾均衡-轮询, 台湾均衡-散列, 台湾自动], include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png}
-  - {name: 欧洲策略,     <<: *BaseHS, proxies: [欧洲均衡-轮询, 欧洲均衡-散列, 欧洲自动], include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/European_Union.png}
-  - {name: 韩国策略,     <<: *BaseHS, proxies: [韩国均衡-轮询, 韩国均衡-散列, 韩国自动], include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png}
-  - {name: 其他策略,     <<: *BaseHS, proxies: [其他均衡-轮询, 其他均衡-散列, 其他自动], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
+  - {name: 狮城策略,     <<: *BaseHS, proxies: [狮城轮询, 狮城散列, 狮城自动], include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png}
+  - {name: 香港策略,     <<: *BaseHS, proxies: [香港轮询, 香港散列, 香港自动], include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png}
+  - {name: 日本策略,     <<: *BaseHS, proxies: [日本轮询, 日本散列, 日本自动], include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png}
+  - {name: 美国策略,     <<: *BaseHS, proxies: [美国轮询, 美国散列, 美国自动], include-all: true, filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png}
+  - {name: 台湾策略,     <<: *BaseHS, proxies: [台湾轮询, 台湾散列, 台湾自动], include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png}
+  - {name: 欧洲策略,     <<: *BaseHS, proxies: [欧洲轮询, 欧洲散列, 欧洲自动], include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/European_Union.png}
+  - {name: 韩国策略,     <<: *BaseHS, proxies: [韩国轮询, 韩国散列, 韩国自动], include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png}
+  - {name: 其他策略,     <<: *BaseHS, proxies: [其他轮询, 其他散列, 其他自动], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Other.png}
 
-  # 3.4 负载均衡-散列 
-  - {name: 香港均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: 台湾均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: 狮城均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: 日本均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: 韩国均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: 美国均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: 欧洲均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: 其他均衡-散列, <<: *BaseCH, include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  # 3.4 负载散列 
+  - {name: 香港散列,     <<: *BaseCH, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: 台湾散列,     <<: *BaseCH, include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: 狮城散列,     <<: *BaseCH, include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: 日本散列,     <<: *BaseCH, include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: 韩国散列,     <<: *BaseCH, include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: 美国散列,     <<: *BaseCH, include-all: true, filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: 欧洲散列,     <<: *BaseCH, include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: 其他散列,     <<: *BaseCH, include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
 
-  # 3.5 负载均衡-轮询 
-  - {name: 香港均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: 台湾均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: 狮城均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: 日本均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: 韩国均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: 美国均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: 欧洲均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: 其他均衡-轮询, <<: *BaseCR, include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  # 3.5 负载轮询 
+  - {name: 香港轮询,     <<: *BaseCR, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: 台湾轮询,     <<: *BaseCR, include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: 狮城轮询,     <<: *BaseCR, include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: 日本轮询,     <<: *BaseCR, include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: 韩国轮询,     <<: *BaseCR, include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: 美国轮询,     <<: *BaseCR, include-all: true, filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: 欧洲轮询,     <<: *BaseCR, include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: 其他轮询,     <<: *BaseCR, include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
 
   # 3.6 自动测速组
   - {name: 香港自动,     <<: *BaseUT, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
