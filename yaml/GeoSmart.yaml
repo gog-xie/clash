@@ -32,10 +32,10 @@
 BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(客户端|特殊|如果|导致|一下|教程|测试|剩余|套餐|公告|排除))'}
 
 # 1.2策略组类型锚点 - 定义不同的策略组基础配置
-BaseHS:       &BaseHS    {type: select,       empty-fallback: REJECT}
+BaseHS:       &BaseHS    {type: select}
 BaseFB:       &BaseFB    {type: fallback,     empty-fallback: REJECT, interval: 200, lazy: true, timeout: 3000, max-failed-times: 2, hidden: true, url: 'https://www.gstatic.com/generate_204'}
 BaseCH:       &BaseCH    {type: load-balance, empty-fallback: REJECT, interval: 200, lazy: true, timeout: 3000, max-failed-times: 2, hidden: true, url: 'https://www.gstatic.com/generate_204', strategy: consistent-hashing}
-BaseCR:       &BaseCR    {type: load-balance, empty-fallback: REJECT, interval: 200, lazy: true, timeout: 3000, max-failed-times: 2, hidden: true, url: 'https://www.gstatic.com/generate_204', strategy: round-robin,}
+BaseCR:       &BaseCR    {type: load-balance, empty-fallback: REJECT, interval: 200, lazy: true, timeout: 3000, max-failed-times: 2, hidden: true, url: 'https://www.gstatic.com/generate_204', strategy: round-robin}
 BaseSmart:    &BaseSmart {type: smart,        empty-fallback: REJECT, interval: 200, lazy: true, timeout: 3000, max-failed-times: 2, hidden: true, url: 'https://www.gstatic.com/generate_204', uselightgbm: true}
 
 # 1.3 规则集行为锚点
