@@ -60,7 +60,7 @@
 
 <details>
 
-<summary>点击展开查看内容</summary>
+<summary>规则示例</summary>
 
 ```
 rules:
