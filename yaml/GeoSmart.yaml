@@ -252,7 +252,7 @@ proxy-groups:
   - {name: 韩国智能,       <<: *BaseSmart, include-all: true, filter: *FilterKR, policy-priority: '主:1.5;备:0.5', icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png}
   - {name: 美国智能,       <<: *BaseSmart, include-all: true, filter: *FilterUS, policy-priority: '主:1.5;备:0.5', icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png}
   - {name: 欧洲智能,       <<: *BaseSmart, include-all: true, filter: *FilterEU, policy-priority: '主:1.5;备:0.5', icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/European_Union.png}
-  - {name: 其他智能,       <<: *BaseSmart, include-all: true, filter: *FilterOT, policy-priority: '主:1.5;备:0.5', icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
+  - {name: 其他智能,       <<: *BaseSmart, include-all: true, filter: *FilterOT, policy-priority: '主:1.5;备:0.5', icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Other.png}
 
   # 3.7 其他策略组
   - {name: 全球手动,       <<: *BaseHS, proxies: [狮城策略, 香港策略, 美国策略, 台湾策略, 欧洲策略, 日本策略, 韩国策略, 其他策略], include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png}
