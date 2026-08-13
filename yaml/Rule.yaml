@@ -210,7 +210,7 @@ proxy-groups:
   - {name: 台湾策略,       <<: *BaseHS, proxies: [台湾轮询, 台湾散列, 台湾自动], include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png}
   - {name: 欧洲策略,       <<: *BaseHS, proxies: [欧洲轮询, 欧洲散列, 欧洲自动], include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/European_Union.png}
   - {name: 韩国策略,       <<: *BaseHS, proxies: [韩国轮询, 韩国散列, 韩国自动], include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png}
-  - {name: 其他策略,       <<: *BaseHS, proxies: [其他轮询, 其他散列, 其他自动], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
+  - {name: 其他策略,       <<: *BaseHS, proxies: [其他轮询, 其他散列, 其他自动], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Other.png}
 
   # 3.4 负载均衡-散列 
   - {name: 香港散列,       <<: *BaseCH, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
