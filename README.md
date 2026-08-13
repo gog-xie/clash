@@ -60,7 +60,7 @@
 
 <details>
 
-<summary>规则示例</summary>
+<summary><strong>📌  示例</strong></summary>
 
 ```
 rules:
