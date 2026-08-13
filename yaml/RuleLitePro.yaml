@@ -192,7 +192,7 @@ proxy-groups:
   - {name: 台湾策略,        <<: *BaseHS, proxies: ['[主] 台湾轮询', '[主] 台湾散列', '[主] 台湾自动', '[备] 台湾轮询', '[备] 台湾散列', '[备] 台湾自动'], include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png}
   - {name: 欧洲策略,        <<: *BaseHS, proxies: ['[主] 欧洲轮询', '[主] 欧洲散列', '[主] 欧洲自动', '[备] 欧洲轮询', '[备] 欧洲散列', '[备] 欧洲自动'], include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/European_Union.png}
   - {name: 韩国策略,        <<: *BaseHS, proxies: ['[主] 韩国轮询', '[主] 韩国散列', '[主] 韩国自动', '[备] 韩国轮询', '[备] 韩国散列', '[备] 韩国自动'], include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png}
-  - {name: 其他策略,        <<: *BaseHS, proxies: ['[主] 其他轮询', '[主] 其他散列', '[主] 其他自动', '[备] 其他轮询', '[备] 其他散列', '[备] 其他自动'], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
+  - {name: 其他策略,        <<: *BaseHS, proxies: ['[主] 其他轮询', '[主] 其他散列', '[主] 其他自动', '[备] 其他轮询', '[备] 其他散列', '[备] 其他自动'], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Other.png}
 
   # 3.4 负载均衡-散列  (需更改机场名称,与1.6小节机场名称一致)
   - {name: '[主] 香港散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
