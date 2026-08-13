@@ -26,12 +26,12 @@
 # 5) 需要全防泄漏,使用时将分流策略的"漏网之鱼"、“网络测试”和“默认直连”选择为任意代理节点即可(实际意义并不大)。
 # 6) 关于"默认直连"策略组,主要挂载了geolocation-!cn非中国域名,它包含了gfw被墙域名,以及其他几乎未被墙的境外域名,含有如cloudflare、cloudfront、fastly等CDN站点,由于先滤掉了gfw被墙域名,剩下的几乎未被墙,可根据使用情况切换代理。
 # 7) 本配置采用多项默认故障转移,分流效果更加灵活。
-# 8) 如果你不熟悉配置，仅将你的机场链接填入“1.6代理提供者”的url即可使用。如果需个性化配置，配置前仔细阅读配置中的相关说明,根据需要自行调整。
-# 9) 如需自定义“1.6代理提供者”机场名称,需同步修订3.4、3.5、3.6机场名称,要确保1.6与3.4、3.5、3.6中的机场名称保持一致，否则会报错。
+# 8) 如果你不熟悉配置，仅将你的机场链接填入“1.6 机场订阅”的url即可使用。如果需个性化配置，配置前仔细阅读配置中的相关说明,根据需要自行调整。
+# 9) 如需自定义“1.6 机场订阅”机场名称,需同步修订3.4、3.5、3.6机场名称,要确保1.6与3.4、3.5、3.6中的机场名称保持一致，否则会报错。
 
 # 配置区
 # 1 锚点配置 
-# 1.1 代理提供者锚点 - 订阅源基础配置 (根据自己机场特性,在filter参数中添加不需要的机场节点关键字,若需保留相关节点,删除该节点名称的关键字)
+# 1.1 机场订阅锚点 - 订阅源基础配置 (根据自己机场特性,在filter参数中添加不需要的机场节点关键字,若需保留相关节点,删除该节点名称的关键字)
 BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(客户端|特殊|如果|导致|一下|教程|测试|剩余|套餐|公告|排除))'}
 
 # 1.2策略组类型锚点 - 定义不同的策略组基础配置
@@ -65,7 +65,7 @@ SelectDD:     &SelectDD  {type: select, proxies: [直接连接, 默认代理, �
 SelectDC:     &SelectDC  {type: select, proxies: [直接连接, 默认直连, 默认代理, 故转手动, 故转狮城, 故转美国, 故转香港, 故转日本, 故转台湾, 韩国策略, 欧洲策略, 其他策略, 全球手动]}
 SelectFB:     &SelectFB  {type: select, proxies: [默认代理, 故转手动, 故转狮城, 故转美国, 故转香港, 故转日本, 故转台湾, 韩国策略, 欧洲策略, 其他策略, 全球手动, 默认直连, 直接连接]}
 
-# 1.6 代理提供者 
+# 1.6 机场订阅 
 # 注意：
 #     1) 填入机场订阅链接,可自定义机场名称。末尾的[主][备]为每个节点添加机场名称前缀,可自定义,避免不同的机场节点重名导致出错。
 #     2) 本配置默认为2个机场，如果需减少或增加机场，需在同步修订3.3、3.4、3.5、3.6,否则会报错。
@@ -204,7 +204,7 @@ proxy-groups:
   - {name: Spotify,        <<: *SelectFB, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Spotify.png}
   - {name: Docker,         <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Docker.png}
   - {name: OneDrive,       <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/OneDrive.png}
-  - {name: Bing,           <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Bing.png}
+  - {name: Bing(Copilot),  <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Bing.png}
   - {name: 微软服务,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Microsoft.png}
   - {name: 苹果服务,        <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Apple.png}
   - {name: Apple TV+,      <<: *SelectDC, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Apple_TV.png}
@@ -318,7 +318,7 @@ rules:
   - GEOSITE,bing@cn,直接连接                                  # bing中国
   - GEOSITE,microsoft@cn,直接连接                             # 微软中国
   - GEOSITE,onedrive,OneDrive                                # OneDrive
-  - GEOSITE,bing,Bing                                        # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)
+  - GEOSITE,bing,Bing(Copilot)                               # bing (含copilot,category-ai-!cn中也含了copilot,在使用edge浏览器时,后台会启用copilot产生流量,需要时开启代理)
   - GEOSITE,github,Github                                    # GitHub(属Microsoft的子集,置其前才能分流)
   - GEOSITE,apple-tvplus,Apple TV+                           # Apple TV+
   - GEOSITE,apple,苹果服务                                    # 苹果服务
