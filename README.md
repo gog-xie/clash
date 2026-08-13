@@ -1,4 +1,4 @@
-<h1 align="center"> ✈️基于mihomo内核代理程序<br> <br>配置模板</h1>
+<h1 align="center"> ✈️基于mihomo内核代理程序<br> <br>Yaml配置模板</h1>
 
 ---
 
