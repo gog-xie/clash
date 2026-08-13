@@ -25,12 +25,12 @@
 # 4) 需要全防泄漏,使用时将分流策略的"漏网之鱼"、“网络测试”和“默认直连”选择为任意代理节点即可(实际意义并不大)。
 # 5) 本配置采用极简分流，仅需将"默认代理"选择好代理策略，以及各地区出站的方式(负载均衡、自动、手动)，当某些网站或链接不能访问时，可尝试将"默认直连"选择为代理节点，如Steam登录器大厅，登陆时需将"默认直连"设置为代理节点，游戏下载不会走代理；
 # 6) 本配置可自主选择出站机场,采用多机场分别控制选择出站节点的模式,但需确保机场自定义名称前后一致；比如台湾策略可选Airport1机场的台湾均衡或自动，香港策略可选Airport2机场的香港均衡或自动等等；
-# 7) 如果你不熟悉配置，仅将你的机场链接填入“1.6代理提供者”的url即可使用。如果需个性化配置，配置前仔细阅读配置中的相关说明,根据需要自行调整。
-# 8) 如需自定义“1.6代理提供者”机场名称,需同步修订3.4、3.5、3.6机场名称(注意机场名称前后都有一个空格),要确保1.6与3.4、3.5、3.6中的机场名称保持一致，否则会报错。
+# 7) 如果你不熟悉配置，仅将你的机场链接填入“1.6 机场订阅”的url即可使用。如果需个性化配置，配置前仔细阅读配置中的相关说明,根据需要自行调整。
+# 8) 如需自定义“1.6 机场订阅”机场名称,需同步修订3.4、3.5、3.6机场名称(注意机场名称前后都有一个空格),要确保1.6与3.4、3.5、3.6中的机场名称保持一致，否则会报错。
 
 # 配置区
 # 1 锚点配置 
-# 1.1 代理提供者锚点 - 订阅源基础配置 (根据自己机场特性,在filter参数中添加不需要的机场节点关键字,若需保留相关节点,删除该节点名称的关键字)
+# 1.1 机场订阅锚点 - 订阅源基础配置 (根据自己机场特性,在filter参数中添加不需要的机场节点关键字,若需保留相关节点,删除该节点名称的关键字)
 BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(客户端|特殊|如果|导致|一下|教程|测试|剩余|套餐|公告|排除))'}
 
 # 1.2策略组类型锚点 - 定义不同的策略组基础配置
@@ -62,7 +62,7 @@ SelectPY:     &SelectPY {type: select, proxies: [故障转移, 狮城策略, 美
 SelectDD:     &SelectDD {type: select, proxies: [直接连接, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧洲策略, 其他策略, 全球手动]}
 SelectDC:     &SelectDC {type: select, proxies: [直接连接, 默认直连, 默认代理, 故障转移, 狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧洲策略, 其他策略, 全球手动]}
 
-# 1.6 代理提供者 
+# 1.6 机场订阅 
 # 注意：
 #     1) 填入机场订阅链接,可自定义机场名称。末尾的[主][备]为每个节点添加机场名称前缀,可自定义,避免不同的机场节点重名导致出错。
 #     2) 本配置默认为2个机场，如果需减少或增加机场，需在同步修订3.3、3.4、3.5、3.6,否则会报错。
@@ -176,84 +176,84 @@ dns:
 # 3 代理策略组 
 proxy-groups:
   # 3.1 业务策略组
-  - {name: 默认代理,         <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
-  - {name: 默认直连,         <<: *SelectDD, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
+  - {name: 默认代理,        <<: *SelectPY, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
+  - {name: 默认直连,        <<: *SelectDD, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png}
 
   # 3.2 策略组与地理策略组分界识别
-  - {name: 漏网之鱼,         <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png}
-  - {name: 网络测试,         <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png}
-  - {name: 直接连接,         <<: *BaseHS, proxies: [DIRECT], hidden: true, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png}
+  - {name: 漏网之鱼,        <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png}
+  - {name: 网络测试,        <<: *SelectDC, include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png}
+  - {name: 直接连接,        <<: *BaseHS, proxies: [DIRECT], hidden: true, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png}
 
   # 3.3 地理策略组 (如果喜欢策略组更整洁,去掉各个具体的节点,可删除掉本小节的include-all和filte参数)
-  - {name: 狮城策略,         <<: *BaseHS, proxies: ['[主] 狮城-轮询', '[主] 狮城-散列', '[主] 狮城-自动', '[备] 狮城-轮询', '[备] 狮城-散列', '[备] 狮城-自动'], include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png}
-  - {name: 香港策略,         <<: *BaseHS, proxies: ['[主] 香港-轮询', '[主] 香港-散列', '[主] 香港-自动', '[备] 香港-轮询', '[备] 香港-散列', '[备] 香港-自动'], include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png}
-  - {name: 日本策略,         <<: *BaseHS, proxies: ['[主] 日本-轮询', '[主] 日本-散列', '[主] 日本-自动', '[备] 日本-轮询', '[备] 日本-散列', '[备] 日本-自动'], include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png}
-  - {name: 美国策略,         <<: *BaseHS, proxies: ['[主] 美国-轮询', '[主] 美国-散列', '[主] 美国-自动', '[备] 美国-轮询', '[备] 美国-散列', '[备] 美国-自动'], include-all: true, filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png}
-  - {name: 台湾策略,         <<: *BaseHS, proxies: ['[主] 台湾-轮询', '[主] 台湾-散列', '[主] 台湾-自动', '[备] 台湾-轮询', '[备] 台湾-散列', '[备] 台湾-自动'], include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png}
-  - {name: 欧洲策略,         <<: *BaseHS, proxies: ['[主] 欧洲-轮询', '[主] 欧洲-散列', '[主] 欧洲-自动', '[备] 欧洲-轮询', '[备] 欧洲-散列', '[备] 欧洲-自动'], include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/European_Union.png}
-  - {name: 韩国策略,         <<: *BaseHS, proxies: ['[主] 韩国-轮询', '[主] 韩国-散列', '[主] 韩国-自动', '[备] 韩国-轮询', '[备] 韩国-散列', '[备] 韩国-自动'], include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png}
-  - {name: 其他策略,         <<: *BaseHS, proxies: ['[主] 其他-轮询', '[主] 其他-散列', '[主] 其他-自动', '[备] 其他-轮询', '[备] 其他-散列', '[备] 其他-自动'], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
+  - {name: 狮城策略,        <<: *BaseHS, proxies: ['[主] 狮城轮询', '[主] 狮城散列', '[主] 狮城自动', '[备] 狮城轮询', '[备] 狮城散列', '[备] 狮城自动'], include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png}
+  - {name: 香港策略,        <<: *BaseHS, proxies: ['[主] 香港轮询', '[主] 香港散列', '[主] 香港自动', '[备] 香港轮询', '[备] 香港散列', '[备] 香港自动'], include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png}
+  - {name: 日本策略,        <<: *BaseHS, proxies: ['[主] 日本轮询', '[主] 日本散列', '[主] 日本自动', '[备] 日本轮询', '[备] 日本散列', '[备] 日本自动'], include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png}
+  - {name: 美国策略,        <<: *BaseHS, proxies: ['[主] 美国轮询', '[主] 美国散列', '[主] 美国自动', '[备] 美国轮询', '[备] 美国散列', '[备] 美国自动'], include-all: true, filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png}
+  - {name: 台湾策略,        <<: *BaseHS, proxies: ['[主] 台湾轮询', '[主] 台湾散列', '[主] 台湾自动', '[备] 台湾轮询', '[备] 台湾散列', '[备] 台湾自动'], include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png}
+  - {name: 欧洲策略,        <<: *BaseHS, proxies: ['[主] 欧洲轮询', '[主] 欧洲散列', '[主] 欧洲自动', '[备] 欧洲轮询', '[备] 欧洲散列', '[备] 欧洲自动'], include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/European_Union.png}
+  - {name: 韩国策略,        <<: *BaseHS, proxies: ['[主] 韩国轮询', '[主] 韩国散列', '[主] 韩国自动', '[备] 韩国轮询', '[备] 韩国散列', '[备] 韩国自动'], include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png}
+  - {name: 其他策略,        <<: *BaseHS, proxies: ['[主] 其他轮询', '[主] 其他散列', '[主] 其他自动', '[备] 其他轮询', '[备] 其他散列', '[备] 其他自动'], include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png}
 
   # 3.4 负载均衡-散列  (需更改机场名称,与1.6小节机场名称一致)
-  - {name: '[主] 香港-散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[主] 台湾-散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[主] 狮城-散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[主] 日本-散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[主] 韩国-散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[主] 美国-散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[主] 欧洲-散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[主] 其他-散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[主] 香港散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[主] 台湾散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[主] 狮城散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[主] 日本散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[主] 韩国散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[主] 美国散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[主] 欧洲散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[主] 其他散列', <<: *BaseCH, use: [ Airport1 ], filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
 
-  - {name: '[备] 香港-散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[备] 台湾-散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[备] 狮城-散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[备] 日本-散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[备] 韩国-散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[备] 美国-散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[备] 欧洲-散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
-  - {name: '[备] 其他-散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[备] 香港散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[备] 台湾散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[备] 狮城散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[备] 日本散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[备] 韩国散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[备] 美国散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[备] 欧洲散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
+  - {name: '[备] 其他散列', <<: *BaseCH, use: [ Airport2 ], filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin_1.png}
 
   # 3.5 负载均衡-轮询  (需更改机场名称,与1.6小节机场名称一致)
-  - {name: '[主] 香港-轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[主] 台湾-轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[主] 狮城-轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[主] 日本-轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[主] 韩国-轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[主] 美国-轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[主] 欧洲-轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[主] 其他-轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[主] 香港轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[主] 台湾轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[主] 狮城轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[主] 日本轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[主] 韩国轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[主] 美国轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[主] 欧洲轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[主] 其他轮询', <<: *BaseCR, use: [ Airport1 ], filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
 
-  - {name: '[备] 香港-轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[备] 台湾-轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[备] 狮城-轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[备] 日本-轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[备] 韩国-轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[备] 美国-轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[备] 欧洲-轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
-  - {name: '[备] 其他-轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[备] 香港轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[备] 台湾轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[备] 狮城轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[备] 日本轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[备] 韩国轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[备] 美国轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[备] 欧洲轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
+  - {name: '[备] 其他轮询', <<: *BaseCR, use: [ Airport2 ], filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
 
   # 3.6 自动测速组  (需更改机场名称,与1.6小节机场名称一致)
-  - {name: '[主] 香港-自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[主] 台湾-自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[主] 狮城-自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[主] 日本-自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[主] 韩国-自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[主] 美国-自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[主] 欧洲-自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[主] 其他-自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[主] 香港自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[主] 台湾自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[主] 狮城自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[主] 日本自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[主] 韩国自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[主] 美国自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[主] 欧洲自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[主] 其他自动', <<: *BaseUT, use: [ Airport1 ], filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
 
-  - {name: '[备] 香港-自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[备] 台湾-自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[备] 狮城-自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[备] 日本-自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[备] 韩国-自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[备] 美国-自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[备] 欧洲-自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
-  - {name: '[备] 其他-自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[备] 香港自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[备] 台湾自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[备] 狮城自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[备] 日本自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[备] 韩国自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[备] 美国自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[备] 欧洲自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
+  - {name: '[备] 其他自动', <<: *BaseUT, use: [ Airport2 ], filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
 
   # 3.7 其他策略组
-  - {name: 全球手动,         <<: *BaseHS, proxies: [狮城策略, 香港策略, 美国策略, 台湾策略, 欧洲策略, 日本策略, 韩国策略, 其他策略], include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png}
-  - {name: 故障转移,         <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧洲策略, 韩国策略, 其他策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
+  - {name: 全球手动,        <<: *BaseHS, proxies: [狮城策略, 香港策略, 美国策略, 台湾策略, 欧洲策略, 日本策略, 韩国策略, 其他策略], include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png}
+  - {name: 故障转移,        <<: *BaseFB, proxies: [全球手动, 狮城策略, 美国策略, 台湾策略, 香港策略, 日本策略, 欧洲策略, 韩国策略, 其他策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png}
 
 # 4 规则路由 (按照从上往下的顺序遍历,优先命中上位规则,规则重复无影响,修改顺序会影响分流效果)
 rules: 
