@@ -124,18 +124,21 @@ payload:
   - DOMAIN-SUFFIX,sidhub.cc
   - DOMAIN-SUFFIX,seeduck.cc
   - DOMAIN-SUFFIX,hubdog.cc
-  - DOMAIN-SUFFIX,liangxin.xyz
-  - DOMAIN-SUFFIX,liangxin1.xyz
   - DOMAIN-SUFFIX,idsduf.com
   - DOMAIN-KEYWORD,synology
-  - DOMAIN-SUFFIX,xn--9kqz23b19z.com
   - DOMAIN-SUFFIX,jueduibupao.top
-  - DOMAIN-SUFFIX,xxxyun.top
   - DOMAIN-SUFFIX,wzsgyy.com
   - DOMAIN-SUFFIX,adtidy.org
-  - DOMAIN-SUFFIX,777078.xyz
-  - DOMAIN-SUFFIX,zimuku.org  
+  - DOMAIN-SUFFIX,zimuku.org 
+  
+  - DOMAIN-SUFFIX,xxxyun.top
   - DOMAIN-SUFFIX,lxy1015.top
+  - DOMAIN-SUFFIX,lxyun.xyz
+  - DOMAIN-SUFFIX,777078.xyz
+  - DOMAIN-SUFFIX,7770008.xyz
+  - DOMAIN-SUFFIX,liangxin.xyz
+  - DOMAIN-SUFFIX,liangxin1.xyz  
+  
   - DOMAIN-SUFFIX,icones.js.org
   - DOMAIN-SUFFIX,tineco.com
   
