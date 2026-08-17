@@ -141,6 +141,7 @@ payload:
   
   - DOMAIN-SUFFIX,icones.js.org
   - DOMAIN-SUFFIX,tineco.com
+  - DOMAIN-SUFFIX,snssdk.com
   
 # Steam_CDN
   - DOMAIN-SUFFIX,steampowered.com
