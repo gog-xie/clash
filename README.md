@@ -50,7 +50,7 @@
 | <div align="center">**3**</div> | [**Rule.yaml**](yaml/Rule.yaml) | ★★★☆ | <div align="center">34</div> | <div align="center">55</div> | 常规分流，多机场混合出站 |
 | <div align="center">**4**</div> | [**RulePlus.yaml**](yaml/RulePlus.yaml) | ★★★★☆ | <div align="center">49</div> | <div align="center">66</div> | 多机场**混合**或**自定义**出站，**${\color{orange}\text{ 多元默认故转 }}$**  **${\color{blue}\text{【推荐】}}$** |
 | <div align="center">**5**</div> | [**RuleSmart.yaml**](yaml/RuleSmart) | ★★★☆ | <div align="center">44</div> | <div align="center">66</div> | 适配Smart核心，多机场混合出站 |
-| <div align="center">**6**</div> | [**RuleBeta.yaml**](yaml/RuleBeta.yaml) | ★★★★★ | <div align="center">51</div> | <div align="center">66</div> | BETA测试版 |
+| <div align="center">**6**</div> | [**RuleBeta.yaml**](yaml/RuleBeta.yaml) | <div align="center">-</div> | <div align="center">51</div> | <div align="center">66</div> | BETA测试版 |
 </div>
 
 ---
