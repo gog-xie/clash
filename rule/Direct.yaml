@@ -1,6 +1,6 @@
 # 根据个人上网习惯收录的漏网之鱼Direct列表
 # REPO: https://raw.githubusercontent.com/gogyt/Mihomo/refs/heads/main/rule/Direct.yaml
-# TOTAL:169
+# TOTAL:179
 payload:
   - DOMAIN-SUFFIX,docker.amingg.com
   - DOMAIN-SUFFIX,docker-cf.mrs.1ms.run
@@ -57,10 +57,7 @@ payload:
   - DOMAIN-SUFFIX,yuneu.com
   - DOMAIN-SUFFIX,zzyhh.top
   - DOMAIN-SUFFIX,cookielaw.org
-  - DOMAIN-SUFFIX,jsdelivr.com
   - DOMAIN-SUFFIX,66jc.top
-  - DOMAIN-SUFFIX,jueduibupao.top
-  - DOMAIN-SUFFIX,xxxyun.top
   - DOMAIN-SUFFIX,6bnw.top
   - DOMAIN-SUFFIX,whtjdasha.com
   - DOMAIN-SUFFIX,iconify.design
@@ -130,7 +127,6 @@ payload:
   - DOMAIN-SUFFIX,wzsgyy.com
   - DOMAIN-SUFFIX,adtidy.org
   - DOMAIN-SUFFIX,zimuku.org 
-  
   - DOMAIN-SUFFIX,xxxyun.top
   - DOMAIN-SUFFIX,lxy1015.top
   - DOMAIN-SUFFIX,lxyun.xyz
@@ -138,11 +134,21 @@ payload:
   - DOMAIN-SUFFIX,7770008.xyz
   - DOMAIN-SUFFIX,liangxin.xyz
   - DOMAIN-SUFFIX,liangxin1.xyz  
-  
   - DOMAIN-SUFFIX,icones.js.org
   - DOMAIN-SUFFIX,tineco.com
   - DOMAIN-SUFFIX,snssdk.com
+
+  - DOMAIN-SUFFIX,ghm.078465.xyz
+  - DOMAIN-SUFFIX,gh.monlor.com
   - DOMAIN-SUFFIX,gh.idayer.com
+  - DOMAIN-SUFFIX,ghproxy.monkeyray.net
+  - DOMAIN-SUFFIX,github.tbap.top
+  - DOMAIN-SUFFIX,down.mxw.xx.kg
+  - DOMAIN-SUFFIX,cdn.akaere.online
+  - DOMAIN-SUFFIX,gh-proxy.com
+  - DOMAIN-SUFFIX,gh.jasonzeng.dev
+  - DOMAIN-SUFFIX,ghfast.top
+  - DOMAIN-SUFFIX,git.yylx.win
   
 # Steam_CDN
   - DOMAIN-SUFFIX,steampowered.com
