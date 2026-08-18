@@ -271,6 +271,7 @@ rules:
   - RULE-SET,fastly_IP,默认直连,no-resolve                     # FSLY CDN(同上IP补充)
   - RULE-SET,cn,直接连接                                       # 中国域名
   - RULE-SET,cn_IP,直接连接,no-resolve                         # 中国IP
+  - RULE-SET,non_standard_port,默认直连                        # 非标端口
   - MATCH,漏网之鱼                                             # 漏网之鱼
 
 # 5 规则提供者
@@ -287,6 +288,7 @@ rule-providers:
   My_Direct:                           {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Direct.yaml}
   Custom_Direct_Domain:                {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Direct_Domain.mrs}
   Speedtest:                           {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/speedtest.mrs}
+  non_standard_port:                   {<<: *BehaviorCY, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/rule/Custom_Port_Direct.yaml}
 
   # 5.5 主要规则集
   private:                             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs}
