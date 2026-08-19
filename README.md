@@ -43,7 +43,8 @@
 <div align="center">
 
 
-| <div align="center">☑️</div> | <div align="center">🧮配置文件</div> | <div align="center">🥇推荐指数</div> | <div align="center">🔍策略组</div> | <div align="center">🔍节点组</div> | <div align="center">📝规则集</div> | <div align="center">📑特点</div> |
+| <div align="center">☑️</div> | <div align="center">🧮配置文件</div> | <div align="center">🥇推荐指数</div> | <div align="center">🔽策略组</div> | <div align="center">⏬
+节点组</div> | <div align="center">📝规则集</div> | <div align="center">📑特点</div> |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | <div align="center">**1**</div> | [**RuleLite.yaml**](yaml/RuleLite.yaml) | ★★★ | <div align="center">14</div> | <div align="center">25</div> | <div align="center">36</div> | 极简分流，多机场混合出站
 | <div align="center">**2**</div> | [**RuleLitePro.yaml**](yaml/RuleLitePro.yaml) | ★★★★ | <div align="center">14</div> | <div align="center">49</div> | <div align="center">36</div> | 极简分流，多机场**自定义**出站  **${\color{blue}\text{【推荐】}}$** |
