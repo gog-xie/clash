@@ -466,8 +466,8 @@ rule-providers:
   category-ecommerce:                  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/category-ecommerce.mrs}
   category-cryptocurrency:             {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/category-cryptocurrency.mrs}
   gfw:                                 {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/gfw.mrs}
-  geolocation-cn:                      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-cn.mrs}
-  geolocation-!cn:                     {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.mrs}
+  geolocation-cn:                      {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/geolocation-cn.mrs}
+  geolocation-!cn:                     {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/geolocation-!cn.mrs}
   cn:                                  {<<: *BehaviorDN, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geosite/cn.mrs}
   private_IP:                          {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geoip/private.mrs}
   telegram_IP:                         {<<: *BehaviorIP, url: https://testingcf.jsdelivr.net/gh/gogyt/Mihomo@main/geo/geoip/telegram.mrs}
