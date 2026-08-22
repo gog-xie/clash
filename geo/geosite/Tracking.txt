@@ -1,6 +1,6 @@
 # NAME: Tracking
 # AUTHOR: YYDS666
-# UPDATED: 2026-08-20 02:15:49
+# UPDATED: 2026-08-22 02:21:25
 # TOTAL: 527
 +.adjust.com
 +.ads.linkedin.com
