@@ -12,3 +12,4 @@ payload:
   - DOMAIN-SUFFIX,ip.sb
   - DOMAIN-SUFFIX,steamcommunity.com    # steam社区
   - DOMAIN-SUFFIX,cilixiong.org
+  - DOMAIN-SUFFIX,cilixiong.cc
