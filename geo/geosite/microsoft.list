@@ -5,8 +5,8 @@ officecdn-microsoft-com.akamaized.net
 statics-marketingsites-eas-ms-com.akamaized.net
 statics-marketingsites-eus-ms-com.akamaized.net
 statics-marketingsites-wcus-ms-com.akamaized.net
-prodforza.blob.core.windows.net
 flightsimulator.azureedge.net
+prodforza.blob.core.windows.net
 azure.microsoft.com
 azuremarketplace.microsoft.com
 location.microsoft.com
@@ -344,6 +344,8 @@ www.microsoft.com
 +.xboxservices.com
 +.xboxstudios.com
 +.xbx.lv
++.asobostudio.com
++.flightsimulator.com
 +.beth.games
 +.bethesda.net
 +.bethesdagamestudios.com
@@ -360,8 +362,6 @@ www.microsoft.com
 +.minecraftservices.com
 +.minecraftshop.com
 +.mojang.com
-+.asobostudio.com
-+.flightsimulator.com
 +.microsoft.be
 +.aadrm.com
 +.azure-api.net

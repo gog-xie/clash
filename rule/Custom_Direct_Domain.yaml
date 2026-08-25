@@ -1,7 +1,7 @@
 # Generated from rule/Custom_Direct.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 722
+# TOTAL: 731
 
 payload:
   - '*m-team*'
@@ -15,6 +15,7 @@ payload:
   - '+.112114.xyz'
   - '+.115cdn.de'
   - '+.123795.com'
+  - '+.123clouddisk.com'
   - '+.17van.com'
   - '+.1996999.xyz'
   - '+.204cloud.com'
@@ -96,6 +97,7 @@ payload:
   - '+.atticus.vip'
   - '+.awstme.top'
   - '+.axuex.top'
+  - '+.b7f3192.com'
   - '+.ba-hospital.com'
   - '+.babawar.com'
   - '+.baicaf.com'
@@ -119,9 +121,11 @@ payload:
   - '+.boyuemobile.com'
   - '+.bsbsb.top'
   - '+.bunny.net'
+  - '+.bvmlt.top'
   - '+.ca-sinfusi.com'
   - '+.canghaiip.com'
   - '+.cangjie-lang.net'
+  - '+.cc39ute.shop'
   - '+.ccw.site'
   - '+.cdn.doctor'
   - '+.cdn.ist'
@@ -143,6 +147,7 @@ payload:
   - '+.chuguansmart.com'
   - '+.chujingapp.com'
   - '+.chushi.cool'
+  - '+.ciallo.party'
   - '+.clivia.fun'
   - '+.cmbc.run'
   - '+.cmhk.com'
@@ -227,6 +232,7 @@ payload:
   - '+.ft07.com'
   - '+.ftqq.com'
   - '+.functorz.com'
+  - '+.funmob.top'
   - '+.fussengroup.com'
   - '+.fuyinkeji.top'
   - '+.fuziche.com'
@@ -441,6 +447,7 @@ payload:
   - '+.msftncsi.com'
   - '+.mslmc.net'
   - '+.mtaokj.com'
+  - '+.muhemob.com'
   - '+.mykuaidi.com'
   - '+.myrny.xin'
   - '+.myshopex.com'
@@ -493,6 +500,7 @@ payload:
   - '+.powershellgallery.com'
   - '+.ppt28.com'
   - '+.privateapi.xyz'
+  - '+.psf0404.shop'
   - '+.ptlgs.org'
   - '+.pwithe.com'
   - '+.qianfan.app'
@@ -532,6 +540,7 @@ payload:
   - '+.seaflysoft.com'
   - '+.seedpace.com'
   - '+.senachina.com'
+  - '+.senmuse.com'
   - '+.server2.cn2gias.uk'
   - '+.sgtv.ii00.cc'
   - '+.shanghai-parking.com'
