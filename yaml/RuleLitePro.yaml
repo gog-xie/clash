@@ -168,7 +168,7 @@ dns:
     - 119.29.29.29
   fake-ip-filter:                                                       # Fake-IP
     - 'geosite: gfw'                                                    # Fake-IP规则  被墙规则
-    - 'geosite: geolocation-!cn'                                        # Fake-IP规则  国外域名
+    - 'geosite: geolocation-!cn'                                        # Fake-IP规则  非国区域名
     
 # 3 代理策略组 
 proxy-groups:
