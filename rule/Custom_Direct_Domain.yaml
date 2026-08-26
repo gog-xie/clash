@@ -1,7 +1,7 @@
 # Generated from rule/Custom_Direct.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 738
+# TOTAL: 748
 
 payload:
   - '*m-team*'
@@ -19,6 +19,7 @@ payload:
   - '+.17van.com'
   - '+.1996999.xyz'
   - '+.204cloud.com'
+  - '+.25mao.com'
   - '+.2mcnxs.cc'
   - '+.365ting.com'
   - '+.365wp.top'
@@ -30,6 +31,7 @@ payload:
   - '+.4kgj.com'
   - '+.4xiaoshuo.org'
   - '+.51kandianshi.com'
+  - '+.51mowan.com'
   - '+.51tbox.com'
   - '+.51wanxue.com'
   - '+.51zmt.top'
@@ -65,6 +67,7 @@ payload:
   - '+.acggit.com'
   - '+.adhuanxiao.com'
   - '+.adobe.com'
+  - '+.adosmo.com'
   - '+.afeica.com'
   - '+.afuns.me'
   - '+.agentscope.io'
@@ -166,6 +169,7 @@ payload:
   - '+.crrcgo.cc'
   - '+.crtyhr.com'
   - '+.csqaq.com'
+  - '+.cydiabc.top'
   - '+.cym520.top'
   - '+.cyouzai.com'
   - '+.d4ctech.com'
@@ -314,6 +318,7 @@ payload:
   - '+.hf-mirror.com'
   - '+.hfhs8x.info'
   - '+.hhtvc.com'
+  - '+.higgsweb.com'
   - '+.hijin.vip'
   - '+.hiocloud.com'
   - '+.hiwms.com'
@@ -398,6 +403,7 @@ payload:
   - '+.keyoo.com'
   - '+.kgithub.com'
   - '+.kit327.com'
+  - '+.kiwiot.com'
   - '+.kldai.vip'
   - '+.kmeila.com'
   - '+.kuaicha888.com'
@@ -490,6 +496,7 @@ payload:
   - '+.packertec.com'
   - '+.paperang.com'
   - '+.passnat.com'
+  - '+.pcwatch.com'
   - '+.piedaochuan.top'
   - '+.pixcheese.com'
   - '+.pkghund.com'
@@ -560,6 +567,7 @@ payload:
   - '+.shyxhy.com'
   - '+.sisiim.com'
   - '+.sixloy428.top'
+  - '+.skktec.com'
   - '+.sksight.com'
   - '+.snfox.com'
   - '+.snltty.com'
@@ -578,6 +586,7 @@ payload:
   - '+.svyun.com'
   - '+.sxlljm.com'
   - '+.sy1.top'
+  - '+.sztopten.com'
   - '+.tailgdd.com'
   - '+.tailscale.com'
   - '+.tajiduo.com'
@@ -727,6 +736,7 @@ payload:
   - '+.zjjslawyer.com'
   - '+.zjshulong.com'
   - '+.zjxhedu.com'
+  - '+.zllinks.com'
   - '+.zmis.me'
   - '+.znnu.com'
   - '+.znztv.com'
