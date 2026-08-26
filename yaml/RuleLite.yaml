@@ -149,25 +149,21 @@ dns:
   enable: true                                                          # 解析服务  启用 Clash 内置 DNS 服务
   ipv6: true                                                            # 网络协议  启用 IPv6 DNS 解析支持
   listen: 0.0.0.0:7874                                                  # 监听服务  DNS 服务监听地址与端口
-  enhanced-mode: fake-ip                                                # 增强模式  FDNS 增强模式(Fake-IP,用于防止 DNS 泄露)
-  fake-ip-range: 198.18.0.1/16                                          # 虚拟地址  Fake-IP 虚拟地址池范围
-  fake-ip-filter-mode: blacklist                                        # 过滤模式  Fake-IP 过滤模式(命中规则则返回真实 IP)
-  respect-rules: false                                                  # 遵循规则  不强制遵循规则顺序
-  nameserver:                                                           # 解析服务  可改为运营商提供的 DNS
-    - 119.29.29.29
+  default-nameserver:                                                   # 域名解析  默认域名解析服务器，解析nameserver域名为IP后交给nameserver
     - 223.5.5.5
-    - 180.76.76.76
-    - 114.114.114.114
-  fake-ip-filter:
-    - +.lan                                                           # 真实解析  常见局域网域名后缀
-    - +.local                                                         # 真实解析  常见局域网域名后缀
-    - +.home                                                          # 真实解析  常见局域网域名后缀
-    - +.internal                                                      # 真实解析  常见局域网域名后缀
-    - rule-set:cn                                                     # 真实解析  中国域名
-    - rule-set:geolocation-cn                                         # 真实解析  补充中国域名
-    - rule-set:fakeip-filter                                          # 真实解析  DustinWin收录的fake-ip-filter，主要包含授时服务器、广告拦截服务器、标准公网STUN/TURN中继服务器等域名
-    - +.jsdelivr.net
-
+    - 119.29.29.29
+  enhanced-mode: fake-ip                                                # 增强模式  FDNS 增强模式(Fake-IP,用于防止 DNS 泄露)
+  fake-ip-range: 198.18.0.1/16                                          # 虚拟地址  Fake-IP IPV4虚拟地址池范围
+  fake-ip-range6: fdfe:dcba:9876::1/64                                  # 虚拟地址  Fake-IP IPV6虚拟地址池范围
+  fake-ip-filter-mode: whitelist                                        # 过滤模式  Fake-IP 白名单模式(规则范围以外则返回真实 IP)
+  respect-rules: false                                                  # 遵循规则  不强制遵循规则顺序
+  nameserver:                                                           # 解析服务  可改为当地运营商提供的 DNS
+    - 223.5.5.5
+    - 119.29.29.29
+  fake-ip-filter:                                                       # Fake-IP
+    - 'geosite: gfw'                                                    # Fake-IP规则  被墙规则
+    - 'geosite: geolocation-!cn'                                        # Fake-IP规则  国外域名
+    
 # 3 代理策略组 
 proxy-groups:
   # 3.1 业务策略组
