@@ -1,7 +1,7 @@
 # Generated from rule/Custom_Direct.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 748
+# TOTAL: 759
 
 payload:
   - '*m-team*'
@@ -113,6 +113,7 @@ payload:
   - '+.bdcb.cc'
   - '+.beautifulcarrot.com'
   - '+.belimked.com'
+  - '+.belongme.top'
   - '+.betahub.tech'
   - '+.biandangroup.com'
   - '+.biaoda.me'
@@ -218,6 +219,7 @@ payload:
   - '+.everdrawing.com'
   - '+.excelbbx.net'
   - '+.exiliumgf.com'
+  - '+.fastify.cc'
   - '+.fb71ef91e1014.beer'
   - '+.fdfinvoice.com'
   - '+.feihengip.com'
@@ -407,6 +409,8 @@ payload:
   - '+.kldai.vip'
   - '+.kmeila.com'
   - '+.kuaicha888.com'
+  - '+.kudashi.com'
+  - '+.kukongjian.com'
   - '+.lanyun.net'
   - '+.laogongju.com'
   - '+.latexlive.com'
@@ -435,6 +439,7 @@ payload:
   - '+.mchuiji.com'
   - '+.mcxyzt.cc'
   - '+.medtechshare.com'
+  - '+.meijian.com'
   - '+.meishiffx.online'
   - '+.meiyitou.top'
   - '+.melecode.com'
@@ -450,6 +455,7 @@ payload:
   - '+.miraiemby.com'
   - '+.mixly.org'
   - '+.mobai.sbs'
+  - '+.modaiyun.com'
   - '+.modelscope.net'
   - '+.monkeyray.net'
   - '+.morefuntengyun.com'
@@ -494,6 +500,7 @@ payload:
   - '+.ourschool.cc'
   - '+.p01.epsonconnect.com'
   - '+.packertec.com'
+  - '+.panjue.com'
   - '+.paperang.com'
   - '+.passnat.com'
   - '+.pcwatch.com'
@@ -607,6 +614,7 @@ payload:
   - '+.thmnet.com'
   - '+.threep.top'
   - '+.tianlala.com'
+  - '+.tianruo.xyz'
   - '+.timbrd.com'
   - '+.tixue.net'
   - '+.tluyou.com'
@@ -617,6 +625,7 @@ payload:
   - '+.tongkask.com'
   - '+.tool56.com'
   - '+.topwd.top'
+  - '+.touchgal.ink'
   - '+.tozi-cn.top'
   - '+.trjho.com'
   - '+.ts3.ink'
@@ -625,6 +634,7 @@ payload:
   - '+.tumukaoyan.com'
   - '+.tuxing.art'
   - '+.twinkstar.com'
+  - '+.tztec.top'
   - '+.u-carloan.com'
   - '+.uascent-iot.com'
   - '+.ugdocker.link'
@@ -699,6 +709,7 @@ payload:
   - '+.xxir.com'
   - '+.xxrsm.com'
   - '+.xyys.com'
+  - '+.xzong.online'
   - '+.xzsckj.com'
   - '+.xzzhtc.com'
   - '+.yayi360.com'
