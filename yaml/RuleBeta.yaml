@@ -326,7 +326,7 @@ proxy-groups:
   - {name: 故转香港,        <<: *BaseFB, proxies: [香港策略, 日本策略, 狮城策略, 美国策略, 台湾策略, 韩国策略, 欧洲策略, 其他策略, 手选(一), 手选(二), 手选(三), 手选(四), 低倍策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Hong_Kong_1.png}
   - {name: 故转日本,        <<: *BaseFB, proxies: [日本策略, 狮城策略, 美国策略, 香港策略, 台湾策略, 韩国策略, 欧洲策略, 其他策略, 手选(一), 手选(二), 手选(三), 手选(四), 低倍策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Japan_1.png}
   - {name: 故转台湾,        <<: *BaseFB, proxies: [台湾策略, 狮城策略, 美国策略, 香港策略, 日本策略, 韩国策略, 欧洲策略, 其他策略, 手选(一), 手选(二), 手选(三), 手选(四), 低倍策略, 直接连接], icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Taiwan_1.png}
-  - {name: 故转低倍,        <<: *BaseFB, proxies: [低倍策略, 美国策略, 狮城策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧洲策略, 其他策略, 手选(一), 手选(二), 手选(三), 手选(四), 直接连接], icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Snail_1.png}
+  - {name: 故转低倍,        <<: *BaseFB, proxies: [低倍策略, 美国策略, 欧洲策略, 日本策略, 狮城策略, 香港策略, 台湾策略, 韩国策略, 其他策略, 手选(一), 手选(二), 手选(三), 手选(四), 直接连接], icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Snail_1.png}
 
   # 3.8 其他策略组
   - {name: 手选(一),        <<: *BaseHS, proxies: [狮城策略, 美国策略, 香港策略, 日本策略, 台湾策略, 韩国策略, 欧洲策略, 其他策略, 低倍策略, 直接连接], include-all: true, filter: *FilterAL, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Select.png}
