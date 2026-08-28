@@ -1,7 +1,7 @@
 # Generated from rule/Custom_Direct.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 764
+# TOTAL: 772
 
 payload:
   - '*m-team*'
@@ -301,6 +301,7 @@ payload:
   - '+.gvgoo.com'
   - '+.gwmapp-w.com'
   - '+.gxnnjidingkeji.top'
+  - '+.gzjkoa.com'
   - '+.gzybao.com'
   - '+.h6009.top'
   - '+.haimaiedu.net'
@@ -351,6 +352,7 @@ payload:
   - '+.hzlawyer.net'
   - '+.hzqsn.com'
   - '+.ibnjl.shop'
+  - '+.ibwm5lynb6.com'
   - '+.icvcs.com'
   - '+.idazhe.net'
   - '+.idsduf.com'
@@ -365,6 +367,7 @@ payload:
   - '+.indeedpower.com'
   - '+.inetlab.top'
   - '+.infini-fantasy.com'
+  - '+.inte.net'
   - '+.iosgujian.com'
   - '+.iot889.com'
   - '+.iotrix.net'
@@ -375,8 +378,10 @@ payload:
   - '+.ipshu.com'
   - '+.istoreos.com'
   - '+.itptg.com'
+  - '+.jbsy20riz9.com'
   - '+.jduoduo.com'
   - '+.jfjt.cc'
+  - '+.jfyxw.com'
   - '+.jh96095.com'
   - '+.jiangningwater.com'
   - '+.jiaoyanyun.com'
@@ -543,6 +548,7 @@ payload:
   - '+.qweapi.com'
   - '+.qweatherapi.com'
   - '+.qzyun.net'
+  - '+.ranwen.tw'
   - '+.rayws.top'
   - '+.redenmc.com'
   - '+.registry.dockermirror.com'
@@ -710,7 +716,9 @@ payload:
   - '+.xopenbeta.com'
   - '+.xuanyuancode.com'
   - '+.xuepaipai.com'
+  - '+.xuyuanyi.com'
   - '+.xxir.com'
+  - '+.xxjnjd.com'
   - '+.xxrsm.com'
   - '+.xyys.com'
   - '+.xzong.online'
