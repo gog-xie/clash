@@ -1,7 +1,7 @@
 # Generated from rule/Custom_Direct.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 791
+# TOTAL: 797
 
 payload:
   - '*m-team*'
@@ -49,6 +49,7 @@ payload:
   - '+.737698.xyz'
   - '+.77shuku.org'
   - '+.7sef.com'
+  - '+.800686.xyz'
   - '+.85sc.com'
   - '+.86656.net'
   - '+.888lm02.com'
@@ -134,6 +135,7 @@ payload:
   - '+.bunny.net'
   - '+.bvmlt.top'
   - '+.ca-sinfusi.com'
+  - '+.calmate.cc'
   - '+.canghaiip.com'
   - '+.cangjie-lang.net'
   - '+.cc39ute.shop'
@@ -238,6 +240,7 @@ payload:
   - '+.fjpit.com'
   - '+.flingtrainer.com'
   - '+.fofuai.com'
+  - '+.founderyt.com'
   - '+.fowep.com'
   - '+.freetv.top'
   - '+.frp-ski.com'
@@ -464,6 +467,7 @@ payload:
   - '+.meloong.com'
   - '+.members.3322.org'
   - '+.meoof-pet.com'
+  - '+.mfdqsc.com'
   - '+.miaotixing.com'
   - '+.micu.hk'
   - '+.micun.com'
@@ -484,7 +488,9 @@ payload:
   - '+.mslmc.net'
   - '+.mtaokj.com'
   - '+.muhemob.com'
+  - '+.myfenghua.com'
   - '+.mykuaidi.com'
+  - '+.mypikpak.net'
   - '+.myrny.xin'
   - '+.myshopex.com'
   - '+.mystery0.vip'
