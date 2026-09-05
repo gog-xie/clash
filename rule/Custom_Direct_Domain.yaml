@@ -1,7 +1,7 @@
 # Generated from rule/Custom_Direct.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 810
+# TOTAL: 815
 
 payload:
   - '*m-team*'
@@ -46,6 +46,7 @@ payload:
   - '+.657192.com'
   - '+.66990000.xyz'
   - '+.6v520.net'
+  - '+.71.am'
   - '+.737698.xyz'
   - '+.77shuku.org'
   - '+.7sef.com'
@@ -200,6 +201,7 @@ payload:
   - '+.dfhog.com'
   - '+.dhub.kubesre.xyz'
   - '+.dingdingzn.com'
+  - '+.dingstock.net'
   - '+.dircleaner.com'
   - '+.divoiotcloud.com'
   - '+.diyiedu.com'
@@ -270,6 +272,7 @@ payload:
   - '+.gaojiua.com'
   - '+.gaze.run'
   - '+.gdcucc.v1.mk'
+  - '+.gdzhimou.com'
   - '+.geektool.top'
   - '+.gegeselect.hk'
   - '+.gelaiyun.net'
@@ -386,6 +389,7 @@ payload:
   - '+.indeedpower.com'
   - '+.inetlab.top'
   - '+.infini-fantasy.com'
+  - '+.initaq.com'
   - '+.inte.net'
   - '+.iosgujian.com'
   - '+.iot889.com'
@@ -531,6 +535,7 @@ payload:
   - '+.opentrust.net'
   - '+.orence.net'
   - '+.osbdf.com'
+  - '+.ossrs.net'
   - '+.ottai.com'
   - '+.ottiptv.cc'
   - '+.ourschool.cc'
