@@ -1,7 +1,7 @@
 # Generated from rule/Custom_Direct.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 819
+# TOTAL: 826
 
 payload:
   - '*m-team*'
@@ -324,6 +324,7 @@ payload:
   - '+.gxnnjidingkeji.top'
   - '+.gzjkoa.com'
   - '+.gzybao.com'
+  - '+.h5bqb.top'
   - '+.h6009.top'
   - '+.haimaiedu.net'
   - '+.halvie.com'
@@ -404,6 +405,7 @@ payload:
   - '+.ipshu.com'
   - '+.istoreos.com'
   - '+.itptg.com'
+  - '+.itui.cc'
   - '+.jbsy20riz9.com'
   - '+.jduoduo.com'
   - '+.jfjt.cc'
@@ -475,6 +477,7 @@ payload:
   - '+.mc-user.com'
   - '+.mcar.vip'
   - '+.mchuiji.com'
+  - '+.mcrmb.com'
   - '+.mcxyzt.cc'
   - '+.medtechshare.com'
   - '+.meijian.com'
@@ -489,6 +492,7 @@ payload:
   - '+.micu.hk'
   - '+.micun.com'
   - '+.midoci.com'
+  - '+.midoci.top'
   - '+.mifeng.plus'
   - '+.mifon.com'
   - '+.minor-api-os.hoyoverse.com'
@@ -530,6 +534,7 @@ payload:
   - '+.oai.sb'
   - '+.oceando.cloud'
   - '+.ok321.top'
+  - '+.omq.cc'
   - '+.onebuygz.com'
   - '+.onetoken.sh'
   - '+.onetools.top'
@@ -633,6 +638,7 @@ payload:
   - '+.ssjj2.com'
   - '+.starlink.uno'
   - '+.startssl.com'
+  - '+.staticmeow.com'
   - '+.stkfanli.com'
   - '+.sufe.me'
   - '+.sunrisecontent.akamaized.net'
@@ -771,6 +777,7 @@ payload:
   - '+.xzzhtc.com'
   - '+.yayi360.com'
   - '+.ycjintou.com'
+  - '+.ycyct.com'
   - '+.ydayc.com'
   - '+.yhxjkj.top'
   - '+.yibanbianji.com'
