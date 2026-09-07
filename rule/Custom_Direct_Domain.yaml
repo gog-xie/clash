@@ -1,7 +1,7 @@
 # Generated from rule/Custom_Direct.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 826
+# TOTAL: 830
 
 payload:
   - '*m-team*'
@@ -133,6 +133,7 @@ payload:
   - '+.bjtzeduyun.com'
   - '+.bochaai.com'
   - '+.bochk.com'
+  - '+.boowayun.com'
   - '+.bowenkj.com'
   - '+.boxim.online'
   - '+.boyuemobile.com'
@@ -236,6 +237,7 @@ payload:
   - '+.everdrawing.com'
   - '+.excelbbx.net'
   - '+.exiliumgf.com'
+  - '+.faka163.com'
   - '+.fastify.cc'
   - '+.fb71ef91e1014.beer'
   - '+.fdfinvoice.com'
@@ -339,6 +341,7 @@ payload:
   - '+.hbctic.com'
   - '+.hbymfswz.com'
   - '+.hdbz.net'
+  - '+.hdcm00.com'
   - '+.hexiny.com'
   - '+.hezuvip.com'
   - '+.hf-mirror.com'
@@ -588,6 +591,7 @@ payload:
   - '+.qiuquan.org'
   - '+.qjmotorlink.com'
   - '+.qmeng.top'
+  - '+.qmpx.net'
   - '+.quanxinfu.com'
   - '+.quanzhua.com'
   - '+.quxuanshu.com'
