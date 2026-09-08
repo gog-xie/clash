@@ -1,7 +1,7 @@
 # Generated from rule/Custom_Direct.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 834
+# TOTAL: 838
 
 payload:
   - '*m-team*'
@@ -279,6 +279,7 @@ payload:
   - '+.gaojiua.com'
   - '+.gaze.run'
   - '+.gdcucc.v1.mk'
+  - '+.gdpcdz.com'
   - '+.gdzhimou.com'
   - '+.geektool.top'
   - '+.gegeselect.hk'
@@ -473,6 +474,7 @@ payload:
   - '+.loveutips.com'
   - '+.lsbj365.com'
   - '+.lsposed.zip'
+  - '+.lty02.com'
   - '+.lucky.gd'
   - '+.lyihub.com'
   - '+.lyilife.com'
@@ -729,6 +731,7 @@ payload:
   - '+.wildfirechat.net'
   - '+.wjx.top'
   - '+.wlcdn88.com'
+  - '+.wlkac.com'
   - '+.wlups.com'
   - '+.wologic.net'
   - '+.wpurl.cc'
@@ -769,6 +772,7 @@ payload:
   - '+.xkkapk.com'
   - '+.xn--4kq62z5rby2qupq9ub.top'
   - '+.xn--cesw6hd3s99f.com'
+  - '+.xn--id-ov2cb7n32b01yl6auun2bpzk4p2dgip.com'
   - '+.xn--mmz.cc'
   - '+.xn--vhqr42drhf5k7b.com'
   - '+.xn--zfru1ggxt.fun'
