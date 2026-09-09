@@ -235,14 +235,14 @@ proxy-groups:
   - {name: 其他轮询,       <<: *BaseCR, include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png}
 
    # 3.6 负载均衡-粘性会话 
-  - {name: 香港粘性,       <<: *BaseSS, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Pinboard.png}
-  - {name: 台湾粘性,       <<: *BaseSS, include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Pinboard.png}
-  - {name: 狮城粘性,       <<: *BaseSS, include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Pinboard.png}
-  - {name: 日本粘性,       <<: *BaseSS, include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Pinboard.png}
-  - {name: 韩国粘性,       <<: *BaseSS, include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Pinboard.png}
-  - {name: 美国粘性,       <<: *BaseSS, include-all: true, filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Pinboard.png}
-  - {name: 欧洲粘性,       <<: *BaseSS, include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Pinboard.png}
-  - {name: 其他粘性,       <<: *BaseSS, include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Pinboard.png}
+  - {name: 香港粘性,       <<: *BaseSS, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Pinboard.png}
+  - {name: 台湾粘性,       <<: *BaseSS, include-all: true, filter: *FilterTW, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Pinboard.png}
+  - {name: 狮城粘性,       <<: *BaseSS, include-all: true, filter: *FilterSG, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Pinboard.png}
+  - {name: 日本粘性,       <<: *BaseSS, include-all: true, filter: *FilterJP, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Pinboard.png}
+  - {name: 韩国粘性,       <<: *BaseSS, include-all: true, filter: *FilterKR, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Pinboard.png}
+  - {name: 美国粘性,       <<: *BaseSS, include-all: true, filter: *FilterUS, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Pinboard.png}
+  - {name: 欧洲粘性,       <<: *BaseSS, include-all: true, filter: *FilterEU, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Pinboard.png}
+  - {name: 其他粘性,       <<: *BaseSS, include-all: true, filter: *FilterOT, icon: https://testingcf.jsdelivr.net/gh/gogyt/Qure@master/IconSet/Color/Pinboard.png}
   
   # 3.6 自动测速组
   - {name: 香港自动,       <<: *BaseUT, include-all: true, filter: *FilterHK, icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png}
